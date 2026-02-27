@@ -9,7 +9,7 @@
 
 ## 一句话总结
 
-VLA-RL 将机器人操作轨迹建模为**多模态多轮对话**，用 PO 在线强化学习微调自回归 VLA（OpenVLA-7B），配合自动生成伪奖励标签训练的 **Robotic Process Reward Model** 解决稀疏奖励问题，在 LIBERO 基准 40 个任务上超越最强 SFT 基线 4.5%，并展现出机器人领域推理时扩展定律（inference scaling law）的早期信号。
+VLA-RL 将机器人操作轨迹建模为**多模态多轮对话**，用 PPO 在线强化学习微调自回归 VLA（OpenVLA-7B），配合自动生成伪奖励标签训练的 **Robotic Process Reward Model** 解决稀疏奖励问题，在 LIBERO 基准 40 个任务上超越最强 SFT 基线 4.5%，并展现出机器人领域推理时扩展定律（inference scaling law）的早期信号。
 
 ---
 

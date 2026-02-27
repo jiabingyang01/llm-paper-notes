@@ -58,6 +58,9 @@ cp templates/paper_template.md papers/<分类>/论文名_年份.md
 git add .
 git commit -m "add: 论文名 年份 论文解读"
 git push
+
+# 4. 本地部署
+npm run docs:dev
 ```
 
 **命名规范**：`论文简称_年份.md`，如 `RISE_2026.md`、`DPO_2023.md`
