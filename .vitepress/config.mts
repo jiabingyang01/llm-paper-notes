@@ -1,4 +1,24 @@
 import { defineConfig } from 'vitepress'
+import fs from 'node:fs'
+import path from 'node:path'
+
+/** 递归统计目录下的论文 .md 文件数（排除 README.md / index.md） */
+function countPapers(dir: string): number {
+  if (!fs.existsSync(dir)) return 0
+  let count = 0
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.isDirectory()) {
+      count += countPapers(path.join(dir, entry.name))
+    } else if (
+      entry.name.endsWith('.md') &&
+      entry.name !== 'README.md' &&
+      entry.name !== 'index.md'
+    ) {
+      count++
+    }
+  }
+  return count
+}
 
 export default defineConfig({
   title: 'LLM Paper Notes',
@@ -7,6 +27,20 @@ export default defineConfig({
   base: '/',
 
   ignoreDeadLinks: true,
+
+  transformPageData(pageData, { siteConfig }) {
+    if (pageData.frontmatter.layout === 'home' && pageData.frontmatter.features) {
+      for (const feature of pageData.frontmatter.features) {
+        if (feature.link?.startsWith('/papers/')) {
+          const dir = path.join(siteConfig.srcDir, feature.link.slice(1))
+          const count = countPapers(dir)
+          if (count > 0) {
+            feature.linkText = `已有 ${count} 篇笔记`
+          }
+        }
+      }
+    }
+  },
 
   rewrites: {
     'papers/:dir/README.md': 'papers/:dir/index.md',

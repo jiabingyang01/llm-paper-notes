@@ -38,7 +38,6 @@ features:
     title: Embodied AI
     details: VLA 模型、世界模型、机器人 RL、模仿学习、Sim-to-Real
     link: /papers/06-embodied-ai/
-    linkText: 已有 1 篇笔记
   - icon: ⚡
     title: Efficiency
     details: 量化、蒸馏、剪枝、推测解码、KV Cache 优化、MoE
