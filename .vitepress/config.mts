@@ -4,9 +4,13 @@ export default defineConfig({
   title: 'LLM Paper Notes',
   description: 'LLM 及相关领域论文精读笔记',
   lang: 'zh-CN',
-  base: '/llm-paper-notes/',
+  base: '/',
 
   ignoreDeadLinks: true,
+
+  rewrites: {
+    'papers/:dir/README.md': 'papers/:dir/index.md',
+  },
 
   markdown: {
     math: true,
