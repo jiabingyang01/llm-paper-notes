@@ -6,7 +6,9 @@
 
 ## 🤖 VLA（Vision-Language-Action）
 
-VLA 基础模型：π₀ 系列、RT 系列、OpenVLA、GR00T 等。
+### 基础模型
+
+π₀ 系列、RT 系列、OpenVLA、GR00T 等。
 
 | 论文 | 关键词 | 年份 |
 | --- | --- | --- |
