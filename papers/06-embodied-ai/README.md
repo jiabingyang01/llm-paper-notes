@@ -23,6 +23,7 @@
 | --- | --- | --- |
 | [RISE](vla/rl/RISE_2026.md) | 组合式世界模型、想象空间 RL、VLA 自改进 | 2026 |
 | [RLinf](vla/rl/RLinf_2025.md) | M2Flow 宏-微流变换、弹性流水线、上下文切换、RL 训练系统 | 2025 |
+| [RLinf-USER](vla/rl/RLinf_USER_2026.md) | 统一硬件抽象、云-边通信、全异步流水线、持久化缓冲区、真实世界在线学习 | 2026 |
 | [RLinf-VLA](vla/rl/RLinf_VLA_2025.md) | Hybrid Fine-grained Pipelining、统一 VLA+RL 框架（PPO/GRPO）、LIBERO-130 达 98.11% | 2025 |
 | [SAC Flow](vla/rl/SAC_Flow_2026.md) | Flow 策略 × 序列模型、GRU/Transformer 重参数化、off-policy RL | 2026 |
 | [VLA-RL](vla/rl/VLA_RL_2025.md) | 在线 PPO 微调自回归 VLA、Robotic Process Reward Model、多模态多轮对话建模 | 2025 |

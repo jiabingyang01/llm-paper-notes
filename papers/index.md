@@ -35,6 +35,7 @@
 | --- | --- | --- | --- |
 | [RISE](/papers/06-embodied-ai/vla/rl/RISE_2026) | 用组合式世界模型在想象空间做 RL，让 VLA 不靠真实交互就能自我改进 | 世界模型、Imagination RL、VLA 自改进 | 2026.02 |
 | [RLinf](/papers/06-embodied-ai/vla/rl/RLinf_2025) | 提出 M2Flow 宏-微流变换范式，通过弹性流水线和上下文切换实现灵活高效的大规模 RL 训练 | M2Flow、弹性流水线、RL 训练系统 | 2025.09 |
+| [RLinf-USER](/papers/06-embodied-ai/vla/rl/RLinf_USER_2026) | 将机器人视为一等硬件资源，通过统一硬件抽象、云-边通信、全异步流水线构建真实世界在线策略学习系统 | 真实世界 RL、统一硬件抽象、云-边协同、异步训练 | 2026.02 |
 | [RLinf-VLA](/papers/06-embodied-ai/vla/rl/RLinf_VLA_2025) | 统一高效的 VLA+RL 训练框架，三种 GPU 分配模式 + PPO/GRPO，单一模型 LIBERO-130 达 98.11% | Hybrid Pipelining、PPO/GRPO、统一 VLA+RL 框架 | 2025.10 |
 | [SAC Flow](/papers/06-embodied-ai/vla/rl/SAC_Flow_2026) | 把 Flow Policy 重新理解为序列模型，用 GRU/Transformer 重参数化解决 RL 梯度不稳定问题 | Flow Policy、序列建模、SAC、off-policy RL | 2026.01 |
 | [VLA-RL](/papers/06-embodied-ai/vla/rl/VLA_RL_2025) | 将机器人操作建模为多模态多轮对话，用 PPO 在线 RL 微调自回归 VLA，配合 Robotic PRM 解决稀疏奖励 | 在线 PPO、Robotic PRM、自回归 VLA + RL | 2025.05 |
