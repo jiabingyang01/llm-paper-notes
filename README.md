@@ -1,100 +1,40 @@
 # 🧠 LLM Paper Notes
 
-> 覆盖 **大语言模型（LLM）及相关领域** 的论文精读笔记。每篇包含原理拆解、公式推导、实验分析与个人思考。
+[![Website](https://img.shields.io/badge/Website-llm--paper--notes-blue)](https://llm-paper-notes.jiabingyang.cn/)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-## 📖 论文索引
+> **大语言模型及相关领域**的论文精读笔记。每篇包含问题动机、前置知识、方法拆解、公式推导、实验分析与个人思考。
 
-### 01 Foundation Models — 基础模型与预训练
-
-> 架构设计、预训练方法、Scaling Laws、Tokenizer、长上下文等
-
-| 论文 | 关键词 | 笔记 |
-| --- | --- | --- |
-| *待添加* | | |
-
-### 02 Alignment & Safety — 对齐与安全
-
-> RLHF、DPO、Constitutional AI、Red-teaming、价值观对齐等
-
-| 论文 | 关键词 | 笔记 |
-| --- | --- | --- |
-| *待添加* | | |
-
-### 03 Reasoning — 推理能力
-
-> Chain-of-Thought、数学推理、代码生成、逻辑推理、Test-time Compute等
-
-| 论文 | 关键词 | 笔记 |
-| --- | --- | --- |
-| *待添加* | | |
-
-### 04 Multimodal — 多模态
-
-> VLM、图像/视频理解、语音、多模态生成等
-
-| 论文 | 关键词 | 笔记 |
-| --- | --- | --- |
-| *待添加* | | |
-
-### 05 Agents — 智能体
-
-> Tool Use、Web Agent、代码 Agent、多 Agent 协作、规划等
-
-| 论文 | 关键词 | 笔记 |
-| --- | --- | --- |
-| *待添加* | | |
-
-### 06 Embodied AI — 具身智能
-
-> VLA 模型、世界模型、机器人 RL、模仿学习、Sim-to-Real等
-
-| 论文 | 子方向 | 关键词 | 笔记 |
-| --- | --- | --- | --- |
-| RISE (Yang et al., 2026) | VLA + RL | 组合式世界模型, 想象空间 RL, VLA 自改进 | [笔记](papers/06-embodied-ai/vla/rl/RISE_2026.md) |
-
-### 07 Efficiency — 高效推理与部署
-
-> 量化、蒸馏、剪枝、推测解码、KV Cache 优化、MoE等
-
-| 论文 | 关键词 | 笔记 |
-| --- | --- | --- |
-| *待添加* | | |
-
-### 08 RAG & Knowledge — 检索增强与知识
-
-> RAG 架构、向量检索、知识图谱、Grounding、幻觉消除等
-
-| 论文 | 关键词 | 笔记 |
-| --- | --- | --- |
-| *待添加* | | |
-
-### 09 Evaluation & Benchmarks — 评测
-
-> Benchmark 设计、评估方法论、LLM-as-Judge、排行榜分析等
-
-| 论文 | 关键词 | 笔记 |
-| --- | --- | --- |
-| *待添加* | | |
+👉 **在线阅读**：[llm-paper-notes.jiabingyang.cn](https://llm-paper-notes.jiabingyang.cn/)
 
 ---
 
-## 🗺️ 分类说明
+## 📚 已收录论文
 
-| 编号 | 分类 | 典型论文/话题 |
-| --- | --- | --- |
-| 01 | Foundation Models | GPT、LLaMA、Mamba、Scaling Laws、MoE 预训练 |
-| 02 | Alignment & Safety | RLHF、DPO、RLAIF、Constitutional AI、Jailbreak 防御 |
-| 03 | Reasoning | CoT、ToT、o1/o3、Math Reasoning、Code Generation |
-| 04 | Multimodal | GPT-4V、LLaVA、视频理解、语音模型、统一多模态架构 |
-| 05 | Agents | ReAct、Toolformer、WebAgent、SWE-Agent、多智能体 |
-| 06 | Embodied AI | π₀ 系列、Diffusion Policy、世界模型、机器人 RL |
-| 07 | Efficiency | GPTQ、AWQ、LoRA、Speculative Decoding、FlashAttention |
-| 08 | RAG & Knowledge | Dense Retrieval、RAPTOR、GraphRAG、长文档处理 |
-| 09 | Evaluation | MMLU、HumanEval、Arena、LLM-as-Judge、污染检测 |
+### 🦾 Embodied AI — VLA / RL 后训练
 
-> **💡 跨分类引用**：一篇论文可以出现在多个分类的索引表中，但笔记 `.md` 只存一份，放在最核心的分类下。
+| 论文 | 一句话概括 | 关键词 | 时间 |
+| --- | --- | --- | --- |
+| [RISE](papers/06-embodied-ai/vla/rl/RISE_2026.md) | 用组合式世界模型在想象空间做 RL，让 VLA 不靠真实交互就能自我改进 | 世界模型、Imagination RL、VLA 自改进 | 2026.02 |
+| [SAC Flow](papers/06-embodied-ai/vla/rl/SAC_Flow_2026.md) | 把 Flow Policy 重新理解为序列模型，用 GRU/Transformer 重参数化解决 RL 梯度不稳定问题 | Flow Policy、序列建模、SAC、off-policy RL | 2026.01 |
 
-> **📂 子目录**：Embodied AI 因为子方向较多，进一步拆分为 `vla/`、`vla/rl/`、`world-models/`。其他分类在论文积累到一定数量后也可以同样拆分。
+---
+
+## 🗺️ 分类体系
+
+| | 分类 | 覆盖方向 |
+| :---: | --- | --- |
+| 🏗️ | Foundation Models | GPT、LLaMA、Mamba、Scaling Laws、MoE 预训练 |
+| 🛡️ | Alignment & Safety | RLHF、DPO、RLAIF、Constitutional AI |
+| 💡 | Reasoning | CoT、ToT、o1/o3、数学推理、Test-time Compute |
+| 🖼️ | Multimodal | GPT-4V、LLaVA、视频理解、语音模型 |
+| 🤖 | Agents | ReAct、Toolformer、WebAgent、SWE-Agent |
+| 🦾 | Embodied AI | VLA、世界模型、机器人 RL、模仿学习 |
+| ⚡ | Efficiency | GPTQ、AWQ、LoRA、Speculative Decoding |
+| 🔍 | RAG & Knowledge | Dense Retrieval、RAPTOR、GraphRAG |
+| 📊 | Evaluation | MMLU、HumanEval、Arena、LLM-as-Judge |
+
+> 一篇论文可以出现在多个分类的索引中，但笔记 `.md` 只存一份，放在最核心的分类下。
 
 ---
 
@@ -106,15 +46,13 @@ cp templates/paper_template.md papers/<分类>/论文名_年份.md
 
 # 2. 按模板结构写笔记（公式用 LaTeX：$...$ 行内，$$...$$ 行间）
 
-# 3. 在本 README 对应分类的表格中添加一行
-
-# 4. 提交
+# 3. 提交
 git add .
 git commit -m "add: 论文名 年份 论文解读"
 git push
 ```
 
-**命名规范**：`论文简称_年份.md`，如 `RISE_2026.md`、`DPO_2023.md`、`LLaMA3_2024.md`
+**命名规范**：`论文简称_年份.md`，如 `RISE_2026.md`、`DPO_2023.md`
 
 详细模板见 → [templates/paper_template.md](templates/paper_template.md)
 
