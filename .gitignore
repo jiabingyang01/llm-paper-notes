@@ -1,0 +1,7 @@
+.DS_Store
+*.pdf
+*.pptx
+*.docx
+__pycache__/
+.vscode/
+.idea/
