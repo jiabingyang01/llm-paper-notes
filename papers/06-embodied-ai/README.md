@@ -22,6 +22,7 @@
 | 论文 | 关键词 | 年份 |
 | --- | --- | --- |
 | [RISE](vla/rl/RISE_2026.md) | 组合式世界模型、想象空间 RL、VLA 自改进 | 2026 |
+| [RLinf](vla/rl/RLinf_2025.md) | M2Flow 宏-微流变换、弹性流水线、上下文切换、RL 训练系统 | 2025 |
 | [SAC Flow](vla/rl/SAC_Flow_2026.md) | Flow 策略 × 序列模型、GRU/Transformer 重参数化、off-policy RL | 2026 |
 | [VLA-RL](vla/rl/VLA_RL_2025.md) | 在线 PPO 微调自回归 VLA、Robotic Process Reward Model、多模态多轮对话建模 | 2025 |
 | [WoVR](vla/rl/WoVR_2026.md) | 幻觉感知世界模型 RL、关键帧初始化 Rollout、策略-模型协同进化（PACE） | 2026 |

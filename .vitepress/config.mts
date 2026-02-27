@@ -124,6 +124,7 @@ export default defineConfig({
                       collapsed: false,
                       items: [
                         { text: 'RISE (2026)', link: '/papers/06-embodied-ai/vla/rl/RISE_2026' },
+                        { text: 'RLinf (2025)', link: '/papers/06-embodied-ai/vla/rl/RLinf_2025' },
                         { text: 'SAC Flow (2026)', link: '/papers/06-embodied-ai/vla/rl/SAC_Flow_2026' },
                         { text: 'VLA-RL (2025)', link: '/papers/06-embodied-ai/vla/rl/VLA_RL_2025' },
                         { text: 'WoVR (2026)', link: '/papers/06-embodied-ai/vla/rl/WoVR_2026' },
