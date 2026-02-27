@@ -72,8 +72,25 @@ export default defineConfig({
               collapsed: false,
               link: '/papers/06-embodied-ai/',
               items: [
-                { text: 'RISE (2026)', link: '/papers/06-embodied-ai/vla/rl/RISE_2026' },
-                { text: 'SAC Flow (2026)', link: '/papers/06-embodied-ai/vla/rl/SAC_Flow_2026' },
+                {
+                  text: 'VLA',
+                  collapsed: false,
+                  items: [
+                    {
+                      text: 'RL',
+                      collapsed: false,
+                      items: [
+                        { text: 'RISE (2026)', link: '/papers/06-embodied-ai/vla/rl/RISE_2026' },
+                        { text: 'SAC Flow (2026)', link: '/papers/06-embodied-ai/vla/rl/SAC_Flow_2026' },
+                      ],
+                    },
+                  ],
+                },
+                {
+                  text: 'World Models',
+                  collapsed: true,
+                  items: [],
+                },
               ],
             },
             {
