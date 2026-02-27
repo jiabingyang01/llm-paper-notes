@@ -30,75 +30,78 @@
 ## 📚 已收录论文
 
 <details>
-<summary><b>🏗️ Foundation Models</b>　<sub>暂无笔记</sub></summary>
+<summary>🏗️ Foundation Models</summary>
 
-> GPT、LLaMA、Mamba、Scaling Laws、MoE 预训练
-
-</details>
-
-<details>
-<summary><b>🛡️ Alignment & Safety</b>　<sub>暂无笔记</sub></summary>
-
-> RLHF、DPO、RLAIF、Constitutional AI
+> 暂无笔记
 
 </details>
 
 <details>
-<summary><b>💡 Reasoning</b>　<sub>暂无笔记</sub></summary>
+<summary>🛡️ Alignment & Safety</summary>
 
-> CoT、ToT、o1/o3、数学推理、Test-time Compute
-
-</details>
-
-<details>
-<summary><b>🖼️ Multimodal</b>　<sub>暂无笔记</sub></summary>
-
-> GPT-4V、LLaVA、视频理解、语音模型
+> 暂无笔记
 
 </details>
 
 <details>
-<summary><b>🤖 Agents</b>　<sub>暂无笔记</sub></summary>
+<summary>💡 Reasoning</summary>
 
-> ReAct、Toolformer、WebAgent、SWE-Agent
+> 暂无笔记
+
+</details>
+
+<details>
+<summary>🖼️ Multimodal</summary>
+
+> 暂无笔记
+
+</details>
+
+<details>
+<summary>🤖 Agents</summary>
+
+> 暂无笔记
 
 </details>
 
 <details open>
-<summary><b>🦾 Embodied AI</b>　<sub>7 篇</sub></summary>
+<summary>🦾 Embodied AI</summary>
 
 <blockquote>
-<details>
-<summary><b>VLA 基础模型</b>　<sub>2 篇</sub></summary>
+<details open>
+<summary>VLA</summary>
 
-| 论文 | 一句话概括 | 时间 |
-| --- | --- | --- |
-| [π₀](papers/06-embodied-ai/vla/foundation/pi0_2024.md) | 用 Flow Matching 替代自回归生成动作，构建首个能完成高频灵巧操作的通用 VLA 基础模型 | 2024.10 |
-| [π₀.₅](papers/06-embodied-ai/vla/foundation/pi05_2025.md) | 通过异构多源数据协同训练和分层推理，首次实现端到端 VLA 在全新家庭环境中执行长时域灵巧操作 | 2025.04 |
+<blockquote>
+<details open>
+<summary>基础模型</summary>
+
+- [π₀ (2024)](papers/06-embodied-ai/vla/foundation/pi0_2024.md) — Flow Matching VLA 基础模型
+- [π₀.₅ (2025)](papers/06-embodied-ai/vla/foundation/pi05_2025.md) — 异构协同训练 + 分层推理
+
+</details>
+</blockquote>
+
+<blockquote>
+<details open>
+<summary>RL 后训练</summary>
+
+- [RISE (2026)](papers/06-embodied-ai/vla/rl/RISE_2026.md) — 组合式世界模型 + 想象空间 RL
+- [RLinf (2025)](papers/06-embodied-ai/vla/rl/RLinf_2025.md) — M2Flow 大规模 RL 训练系统
+- [SAC Flow (2026)](papers/06-embodied-ai/vla/rl/SAC_Flow_2026.md) — Flow Policy 序列建模 + off-policy RL
+- [VLA-RL (2025)](papers/06-embodied-ai/vla/rl/VLA_RL_2025.md) — 在线 PPO 微调自回归 VLA
+- [WoVR (2026)](papers/06-embodied-ai/vla/rl/WoVR_2026.md) — 幻觉感知世界模型 RL
+
+</details>
+</blockquote>
 
 </details>
 </blockquote>
 
 <blockquote>
 <details>
-<summary><b>VLA / RL 后训练</b>　<sub>5 篇</sub></summary>
+<summary>World Models</summary>
 
-| 论文 | 一句话概括 | 时间 |
-| --- | --- | --- |
-| [RISE](papers/06-embodied-ai/vla/rl/RISE_2026.md) | 用组合式世界模型在想象空间做 RL，让 VLA 不靠真实交互就能自我改进 | 2026.02 |
-| [RLinf](papers/06-embodied-ai/vla/rl/RLinf_2025.md) | 提出 M2Flow 宏-微流变换范式，通过弹性流水线和上下文切换实现灵活高效的大规模 RL 训练 | 2025.09 |
-| [SAC Flow](papers/06-embodied-ai/vla/rl/SAC_Flow_2026.md) | 把 Flow Policy 重新理解为序列模型，用 GRU/Transformer 重参数化解决 RL 梯度不稳定问题 | 2026.01 |
-| [VLA-RL](papers/06-embodied-ai/vla/rl/VLA_RL_2025.md) | 将机器人操作建模为多模态多轮对话，用 PPO 在线 RL 微调自回归 VLA，配合 Robotic PRM 解决稀疏奖励 | 2025.05 |
-| [WoVR](papers/06-embodied-ai/vla/rl/WoVR_2026.md) | 通过三级幻觉控制（稳定世界模型 + 关键帧初始化 Rollout + 策略-模型协同进化），在想象空间中可靠地 RL 后训练 VLA | 2026.02 |
-
-</details>
-</blockquote>
-
-<blockquote>
-<details>
-<summary><b>World Models</b>　<sub>暂无笔记</sub></summary>
-
-> 视频世界模型、动力学预测、可控生成、想象与规划
+> 暂无笔记
 
 </details>
 </blockquote>
@@ -106,23 +109,23 @@
 </details>
 
 <details>
-<summary><b>⚡ Efficiency</b>　<sub>暂无笔记</sub></summary>
+<summary>⚡ Efficiency</summary>
 
-> GPTQ、AWQ、LoRA、Speculative Decoding
-
-</details>
-
-<details>
-<summary><b>🔍 RAG & Knowledge</b>　<sub>暂无笔记</sub></summary>
-
-> Dense Retrieval、RAPTOR、GraphRAG
+> 暂无笔记
 
 </details>
 
 <details>
-<summary><b>📊 Evaluation</b>　<sub>暂无笔记</sub></summary>
+<summary>🔍 RAG & Knowledge</summary>
 
-> MMLU、HumanEval、Arena、LLM-as-Judge
+> 暂无笔记
+
+</details>
+
+<details>
+<summary>📊 Evaluation</summary>
+
+> 暂无笔记
 
 </details>
 
