@@ -50,7 +50,7 @@
 
 | 论文 | 子方向 | 关键词 | 笔记 |
 | --- | --- | --- | --- |
-| RISE (Yang et al., 2026) | Robot RL | 组合式世界模型, 想象空间 RL, VLA 自改进 | [笔记](papers/06-embodied-ai/robot-rl/RISE_2026.md) |
+| RISE (Yang et al., 2026) | VLA + RL | 组合式世界模型, 想象空间 RL, VLA 自改进 | [笔记](papers/06-embodied-ai/vla/rl/RISE_2026.md) |
 
 ### 07 Efficiency — 高效推理与部署
 
@@ -94,7 +94,7 @@
 
 > **💡 跨分类引用**：一篇论文可以出现在多个分类的索引表中，但笔记 `.md` 只存一份，放在最核心的分类下。
 
-> **📂 子目录**：Embodied AI 因为子方向较多，进一步拆分为 `vla/`、`world-models/`、`robot-rl/`、`imitation-learning/`。其他分类在论文积累到一定数量后也可以同样拆分。
+> **📂 子目录**：Embodied AI 因为子方向较多，进一步拆分为 `vla/`、`vla/rl/`、`world-models/`。其他分类在论文积累到一定数量后也可以同样拆分。
 
 ---
 
