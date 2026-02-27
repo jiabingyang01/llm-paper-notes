@@ -46,6 +46,68 @@
 
 ---
 
+## 🚀 本地部署
+
+### 环境要求
+
+- [Git](https://git-scm.com/downloads)
+- [Node.js](https://nodejs.org/) >= 18（推荐 LTS 版本，npm 随 Node.js 一起安装）
+
+如果尚未安装 Node.js，根据你的操作系统选择对应方式：
+
+```bash
+# macOS（使用 Homebrew）
+brew install node
+
+# Ubuntu / Debian
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Windows
+# 前往 https://nodejs.org 下载 LTS 安装包，双击安装即可
+```
+
+安装完成后验证：
+
+```bash
+node -v   # 应输出 v18.x.x 或更高
+npm -v    # 应输出 9.x.x 或更高
+```
+
+### 安装与启动
+
+```bash
+# 1. 克隆仓库
+git clone git@github.com:jiabingyang01/llm-paper-notes.git
+cd llm-paper-notes
+
+# 2. 安装依赖
+npm install
+
+# 3. 启动本地开发服务器（支持热更新）
+npm run docs:dev
+```
+
+启动后终端会输出本地地址（默认 `http://localhost:5173`），浏览器打开即可预览。编辑任何 `.md` 文件后页面会自动刷新。
+
+### 构建与预览
+
+```bash
+# 构建生产版本（输出到 .vitepress/dist）
+npm run docs:build
+
+# 本地预览构建产物
+npm run docs:preview
+```
+
+### 部署到线上
+
+本站使用 GitHub Pages 自动部署。推送到 `main` 分支后，GitHub Actions 会自动构建并发布到 [llm-paper-notes.jiabingyang.cn](https://llm-paper-notes.jiabingyang.cn/)。
+
+如需手动部署到vercel，将 `.vitepress/dist` 目录部署为静态站点即可。
+
+---
+
 ## 📝 如何添加新笔记
 
 ```bash
@@ -58,9 +120,6 @@ cp templates/paper_template.md papers/<分类>/论文名_年份.md
 git add .
 git commit -m "add: 论文名 年份 论文解读"
 git push
-
-# 4. 本地部署
-npm run docs:dev
 ```
 
 **命名规范**：`论文简称_年份.md`，如 `RISE_2026.md`、`DPO_2023.md`
