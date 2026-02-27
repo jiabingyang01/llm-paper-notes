@@ -1,0 +1,26 @@
+{
+  "name": "llm-paper-notes",
+  "version": "1.0.0",
+  "description": "> 覆盖 **大语言模型（LLM）及相关领域** 的论文精读笔记。每篇包含原理拆解、公式推导、实验分析与个人思考。",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiabingyang01/llm-paper-notes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jiabingyang01/llm-paper-notes/issues"
+  },
+  "homepage": "https://github.com/jiabingyang01/llm-paper-notes#readme",
+  "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "vitepress": "^1.6.4"
+  }
+}

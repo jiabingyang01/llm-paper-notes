@@ -5,3 +5,6 @@
 __pycache__/
 .vscode/
 .idea/
+node_modules/
+.vitepress/cache/
+.vitepress/dist/

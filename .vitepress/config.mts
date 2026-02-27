@@ -1,0 +1,142 @@
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  title: 'LLM Paper Notes',
+  description: 'LLM 及相关领域论文精读笔记',
+  lang: 'zh-CN',
+  base: '/llm-paper-notes/',
+
+  ignoreDeadLinks: true,
+
+  markdown: {
+    math: true,
+  },
+
+  head: [
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+    ['link', { href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap', rel: 'stylesheet' }],
+  ],
+
+  themeConfig: {
+    logo: undefined,
+    siteTitle: '🧠 LLM Paper Notes',
+
+    nav: [
+      { text: '首页', link: '/' },
+      { text: '论文索引', link: '/papers/' },
+      { text: '笔记模板', link: '/templates/paper_template' },
+    ],
+
+    sidebar: {
+      '/papers/': [
+        {
+          text: '📚 论文分类',
+          items: [
+            {
+              text: '01 Foundation Models',
+              collapsed: true,
+              link: '/papers/01-foundation-models/',
+              items: [],
+            },
+            {
+              text: '02 Alignment & Safety',
+              collapsed: true,
+              link: '/papers/02-alignment-and-safety/',
+              items: [],
+            },
+            {
+              text: '03 Reasoning',
+              collapsed: true,
+              link: '/papers/03-reasoning/',
+              items: [],
+            },
+            {
+              text: '04 Multimodal',
+              collapsed: true,
+              link: '/papers/04-multimodal/',
+              items: [],
+            },
+            {
+              text: '05 Agents',
+              collapsed: true,
+              link: '/papers/05-agents/',
+              items: [],
+            },
+            {
+              text: '06 Embodied AI',
+              collapsed: false,
+              link: '/papers/06-embodied-ai/',
+              items: [
+                { text: 'RISE (2026)', link: '/papers/06-embodied-ai/vla/rl/RISE_2026' },
+              ],
+            },
+            {
+              text: '07 Efficiency',
+              collapsed: true,
+              link: '/papers/07-efficiency/',
+              items: [],
+            },
+            {
+              text: '08 RAG & Knowledge',
+              collapsed: true,
+              link: '/papers/08-rag-and-knowledge/',
+              items: [],
+            },
+            {
+              text: '09 Evaluation',
+              collapsed: true,
+              link: '/papers/09-evaluation-and-benchmarks/',
+              items: [],
+            },
+          ],
+        },
+      ],
+    },
+
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: {
+            buttonText: '搜索',
+            buttonAriaLabel: '搜索',
+          },
+          modal: {
+            noResultsText: '没有找到结果',
+            resetButtonTitle: '清除搜索',
+            footer: {
+              selectText: '选择',
+              navigateText: '导航',
+              closeText: '关闭',
+            },
+          },
+        },
+      },
+    },
+
+    outline: {
+      level: [2, 3],
+      label: '目录',
+    },
+
+    darkModeSwitchLabel: '主题',
+    returnToTopLabel: '回到顶部',
+    lastUpdated: {
+      text: '最后更新',
+    },
+    docFooter: {
+      prev: '上一篇',
+      next: '下一篇',
+    },
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/jiabingyang01/llm-paper-notes' },
+    ],
+
+    footer: {
+      message: '基于 CC BY-SA 4.0 协议',
+      copyright: '© 2026 LLM Paper Notes',
+    },
+  },
+})
