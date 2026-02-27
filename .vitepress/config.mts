@@ -140,7 +140,7 @@ export default defineConfig({
 
     footer: {
       message: '基于 CC BY-SA 4.0 协议',
-      copyright: '©<a href="https://github.com/jiabingyang01" target="_blank">jiabingyang01</a>',
+      copyright: '© <a href="https://github.com/jiabingyang01" target="_blank">jiabingyang01</a>',
     },
   },
 })
