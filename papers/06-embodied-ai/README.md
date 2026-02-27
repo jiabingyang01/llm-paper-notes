@@ -11,3 +11,4 @@
 ## 论文列表
 
 - [RISE (2026)](vla/rl/RISE_2026.md) — 组合式世界模型 + 想象空间 RL，实现 VLA 自改进
+- [SAC Flow (2026)](vla/rl/SAC_Flow_2026.md) — 将 Flow 策略视为序列模型，用 GRU/Transformer 重参数化速度网络实现稳定 off-policy RL

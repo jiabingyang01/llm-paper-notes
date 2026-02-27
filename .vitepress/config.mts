@@ -73,6 +73,7 @@ export default defineConfig({
               link: '/papers/06-embodied-ai/',
               items: [
                 { text: 'RISE (2026)', link: '/papers/06-embodied-ai/vla/rl/RISE_2026' },
+                { text: 'SAC Flow (2026)', link: '/papers/06-embodied-ai/vla/rl/SAC_Flow_2026' },
               ],
             },
             {
