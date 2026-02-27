@@ -29,6 +29,12 @@
 
 ## 📚 已收录论文
 
+### 🦾 Embodied AI — VLA 基础模型
+
+| 论文 | 一句话概括 | 关键词 | 时间 |
+| --- | --- | --- | --- |
+| [π₀](papers/06-embodied-ai/vla/foundation/pi0_2024.md) | 用 Flow Matching 替代自回归生成动作，构建首个能完成高频灵巧操作的通用 VLA 基础模型 | Flow Matching VLA、Action Expert、跨构型预训练 | 2024.10 |
+
 ### 🦾 Embodied AI — VLA / RL 后训练
 
 | 论文 | 一句话概括 | 关键词 | 时间 |

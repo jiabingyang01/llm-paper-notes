@@ -112,7 +112,14 @@ export default defineConfig({
                   collapsed: false,
                   items: [
                     {
-                      text: 'RL',
+                      text: '基础模型',
+                      collapsed: false,
+                      items: [
+                        { text: 'π₀ (2024)', link: '/papers/06-embodied-ai/vla/foundation/pi0_2024' },
+                      ],
+                    },
+                    {
+                      text: 'RL 后训练',
                       collapsed: false,
                       items: [
                         { text: 'RISE (2026)', link: '/papers/06-embodied-ai/vla/rl/RISE_2026' },

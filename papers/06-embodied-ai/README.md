@@ -8,7 +8,9 @@
 
 VLA 基础模型：π₀ 系列、RT 系列、OpenVLA、GR00T 等。
 
-> 暂无笔记，敬请期待。
+| 论文 | 关键词 | 年份 |
+| --- | --- | --- |
+| [π₀](vla/foundation/pi0_2024.md) | Flow Matching VLA、VLM 骨架 + Action Expert、跨构型预训练、预训练/后训练范式 | 2024 |
 
 ### RL 后训练
 
