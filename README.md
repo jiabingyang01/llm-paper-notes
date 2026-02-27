@@ -9,17 +9,6 @@
 
 ---
 
-## 📚 已收录论文
-
-### 🦾 Embodied AI — VLA / RL 后训练
-
-| 论文 | 一句话概括 | 关键词 | 时间 |
-| --- | --- | --- | --- |
-| [RISE](papers/06-embodied-ai/vla/rl/RISE_2026.md) | 用组合式世界模型在想象空间做 RL，让 VLA 不靠真实交互就能自我改进 | 世界模型、Imagination RL、VLA 自改进 | 2026.02 |
-| [SAC Flow](papers/06-embodied-ai/vla/rl/SAC_Flow_2026.md) | 把 Flow Policy 重新理解为序列模型，用 GRU/Transformer 重参数化解决 RL 梯度不稳定问题 | Flow Policy、序列建模、SAC、off-policy RL | 2026.01 |
-
----
-
 ## 🗺️ 分类体系
 
 | | 分类 | 覆盖方向 |
@@ -35,6 +24,17 @@
 | 📊 | Evaluation | MMLU、HumanEval、Arena、LLM-as-Judge |
 
 > 一篇论文可以出现在多个分类的索引中，但笔记 `.md` 只存一份，放在最核心的分类下。
+
+---
+
+## 📚 已收录论文
+
+### 🦾 Embodied AI — VLA / RL 后训练
+
+| 论文 | 一句话概括 | 关键词 | 时间 |
+| --- | --- | --- | --- |
+| [RISE](papers/06-embodied-ai/vla/rl/RISE_2026.md) | 用组合式世界模型在想象空间做 RL，让 VLA 不靠真实交互就能自我改进 | 世界模型、Imagination RL、VLA 自改进 | 2026.02 |
+| [SAC Flow](papers/06-embodied-ai/vla/rl/SAC_Flow_2026.md) | 把 Flow Policy 重新理解为序列模型，用 GRU/Transformer 重参数化解决 RL 梯度不稳定问题 | Flow Policy、序列建模、SAC、off-policy RL | 2026.01 |
 
 ---
 
