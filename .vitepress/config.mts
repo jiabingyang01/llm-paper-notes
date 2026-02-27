@@ -116,6 +116,7 @@ export default defineConfig({
                       collapsed: false,
                       items: [
                         { text: 'π₀ (2024)', link: '/papers/06-embodied-ai/vla/foundation/pi0_2024' },
+                        { text: 'π₀.₅ (2025)', link: '/papers/06-embodied-ai/vla/foundation/pi05_2025' },
                       ],
                     },
                     {
