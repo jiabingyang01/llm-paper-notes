@@ -22,6 +22,7 @@ VLA 模型推理加速，包括 Token 缓存/剪枝、动态计算、量化等�
 | 论文 | 关键词 | 年份 |
 | --- | --- | --- |
 | [LAC](vla/efficient/LAC_2026.md) | 可学习自适应 Token 缓存、光流运动先验、Gumbel-Softmax 端到端优化、1.76× 加速 | 2026 |
+| [VLA-Cache](vla/efficient/VLA_Cache_2025.md) | 训练无关跨帧 Token 缓存、注意力驱动任务相关性过滤、层自适应复用策略、1.7× 加速 | 2025 |
 
 ### RL 后训练
 
