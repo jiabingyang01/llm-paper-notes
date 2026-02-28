@@ -83,6 +83,15 @@
 
 <blockquote>
 <details open>
+<summary>高效推理</summary>
+
+- [LAC (2026)](papers/06-embodied-ai/vla/efficient/LAC_2026.md) — 可学习自适应 Token 缓存加速 VLA
+
+</details>
+</blockquote>
+
+<blockquote>
+<details open>
 <summary>RL 后训练</summary>
 
 - [RISE (2026)](papers/06-embodied-ai/vla/rl/RISE_2026.md) — 组合式世界模型 + 想象空间 RL

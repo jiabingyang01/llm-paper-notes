@@ -15,6 +15,14 @@
 | [π₀](vla/foundation/pi0_2024.md) | Flow Matching VLA、VLM 骨架 + Action Expert、跨构型预训练、预训练/后训练范式 | 2024 |
 | [π₀.₅](vla/foundation/pi05_2025.md) | 异构多源数据协同训练、分层推理（子任务预测 + 低层控制）、开放世界泛化 | 2025 |
 
+### 高效推理
+
+VLA 模型推理加速，包括 Token 缓存/剪枝、动态计算、量化等。
+
+| 论文 | 关键词 | 年份 |
+| --- | --- | --- |
+| [LAC](vla/efficient/LAC_2026.md) | 可学习自适应 Token 缓存、光流运动先验、Gumbel-Softmax 端到端优化、1.76× 加速 | 2026 |
+
 ### RL 后训练
 
 用强化学习微调或改进机器人策略，包括 VLA + RL 自改进、Flow/Diffusion Policy + RL 等。

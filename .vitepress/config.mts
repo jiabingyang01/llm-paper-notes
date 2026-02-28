@@ -120,6 +120,13 @@ export default defineConfig({
                       ],
                     },
                     {
+                      text: '高效推理',
+                      collapsed: false,
+                      items: [
+                        { text: 'LAC (2026)', link: '/papers/06-embodied-ai/vla/efficient/LAC_2026' },
+                      ],
+                    },
+                    {
                       text: 'RL 后训练',
                       collapsed: false,
                       items: [
