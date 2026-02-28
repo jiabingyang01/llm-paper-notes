@@ -125,6 +125,7 @@ export default defineConfig({
                       items: [
                         { text: 'LAC (2026)', link: '/papers/06-embodied-ai/vla/efficient/LAC_2026' },
                         { text: 'VLA-Cache (2025)', link: '/papers/06-embodied-ai/vla/efficient/VLA_Cache_2025' },
+                        { text: 'SD-VLA (2026)', link: '/papers/06-embodied-ai/vla/efficient/SD_VLA_2026' },
                       ],
                     },
                     {
