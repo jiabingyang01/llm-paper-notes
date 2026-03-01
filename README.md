@@ -105,6 +105,7 @@
 - [WoVR (2026)](papers/06-embodied-ai/vla/rl/WoVR_2026.md) — 幻觉感知世界模型 RL
 - [GR-RL (2025)](papers/06-embodied-ai/vla/rl/GR_RL_2025.md) — 多阶段流水线特化通才 VLA 为精密操作专家
 - [π₀.₆* (2025)](papers/06-embodied-ai/vla/rl/pi06star_2025.md) — RECAP 优势条件化离线 RL 训练 VLA
+- [RLVLA (2025)](papers/06-embodied-ai/vla/rl/RLVLA_2025.md) — 系统性实证：RL 在语义和执行维度显著提升 VLA 泛化
 
 </details>
 </blockquote>

@@ -42,3 +42,4 @@
 | [WoVR](/papers/06-embodied-ai/vla/rl/WoVR_2026) | 通过三级幻觉控制（稳定世界模型 + 关键帧初始化 Rollout + 策略-模型协同进化），在想象空间中可靠地 RL 后训练 VLA | 世界模型 RL、幻觉感知、KIR、PACE | 2026.02 |
 | [GR-RL](/papers/06-embodied-ai/vla/rl/GR_RL_2025) | 多阶段流水线（离线数据过滤 + 形态对称增强 + 隐空间在线 RL）将通才 VLA 特化为穿鞋带专家，83.3% 成功率 | 数据过滤、分布式 Critic、隐空间 RL、形态对称增强 | 2025.12 |
 | [π₀.₆*](/papers/06-embodied-ai/vla/rl/pi06star_2025) | 通过 RECAP（优势条件化离线 RL）整合自主 rollout、专家干预和演示数据，VLA 吞吐量翻倍、失败率减半 | 优势条件化、离线 RL、分布式价值函数、RECAP | 2025.11 |
+| [RLVLA](/papers/06-embodied-ai/vla/rl/RLVLA_2025) | 系统性实证研究 RL 对 VLA 泛化性的收益：PPO 优于 DPO/GRPO，RL 在语义和执行维度显著优于 SFT | PPO、泛化基准、共享 Actor-Critic、SFT vs RL | 2025.05 |
