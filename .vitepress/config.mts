@@ -144,6 +144,7 @@ export default defineConfig({
                         { text: 'RLVLA (2025)', link: '/papers/06-embodied-ai/vla/rl/RLVLA_2025' },
                         { text: 'SRPO (2025)', link: '/papers/06-embodied-ai/vla/rl/SRPO_2025' },
                         { text: 'TACO (2025)', link: '/papers/06-embodied-ai/vla/rl/TACO_2025' },
+                        { text: 'TGRPO (2025)', link: '/papers/06-embodied-ai/vla/rl/TGRPO_2025' },
                       ],
                     },
                   ],
