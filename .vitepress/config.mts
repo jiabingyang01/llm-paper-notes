@@ -142,6 +142,7 @@ export default defineConfig({
                         { text: 'GR-RL (2025)', link: '/papers/06-embodied-ai/vla/rl/GR_RL_2025' },
                         { text: 'π₀.₆* (2025)', link: '/papers/06-embodied-ai/vla/rl/pi06star_2025' },
                         { text: 'RLVLA (2025)', link: '/papers/06-embodied-ai/vla/rl/RLVLA_2025' },
+                        { text: 'SRPO (2025)', link: '/papers/06-embodied-ai/vla/rl/SRPO_2025' },
                       ],
                     },
                   ],
