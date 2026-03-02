@@ -38,6 +38,13 @@ VLA 模型推理加速，包括 Token 缓存/剪枝、动态计算、量化等�
 | [SAC Flow](vla/rl/SAC_Flow_2026.md) | Flow 策略 × 序列模型、GRU/Transformer 重参数化、off-policy RL | 2026 |
 | [VLA-RL](vla/rl/VLA_RL_2025.md) | 在线 PPO 微调自回归 VLA、Robotic Process Reward Model、多模态多轮对话建模 | 2025 |
 | [WoVR](vla/rl/WoVR_2026.md) | 幻觉感知世界模型 RL、关键帧初始化 Rollout、策略-模型协同进化（PACE） | 2026 |
+| [GR-RL](vla/rl/GR_RL_2025.md) | 数据过滤 + 形态对称增强 + 隐空间在线 RL，通才 VLA 特化为精密操作专家 | 2025 |
+| [π₀.₆*](vla/rl/pi06star_2025.md) | RECAP 优势条件化离线 RL、分布式价值函数、VLA 吞吐量翻倍 | 2025 |
+| [RLVLA](vla/rl/RLVLA_2025.md) | PPO 优于 DPO/GRPO、共享 Actor-Critic、RL 在语义和执行维度显著优于 SFT | 2025 |
+| [SRPO](vla/rl/SRPO_2025.md) | 自参照策略优化、世界模型隐空间 progress-wise 奖励、V-JEPA 2、GRPO 扩展 | 2025 |
+| [TACO](vla/rl/TACO_2025.md) | Test-Time Scaling、Anti-Exploration、轻量 CFN 伪计数器选择 in-support 动作 | 2025 |
+| [TGRPO](vla/rl/TGRPO_2025.md) | 无 Critic 在线 RL、LLM 自动生成多阶段稠密奖励、步级/轨迹级双层组相对优势 | 2025 |
+| [GRAPE](vla/rl/GRAPE_2025.md) | 轨迹级 DPO（TPO）、VLM 代价函数自动生成、多元对齐目标、plug-and-play | 2025 |
 
 ---
 
