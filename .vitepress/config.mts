@@ -146,6 +146,7 @@ export default defineConfig({
                         { text: 'TACO (2025)', link: '/papers/06-embodied-ai/vla/rl/TACO_2025' },
                         { text: 'TGRPO (2025)', link: '/papers/06-embodied-ai/vla/rl/TGRPO_2025' },
                         { text: 'GRAPE (2025)', link: '/papers/06-embodied-ai/vla/rl/GRAPE_2025' },
+                        { text: 'FPO++ (2026)', link: '/papers/06-embodied-ai/vla/rl/FPO_2026' },
                       ],
                     },
                   ],

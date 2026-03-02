@@ -45,6 +45,7 @@ VLA 模型推理加速，包括 Token 缓存/剪枝、动态计算、量化等�
 | [TACO](vla/rl/TACO_2025.md) | Test-Time Scaling、Anti-Exploration、轻量 CFN 伪计数器选择 in-support 动作 | 2025 |
 | [TGRPO](vla/rl/TGRPO_2025.md) | 无 Critic 在线 RL、LLM 自动生成多阶段稠密奖励、步级/轨迹级双层组相对优势 | 2025 |
 | [GRAPE](vla/rl/GRAPE_2025.md) | 轨迹级 DPO（TPO）、VLM 代价函数自动生成、多元对齐目标、plug-and-play | 2025 |
+| [FPO++](vla/rl/FPO_2026.md) | CFM 损失差值代理似然比、逐样本裁剪、非对称信任域 ASPO、sim-to-real | 2026 |
 
 ---
 
