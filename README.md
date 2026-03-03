@@ -104,12 +104,14 @@
 - [RLinf (2025)](papers/06-embodied-ai/vla/rl/RLinf_2025.md) — M2Flow 大规模 RL 训练系统
 - [RLinf-USER (2026)](papers/06-embodied-ai/vla/rl/RLinf_USER_2026.md) — 真实世界在线策略学习统一系统
 - [RLinf-VLA (2025)](papers/06-embodied-ai/vla/rl/RLinf_VLA_2025.md) — 统一高效的 VLA+RL 训练框架
+- [RL-VLA Survey (2025)](papers/06-embodied-ai/vla/rl/RL_VLA_Survey_2025.md) — 综述：RL 后训练 VLA 的架构、训练范式、部署与评测全景图
 - [RLVLA (2025)](papers/06-embodied-ai/vla/rl/RLVLA_2025.md) — 系统性实证：RL 在语义和执行维度显著提升 VLA 泛化
 - [SAC Flow (2026)](papers/06-embodied-ai/vla/rl/SAC_Flow_2026.md) — Flow Policy 序列建模 + off-policy RL
 - [SRPO (2025)](papers/06-embodied-ai/vla/rl/SRPO_2025.md) — 自参照策略优化：世界模型隐表征 progress-wise 奖励
 - [TACO (2025)](papers/06-embodied-ai/vla/rl/TACO_2025.md) — 反探索 test-time scaling：轻量伪计数器选择 in-support 动作
 - [TGRPO (2025)](papers/06-embodied-ai/vla/rl/TGRPO_2025.md) — 双层组相对策略优化：LLM 稠密奖励 + 步级/轨迹级优势融合
 - [VLA-RL (2025)](papers/06-embodied-ai/vla/rl/VLA_RL_2025.md) — 在线 PPO 微调自回归 VLA
+- [WMPO (2025)](papers/06-embodied-ai/vla/rl/WMPO_2025.md) — 隐空间世界模型 imagination RL 后训练 VLA
 - [WoVR (2026)](papers/06-embodied-ai/vla/rl/WoVR_2026.md) — 幻觉感知世界模型 RL
 
 </details>
