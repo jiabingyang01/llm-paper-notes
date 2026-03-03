@@ -47,6 +47,7 @@
 | [SRPO](/papers/06-embodied-ai/vla/rl/SRPO_2025) | 自参照策略优化：用模型自身成功轨迹 + 世界模型隐表征为失败轨迹提供 progress-wise 奖励，消除外部演示依赖 | 自参照、隐空间进度奖励、V-JEPA 2、GRPO 扩展 | 2025.11 |
 | [TACO](/papers/06-embodied-ai/vla/rl/TACO_2025) | 将 offline RL 反探索原则应用于 VLA 推理阶段，用轻量 CFN 伪计数器选择最 in-support 的动作，无需改参数即提升成功率 | Test-Time Scaling、Anti-Exploration、Pseudo-Count | 2025.12 |
 | [TGRPO](/papers/06-embodied-ai/vla/rl/TGRPO_2025) | 无 Critic 在线 RL 框架：LLM 自动生成多阶段稠密奖励 + 步级/轨迹级双层组相对优势融合微调 VLA | GRPO 扩展、双层优势、LLM 奖励设计 | 2025.06 |
+| [VLA-RFT](/papers/06-embodied-ai/vla/rl/VLA_RFT_2025) | 数据驱动视频世界模型充当模拟器，verified reward（MAE+LPIPS）+ GRPO 端到端微调 VLA，400 步超越 150K 步 SFT | 视频世界模型、Verified Reward、SDE-Policy、GRPO | 2025.10 |
 | [VLA-RL](/papers/06-embodied-ai/vla/rl/VLA_RL_2025) | 将机器人操作建模为多模态多轮对话，用 PPO 在线 RL 微调自回归 VLA，配合 Robotic PRM 解决稀疏奖励 | 在线 PPO、Robotic PRM、自回归 VLA + RL | 2025.05 |
 | [WMPO](/papers/06-embodied-ai/vla/rl/WMPO_2025) | 在隐空间世界模型中做 imagination rollout + PPO，无需在线交互即可 RL 后训练 VLA | 隐空间世界模型、Imagination RL、PPO、离线后训练 | 2025.12 |
 | [WoVR](/papers/06-embodied-ai/vla/rl/WoVR_2026) | 通过三级幻觉控制（稳定世界模型 + 关键帧初始化 Rollout + 策略-模型协同进化），在想象空间中可靠地 RL 后训练 VLA | 世界模型 RL、幻觉感知、KIR、PACE | 2026.02 |

@@ -110,6 +110,7 @@
 - [SRPO (2025)](papers/06-embodied-ai/vla/rl/SRPO_2025.md) — 自参照策略优化：世界模型隐表征 progress-wise 奖励
 - [TACO (2025)](papers/06-embodied-ai/vla/rl/TACO_2025.md) — 反探索 test-time scaling：轻量伪计数器选择 in-support 动作
 - [TGRPO (2025)](papers/06-embodied-ai/vla/rl/TGRPO_2025.md) — 双层组相对策略优化：LLM 稠密奖励 + 步级/轨迹级优势融合
+- [VLA-RFT (2025)](papers/06-embodied-ai/vla/rl/VLA_RFT_2025.md) — 视频世界模型 + Verified Reward + GRPO，400 步超越 SFT
 - [VLA-RL (2025)](papers/06-embodied-ai/vla/rl/VLA_RL_2025.md) — 在线 PPO 微调自回归 VLA
 - [WMPO (2025)](papers/06-embodied-ai/vla/rl/WMPO_2025.md) — 隐空间世界模型 imagination RL 后训练 VLA
 - [WoVR (2026)](papers/06-embodied-ai/vla/rl/WoVR_2026.md) — 幻觉感知世界模型 RL

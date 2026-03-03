@@ -146,6 +146,7 @@ export default defineConfig({
                         { text: 'SRPO (2025)', link: '/papers/06-embodied-ai/vla/rl/SRPO_2025' },
                         { text: 'TACO (2025)', link: '/papers/06-embodied-ai/vla/rl/TACO_2025' },
                         { text: 'TGRPO (2025)', link: '/papers/06-embodied-ai/vla/rl/TGRPO_2025' },
+                        { text: 'VLA-RFT (2025)', link: '/papers/06-embodied-ai/vla/rl/VLA_RFT_2025' },
                         { text: 'VLA-RL (2025)', link: '/papers/06-embodied-ai/vla/rl/VLA_RL_2025' },
                         { text: 'WMPO (2025)', link: '/papers/06-embodied-ai/vla/rl/WMPO_2025' },
                         { text: 'WoVR (2026)', link: '/papers/06-embodied-ai/vla/rl/WoVR_2026' },
