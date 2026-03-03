@@ -142,6 +142,7 @@ export default defineConfig({
                         { text: 'RLinf-VLA (2025)', link: '/papers/06-embodied-ai/vla/rl/RLinf_VLA_2025' },
                         { text: 'RL-VLA Survey (2025)', link: '/papers/06-embodied-ai/vla/rl/RL_VLA_Survey_2025' },
                         { text: 'RLVLA (2025)', link: '/papers/06-embodied-ai/vla/rl/RLVLA_2025' },
+                        { text: 'RPD (2025)', link: '/papers/06-embodied-ai/vla/rl/RPD_2025' },
                         { text: 'SAC Flow (2026)', link: '/papers/06-embodied-ai/vla/rl/SAC_Flow_2026' },
                         { text: 'SRPO (2025)', link: '/papers/06-embodied-ai/vla/rl/SRPO_2025' },
                         { text: 'TACO (2025)', link: '/papers/06-embodied-ai/vla/rl/TACO_2025' },

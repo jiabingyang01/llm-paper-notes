@@ -106,6 +106,7 @@
 - [RLinf-VLA (2025)](papers/06-embodied-ai/vla/rl/RLinf_VLA_2025.md) — 统一高效的 VLA+RL 训练框架
 - [RL-VLA Survey (2025)](papers/06-embodied-ai/vla/rl/RL_VLA_Survey_2025.md) — 综述：RL 后训练 VLA 的架构、训练范式、部署与评测全景图
 - [RLVLA (2025)](papers/06-embodied-ai/vla/rl/RLVLA_2025.md) — 系统性实证：RL 在语义和执行维度显著提升 VLA 泛化
+- [RPD (2025)](papers/06-embodied-ai/vla/rl/RPD_2025.md) — PPO + MSE 蒸馏将 VLA 通才知识提炼为紧凑 RL 专家
 - [SAC Flow (2026)](papers/06-embodied-ai/vla/rl/SAC_Flow_2026.md) — Flow Policy 序列建模 + off-policy RL
 - [SRPO (2025)](papers/06-embodied-ai/vla/rl/SRPO_2025.md) — 自参照策略优化：世界模型隐表征 progress-wise 奖励
 - [TACO (2025)](papers/06-embodied-ai/vla/rl/TACO_2025.md) — 反探索 test-time scaling：轻量伪计数器选择 in-support 动作
