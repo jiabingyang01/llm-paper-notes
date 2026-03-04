@@ -137,6 +137,7 @@ export default defineConfig({
                         { text: 'GRAPE (2025)', link: '/papers/06-embodied-ai/vla/rl/GRAPE_2025' },
                         { text: 'GR-RL (2025)', link: '/papers/06-embodied-ai/vla/rl/GR_RL_2025' },
                         { text: 'π₀.₆* (2025)', link: '/papers/06-embodied-ai/vla/rl/pi06star_2025' },
+                        { text: 'PLD (2026)', link: '/papers/06-embodied-ai/vla/rl/PLD_2026' },
                         { text: 'RISE (2026)', link: '/papers/06-embodied-ai/vla/rl/RISE_2026' },
                         { text: 'RLinf (2025)', link: '/papers/06-embodied-ai/vla/rl/RLinf_2025' },
                         { text: 'RLinf-USER (2026)', link: '/papers/06-embodied-ai/vla/rl/RLinf_USER_2026' },
