@@ -60,7 +60,9 @@
 | [TACO](/papers/06-embodied-ai/vla/rl/TACO_2025) | 将 offline RL 反探索原则应用于 VLA 推理阶段，用轻量 CFN 伪计数器选择最 in-support 的动作，无需改参数即提升成功率 | Test-Time Scaling、Anti-Exploration、Pseudo-Count | 2025.12 |
 | [TGRPO](/papers/06-embodied-ai/vla/rl/TGRPO_2025) | 无 Critic 在线 RL 框架：LLM 自动生成多阶段稠密奖励 + 步级/轨迹级双层组相对优势融合微调 VLA | GRPO 扩展、双层优势、LLM 奖励设计 | 2025.06 |
 | [VLA-RFT](/papers/06-embodied-ai/vla/rl/VLA_RFT_2025) | 数据驱动视频世界模型充当模拟器，verified reward（MAE+LPIPS）+ GRPO 端到端微调 VLA，400 步超越 150K 步 SFT | 视频世界模型、Verified Reward、SDE-Policy、GRPO | 2025.10 |
+| [VLAC](/papers/06-embodied-ai/vla/rl/VLAC_2025) | 基于 InternVL 构建统一 Actor-Critic 模型，pairwise progress delta 提供通用稠密奖励，配合异步真实世界 RL 和分级人机协作，200 episode 内成功率 30%→90% | 统一 Actor-Critic、Pairwise Progress、真实世界 RL、Human-in-the-Loop | 2025.09 |
 | [VLA-RL](/papers/06-embodied-ai/vla/rl/VLA_RL_2025) | 将机器人操作建模为多模态多轮对话，用 PPO 在线 RL 微调自回归 VLA，配合 Robotic PRM 解决稀疏奖励 | 在线 PPO、Robotic PRM、自回归 VLA + RL | 2025.05 |
 | [SC-VLA](/papers/06-embodied-ai/vla/rl/SC_VLA_2026) | 稀疏世界想象（预测进度 + 状态增量）+ 残差 SAC 在线修正，内生密集奖励无需外部奖励模型 | 稀疏世界想象、残差 RL、内生奖励、Flow Matching | 2026.02 |
 | [WMPO](/papers/06-embodied-ai/vla/rl/WMPO_2025) | 在隐空间世界模型中做 imagination rollout + PPO，无需在线交互即可 RL 后训练 VLA | 隐空间世界模型、Imagination RL、PPO、离线后训练 | 2025.12 |
+| [TwinRL](/papers/06-embodied-ai/vla/rl/TwinRL_2026) | 用高保真数字孪生作为探索放大器和引导器，三阶段流程（探索空间扩展 + 孪生在线 RL + sim-to-real 引导）四任务平均 20 分钟逼近 100% 成功率 | 数字孪生、探索空间扩展、Sim-to-Real 引导、HiL | 2026.02 |
 | [WoVR](/papers/06-embodied-ai/vla/rl/WoVR_2026) | 通过三级幻觉控制（稳定世界模型 + 关键帧初始化 Rollout + 策略-模型协同进化），在想象空间中可靠地 RL 后训练 VLA | 世界模型 RL、幻觉感知、KIR、PACE | 2026.02 |

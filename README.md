@@ -115,9 +115,11 @@
 - [TACO (2025)](papers/06-embodied-ai/vla/rl/TACO_2025.md) — 反探索 test-time scaling：轻量伪计数器选择 in-support 动作
 - [TGRPO (2025)](papers/06-embodied-ai/vla/rl/TGRPO_2025.md) — 双层组相对策略优化：LLM 稠密奖励 + 步级/轨迹级优势融合
 - [VLA-RFT (2025)](papers/06-embodied-ai/vla/rl/VLA_RFT_2025.md) — 视频世界模型 + Verified Reward + GRPO，400 步超越 SFT
+- [VLAC (2025)](papers/06-embodied-ai/vla/rl/VLAC_2025.md) — 统一 Actor-Critic + pairwise progress 稠密奖励，真实世界 RL 自改进
 - [VLA-RL (2025)](papers/06-embodied-ai/vla/rl/VLA_RL_2025.md) — 在线 PPO 微调自回归 VLA
 - [SC-VLA (2026)](papers/06-embodied-ai/vla/rl/SC_VLA_2026.md) — 稀疏世界想象 + 残差 RL 在线修正，内生奖励自改进
 - [WMPO (2025)](papers/06-embodied-ai/vla/rl/WMPO_2025.md) — 隐空间世界模型 imagination RL 后训练 VLA
+- [TwinRL (2026)](papers/06-embodied-ai/vla/rl/TwinRL_2026.md) — 数字孪生驱动的真实世界机器人 RL
 - [WoVR (2026)](papers/06-embodied-ai/vla/rl/WoVR_2026.md) — 幻觉感知世界模型 RL
 
 </details>
