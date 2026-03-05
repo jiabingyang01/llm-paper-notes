@@ -42,6 +42,7 @@
 
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
+| [ConRFT](/papers/06-embodied-ai/vla/rl/ConRFT_2025) | 一致性策略统一离线 BC+Q-learning 与在线 HIL RL，8 个真实任务 45–90 分钟达 96.3%，比 SFT 提升 144% | 一致性策略、Cal-QL、离线-在线统一目标、HIL | 2025.02 |
 | [DiffRL Data](/papers/06-embodied-ai/vla/rl/DiffRL_Data_2025) | 轻量扩散策略 + PPO 生成高质量低方差轨迹训练 VLA，纯合成数据超越人类演示 +5.3% | 扩散 RL、数据生成、BC Warm-Start、LIBERO-130 | 2025.09 |
 | [FPO++](/papers/06-embodied-ai/vla/rl/FPO_2026) | 用 CFM 损失差值近似似然比绕开 flow 策略密度计算，逐样本裁剪 + 非对称信任域实现稳定 on-policy RL 训练 | Flow Policy Gradient、CFM 代理似然比、ASPO、sim-to-real | 2026.02 |
 | [GRAPE](/papers/06-embodied-ai/vla/rl/GRAPE_2025) | 轨迹级偏好优化（TPO）+ VLM 自动生成代价函数，plug-and-play 提升 VLA 泛化性并支持多元对齐目标 | 轨迹级 DPO、VLM 代价函数、多元对齐、偏好合成 | 2024.11 |

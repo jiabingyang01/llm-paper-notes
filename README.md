@@ -97,6 +97,7 @@
 <details open>
 <summary>RL 后训练</summary>
 
+- [ConRFT (2025)](papers/06-embodied-ai/vla/rl/ConRFT_2025.md) — 一致性策略统一离线-在线 RL 微调 VLA，真实世界 96.3% 成功率
 - [DiffRL Data (2025)](papers/06-embodied-ai/vla/rl/DiffRL_Data_2025.md) — 扩散 RL 生成高质量低方差轨迹，纯合成数据训练 VLA 超越人类演示
 - [FPO++ (2026)](papers/06-embodied-ai/vla/rl/FPO_2026.md) — CFM 损失差值近似似然比 + 非对称信任域，flow 策略 on-policy RL
 - [GRAPE (2025)](papers/06-embodied-ai/vla/rl/GRAPE_2025.md) — 轨迹级偏好优化 + VLM 代价函数，plug-and-play 提升 VLA 泛化
