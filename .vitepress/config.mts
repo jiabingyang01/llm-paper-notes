@@ -133,6 +133,7 @@ export default defineConfig({
                       text: 'RL 后训练',
                       collapsed: false,
                       items: [
+                        { text: 'DiffRL Data (2025)', link: '/papers/06-embodied-ai/vla/rl/DiffRL_Data_2025' },
                         { text: 'FPO++ (2026)', link: '/papers/06-embodied-ai/vla/rl/FPO_2026' },
                         { text: 'GRAPE (2025)', link: '/papers/06-embodied-ai/vla/rl/GRAPE_2025' },
                         { text: 'GR-RL (2025)', link: '/papers/06-embodied-ai/vla/rl/GR_RL_2025' },
