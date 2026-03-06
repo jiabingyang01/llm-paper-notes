@@ -175,6 +175,7 @@ export default defineConfig({
                         { text: 'VLA-RFT (2025)', link: '/papers/06-embodied-ai/vla/rl/VLA_RFT_2025' },
                         { text: 'VLA-RL (2025)', link: '/papers/06-embodied-ai/vla/rl/VLA_RL_2025' },
                         { text: 'WMPO (2025)', link: '/papers/06-embodied-ai/vla/rl/WMPO_2025' },
+                        { text: 'World-VLA-Loop (2026)', link: '/papers/06-embodied-ai/vla/rl/World_VLA_Loop_2026' },
                         { text: 'WoVR (2026)', link: '/papers/06-embodied-ai/vla/rl/WoVR_2026' },
                       ],
                     },

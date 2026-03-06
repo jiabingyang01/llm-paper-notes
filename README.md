@@ -139,6 +139,7 @@
 - [VLA-RFT (2025)](papers/06-embodied-ai/vla/rl/VLA_RFT_2025.md) — 视频世界模型 + Verified Reward + GRPO，400 步超越 SFT
 - [VLA-RL (2025)](papers/06-embodied-ai/vla/rl/VLA_RL_2025.md) — 在线 PPO 微调自回归 VLA
 - [WMPO (2025)](papers/06-embodied-ai/vla/rl/WMPO_2025.md) — 隐空间世界模型 imagination RL 后训练 VLA
+- [World-VLA-Loop (2026)](papers/06-embodied-ai/vla/rl/World_VLA_Loop_2026.md) — 视频世界模型与 VLA 策略闭环联合优化，SANS 近成功数据 + 迭代 RL
 - [WoVR (2026)](papers/06-embodied-ai/vla/rl/WoVR_2026.md) — 幻觉感知世界模型 RL
 
 </details>
