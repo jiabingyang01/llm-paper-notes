@@ -86,18 +86,18 @@ SENTINEL 使用两个开放词汇检测器进行交叉验证：
 
 SENTINEL 包含三个核心模块，流程如下：
 
-```
-输入：图像 v, 提示 q, 上下文 c (初始为空)
-输出：偏好训练数据 (v, q, c, y⁺_w, y_l)
+> **输入**：图像 $v$，提示 $q$，上下文 $c$（初始为空）
+>
+> **输出**：偏好训练数据 $(v, q, c, \boldsymbol{y}_w^+, \boldsymbol{y}_l)$
 
-while 模型未生成 </s>:
-  ① 域内候选采样：在 (v, q, c) 条件下采样 n 个候选句子
-  ② 对象提取：SceneGraphParser 解析三元组 → 提取名词实体
-  ③ 对象存在验证：GroundingDINO + YOLO World 交叉验证
-  ④ 偏好数据构造：非幻觉句子 → y⁺_w，幻觉句子 → y_l
-  ⑤ 迭代上下文自举：将 y⁺_w 追加到 c 中，继续下一轮
-  ⑥ 用 C-DPO 训练模型
-```
+**while** 模型未生成 $\langle\text{/s}\rangle$：
+
+1. **域内候选采样**：在 $(v, q, c)$ 条件下采样 $n$ 个候选句子
+2. **对象提取**：SceneGraphParser 解析三元组 → 提取名词实体
+3. **对象存在验证**：GroundingDINO + YOLO World 交叉验证
+4. **偏好数据构造**：非幻觉句子 → $\boldsymbol{y}_w^+$，幻觉句子 → $\boldsymbol{y}_l$
+5. **迭代上下文自举**：将 $\boldsymbol{y}_w^+$ 追加到 $c$ 中，继续下一轮
+6. 用 **C-DPO** 训练模型
 
 ### 3.1 域内候选自举（In-domain Candidate Bootstrapping）
 
@@ -156,14 +156,15 @@ while 模型未生成 </s>:
 
 这是 SENTINEL 的关键设计之一。给定当前上下文 $c_i$，生成偏好数据对后，将非幻觉正样本 $\boldsymbol{y}_w^+$ 追加到上下文中，构造新上下文 $c_{i+1} = c_i + \boldsymbol{y}_w^+$，然后基于新上下文继续采样和构造偏好数据。
 
-```
-c₀ = "" (空上下文)
-→ 采样 → 构造偏好对 (v, q, c₀, y⁺_w, y_l) → 追加到数据集
-c₁ = c₀ + y⁺_w
-→ 采样 → 构造偏好对 (v, q, c₁, y⁺_w, y_l) → 追加到数据集
-c₂ = c₁ + y⁺_w
-→ ...（直到模型生成 </s>）
-```
+$$c_0 = \text{""（空上下文）}$$
+
+$$\xrightarrow{\text{采样}} \text{构造偏好对 } (v, q, c_0, \boldsymbol{y}_w^+, \boldsymbol{y}_l) \xrightarrow{\text{追加到数据集}}$$
+
+$$c_1 = c_0 + \boldsymbol{y}_w^+$$
+
+$$\xrightarrow{\text{采样}} \text{构造偏好对 } (v, q, c_1, \boldsymbol{y}_w^+, \boldsymbol{y}_l) \xrightarrow{\text{追加到数据集}}$$
+
+$$c_2 = c_1 + \boldsymbol{y}_w^+ \quad \rightarrow \quad \cdots \text{（直到模型生成 } \langle\text{/s}\rangle \text{）}$$
 
 **ICB 的作用**：确保偏好数据覆盖**不同长度的上下文**，使模型在各种生成阶段都能区分幻觉与非幻觉内容，增强鲁棒性。
 
