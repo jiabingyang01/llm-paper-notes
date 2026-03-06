@@ -1,11 +1,17 @@
 # SENTINEL：句子级早期干预缓解 MLLM 对象幻觉
 
 > **论文**：*Mitigating Object Hallucinations via Sentence-Level Early Intervention*
+>
 > **作者**：Shangpin Peng, Senqiao Yang, Li Jiang, Zhuotao Tian
+>
 > **机构**：Harbin Institute of Technology (Shenzhen), The Chinese University of Hong Kong, CUHK (Shenzhen)
+>
 > **发布时间**：2025年7月
+>
 > **论文链接**：[arXiv](https://arxiv.org/abs/2507.12455) | [GitHub](https://github.com/pspdada/SENTINEL)
+>
 > **发表会议**：ICCV 2025
+>
 > **分类标签**：`MLLM` `Object Hallucination` `Preference Learning` `DPO` `In-domain Data`
 
 ---
