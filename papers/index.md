@@ -52,6 +52,7 @@
 | [ConRFT](/papers/06-embodied-ai/vla/rl/ConRFT_2025) | 一致性策略统一离线 BC+Q-learning 与在线 HIL RL，8 个真实任务 45–90 分钟达 96.3%，比 SFT 提升 144% | 一致性策略、Cal-QL、离线-在线统一目标、HIL | 2025.02 |
 | [DiffRL Data](/papers/06-embodied-ai/vla/rl/DiffRL_Data_2025) | 轻量扩散策略 + PPO 生成高质量低方差轨迹训练 VLA，纯合成数据超越人类演示 +5.3% | 扩散 RL、数据生成、BC Warm-Start、LIBERO-130 | 2025.09 |
 | [FPO++](/papers/06-embodied-ai/vla/rl/FPO_2026) | 用 CFM 损失差值近似似然比绕开 flow 策略密度计算，逐样本裁剪 + 非对称信任域实现稳定 on-policy RL 训练 | Flow Policy Gradient、CFM 代理似然比、ASPO、sim-to-real | 2026.02 |
+| [GigaBrain-0.5M*](/papers/06-embodied-ai/vla/rl/GigaBrain_2026) | 用视频世界模型联合预测未来状态+价值条件化 VLA 策略（RAMP），理论证明 RECAP 是其退化特例，比 RECAP 提升约 30% | 世界模型 RL、RAMP、优势条件化、未来状态条件化 | 2026.02 |
 | [GRAPE](/papers/06-embodied-ai/vla/rl/GRAPE_2025) | 轨迹级偏好优化（TPO）+ VLM 自动生成代价函数，plug-and-play 提升 VLA 泛化性并支持多元对齐目标 | 轨迹级 DPO、VLM 代价函数、多元对齐、偏好合成 | 2024.11 |
 | [GR-RL](/papers/06-embodied-ai/vla/rl/GR_RL_2025) | 多阶段流水线（离线数据过滤 + 形态对称增强 + 隐空间在线 RL）将通才 VLA 特化为穿鞋带专家，83.3% 成功率 | 数据过滤、分布式 Critic、隐空间 RL、形态对称增强 | 2025.12 |
 | [π₀.₆*](/papers/06-embodied-ai/vla/rl/pi06star_2025) | 通过 RECAP（优势条件化离线 RL）整合自主 rollout、专家干预和演示数据，VLA 吞吐量翻倍、失败率减半 | 优势条件化、离线 RL、分布式价值函数、RECAP | 2025.11 |
