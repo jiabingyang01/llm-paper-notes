@@ -1,8 +1,11 @@
 # SAC Flow：基于速度重参数化序列建模的 Flow 策略高效强化学习——原理详解
 
 > 论文：*SAC Flow: Sample-Efficient Reinforcement Learning of Flow-Based Policies via Velocity-Reparameterized Sequential Modeling*
+>
 > 机构：清华大学、Carnegie Mellon University、理想汽车、上海 AI Lab
+>
 > 发布时间：2026年1月
+>
 > 🔗 [arXiv](https://arxiv.org/abs/2509.25756) | [PDF](https://arxiv.org/pdf/2509.25756) | [代码](https://github.com/Elessar123/SAC-FLOW)
 
 ---

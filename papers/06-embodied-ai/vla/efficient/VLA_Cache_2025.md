@@ -1,9 +1,14 @@
 # VLA-Cache：通过自适应 Token 缓存加速 VLA 操控——原理详解
 
 > 论文：*VLA-Cache: Efficient Vision-Language-Action Manipulation via Adaptive Token Caching*
+>
 > 机构：University of Sydney、Shanghai Jiao Tong University
-> 发布时间：2025年2月（NeurIPS 2025）
+>
+> 发布时间：2025年2月
+>
 > 🔗 [arXiv](https://arxiv.org/abs/2502.02175) | [Project](https://vla-cache.github.io)
+>
+> **发表会议**：NeurIPS 2025
 
 ---
 

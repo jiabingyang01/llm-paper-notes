@@ -1,9 +1,13 @@
 # VLA-RFT：世界模型驱动的 Verified Reward 强化微调——原理详解
 
 > 论文：*VLA-RFT: Vision-Language-Action Reinforcement Fine-Tuning with Verified Rewards in World Simulators*
+>
 > 机构：Westlake University、Zhejiang University、OpenHelix Team、Fudan University 等
+>
 > 作者：Hengtao Li、Pengxiang Ding、Runze Suo、Yihao Wang、Zirui Ge 等
+>
 > 发布时间：2025年10月
+>
 > [arXiv](https://arxiv.org/abs/2510.00406)
 
 ---

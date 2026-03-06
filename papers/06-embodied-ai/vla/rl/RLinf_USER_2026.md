@@ -1,9 +1,13 @@
 # RLinf-USER：面向真实世界在线策略学习的统一可扩展系统——原理详解
 
 > 论文：*RLinf-USER: A Unified and Extensible System for Real-World Online Policy Learning in Embodied AI*
+>
 > 机构：清华大学、Infinigence AI、北京理工大学、浙江大学、中关村科学院、上海人工智能实验室
+>
 > 发布时间：2026年2月
+>
 > 🔗 [arXiv](https://arxiv.org/abs/2602.07837) | [代码](https://github.com/RLinf/RLinf)
+>
 > **分类标签**：`真实世界 RL` `机器人学习系统` `云-边协同` `异步训练` `VLA`
 
 ---

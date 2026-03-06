@@ -1,8 +1,11 @@
 # GRAPE：通过偏好对齐提升 VLA 策略泛化性——原理详解
 
 > 论文：*GRAPE: Generalizing Robot Policy via Preference Alignment*
+>
 > 机构：UNC-Chapel Hill、University of Washington、University of Chicago
+>
 > 发布时间：2024年11月（arXiv v1），2025年2月更新（v2）
+>
 > 🔗 [arXiv](https://arxiv.org/abs/2411.19309) | [PDF](https://arxiv.org/pdf/2411.19309) | [项目主页](https://grape-vla.github.io/) | [代码](https://github.com/aiming-lab/GRAPE)
 
 ---

@@ -1,10 +1,15 @@
 # ConRFT：基于一致性策略的 VLA 模型强化微调
 
 > 论文：*ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy*
+>
 > 作者：Yuhui Chen, Shuai Tian, Shugao Liu, Yingting Zhou, Haoran Li, Dongbin Zhao
+>
 > 机构：中国科学院自动化研究所（CASIA）、中国科学院大学
+>
 > 会议：RSS 2025（Robotics: Science and Systems）
+>
 > 发布时间：2025.02
+>
 > :link: [arXiv](https://arxiv.org/abs/2502.05450) | [项目页面](https://cccedric.github.io/conrft/)
 
 ---

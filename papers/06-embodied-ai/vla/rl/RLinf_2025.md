@@ -1,8 +1,11 @@
 # RLinf：通过宏-微流变换实现灵活高效的大规模 RL 训练——原理详解
 
 > 论文：*RLinf: Flexible and Efficient Large-scale Reinforcement Learning via Macro-to-Micro Flow Transformation*
+>
 > 机构：清华大学、中关村科学院、Infinigence AI、北京大学、UC Berkeley、北航、上海交通大学
+>
 > 发布时间：2025年9月
+>
 > 🔗 [arXiv](https://arxiv.org/abs/2509.15965) | [PDF](https://arxiv.org/pdf/2509.15965) | [代码](https://github.com/RLinf/RLinf)
 
 ---

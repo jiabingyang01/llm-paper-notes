@@ -1,8 +1,11 @@
 # RLinf-VLA：统一高效的 VLA+RL 训练框架——原理详解
 
 > 论文：*RLinf-VLA: A Unified and Efficient Framework for VLA+RL Training*
+>
 > 机构：清华大学、中关村科学院、Infinigence AI、北京大学、UC Berkeley、哈工大、中科院自动化所
+>
 > 发布时间：2025年10月
+>
 > 🔗 [arXiv](https://arxiv.org/abs/2510.06710) | [PDF](https://arxiv.org/pdf/2510.06710) | [代码](https://github.com/RLinf/RLinf) | [模型](https://huggingface.co/RLinf)
 
 ---

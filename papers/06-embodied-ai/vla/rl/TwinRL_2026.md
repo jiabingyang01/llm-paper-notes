@@ -1,8 +1,11 @@
 # TwinRL-VLA：数字孪生驱动的真实世界机器人 RL——原理详解
 
 > 论文：*TwinRL-VLA: Digital Twin-Driven Reinforcement Learning for Real-World Robotic Manipulation*
+>
 > 机构：北京大学、Simplexity Robotics、清华大学、香港科技大学
+>
 > 发布时间：2026年2月
+>
 > [arXiv](https://arxiv.org/abs/2602.09023) | [项目主页](https://sites.google.com/view/twinrl/twinrl)
 
 ---

@@ -1,8 +1,11 @@
 # VLA-RL：用可扩展的在线强化学习提升自回归 VLA——原理详解
 
 > 论文：*VLA-RL: Towards Masterful and General Robotic Manipulation with Scalable Reinforcement Learning*
+>
 > 机构：清华大学深圳国际研究生院、南洋理工大学
+>
 > 发布时间：2025年5月
+>
 > 🔗 [arXiv](https://arxiv.org/abs/2505.18719) | [PDF](https://arxiv.org/pdf/2505.18719) | [代码](https://github.com/GuanxingLu/vlarl)
 
 ---

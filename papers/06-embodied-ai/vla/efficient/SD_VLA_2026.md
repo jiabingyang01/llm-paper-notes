@@ -1,8 +1,11 @@
 # SD-VLA：通过静态-动态解耦实现高效长时程 VLA 模型——原理详解
 
 > 论文：*Efficient Long-Horizon Vision-Language-Action Models via Static-Dynamic Disentanglement*
+>
 > 机构：Yale University
+>
 > 发布时间：2026年2月
+>
 > 🔗 [arXiv](https://arxiv.org/abs/2602.03983) | [PDF](https://arxiv.org/pdf/2602.03983)
 
 ---

@@ -1,9 +1,13 @@
 # RL-VLA 综述：VLA 模型的强化学习后训练全景图
 
 > 论文：*A Survey on Reinforcement Learning of Vision-Language-Action Models for Robotic Manipulation*
+>
 > 机构：NTU、BUPT、清华大学
+>
 > 作者：Haoyuan Deng*, Zhenyu Wu*, Haichao Liu* 等
+>
 > 发布时间：2025年12月
+>
 > [TechRxiv](https://doi.org/10.36227/techrxiv.176531955.54563920/v1)
 
 ---

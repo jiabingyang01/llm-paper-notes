@@ -1,8 +1,11 @@
 # What Can RL Bring to VLA Generalization?——VLA 泛化性的系统性实证研究
 
 > 论文：*What Can RL Bring to VLA Generalization? An Empirical Study*
+>
 > 机构：清华大学、上海期智研究院、中关村学院
+>
 > 发布时间：2025年5月（NeurIPS 2025）
+>
 > 🔗 [arXiv](https://arxiv.org/abs/2505.19789) | [项目主页](https://rlvla.github.io)
 
 ---

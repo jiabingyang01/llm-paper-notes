@@ -1,8 +1,11 @@
 # SC-VLA：通过稀疏世界想象实现在线动作纠正的自修正 VLA 框架——原理详解
 
 > 论文：*Self-Correcting VLA: Online Action Refinement via Sparse World Imagination*
+>
 > 机构：同济大学、悉尼科技大学、电子科技大学、大数据高等研究院
+>
 > 发布时间：2026年2月
+>
 > [arXiv](https://arxiv.org/abs/2602.21633) | [代码](https://github.com/Kisaragi0/SC-VLA)
 
 ---

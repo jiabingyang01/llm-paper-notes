@@ -1,10 +1,15 @@
 # Beyond Human Demonstrations——扩散 RL 生成高质量数据训练 VLA
 
 > 论文：*Beyond Human Demonstrations: Diffusion-Based Reinforcement Learning to Generate Data for VLA Training*
+>
 > 作者：Rushuai Yang*, Hangxing Wei*, Ran Zhang* 等
+>
 > 机构：HKUST、Microsoft Research Asia、Wuhan University、UCAS、Tsinghua、CSU
+>
 > 发布时间：2025 年 9 月（arXiv: 2509.19752v2）
+>
 > 🔗 [arXiv](https://arxiv.org/abs/2509.19752)
+>
 > 分类标签：`Diffusion RL` `数据生成` `VLA 训练` `PPO` `LIBERO`
 
 ---

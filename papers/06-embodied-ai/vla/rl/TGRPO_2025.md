@@ -1,8 +1,11 @@
 # TGRPO——轨迹级组相对策略优化微调 VLA
 
 > 论文：*TGRPO: Fine-tuning Vision-Language-Action Model via Trajectory-wise Group Relative Policy Optimization*
+>
 > 机构：吉林大学人工智能学院
+>
 > 发布时间：2025年6月（arXiv:2506.08440v3）
+>
 > 🔗 [arXiv](https://arxiv.org/abs/2506.08440)
 
 ---
