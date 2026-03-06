@@ -68,6 +68,7 @@
 | [RPD](/papers/06-embodied-ai/vla/rl/RPD_2025) | PPO + MSE 蒸馏项将 VLA 通才知识蒸馏为紧凑 RL 专家策略，稀疏奖励和视角变化下大幅优于 vanilla PPO | Policy Distillation、PPO + BC、VLA→RL 专家、ManiSkill3 | 2025.03 |
 | [SAC Flow](/papers/06-embodied-ai/vla/rl/SAC_Flow_2026) | 把 Flow Policy 重新理解为序列模型，用 GRU/Transformer 重参数化解决 RL 梯度不稳定问题 | Flow Policy、序列建模、SAC、off-policy RL | 2026.01 |
 | [SC-VLA](/papers/06-embodied-ai/vla/rl/SC_VLA_2026) | 稀疏世界想象（预测进度 + 状态增量）+ 残差 SAC 在线修正，内生密集奖励无需外部奖励模型 | 稀疏世界想象、残差 RL、内生奖励、Flow Matching | 2026.02 |
+| [SimpleVLA-RL](/papers/06-embodied-ai/vla/rl/SimpleVLA_RL_2025) | 基于 veRL 的端到端在线 RL 框架：二元结果奖励 + GRPO + 三种探索增强，LIBERO 达 99.1%，1 条演示 RL 超越全量 SFT，发现 pushcut 涌现行为 | 在线 GRPO、Dynamic Sampling、探索增强、pushcut | 2025.05 |
 | [SRPO](/papers/06-embodied-ai/vla/rl/SRPO_2025) | 自参照策略优化：用模型自身成功轨迹 + 世界模型隐表征为失败轨迹提供 progress-wise 奖励，消除外部演示依赖 | 自参照、隐空间进度奖励、V-JEPA 2、GRPO 扩展 | 2025.11 |
 | [TACO](/papers/06-embodied-ai/vla/rl/TACO_2025) | 将 offline RL 反探索原则应用于 VLA 推理阶段，用轻量 CFN 伪计数器选择最 in-support 的动作，无需改参数即提升成功率 | Test-Time Scaling、Anti-Exploration、Pseudo-Count | 2025.12 |
 | [TGRPO](/papers/06-embodied-ai/vla/rl/TGRPO_2025) | 无 Critic 在线 RL 框架：LLM 自动生成多阶段稠密奖励 + 步级/轨迹级双层组相对优势融合微调 VLA | GRPO 扩展、双层优势、LLM 奖励设计 | 2025.06 |
