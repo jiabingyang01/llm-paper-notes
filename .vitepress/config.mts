@@ -104,6 +104,7 @@ export default defineConfig({
                       collapsed: false,
                       items: [
                         { text: 'HIME (2026)', link: '/papers/04-multimodal/vlm/hallucination/HIME_2026' },
+                        { text: 'SENTINEL (2025)', link: '/papers/04-multimodal/vlm/hallucination/SENTINEL_2025' },
                       ],
                     },
                   ],

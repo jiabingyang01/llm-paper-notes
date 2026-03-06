@@ -27,6 +27,7 @@
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
 | [HIME](/papers/04-multimodal/vlm/hallucination/HIME_2026) | 提出 HIS 量化每层幻觉敏感度，层自适应加权投影编辑 MLP 权重，无训练/无额外参数/无推理开销平均降低 61.8% 对象幻觉 | HIS、层自适应模型编辑、零空间投影、Training-Free | 2026.02 |
+| [SENTINEL](/papers/04-multimodal/vlm/hallucination/SENTINEL_2025) | 域内自举采样 + 检测器交叉验证构建句子级偏好数据，C-DPO 在幻觉首次出现处早期干预，Object HalBench 幻觉率降低 92% 且通用能力不降反升 | 句子级早期干预、域内偏好学习、C-DPO、交叉验证 | 2025.07 |
 
 ### 🦾 Embodied AI — VLA 基础模型
 

@@ -62,6 +62,7 @@
 <summary>幻觉缓解</summary>
 
 - [HIME (2026)](papers/04-multimodal/vlm/hallucination/HIME_2026.md) — HIS 层自适应加权投影编辑，无训练/无开销降低 61.8% 对象幻觉
+- [SENTINEL (2025)](papers/04-multimodal/vlm/hallucination/SENTINEL_2025.md) — 域内自举 + 句子级 C-DPO 早期干预，幻觉率降低 92% 且通用能力不降反升
 
 </details>
 </blockquote>
