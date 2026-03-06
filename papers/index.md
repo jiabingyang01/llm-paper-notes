@@ -22,6 +22,12 @@
 
 ## 全部论文
 
+### 🖼️ Multimodal — VLM 幻觉缓解
+
+| 论文 | 一句话概括 | 关键词 | 时间 |
+| --- | --- | --- | --- |
+| [HIME](/papers/04-multimodal/vlm/hallucination/HIME_2026) | 提出 HIS 量化每层幻觉敏感度，层自适应加权投影编辑 MLP 权重，无训练/无额外参数/无推理开销平均降低 61.8% 对象幻觉 | HIS、层自适应模型编辑、零空间投影、Training-Free | 2026.02 |
+
 ### 🦾 Embodied AI — VLA 基础模型
 
 | 论文 | 一句话概括 | 关键词 | 时间 |

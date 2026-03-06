@@ -50,10 +50,24 @@
 
 </details>
 
-<details>
+<details open>
 <summary>🖼️ Multimodal</summary>
 
-> 暂无笔记
+<blockquote>
+<details open>
+<summary>VLM</summary>
+
+<blockquote>
+<details open>
+<summary>幻觉缓解</summary>
+
+- [HIME (2026)](papers/04-multimodal/vlm/hallucination/HIME_2026.md) — HIS 层自适应加权投影编辑，无训练/无开销降低 61.8% 对象幻觉
+
+</details>
+</blockquote>
+
+</details>
+</blockquote>
 
 </details>
 

@@ -92,9 +92,23 @@ export default defineConfig({
             },
             {
               text: '04 Multimodal',
-              collapsed: true,
+              collapsed: false,
               link: '/papers/04-multimodal/',
-              items: [],
+              items: [
+                {
+                  text: 'VLM',
+                  collapsed: false,
+                  items: [
+                    {
+                      text: '幻觉缓解',
+                      collapsed: false,
+                      items: [
+                        { text: 'HIME (2026)', link: '/papers/04-multimodal/vlm/hallucination/HIME_2026' },
+                      ],
+                    },
+                  ],
+                },
+              ],
             },
             {
               text: '05 Agents',
