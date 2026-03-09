@@ -156,6 +156,7 @@ export default defineConfig({
                         { text: 'GR-RL (2025)', link: '/papers/06-embodied-ai/vla/rl/GR_RL_2025' },
                         { text: 'MoRE (2025)', link: '/papers/06-embodied-ai/vla/rl/MoRE_2025' },
                         { text: 'π₀.₆* (2025)', link: '/papers/06-embodied-ai/vla/rl/pi06star_2025' },
+                        { text: 'π-StepNFT (2026)', link: '/papers/06-embodied-ai/vla/rl/pi_StepNFT_2026' },
                         { text: 'PLD (2026)', link: '/papers/06-embodied-ai/vla/rl/PLD_2026' },
                         { text: 'RISE (2026)', link: '/papers/06-embodied-ai/vla/rl/RISE_2026' },
                         { text: 'RL-Co (2026)', link: '/papers/06-embodied-ai/vla/rl/RL_Co_2026' },

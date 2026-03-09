@@ -57,6 +57,7 @@
 | [GR-RL](/papers/06-embodied-ai/vla/rl/GR_RL_2025) | 多阶段流水线（离线数据过滤 + 形态对称增强 + 隐空间在线 RL）将通才 VLA 特化为穿鞋带专家，83.3% 成功率 | 数据过滤、分布式 Critic、隐空间 RL、形态对称增强 | 2025.12 |
 | [MoRE](/papers/06-embodied-ai/vla/rl/MoRE_2025) | Fuyu 8B 上构建 Mixture of LoRA Experts + 自回归 Q-learning 离线 RL，从混合质量数据学习，四足 6 任务平均成功率 44%→60% | MoE-LoRA、自回归 Q-learning、混合质量数据、四足 VLA | 2025.03 |
 | [π₀.₆*](/papers/06-embodied-ai/vla/rl/pi06star_2025) | 通过 RECAP（优势条件化离线 RL）整合自主 rollout、专家干预和演示数据，VLA 吞吐量翻倍、失败率减半 | 优势条件化、离线 RL、分布式价值函数、RECAP | 2025.11 |
+| [π-StepNFT](/papers/06-embodied-ai/vla/rl/pi_StepNFT_2026) | 无 Critic 无似然在线 RL：SDE 拓宽探索 + 逐步监督 + 对比排序损失，ManiSkill OOD 超 PPO 11.1% | SDE 探索、逐步监督、对比排序、无 Critic | 2026.03 |
 | [PLD](/papers/06-embodied-ai/vla/rl/PLD_2026) | 冻结 VLA 主干训练轻量残差 RL 专家探索失败区域，基础策略探针 + 混合轨迹蒸馏实现 VLA 自改进，LIBERO 达 99% 成功率 | 残差 RL、基础策略探针、混合数据蒸馏、VLA 自改进 | 2026.01 |
 | [RISE](/papers/06-embodied-ai/vla/rl/RISE_2026) | 用组合式世界模型在想象空间做 RL，让 VLA 不靠真实交互就能自我改进 | 世界模型、Imagination RL、VLA 自改进 | 2026.02 |
 | [RL-Co](/papers/06-embodied-ai/vla/rl/RL_Co_2026) | 两阶段 sim-real 协同训练：SFT 混合初始化 + 仿真 RL 微调并加真实数据 SFT 正则防遗忘，OpenVLA +24%、$\pi_{0.5}$ +20% | Sim-Real Co-Training、RL + SFT 正则、数据效率、通用框架 | 2026.02 |

@@ -120,6 +120,7 @@
 - [GR-RL (2025)](papers/06-embodied-ai/vla/rl/GR_RL_2025.md) — 多阶段流水线特化通才 VLA 为精密操作专家
 - [MoRE (2025)](papers/06-embodied-ai/vla/rl/MoRE_2025.md) — Mixture of LoRA Experts + 离线 Q-learning，四足多任务 VLA 成功率提升 36%
 - [π₀.₆* (2025)](papers/06-embodied-ai/vla/rl/pi06star_2025.md) — RECAP 优势条件化离线 RL 训练 VLA
+- [π-StepNFT (2026)](papers/06-embodied-ai/vla/rl/pi_StepNFT_2026.md) — 无 Critic 无似然在线 RL：SDE 探索 + 逐步监督 + 对比排序，ManiSkill OOD 超 PPO 11.1%
 - [PLD (2026)](papers/06-embodied-ai/vla/rl/PLD_2026.md) — 残差 RL 专家探索 + 基础策略探针混合蒸馏实现 VLA 自改进
 - [RISE (2026)](papers/06-embodied-ai/vla/rl/RISE_2026.md) — 组合式世界模型 + 想象空间 RL
 - [RL-Co (2026)](papers/06-embodied-ai/vla/rl/RL_Co_2026.md) — RL-based sim-real co-training，仿真 RL + 真实数据 SFT 正则
