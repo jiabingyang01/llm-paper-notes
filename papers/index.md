@@ -45,6 +45,12 @@
 | [RLRC](/papers/06-embodied-ai/vla/efficient/RLRC_2025) | 三阶段 VLA 压缩流水线（结构化剪枝 + SFT/RL 恢复 + 量化），8× 显存压缩、2.3× 加速 | 结构化剪枝、RL 恢复、量化、8× 压缩 | 2025.06 |
 | [VLA-Cache](/papers/06-embodied-ai/vla/efficient/VLA_Cache_2025) | 训练无关跨帧 Token 缓存 + 注意力驱动任务相关性过滤，1.7× 加速 | 跨帧 Token 缓存、注意力过滤、1.7× 加速 | 2025.02 |
 
+### 🦾 Embodied AI — VLA 推理增强
+
+| 论文 | 一句话概括 | 关键词 | 时间 |
+| --- | --- | --- | --- |
+| [UAOR](/papers/06-embodied-ai/vla/inference/UAOR_2026) | 用 Action Entropy 检测高不确定性层，通过注意力检索将观测特征重注入 FFN，无训练即插即用一致提升多种 VLA | Action Entropy、观测重注入、FFN-as-Memory、Training-Free | 2026.02 |
+
 ### 🦾 Embodied AI — VLA / RL 后训练
 
 | 论文 | 一句话概括 | 关键词 | 时间 |

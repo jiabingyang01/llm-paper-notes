@@ -110,6 +110,15 @@
 
 <blockquote>
 <details open>
+<summary>推理增强</summary>
+
+- [UAOR (2026)](papers/06-embodied-ai/vla/inference/UAOR_2026.md) — Action Entropy 检测不确定性 + 观测重注入 FFN，无训练即插即用增强 VLA
+
+</details>
+</blockquote>
+
+<blockquote>
+<details open>
 <summary>RL 后训练</summary>
 
 - [ConRFT (2025)](papers/06-embodied-ai/vla/rl/ConRFT_2025.md) — 一致性策略统一离线-在线 RL 微调 VLA，真实世界 96.3% 成功率

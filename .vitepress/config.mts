@@ -145,6 +145,13 @@ export default defineConfig({
                       ],
                     },
                     {
+                      text: '推理增强',
+                      collapsed: false,
+                      items: [
+                        { text: 'UAOR (2026)', link: '/papers/06-embodied-ai/vla/inference/UAOR_2026' },
+                      ],
+                    },
+                    {
                       text: 'RL 后训练',
                       collapsed: false,
                       items: [
