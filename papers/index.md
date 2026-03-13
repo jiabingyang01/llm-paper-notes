@@ -22,6 +22,12 @@
 
 ## 全部论文
 
+### 🛡️ Alignment & Safety — LLM RL 训练
+
+| 论文 | 一句话概括 | 关键词 | 时间 |
+| --- | --- | --- | --- |
+| [R³L](/papers/02-alignment-and-safety/R3L_2026) | 反思-重试合成成功轨迹 + 关键点信用分配只更新分歧后缀 + 正向放大确保正信号主导，Agentic 和数学推理任务相对 GRPO 提升 5%–52% | GRPO 改进、语言引导探索、Pivotal Credit、Positive Amplification | 2026.01 |
+
 ### 🖼️ Multimodal — VLM 幻觉缓解
 
 | 论文 | 一句话概括 | 关键词 | 时间 |

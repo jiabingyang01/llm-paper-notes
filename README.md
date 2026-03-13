@@ -36,10 +36,10 @@
 
 </details>
 
-<details>
+<details open>
 <summary>🛡️ Alignment & Safety</summary>
 
-> 暂无笔记
+- [R³L (2026)](papers/02-alignment-and-safety/R3L_2026.md) — 反思-重试 + 关键点信用分配 + 正向放大，GRPO 改进框架提升 5%–52%
 
 </details>
 

@@ -80,9 +80,11 @@ export default defineConfig({
             },
             {
               text: '02 Alignment & Safety',
-              collapsed: true,
+              collapsed: false,
               link: '/papers/02-alignment-and-safety/',
-              items: [],
+              items: [
+                { text: 'R³L (2026)', link: '/papers/02-alignment-and-safety/R3L_2026' },
+              ],
             },
             {
               text: '03 Reasoning',
