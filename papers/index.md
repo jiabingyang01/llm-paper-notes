@@ -67,6 +67,7 @@
 | [GigaBrain-0.5M*](/papers/06-embodied-ai/vla/rl/GigaBrain_2026) | 用视频世界模型联合预测未来状态+价值条件化 VLA 策略（RAMP），理论证明 RECAP 是其退化特例，比 RECAP 提升约 30% | 世界模型 RL、RAMP、优势条件化、未来状态条件化 | 2026.02 |
 | [GRAPE](/papers/06-embodied-ai/vla/rl/GRAPE_2025) | 轨迹级偏好优化（TPO）+ VLM 自动生成代价函数，plug-and-play 提升 VLA 泛化性并支持多元对齐目标 | 轨迹级 DPO、VLM 代价函数、多元对齐、偏好合成 | 2024.11 |
 | [GR-RL](/papers/06-embodied-ai/vla/rl/GR_RL_2025) | 多阶段流水线（离线数据过滤 + 形态对称增强 + 隐空间在线 RL）将通才 VLA 特化为穿鞋带专家，83.3% 成功率 | 数据过滤、分布式 Critic、隐空间 RL、形态对称增强 | 2025.12 |
+| [LRM](/papers/06-embodied-ai/vla/rl/LRM_2026) | 将 Qwen3-VL-8B 适配为三维度帧级在线奖励引擎（时序对比/绝对进度/任务完成），24 源数据训练后零样本驱动 PPO，30 轮迭代超越 RoboReward 和 ROBOMETER | 帧级在线奖励、三维度奖励分解、VLM-as-Reward、PPO 闭环 | 2026.03 |
 | [MoRE](/papers/06-embodied-ai/vla/rl/MoRE_2025) | Fuyu 8B 上构建 Mixture of LoRA Experts + 自回归 Q-learning 离线 RL，从混合质量数据学习，四足 6 任务平均成功率 44%→60% | MoE-LoRA、自回归 Q-learning、混合质量数据、四足 VLA | 2025.03 |
 | [π₀.₆*](/papers/06-embodied-ai/vla/rl/pi06star_2025) | 通过 RECAP（优势条件化离线 RL）整合自主 rollout、专家干预和演示数据，VLA 吞吐量翻倍、失败率减半 | 优势条件化、离线 RL、分布式价值函数、RECAP | 2025.11 |
 | [π-StepNFT](/papers/06-embodied-ai/vla/rl/pi_StepNFT_2026) | 无 Critic 无似然在线 RL：SDE 拓宽探索 + 逐步监督 + 对比排序损失，ManiSkill OOD 超 PPO 11.1% | SDE 探索、逐步监督、对比排序、无 Critic | 2026.03 |

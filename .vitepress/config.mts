@@ -163,6 +163,7 @@ export default defineConfig({
                         { text: 'GRAPE (2025)', link: '/papers/06-embodied-ai/vla/rl/GRAPE_2025' },
                         { text: 'GigaBrain-0.5M* (2026)', link: '/papers/06-embodied-ai/vla/rl/GigaBrain_2026' },
                         { text: 'GR-RL (2025)', link: '/papers/06-embodied-ai/vla/rl/GR_RL_2025' },
+                        { text: 'LRM (2026)', link: '/papers/06-embodied-ai/vla/rl/LRM_2026' },
                         { text: 'MoRE (2025)', link: '/papers/06-embodied-ai/vla/rl/MoRE_2025' },
                         { text: 'π₀.₆* (2025)', link: '/papers/06-embodied-ai/vla/rl/pi06star_2025' },
                         { text: 'π-StepNFT (2026)', link: '/papers/06-embodied-ai/vla/rl/pi_StepNFT_2026' },
