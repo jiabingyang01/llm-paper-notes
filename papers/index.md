@@ -33,6 +33,7 @@
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
 | [DLC](/papers/04-multimodal/vlm/hallucination/DLC_2025) | 解码时用 CLIP 逐步评估候选 token 的相对视觉优势 (RVA)，相对动态历史基线自适应调整 logits，无需额外前向传播高效缓解语义漂移幻觉 | 动态 Logits 校准、CLIP 探针、相对视觉优势、自适应引导、Training-Free | 2025.06 |
+| [HALC](/papers/04-multimodal/vlm/hallucination/HALC_2024) | 自适应 FOV 采样 + JSD 双向对比解码修正局部幻觉 + 视觉匹配 beam search 全局保障，无训练即插即用，CHAIR$_S$ 在 MiniGPT-4 上降低 36% | FOV 对比解码、JSD 选择、视觉匹配 Beam Search、Plug-and-Play | 2024.03 |
 | [HIME](/papers/04-multimodal/vlm/hallucination/HIME_2026) | 提出 HIS 量化每层幻觉敏感度，层自适应加权投影编辑 MLP 权重，无训练/无额外参数/无推理开销平均降低 61.8% 对象幻觉 | HIS、层自适应模型编辑、零空间投影、Training-Free | 2026.02 |
 | [SENTINEL](/papers/04-multimodal/vlm/hallucination/SENTINEL_2025) | 域内自举采样 + 检测器交叉验证构建句子级偏好数据，C-DPO 在幻觉首次出现处早期干预，Object HalBench 幻觉率降低 92% 且通用能力不降反升 | 句子级早期干预、域内偏好学习、C-DPO、交叉验证 | 2025.07 |
 
