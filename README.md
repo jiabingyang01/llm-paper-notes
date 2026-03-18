@@ -133,6 +133,7 @@
 - [π-StepNFT (2026)](papers/06-embodied-ai/vla/rl/pi_StepNFT_2026.md) — 无 Critic 无似然在线 RL：SDE 探索 + 逐步监督 + 对比排序，ManiSkill OOD 超 PPO 11.1%
 - [PLD (2026)](papers/06-embodied-ai/vla/rl/PLD_2026.md) — 残差 RL 专家探索 + 基础策略探针混合蒸馏实现 VLA 自改进
 - [RISE (2026)](papers/06-embodied-ai/vla/rl/RISE_2026.md) — 组合式世界模型 + 想象空间 RL
+- [Robo-Dopamine (2025)](papers/06-embodied-ai/vla/rl/RoboDopamine_2025.md) — 35M 多视角 GRM + Hop-based 进度归一化 + 策略不变奖励塑形，One-shot 适配 150 次交互达 95%
 - [ROBOMETER (2026)](papers/06-embodied-ai/vla/rl/ROBOMETER_2026.md) — 帧级进度 + 轨迹偏好双目标训练通用机器人奖励模型
 - [RoboReward (2026)](papers/06-embodied-ai/vla/rl/RoboReward_2026.md) — 反事实重标注 + 时序裁剪合成负样本，微调 Qwen3-VL 为 episode 级通用奖励模型，22 个 VLM 排名第一
 - [RL-Co (2026)](papers/06-embodied-ai/vla/rl/RL_Co_2026.md) — RL-based sim-real co-training，仿真 RL + 真实数据 SFT 正则

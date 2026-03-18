@@ -169,6 +169,7 @@ export default defineConfig({
                         { text: 'π-StepNFT (2026)', link: '/papers/06-embodied-ai/vla/rl/pi_StepNFT_2026' },
                         { text: 'PLD (2026)', link: '/papers/06-embodied-ai/vla/rl/PLD_2026' },
                         { text: 'RISE (2026)', link: '/papers/06-embodied-ai/vla/rl/RISE_2026' },
+                        { text: 'Robo-Dopamine (2025)', link: '/papers/06-embodied-ai/vla/rl/RoboDopamine_2025' },
                         { text: 'ROBOMETER (2026)', link: '/papers/06-embodied-ai/vla/rl/ROBOMETER_2026' },
                         { text: 'RoboReward (2026)', link: '/papers/06-embodied-ai/vla/rl/RoboReward_2026' },
                         { text: 'RL-Co (2026)', link: '/papers/06-embodied-ai/vla/rl/RL_Co_2026' },
