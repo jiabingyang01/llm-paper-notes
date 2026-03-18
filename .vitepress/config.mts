@@ -109,6 +109,7 @@ export default defineConfig({
                         { text: 'HALC (2024)', link: '/papers/04-multimodal/vlm/hallucination/HALC_2024' },
                         { text: 'HIME (2026)', link: '/papers/04-multimodal/vlm/hallucination/HIME_2026' },
                         { text: 'SENTINEL (2025)', link: '/papers/04-multimodal/vlm/hallucination/SENTINEL_2025' },
+                        { text: 'VisFlow (2025)', link: '/papers/04-multimodal/vlm/hallucination/VisFlow_2025' },
                       ],
                     },
                   ],
@@ -135,7 +136,9 @@ export default defineConfig({
                       collapsed: false,
                       items: [
                         { text: 'DAM-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/DAM_VLA_2026' },
+                        { text: 'Dexbotic (2025)', link: '/papers/06-embodied-ai/vla/foundation/Dexbotic_2025' },
                         { text: 'MoH (2025)', link: '/papers/06-embodied-ai/vla/foundation/MoH_2025' },
+                        { text: 'OptimusVLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/OptimusVLA_2026' },
                         { text: 'π₀ (2024)', link: '/papers/06-embodied-ai/vla/foundation/pi0_2024' },
                         { text: 'π₀.₅ (2025)', link: '/papers/06-embodied-ai/vla/foundation/pi05_2025' },
                         { text: 'SF (2025)', link: '/papers/06-embodied-ai/vla/foundation/SF_2025' },
@@ -205,8 +208,10 @@ export default defineConfig({
                 },
                 {
                   text: 'World Models',
-                  collapsed: true,
-                  items: [],
+                  collapsed: false,
+                  items: [
+                    { text: 'BridgeV2W (2025)', link: '/papers/06-embodied-ai/world-models/BridgeV2W_2025' },
+                  ],
                 },
               ],
             },
