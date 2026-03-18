@@ -64,6 +64,7 @@
 - [DLC (2025)](papers/04-multimodal/vlm/hallucination/DLC_2025.md) — CLIP 动态探针 + 相对视觉优势 + 自适应 Logits 调制，Training-Free 高效缓解 LVLM 幻觉
 - [HALC (2024)](papers/04-multimodal/vlm/hallucination/HALC_2024.md) — 自适应 FOV 对比解码 + 视觉匹配 beam search，无训练即插即用缓解三种对象幻觉
 - [HIME (2026)](papers/04-multimodal/vlm/hallucination/HIME_2026.md) — HIS 层自适应加权投影编辑，无训练/无开销降低 61.8% 对象幻觉
+- [MemVR (2025)](papers/04-multimodal/vlm/hallucination/MemVR_2025.md) — FFN key-value memory 视觉回溯 + 不确定性动态触发，1.04× 延迟缓解幻觉且提升通用能力
 - [SENTINEL (2025)](papers/04-multimodal/vlm/hallucination/SENTINEL_2025.md) — 域内自举 + 句子级 C-DPO 早期干预，幻觉率降低 92% 且通用能力不降反升
 - [VisFlow (2025)](papers/04-multimodal/vlm/hallucination/VisFlow_2025.md) — 双层注意力干预（Token 级增强显著视觉 token + Head 级抑制系统/文本头），无训练缓解幻觉
 

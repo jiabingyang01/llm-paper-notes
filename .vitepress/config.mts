@@ -108,6 +108,7 @@ export default defineConfig({
                         { text: 'DLC (2025)', link: '/papers/04-multimodal/vlm/hallucination/DLC_2025' },
                         { text: 'HALC (2024)', link: '/papers/04-multimodal/vlm/hallucination/HALC_2024' },
                         { text: 'HIME (2026)', link: '/papers/04-multimodal/vlm/hallucination/HIME_2026' },
+                        { text: 'MemVR (2025)', link: '/papers/04-multimodal/vlm/hallucination/MemVR_2025' },
                         { text: 'SENTINEL (2025)', link: '/papers/04-multimodal/vlm/hallucination/SENTINEL_2025' },
                         { text: 'VisFlow (2025)', link: '/papers/04-multimodal/vlm/hallucination/VisFlow_2025' },
                       ],
