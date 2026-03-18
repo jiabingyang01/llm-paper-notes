@@ -158,6 +158,7 @@ export default defineConfig({
                         { text: 'SD-VLA (2026)', link: '/papers/06-embodied-ai/vla/efficient/SD_VLA_2026' },
                         { text: 'RLRC (2025)', link: '/papers/06-embodied-ai/vla/efficient/RLRC_2025' },
                         { text: 'VLA-Cache (2025)', link: '/papers/06-embodied-ai/vla/efficient/VLA_Cache_2025' },
+                        { text: 'VLA-Pruner (2025)', link: '/papers/06-embodied-ai/vla/efficient/VLA_Pruner_2025' },
                       ],
                     },
                     {

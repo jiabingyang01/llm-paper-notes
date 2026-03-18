@@ -64,6 +64,7 @@
 | [SD-VLA](/papers/06-embodied-ai/vla/efficient/SD_VLA_2026) | 静态-动态 Token 解耦 + 多级缓存层次 + 可学习重缓存门，长时程 VLA 2.26× 加速 | 静态-动态解耦、多级缓存、2.26× 加速 | 2026.02 |
 | [RLRC](/papers/06-embodied-ai/vla/efficient/RLRC_2025) | 三阶段 VLA 压缩流水线（结构化剪枝 + SFT/RL 恢复 + 量化），8× 显存压缩、2.3× 加速 | 结构化剪枝、RL 恢复、量化、8× 压缩 | 2025.06 |
 | [VLA-Cache](/papers/06-embodied-ai/vla/efficient/VLA_Cache_2025) | 训练无关跨帧 Token 缓存 + 注意力驱动任务相关性过滤，1.7× 加速 | 跨帧 Token 缓存、注意力过滤、1.7× 加速 | 2025.02 |
+| [VLA-Pruner](/papers/06-embodied-ai/vla/efficient/VLA_Pruner_2025) | 双层重要性准则（语义级 prefill + 动作级 decode 注意力时序平滑）+ mRMR 双层选择策略，50% 剪枝率反超原模型，87.5% 剪枝率保持 88.9% 准确率 | 双层 Token 剪枝、时序平滑、mRMR 选择、Training-Free、1.8× 加速 | 2025.11 |
 
 ### 🦾 Embodied AI — VLA 推理增强
 
