@@ -74,6 +74,7 @@
 | [PLD](/papers/06-embodied-ai/vla/rl/PLD_2026) | 冻结 VLA 主干训练轻量残差 RL 专家探索失败区域，基础策略探针 + 混合轨迹蒸馏实现 VLA 自改进，LIBERO 达 99% 成功率 | 残差 RL、基础策略探针、混合数据蒸馏、VLA 自改进 | 2026.01 |
 | [RISE](/papers/06-embodied-ai/vla/rl/RISE_2026) | 用组合式世界模型在想象空间做 RL，让 VLA 不靠真实交互就能自我改进 | 世界模型、Imagination RL、VLA 自改进 | 2026.02 |
 | [ROBOMETER](/papers/06-embodied-ai/vla/rl/ROBOMETER_2026) | 帧级进度预测 + 轨迹间偏好比较双目标训练通用机器人奖励模型，有效利用失败数据，下游 RL 策略成功率提升 2.4–4.5× | 通用奖励模型、轨迹偏好比较、失败数据利用 | 2026.03 |
+| [RoboReward](/papers/06-embodied-ai/vla/rl/RoboReward_2026) | 反事实重标注 + 时序裁剪合成负样本，微调 Qwen3-VL 为 episode 级离散进度奖励模型（1-5分），22 个 VLM 排名第一，真实 RL 大幅超越 Gemini Robotics-ER 1.5 | 通用奖励模型、反事实重标注、时序裁剪、RoboRewardBench | 2026.01 |
 | [RL-Co](/papers/06-embodied-ai/vla/rl/RL_Co_2026) | 两阶段 sim-real 协同训练：SFT 混合初始化 + 仿真 RL 微调并加真实数据 SFT 正则防遗忘，OpenVLA +24%、$\pi_{0.5}$ +20% | Sim-Real Co-Training、RL + SFT 正则、数据效率、通用框架 | 2026.02 |
 | [RLinf](/papers/06-embodied-ai/vla/rl/RLinf_2025) | 提出 M2Flow 宏-微流变换范式，通过弹性流水线和上下文切换实现灵活高效的大规模 RL 训练 | M2Flow、弹性流水线、RL 训练系统 | 2025.09 |
 | [RLinf-USER](/papers/06-embodied-ai/vla/rl/RLinf_USER_2026) | 将机器人视为一等硬件资源，通过统一硬件抽象、云-边通信、全异步流水线构建真实世界在线策略学习系统 | 真实世界 RL、统一硬件抽象、云-边协同、异步训练 | 2026.02 |

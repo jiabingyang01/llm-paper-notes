@@ -134,6 +134,7 @@
 - [PLD (2026)](papers/06-embodied-ai/vla/rl/PLD_2026.md) — 残差 RL 专家探索 + 基础策略探针混合蒸馏实现 VLA 自改进
 - [RISE (2026)](papers/06-embodied-ai/vla/rl/RISE_2026.md) — 组合式世界模型 + 想象空间 RL
 - [ROBOMETER (2026)](papers/06-embodied-ai/vla/rl/ROBOMETER_2026.md) — 帧级进度 + 轨迹偏好双目标训练通用机器人奖励模型
+- [RoboReward (2026)](papers/06-embodied-ai/vla/rl/RoboReward_2026.md) — 反事实重标注 + 时序裁剪合成负样本，微调 Qwen3-VL 为 episode 级通用奖励模型，22 个 VLM 排名第一
 - [RL-Co (2026)](papers/06-embodied-ai/vla/rl/RL_Co_2026.md) — RL-based sim-real co-training，仿真 RL + 真实数据 SFT 正则
 - [RLinf (2025)](papers/06-embodied-ai/vla/rl/RLinf_2025.md) — M2Flow 大规模 RL 训练系统
 - [RLinf-USER (2026)](papers/06-embodied-ai/vla/rl/RLinf_USER_2026.md) — 真实世界在线策略学习统一系统

@@ -170,6 +170,7 @@ export default defineConfig({
                         { text: 'PLD (2026)', link: '/papers/06-embodied-ai/vla/rl/PLD_2026' },
                         { text: 'RISE (2026)', link: '/papers/06-embodied-ai/vla/rl/RISE_2026' },
                         { text: 'ROBOMETER (2026)', link: '/papers/06-embodied-ai/vla/rl/ROBOMETER_2026' },
+                        { text: 'RoboReward (2026)', link: '/papers/06-embodied-ai/vla/rl/RoboReward_2026' },
                         { text: 'RL-Co (2026)', link: '/papers/06-embodied-ai/vla/rl/RL_Co_2026' },
                         { text: 'RLinf (2025)', link: '/papers/06-embodied-ai/vla/rl/RLinf_2025' },
                         { text: 'RLinf-USER (2026)', link: '/papers/06-embodied-ai/vla/rl/RLinf_USER_2026' },
