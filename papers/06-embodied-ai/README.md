@@ -13,6 +13,7 @@
 | 论文 | 关键词 | 年份 |
 | --- | --- | --- |
 | [DAM-VLA](vla/foundation/DAM_VLA_2026.md) | 动作路由、双扩散动作头（手臂 class token + 夹爪 register token）、双尺度加权 | 2026 |
+| [MoH](vla/foundation/MoH_2025.md) | 多 Horizon 动作块并行融合、轻量门控（2k 参数）、跨 Horizon 共识动态推理、Plug-and-Play、LIBERO 99% | 2025 |
 | [π₀](vla/foundation/pi0_2024.md) | Flow Matching VLA、VLM 骨架 + Action Expert、跨构型预训练、预训练/后训练范式 | 2024 |
 | [π₀.₅](vla/foundation/pi05_2025.md) | 异构多源数据协同训练、分层推理（子任务预测 + 低层控制）、开放世界泛化 | 2025 |
 | [TGM-VLA](vla/foundation/TGM_VLA_2026.md) | 关键帧采样优化、颜色反转投影、跨任务/任务内 Mixup、RLBench 90.5%、COLOSSEUM 68.8% | 2026 |
