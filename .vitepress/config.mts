@@ -138,6 +138,7 @@ export default defineConfig({
                         { text: 'MoH (2025)', link: '/papers/06-embodied-ai/vla/foundation/MoH_2025' },
                         { text: 'π₀ (2024)', link: '/papers/06-embodied-ai/vla/foundation/pi0_2024' },
                         { text: 'π₀.₅ (2025)', link: '/papers/06-embodied-ai/vla/foundation/pi05_2025' },
+                        { text: 'SF (2025)', link: '/papers/06-embodied-ai/vla/foundation/SF_2025' },
                         { text: 'TGM-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/TGM_VLA_2026' },
                       ],
                     },
