@@ -43,6 +43,7 @@
 
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
+| [BridgeVLA](/papers/06-embodied-ai/vla/foundation/BridgeVLA_2025) | 3D 点云正交投影为多视图 2D 图像 + 预测 2D 热力图对齐输入-输出，热力图预训练赋予 VLM 空间定位能力，RLBench 88.2%、3 条轨迹达 95.4% | 输入-输出对齐、2D 热力图、正交投影、样本效率 | 2025.06 |
 | [DAM-VLA](/papers/06-embodied-ai/vla/foundation/DAM_VLA_2026) | VLM 推理驱动动作路由选择手臂/夹爪专用扩散模型（class token 全局 + register token 局部）+ 双尺度加权协调训练，SIMPLER 平均 78-83%、真实世界 86.8% | 动作路由、双扩散头、class/register token、双尺度加权 | 2026.03 |
 | [Dexbotic](/papers/06-embodied-ai/vla/foundation/Dexbotic_2025) | 开源 VLA 工具箱：统一模块化框架（VLM + Action Expert）+ 基于 Qwen2.5 的更强预训练模型 + 实验驱动 Exp 脚本开发，SimplerEnv 最高 +46.2%、CALVIN +0.81 | VLA Toolbox、统一框架、DexboticVLM、实验驱动开发 | 2025.10 |
 | [MoH](/papers/06-embodied-ai/vla/foundation/MoH_2025) | 多 horizon 动作块在共享 Action Transformer 中并行处理 + 轻量门控融合（2k 参数）+ 跨 horizon 共识动态推理，plug-and-play 适用于 flow/regression 策略，$\pi_{0.5}$+MoH LIBERO 99% SOTA | 多 Horizon 融合、门控融合、动态推理、Action Chunking | 2025.11 |
@@ -56,6 +57,7 @@
 
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
+| [EfficientVLA](/papers/06-embodied-ai/vla/efficient/EfficientVLA_2025) | 结构化 training-free 加速：LLM 层剪枝 + 任务感知视觉 token 选择 + 扩散步缓存，三维度协同消除冗余，FLOPs 降至 28.9%、1.93× 加速 | LLM 层剪枝、任务感知 Token 选择、扩散步缓存、Training-Free、1.93× 加速 | 2025.06 |
 | [LAC](/papers/06-embodied-ai/vla/efficient/LAC_2026) | 可学习自适应 Token 缓存，光流运动先验 + Gumbel-Softmax 端到端优化，1.76× 加速 | 可学习 Token 缓存、光流运动先验、1.76× 加速 | 2026.01 |
 | [SD-VLA](/papers/06-embodied-ai/vla/efficient/SD_VLA_2026) | 静态-动态 Token 解耦 + 多级缓存层次 + 可学习重缓存门，长时程 VLA 2.26× 加速 | 静态-动态解耦、多级缓存、2.26× 加速 | 2026.02 |
 | [RLRC](/papers/06-embodied-ai/vla/efficient/RLRC_2025) | 三阶段 VLA 压缩流水线（结构化剪枝 + SFT/RL 恢复 + 量化），8× 显存压缩、2.3× 加速 | 结构化剪枝、RL 恢复、量化、8× 压缩 | 2025.06 |

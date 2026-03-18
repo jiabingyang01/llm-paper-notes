@@ -136,6 +136,7 @@ export default defineConfig({
                       text: '基础模型',
                       collapsed: false,
                       items: [
+                        { text: 'BridgeVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/BridgeVLA_2025' },
                         { text: 'DAM-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/DAM_VLA_2026' },
                         { text: 'Dexbotic (2025)', link: '/papers/06-embodied-ai/vla/foundation/Dexbotic_2025' },
                         { text: 'MoH (2025)', link: '/papers/06-embodied-ai/vla/foundation/MoH_2025' },
@@ -150,6 +151,7 @@ export default defineConfig({
                       text: '高效推理',
                       collapsed: false,
                       items: [
+                        { text: 'EfficientVLA (2025)', link: '/papers/06-embodied-ai/vla/efficient/EfficientVLA_2025' },
                         { text: 'LAC (2026)', link: '/papers/06-embodied-ai/vla/efficient/LAC_2026' },
                         { text: 'SD-VLA (2026)', link: '/papers/06-embodied-ai/vla/efficient/SD_VLA_2026' },
                         { text: 'RLRC (2025)', link: '/papers/06-embodied-ai/vla/efficient/RLRC_2025' },

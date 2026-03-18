@@ -94,6 +94,7 @@
 <details open>
 <summary>基础模型</summary>
 
+- [BridgeVLA (2025)](papers/06-embodied-ai/vla/foundation/BridgeVLA_2025.md) — 3D 正交投影 + 2D 热力图输入-输出对齐，RLBench 88.2%、3 条轨迹 95.4%
 - [DAM-VLA (2026)](papers/06-embodied-ai/vla/foundation/DAM_VLA_2026.md) — 动作路由 + 手臂/夹爪双扩散模型 + 双尺度加权协调
 - [Dexbotic (2025)](papers/06-embodied-ai/vla/foundation/Dexbotic_2025.md) — 开源 VLA 工具箱：统一框架 + Qwen2.5 预训练模型 + 实验驱动开发，最高 +46.2%
 - [MoH (2025)](papers/06-embodied-ai/vla/foundation/MoH_2025.md) — 多 Horizon 动作块并行融合 + 轻量门控 + 动态推理，π₀.₅+MoH LIBERO 99%
@@ -110,6 +111,7 @@
 <details open>
 <summary>高效推理</summary>
 
+- [EfficientVLA (2025)](papers/06-embodied-ai/vla/efficient/EfficientVLA_2025.md) — 结构化 training-free 加速：层剪枝 + Token 选择 + 扩散步缓存，1.93× 加速
 - [LAC (2026)](papers/06-embodied-ai/vla/efficient/LAC_2026.md) — 可学习自适应 Token 缓存加速 VLA
 - [SD-VLA (2026)](papers/06-embodied-ai/vla/efficient/SD_VLA_2026.md) — 静态-动态解耦实现长时程高效 VLA
 - [RLRC (2025)](papers/06-embodied-ai/vla/efficient/RLRC_2025.md) — 结构化剪枝 + SFT/RL 恢复 + 量化，8× 显存压缩
