@@ -97,7 +97,9 @@
 - [BridgeVLA (2025)](papers/06-embodied-ai/vla/foundation/BridgeVLA_2025.md) — 3D 正交投影 + 2D 热力图输入-输出对齐，RLBench 88.2%、3 条轨迹 95.4%
 - [DAM-VLA (2026)](papers/06-embodied-ai/vla/foundation/DAM_VLA_2026.md) — 动作路由 + 手臂/夹爪双扩散模型 + 双尺度加权协调
 - [Dexbotic (2025)](papers/06-embodied-ai/vla/foundation/Dexbotic_2025.md) — 开源 VLA 工具箱：统一框架 + Qwen2.5 预训练模型 + 实验驱动开发，最高 +46.2%
+- [GR-3 (2025)](papers/06-embodied-ai/vla/foundation/GR3_2025.md) — 4B VLA：VL 协同训练 + VR 人类轨迹 10-shot 适配 + Task Status 指令跟随，全面超越 π₀
 - [MoH (2025)](papers/06-embodied-ai/vla/foundation/MoH_2025.md) — 多 Horizon 动作块并行融合 + 轻量门控 + 动态推理，π₀.₅+MoH LIBERO 99%
+- [MemoryVLA (2025)](papers/06-embodied-ai/vla/foundation/MemoryVLA_2025.md) — 感知-认知双流记忆库建模长时域依赖，SimplerEnv-Bridge +14.6、LIBERO 96.5%、真实世界时序 +26
 - [OptimusVLA (2026)](papers/06-embodied-ai/vla/foundation/OptimusVLA_2026.md) — 双记忆增强 VLA：GPM 任务级先验检索 + LCM 时序一致性，LIBERO 98.6%、2.9× 加速
 - [π₀ (2024)](papers/06-embodied-ai/vla/foundation/pi0_2024.md) — Flow Matching VLA 基础模型
 - [π₀.₅ (2025)](papers/06-embodied-ai/vla/foundation/pi05_2025.md) — 异构协同训练 + 分层推理
@@ -181,6 +183,16 @@
 <summary>World Models</summary>
 
 - [BridgeV2W (2025)](papers/06-embodied-ai/world-models/BridgeV2W_2025.md) — Embodiment Mask + ControlNet 像素空间动作注入，跨构型统一世界模型
+- [WorldVLA (2025)](papers/06-embodied-ai/world-models/WorldVLA_2025.md) — 自回归统一 VLA + 世界模型，Action Attention Mask 解决 Chunking 误差累积
+
+</details>
+</blockquote>
+
+<blockquote>
+<details open>
+<summary>Imitation Learning</summary>
+
+- [EC-Flow (2025)](papers/06-embodied-ai/imitation-learning/EC_Flow_2025.md) — 具身中心光流 + 目标图像对齐 + URDF 运动学，5 条无动作标注视频学操作，遮挡 +62%、柔性 +45%、非位移 +80%
 
 </details>
 </blockquote>

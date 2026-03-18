@@ -139,7 +139,9 @@ export default defineConfig({
                         { text: 'BridgeVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/BridgeVLA_2025' },
                         { text: 'DAM-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/DAM_VLA_2026' },
                         { text: 'Dexbotic (2025)', link: '/papers/06-embodied-ai/vla/foundation/Dexbotic_2025' },
+                        { text: 'GR-3 (2025)', link: '/papers/06-embodied-ai/vla/foundation/GR3_2025' },
                         { text: 'MoH (2025)', link: '/papers/06-embodied-ai/vla/foundation/MoH_2025' },
+                        { text: 'MemoryVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/MemoryVLA_2025' },
                         { text: 'OptimusVLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/OptimusVLA_2026' },
                         { text: 'π₀ (2024)', link: '/papers/06-embodied-ai/vla/foundation/pi0_2024' },
                         { text: 'π₀.₅ (2025)', link: '/papers/06-embodied-ai/vla/foundation/pi05_2025' },
@@ -214,6 +216,14 @@ export default defineConfig({
                   collapsed: false,
                   items: [
                     { text: 'BridgeV2W (2025)', link: '/papers/06-embodied-ai/world-models/BridgeV2W_2025' },
+                    { text: 'WorldVLA (2025)', link: '/papers/06-embodied-ai/world-models/WorldVLA_2025' },
+                  ],
+                },
+                {
+                  text: 'Imitation Learning',
+                  collapsed: false,
+                  items: [
+                    { text: 'EC-Flow (2025)', link: '/papers/06-embodied-ai/imitation-learning/EC_Flow_2025' },
                   ],
                 },
               ],

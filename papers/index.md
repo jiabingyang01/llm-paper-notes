@@ -46,7 +46,9 @@
 | [BridgeVLA](/papers/06-embodied-ai/vla/foundation/BridgeVLA_2025) | 3D 点云正交投影为多视图 2D 图像 + 预测 2D 热力图对齐输入-输出，热力图预训练赋予 VLM 空间定位能力，RLBench 88.2%、3 条轨迹达 95.4% | 输入-输出对齐、2D 热力图、正交投影、样本效率 | 2025.06 |
 | [DAM-VLA](/papers/06-embodied-ai/vla/foundation/DAM_VLA_2026) | VLM 推理驱动动作路由选择手臂/夹爪专用扩散模型（class token 全局 + register token 局部）+ 双尺度加权协调训练，SIMPLER 平均 78-83%、真实世界 86.8% | 动作路由、双扩散头、class/register token、双尺度加权 | 2026.03 |
 | [Dexbotic](/papers/06-embodied-ai/vla/foundation/Dexbotic_2025) | 开源 VLA 工具箱：统一模块化框架（VLM + Action Expert）+ 基于 Qwen2.5 的更强预训练模型 + 实验驱动 Exp 脚本开发，SimplerEnv 最高 +46.2%、CALVIN +0.81 | VLA Toolbox、统一框架、DexboticVLM、实验驱动开发 | 2025.10 |
+| [GR-3](/papers/06-embodied-ai/vla/foundation/GR3_2025) | 4B VLA（Qwen2.5-VL + Action DiT），机器人轨迹 + VL 数据协同训练实现 OOD 指令零样本泛化，VR 人类轨迹 10-shot 适配新物体（57.8%→86.7%），Task Status 辅助监督 + DiT RMSNorm 强化指令跟随，全面超越 π₀ | MoT 架构、VL 协同训练、人类轨迹少样本适配、Task Status、ByteMini 双臂移动 | 2025.07 |
 | [MoH](/papers/06-embodied-ai/vla/foundation/MoH_2025) | 多 horizon 动作块在共享 Action Transformer 中并行处理 + 轻量门控融合（2k 参数）+ 跨 horizon 共识动态推理，plug-and-play 适用于 flow/regression 策略，$\pi_{0.5}$+MoH LIBERO 99% SOTA | 多 Horizon 融合、门控融合、动态推理、Action Chunking | 2025.11 |
+| [MemoryVLA](/papers/06-embodied-ai/vla/foundation/MemoryVLA_2025) | 借鉴认知科学双记忆系统设计感知-认知记忆库（PCMB），同时存储低层视觉细节和高层语义，跨注意力检索 + 门控融合 + 合并压缩建模长时域依赖，SimplerEnv-Bridge +14.6、LIBERO 96.5%、真实世界时序任务 +26 | 感知-认知记忆、时序建模、扩散策略、长时域操作 | 2025.08 |
 | [OptimusVLA](/papers/06-embodied-ai/vla/foundation/OptimusVLA_2026) | 双记忆增强 VLA：GPM 用检索到的任务级先验替代高斯噪声缩短 flow 生成路径 + LCM 用 Mamba 建模动作历史注入时序一致性，LIBERO 98.6%、真实世界 2.9× 推理加速 | 双记忆、任务级先验检索、时序一致性、自适应 NFE | 2026.02 |
 | [π₀](/papers/06-embodied-ai/vla/foundation/pi0_2024) | 用 Flow Matching 替代自回归生成动作，构建首个能完成高频灵巧操作的通用 VLA 基础模型 | Flow Matching VLA、Action Expert、跨构型预训练 | 2024.10 |
 | [π₀.₅](/papers/06-embodied-ai/vla/foundation/pi05_2025) | 通过异构多源数据协同训练和分层推理，首次实现端到端 VLA 在全新家庭环境中执行长时域灵巧操作 | 异构协同训练、分层推理、开放世界泛化 | 2025.04 |
@@ -115,3 +117,10 @@
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
 | [BridgeV2W](/papers/06-embodied-ai/world-models/BridgeV2W_2025) | 将坐标空间动作通过 URDF + 相机参数渲染为像素对齐 Embodiment Mask，经 ControlNet 注入预训练视频生成模型，辅以光流运动损失，统一解决动作-视频鸿沟、视角敏感性和跨构型架构不统一三大问题 | Embodiment Mask、ControlNet、光流运动损失、跨构型统一 | 2025 |
+| [WorldVLA](/papers/06-embodied-ai/world-models/WorldVLA_2025) | 基于 Chameleon 将 VLA 动作模型与世界模型统一到单个自回归框架，共享权重混合训练实现双向增强，提出 Action Attention Mask 阻断 Action Chunking 误差累积 | 自回归统一模型、Action Attention Mask、Chameleon、双向增强 | 2025 |
+
+### 🦾 Embodied AI — Imitation Learning
+
+| 论文 | 一句话概括 | 关键词 | 时间 |
+| --- | --- | --- | --- |
+| [EC-Flow](/papers/06-embodied-ai/imitation-learning/EC_Flow_2025) | 将光流预测从物体中心转为具身中心（预测机器人上采样点轨迹），配合目标图像辅助对齐和 URDF 感知运动学动作计算，仅用 5 条无动作标注 RGB 视频学习操作策略，在遮挡（+62%）、柔性物体（+45%）和非位移操作（+80%）场景大幅超越物体中心方法 | 具身中心光流、目标图像对齐、URDF 运动学、无动作标注、DiT 扩散 | 2025.07 |
