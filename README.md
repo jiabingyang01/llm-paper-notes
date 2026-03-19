@@ -61,13 +61,37 @@
 <details open>
 <summary>幻觉缓解</summary>
 
+- [AGLA (2025)](papers/04-multimodal/vlm/hallucination/AGLA_2025.md) — GradCAM + Image-Prompt Matching 生成增强图像，全局-局部 logit 融合 training-free 缓解幻觉，POPE +5.5%
 - [CSR (2024)](papers/04-multimodal/vlm/hallucination/CSR_2024.md) — CLIP 校准自奖励 + 句子级 beam search + 迭代 DPO，三轮迭代 CHAIR$_S$ 降低 57%
 - [DLC (2025)](papers/04-multimodal/vlm/hallucination/DLC_2025.md) — CLIP 动态探针 + 相对视觉优势 + 自适应 Logits 调制，Training-Free 高效缓解 LVLM 幻觉
+- [EFUF (2024)](papers/04-multimodal/vlm/hallucination/EFUF_2024.md) — CLIP 筛选 + 细粒度梯度上升遗忘幻觉子句，无需配对数据仅 3 GPU 小时，CHAIR$_S$ 平均降低 ~15%
+- [FarSight (2025)](papers/04-multimodal/vlm/hallucination/FarSight_2025.md) — 因果掩码上三角注意力寄存器 + 渐减遮蔽率位置编码，training-free 缓解图像/视频 MLLM 幻觉，CHAIR$_S$ -6.4 pp
 - [HALC (2024)](papers/04-multimodal/vlm/hallucination/HALC_2024.md) — 自适应 FOV 对比解码 + 视觉匹配 beam search，无训练即插即用缓解三种对象幻觉
 - [HIME (2026)](papers/04-multimodal/vlm/hallucination/HIME_2026.md) — HIS 层自适应加权投影编辑，无训练/无开销降低 61.8% 对象幻觉
+- [HIO (2024)](papers/04-multimodal/vlm/hallucination/HIO_2024.md) — 反转 BT 模型训练 Evil LVLM 精准放大幻觉 + 对比解码消除，CHAIR$_I$ 降至 2.24
+- [ICD (2024)](papers/04-multimodal/vlm/hallucination/ICD_2024.md) — 指令对比解码：扰动指令放大幻觉后对比剥离，training-free 模型无关，POPE +10.5%/+6.0%
+- [LessIsMore (2024)](papers/04-multimodal/vlm/hallucination/LessIsMore_2024.md) — EOS 决策视角：修改 MLE 保护模型内在终止倾向 + 数据过滤移除有害样本，CHAIR$_S$ -26.4%
+- [LogicCheckGPT (2024)](papers/04-multimodal/vlm/hallucination/LogicCheckGPT_2024.md) — 逻辑闭环探测（对象→属性→对象），黑盒后处理缓解幻觉，POPE 准确率提升超 30%
+- [mDPO (2024)](papers/04-multimodal/vlm/hallucination/mDPO_2024.md) — 发现多模态 DPO 忽略图像条件，图像对比偏好优化 + 锚定奖励正则化缓解幻觉
 - [MemVR (2025)](papers/04-multimodal/vlm/hallucination/MemVR_2025.md) — FFN key-value memory 视觉回溯 + 不确定性动态触发，1.04× 延迟缓解幻觉且提升通用能力
+- [MMHalSnowball (2024)](papers/04-multimodal/vlm/hallucination/MMHalSnowball_2024.md) — 多模态幻觉雪球效应评估框架 + 残差视觉解码自适应缓解多轮对话幻觉累积
+- [OPERA (2024)](papers/04-multimodal/vlm/hallucination/OPERA_2024.md) — 注意力柱状聚合模式检测 + 过度信任惩罚 + 回溯重分配，无训练 Beam Search 解码缓解幻觉
+- [REVERIE (2024)](papers/04-multimodal/vlm/hallucination/REVERIE_2024.md) — 正负 rationale 反思式指令微调，254k 三元组数据集提供细粒度推理监督，POPE +12.7、MME +348
 - [SENTINEL (2025)](papers/04-multimodal/vlm/hallucination/SENTINEL_2025.md) — 域内自举 + 句子级 C-DPO 早期干预，幻觉率降低 92% 且通用能力不降反升
+- [SIMA (2024)](papers/04-multimodal/vlm/hallucination/SIMA_2024.md) — 三视觉指标引导的上下文自评估 + 自生成偏好数据 DPO，无需外部模型，14 基准平均 +7.5%
+- [STIC (2024)](papers/04-multimodal/vlm/hallucination/STIC_2024.md) — 两阶段自训练：good/bad prompt + 图像腐蚀构造偏好数据 DPO + 描述注入式 SFT，仅用无标签图像，7 基准平均 +4.0%
+- [VACoDe (2024)](papers/04-multimodal/vlm/hallucination/VACoDe_2024.md) — Softmax L2 距离自适应选择对比增强 + 对比解码，Training-Free 跨模型一致提升
+- [VGA (2024)](papers/04-multimodal/vlm/hallucination/VGA_2024.md) — Referent Method + FAC 两阶段微调，63.8k GUI VQA 数据集，GUI 理解超越 GPT-4V/GPT-4o
 - [VisFlow (2025)](papers/04-multimodal/vlm/hallucination/VisFlow_2025.md) — 双层注意力干预（Token 级增强显著视觉 token + Head 级抑制系统/文本头），无训练缓解幻觉
+
+</details>
+</blockquote>
+
+<blockquote>
+<details open>
+<summary>Token 压缩</summary>
+
+- [Token Pruning Survey (2025)](papers/04-multimodal/vlm/efficiency/TokenPruningSurvey_2025.md) — 系统性分析 MLLM 视觉 token 剪枝五大问题：位置偏差、语言引导条件、重要性 vs. 冗余性、FLOPs 评估偏差、训练感知压缩优势
 
 </details>
 </blockquote>
@@ -95,6 +119,8 @@
 <details open>
 <summary>基础模型</summary>
 
+- [3D-CAVLA (2025)](papers/06-embodied-ai/vla/foundation/3D_CAVLA_2025.md) — CoT 指令分解 + PointNet 深度编码器 + 任务感知 ROI，LIBERO 98.1%，零样本 +8.8%
+- [AimBot (2025)](papers/06-embodied-ai/vla/foundation/AimBot_2025.md) — 瞄准线+准星视觉线索编码 EE 空间状态到像素空间，<1 ms 模型无关，π₀ 真实世界 27→43/50
 - [BridgeVLA (2025)](papers/06-embodied-ai/vla/foundation/BridgeVLA_2025.md) — 3D 正交投影 + 2D 热力图输入-输出对齐，RLBench 88.2%、3 条轨迹 95.4%
 - [DAM-VLA (2026)](papers/06-embodied-ai/vla/foundation/DAM_VLA_2026.md) — 动作路由 + 手臂/夹爪双扩散模型 + 双尺度加权协调
 - [DreamVLA (2025)](papers/06-embodied-ai/vla/foundation/DreamVLA_2025.md) — 预测三类综合世界知识（动态区域/深度/语义）+ 结构化注意力解耦，CALVIN 4.44 SOTA
@@ -104,10 +130,12 @@
 - [MoH (2025)](papers/06-embodied-ai/vla/foundation/MoH_2025.md) — 多 Horizon 动作块并行融合 + 轻量门控 + 动态推理，π₀.₅+MoH LIBERO 99%
 - [MemoryVLA (2025)](papers/06-embodied-ai/vla/foundation/MemoryVLA_2025.md) — 感知-认知双流记忆库建模长时域依赖，SimplerEnv-Bridge +14.6、LIBERO 96.5%、真实世界时序 +26
 - [OptimusVLA (2026)](papers/06-embodied-ai/vla/foundation/OptimusVLA_2026.md) — 双记忆增强 VLA：GPM 任务级先验检索 + LCM 时序一致性，LIBERO 98.6%、2.9× 加速
+- [OTTER (2025)](papers/06-embodied-ai/vla/foundation/OTTER_2025.md) — 冻结 CLIP + 文本感知视觉特征提取实现零样本泛化，4 种原语未见任务 77%，Octo/OpenVLA 几乎为 0%
 - [π₀ (2024)](papers/06-embodied-ai/vla/foundation/pi0_2024.md) — Flow Matching VLA 基础模型
 - [π₀.₅ (2025)](papers/06-embodied-ai/vla/foundation/pi05_2025.md) — 异构协同训练 + 分层推理
 - [SF (2025)](papers/06-embodied-ai/vla/foundation/SF_2025.md) — 隐式空间表征对齐（VGGT），推理零开销，LIBERO 98.5%，训练 3.8× 加速
 - [TGM-VLA (2026)](papers/06-embodied-ai/vla/foundation/TGM_VLA_2026.md) — 关键帧采样优化 + 颜色反转 + 任务引导 Mixup，RLBench 90.5%
+- [UniVLA (2025)](papers/06-embodied-ai/vla/foundation/UniVLA_2025.md) — 任务中心潜在动作两阶段解耦 + 跨具身无标注视频预训练，1/20 算力超 OpenVLA，LIBERO 95.2%、真实世界 81.7%
 
 </details>
 </blockquote>
@@ -116,10 +144,13 @@
 <details open>
 <summary>高效推理</summary>
 
+- [BitVLA (2025)](papers/06-embodied-ai/vla/efficient/BitVLA_2025.md) — 首个全参数三值化 VLA，蒸馏感知训练量化 ViT 至 1.58-bit，LIBERO 94.8%、显存仅 1.4GB
 - [EfficientVLA (2025)](papers/06-embodied-ai/vla/efficient/EfficientVLA_2025.md) — 结构化 training-free 加速：层剪枝 + Token 选择 + 扩散步缓存，1.93× 加速
 - [LAC (2026)](papers/06-embodied-ai/vla/efficient/LAC_2026.md) — 可学习自适应 Token 缓存加速 VLA
+- [PD-VLA (2025)](papers/06-embodied-ai/vla/efficient/PD_VLA_2025.md) — Jacobi 并行解码加速 Action Chunking VLA，不改模型不训练，2.52× 频率提升
 - [SD-VLA (2026)](papers/06-embodied-ai/vla/efficient/SD_VLA_2026.md) — 静态-动态解耦实现长时程高效 VLA
 - [RLRC (2025)](papers/06-embodied-ai/vla/efficient/RLRC_2025.md) — 结构化剪枝 + SFT/RL 恢复 + 量化，8× 显存压缩
+- [RTC (2025)](papers/06-embodied-ai/vla/efficient/RTC_2025.md) — 异步动作块执行建模为修复问题：冻结前缀 + 引导修复 + 软掩码，Training-Free 实时 VLA，π₀.₅ 快 20%
 - [VLA-Cache (2025)](papers/06-embodied-ai/vla/efficient/VLA_Cache_2025.md) — 训练无关跨帧 Token 缓存加速 VLA
 - [VLA-Pruner (2025)](papers/06-embodied-ai/vla/efficient/VLA_Pruner_2025.md) — 双层 Token 剪枝（语义级 + 动作级注意力时序平滑）+ mRMR 选择，50% 剪枝率反超原模型
 
@@ -203,10 +234,11 @@
 
 </details>
 
-<details>
+<details open>
 <summary>⚡ Efficiency</summary>
 
-> 暂无笔记
+- [DART (2025)](papers/07-efficiency/DART_2025.md) — 基于 token 重复度而非重要性剪枝视觉 token，兼容 FlashAttention，88.9% 剪枝率保持 93.7% 性能，1.99× 加速
+- [Elastic Cache (2024)](papers/07-efficiency/ElasticCache_2024.md) — Importance-driven cache merging + 固定截断点淘汰，training-free KV Cache 压缩实现 78% 加速
 
 </details>
 
