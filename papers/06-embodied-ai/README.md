@@ -15,6 +15,7 @@
 | [BridgeVLA](vla/foundation/BridgeVLA_2025.md) | 输入-输出 2D 对齐、正交投影、2D 热力图预训练、RLBench 88.2%、3 条轨迹 95.4% | 2025 |
 | [DAM-VLA](vla/foundation/DAM_VLA_2026.md) | 动作路由、双扩散动作头（手臂 class token + 夹爪 register token）、双尺度加权 | 2026 |
 | [Dexbotic](vla/foundation/Dexbotic_2025.md) | VLA Toolbox、统一模块化框架（VLM + AE）、DexboticVLM（Qwen2.5）、Exp 脚本实验开发、SimplerEnv +46.2% | 2025 |
+| [FutureVLA](vla/foundation/FutureVLA_2026.md) | 联合视觉运动预测（JVPM）、3D-VAE 连续 17 帧编码、双流解耦监督、门控交叉注意力、潜在嵌入对齐、SimplerEnv 80.1%、真实机器人 +26.7% | 2026 |
 | [GR-3](vla/foundation/GR3_2025.md) | MoT 架构（Qwen2.5-VL + Action DiT）、VL 协同训练、VR 人类轨迹少样本适配、Task Status 辅助监督、全面超越 π₀ | 2025 |
 | [MoH](vla/foundation/MoH_2025.md) | 多 Horizon 动作块并行融合、轻量门控（2k 参数）、跨 Horizon 共识动态推理、Plug-and-Play、LIBERO 99% | 2025 |
 | [MemoryVLA](vla/foundation/MemoryVLA_2025.md) | 感知-认知双流记忆库（PCMB）、跨注意力检索 + 门控融合 + 合并压缩、长时域操作、SimplerEnv-Bridge +14.6、LIBERO 96.5%、真实世界时序 +26 | 2025 |

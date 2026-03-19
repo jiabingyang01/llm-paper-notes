@@ -32,6 +32,7 @@
 
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
+| [CSR](/papers/04-multimodal/vlm/hallucination/CSR_2024) | 句子级 beam search + CLIP 视觉校准奖励迭代构造自生成偏好数据 + DPO 微调，三轮迭代 10 个基准平均提升 7.62%，CHAIR$_S$ 降低 57% | 校准自奖励、CLIP Score、迭代 DPO、模态对齐、Self-Rewarding | 2024.05 |
 | [DLC](/papers/04-multimodal/vlm/hallucination/DLC_2025) | 解码时用 CLIP 逐步评估候选 token 的相对视觉优势 (RVA)，相对动态历史基线自适应调整 logits，无需额外前向传播高效缓解语义漂移幻觉 | 动态 Logits 校准、CLIP 探针、相对视觉优势、自适应引导、Training-Free | 2025.06 |
 | [HALC](/papers/04-multimodal/vlm/hallucination/HALC_2024) | 自适应 FOV 采样 + JSD 双向对比解码修正局部幻觉 + 视觉匹配 beam search 全局保障，无训练即插即用，CHAIR$_S$ 在 MiniGPT-4 上降低 36% | FOV 对比解码、JSD 选择、视觉匹配 Beam Search、Plug-and-Play | 2024.03 |
 | [HIME](/papers/04-multimodal/vlm/hallucination/HIME_2026) | 提出 HIS 量化每层幻觉敏感度，层自适应加权投影编辑 MLP 权重，无训练/无额外参数/无推理开销平均降低 61.8% 对象幻觉 | HIS、层自适应模型编辑、零空间投影、Training-Free | 2026.02 |
@@ -46,6 +47,7 @@
 | [BridgeVLA](/papers/06-embodied-ai/vla/foundation/BridgeVLA_2025) | 3D 点云正交投影为多视图 2D 图像 + 预测 2D 热力图对齐输入-输出，热力图预训练赋予 VLM 空间定位能力，RLBench 88.2%、3 条轨迹达 95.4% | 输入-输出对齐、2D 热力图、正交投影、样本效率 | 2025.06 |
 | [DAM-VLA](/papers/06-embodied-ai/vla/foundation/DAM_VLA_2026) | VLM 推理驱动动作路由选择手臂/夹爪专用扩散模型（class token 全局 + register token 局部）+ 双尺度加权协调训练，SIMPLER 平均 78-83%、真实世界 86.8% | 动作路由、双扩散头、class/register token、双尺度加权 | 2026.03 |
 | [Dexbotic](/papers/06-embodied-ai/vla/foundation/Dexbotic_2025) | 开源 VLA 工具箱：统一模块化框架（VLM + Action Expert）+ 基于 Qwen2.5 的更强预训练模型 + 实验驱动 Exp 脚本开发，SimplerEnv 最高 +46.2%、CALVIN +0.81 | VLA Toolbox、统一框架、DexboticVLM、实验驱动开发 | 2025.10 |
+| [FutureVLA](/papers/06-embodied-ai/vla/foundation/FutureVLA_2026) | 联合视觉-运动预测建模（JVPM）：3D-VAE 编码连续 17 帧 + 双流解耦监督 + 门控交叉注意力条件化交互，潜在嵌入对齐迁移时序先验，推理零开销，SimplerEnv 80.1%、真实机器人超 π₀ 达 26.7% | 联合视觉运动预测、双流解耦、门控交叉注意力、潜在对齐 | 2026.03 |
 | [GR-3](/papers/06-embodied-ai/vla/foundation/GR3_2025) | 4B VLA（Qwen2.5-VL + Action DiT），机器人轨迹 + VL 数据协同训练实现 OOD 指令零样本泛化，VR 人类轨迹 10-shot 适配新物体（57.8%→86.7%），Task Status 辅助监督 + DiT RMSNorm 强化指令跟随，全面超越 π₀ | MoT 架构、VL 协同训练、人类轨迹少样本适配、Task Status、ByteMini 双臂移动 | 2025.07 |
 | [MoH](/papers/06-embodied-ai/vla/foundation/MoH_2025) | 多 horizon 动作块在共享 Action Transformer 中并行处理 + 轻量门控融合（2k 参数）+ 跨 horizon 共识动态推理，plug-and-play 适用于 flow/regression 策略，$\pi_{0.5}$+MoH LIBERO 99% SOTA | 多 Horizon 融合、门控融合、动态推理、Action Chunking | 2025.11 |
 | [MemoryVLA](/papers/06-embodied-ai/vla/foundation/MemoryVLA_2025) | 借鉴认知科学双记忆系统设计感知-认知记忆库（PCMB），同时存储低层视觉细节和高层语义，跨注意力检索 + 门控融合 + 合并压缩建模长时域依赖，SimplerEnv-Bridge +14.6、LIBERO 96.5%、真实世界时序任务 +26 | 感知-认知记忆、时序建模、扩散策略、长时域操作 | 2025.08 |

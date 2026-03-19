@@ -61,6 +61,7 @@
 <details open>
 <summary>幻觉缓解</summary>
 
+- [CSR (2024)](papers/04-multimodal/vlm/hallucination/CSR_2024.md) — CLIP 校准自奖励 + 句子级 beam search + 迭代 DPO，三轮迭代 CHAIR$_S$ 降低 57%
 - [DLC (2025)](papers/04-multimodal/vlm/hallucination/DLC_2025.md) — CLIP 动态探针 + 相对视觉优势 + 自适应 Logits 调制，Training-Free 高效缓解 LVLM 幻觉
 - [HALC (2024)](papers/04-multimodal/vlm/hallucination/HALC_2024.md) — 自适应 FOV 对比解码 + 视觉匹配 beam search，无训练即插即用缓解三种对象幻觉
 - [HIME (2026)](papers/04-multimodal/vlm/hallucination/HIME_2026.md) — HIS 层自适应加权投影编辑，无训练/无开销降低 61.8% 对象幻觉
@@ -97,6 +98,7 @@
 - [BridgeVLA (2025)](papers/06-embodied-ai/vla/foundation/BridgeVLA_2025.md) — 3D 正交投影 + 2D 热力图输入-输出对齐，RLBench 88.2%、3 条轨迹 95.4%
 - [DAM-VLA (2026)](papers/06-embodied-ai/vla/foundation/DAM_VLA_2026.md) — 动作路由 + 手臂/夹爪双扩散模型 + 双尺度加权协调
 - [Dexbotic (2025)](papers/06-embodied-ai/vla/foundation/Dexbotic_2025.md) — 开源 VLA 工具箱：统一框架 + Qwen2.5 预训练模型 + 实验驱动开发，最高 +46.2%
+- [FutureVLA (2026)](papers/06-embodied-ai/vla/foundation/FutureVLA_2026.md) — 双流解耦 + 门控交叉注意力联合视觉运动预测，潜在对齐迁移时序先验，SimplerEnv 80.1%、真实机器人超 π₀ 达 26.7%
 - [GR-3 (2025)](papers/06-embodied-ai/vla/foundation/GR3_2025.md) — 4B VLA：VL 协同训练 + VR 人类轨迹 10-shot 适配 + Task Status 指令跟随，全面超越 π₀
 - [MoH (2025)](papers/06-embodied-ai/vla/foundation/MoH_2025.md) — 多 Horizon 动作块并行融合 + 轻量门控 + 动态推理，π₀.₅+MoH LIBERO 99%
 - [MemoryVLA (2025)](papers/06-embodied-ai/vla/foundation/MemoryVLA_2025.md) — 感知-认知双流记忆库建模长时域依赖，SimplerEnv-Bridge +14.6、LIBERO 96.5%、真实世界时序 +26

@@ -105,6 +105,7 @@ export default defineConfig({
                       text: '幻觉缓解',
                       collapsed: false,
                       items: [
+                        { text: 'CSR (2024)', link: '/papers/04-multimodal/vlm/hallucination/CSR_2024' },
                         { text: 'DLC (2025)', link: '/papers/04-multimodal/vlm/hallucination/DLC_2025' },
                         { text: 'HALC (2024)', link: '/papers/04-multimodal/vlm/hallucination/HALC_2024' },
                         { text: 'HIME (2026)', link: '/papers/04-multimodal/vlm/hallucination/HIME_2026' },
@@ -139,6 +140,7 @@ export default defineConfig({
                         { text: 'BridgeVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/BridgeVLA_2025' },
                         { text: 'DAM-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/DAM_VLA_2026' },
                         { text: 'Dexbotic (2025)', link: '/papers/06-embodied-ai/vla/foundation/Dexbotic_2025' },
+                        { text: 'FutureVLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/FutureVLA_2026' },
                         { text: 'GR-3 (2025)', link: '/papers/06-embodied-ai/vla/foundation/GR3_2025' },
                         { text: 'MoH (2025)', link: '/papers/06-embodied-ai/vla/foundation/MoH_2025' },
                         { text: 'MemoryVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/MemoryVLA_2025' },
