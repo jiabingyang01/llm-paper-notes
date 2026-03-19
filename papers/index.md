@@ -46,6 +46,7 @@
 | --- | --- | --- | --- |
 | [BridgeVLA](/papers/06-embodied-ai/vla/foundation/BridgeVLA_2025) | 3D 点云正交投影为多视图 2D 图像 + 预测 2D 热力图对齐输入-输出，热力图预训练赋予 VLM 空间定位能力，RLBench 88.2%、3 条轨迹达 95.4% | 输入-输出对齐、2D 热力图、正交投影、样本效率 | 2025.06 |
 | [DAM-VLA](/papers/06-embodied-ai/vla/foundation/DAM_VLA_2026) | VLM 推理驱动动作路由选择手臂/夹爪专用扩散模型（class token 全局 + register token 局部）+ 双尺度加权协调训练，SIMPLER 平均 78-83%、真实世界 86.8% | 动作路由、双扩散头、class/register token、双尺度加权 | 2026.03 |
+| [DreamVLA](/papers/06-embodied-ai/vla/foundation/DreamVLA_2025) | 感知-预测-动作闭环：预测三类综合世界知识（动态区域/深度/语义）+ block-wise 结构化注意力防止跨类泄露 + DiT 动作头，CALVIN ABC-D 4.44 SOTA、LIBERO 92.6%、真实世界 76.7% | 世界知识预测、结构化注意力、DiT 动作头、CoTracker/Depth Anything/DINOv2 | 2025.07 |
 | [Dexbotic](/papers/06-embodied-ai/vla/foundation/Dexbotic_2025) | 开源 VLA 工具箱：统一模块化框架（VLM + Action Expert）+ 基于 Qwen2.5 的更强预训练模型 + 实验驱动 Exp 脚本开发，SimplerEnv 最高 +46.2%、CALVIN +0.81 | VLA Toolbox、统一框架、DexboticVLM、实验驱动开发 | 2025.10 |
 | [FutureVLA](/papers/06-embodied-ai/vla/foundation/FutureVLA_2026) | 联合视觉-运动预测建模（JVPM）：3D-VAE 编码连续 17 帧 + 双流解耦监督 + 门控交叉注意力条件化交互，潜在嵌入对齐迁移时序先验，推理零开销，SimplerEnv 80.1%、真实机器人超 π₀ 达 26.7% | 联合视觉运动预测、双流解耦、门控交叉注意力、潜在对齐 | 2026.03 |
 | [GR-3](/papers/06-embodied-ai/vla/foundation/GR3_2025) | 4B VLA（Qwen2.5-VL + Action DiT），机器人轨迹 + VL 数据协同训练实现 OOD 指令零样本泛化，VR 人类轨迹 10-shot 适配新物体（57.8%→86.7%），Task Status 辅助监督 + DiT RMSNorm 强化指令跟随，全面超越 π₀ | MoT 架构、VL 协同训练、人类轨迹少样本适配、Task Status、ByteMini 双臂移动 | 2025.07 |

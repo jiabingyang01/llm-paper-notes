@@ -97,6 +97,7 @@
 
 - [BridgeVLA (2025)](papers/06-embodied-ai/vla/foundation/BridgeVLA_2025.md) — 3D 正交投影 + 2D 热力图输入-输出对齐，RLBench 88.2%、3 条轨迹 95.4%
 - [DAM-VLA (2026)](papers/06-embodied-ai/vla/foundation/DAM_VLA_2026.md) — 动作路由 + 手臂/夹爪双扩散模型 + 双尺度加权协调
+- [DreamVLA (2025)](papers/06-embodied-ai/vla/foundation/DreamVLA_2025.md) — 预测三类综合世界知识（动态区域/深度/语义）+ 结构化注意力解耦，CALVIN 4.44 SOTA
 - [Dexbotic (2025)](papers/06-embodied-ai/vla/foundation/Dexbotic_2025.md) — 开源 VLA 工具箱：统一框架 + Qwen2.5 预训练模型 + 实验驱动开发，最高 +46.2%
 - [FutureVLA (2026)](papers/06-embodied-ai/vla/foundation/FutureVLA_2026.md) — 双流解耦 + 门控交叉注意力联合视觉运动预测，潜在对齐迁移时序先验，SimplerEnv 80.1%、真实机器人超 π₀ 达 26.7%
 - [GR-3 (2025)](papers/06-embodied-ai/vla/foundation/GR3_2025.md) — 4B VLA：VL 协同训练 + VR 人类轨迹 10-shot 适配 + Task Status 指令跟随，全面超越 π₀

@@ -139,6 +139,7 @@ export default defineConfig({
                       items: [
                         { text: 'BridgeVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/BridgeVLA_2025' },
                         { text: 'DAM-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/DAM_VLA_2026' },
+                        { text: 'DreamVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/DreamVLA_2025' },
                         { text: 'Dexbotic (2025)', link: '/papers/06-embodied-ai/vla/foundation/Dexbotic_2025' },
                         { text: 'FutureVLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/FutureVLA_2026' },
                         { text: 'GR-3 (2025)', link: '/papers/06-embodied-ai/vla/foundation/GR3_2025' },
