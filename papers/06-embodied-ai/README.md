@@ -14,6 +14,7 @@
 | --- | --- | --- |
 | [3D-CAVLA](vla/foundation/3D_CAVLA_2025.md) | 3D 深度感知、CoT 指令分解、ROI 检测、零样本泛化、LIBERO | 2025 |
 | [AimBot](vla/foundation/AimBot_2025.md) | 瞄准线 + 准星视觉空间线索、EE 位姿/朝向/夹爪编码到像素空间、<1 ms 模型无关、LIBERO-Long +5.8、真实世界 27→43/50 | 2025 |
+| [AnchorVLA4D](vla/foundation/AnchorVLA4D_2026.md) | 首帧锚帧 + 冻结 Any4D 空间编码器、遮挡遗忘缓解、早期重试、SimplerEnv 64.6%（+13.6%）、真实世界 80% | 2026 |
 | [BridgeVLA](vla/foundation/BridgeVLA_2025.md) | 输入-输出 2D 对齐、正交投影、2D 热力图预训练、RLBench 88.2%、3 条轨迹 95.4% | 2025 |
 | [ChatVLA](vla/foundation/ChatVLA_2025.md) | Spurious Forgetting 分析、Phased Alignment Training、MoE 双专家（共享 Attention 隔离 MLP）、2B 参数统一理解+控制、MMMU 37.4 | 2025 |
 | [DAM-VLA](vla/foundation/DAM_VLA_2026.md) | 动作路由、双扩散动作头（手臂 class token + 夹爪 register token）、双尺度加权 | 2026 |
@@ -28,6 +29,7 @@
 | [π₀](vla/foundation/pi0_2024.md) | Flow Matching VLA、VLM 骨架 + Action Expert、跨构型预训练、预训练/后训练范式 | 2024 |
 | [π₀.₅](vla/foundation/pi05_2025.md) | 异构多源数据协同训练、分层推理（子任务预测 + 低层控制）、开放世界泛化 | 2025 |
 | [SF](vla/foundation/SF_2025.md) | 隐式空间表征对齐（VGGT）、中间层视觉 embedding 监督、推理零开销、3.8× 训练加速、LIBERO 98.5% | 2025 |
+| [SPR](vla/foundation/SPR_2026.md) | 进度感知空间子目标规划、See-Plan-Rewind 闭环、自主错误恢复、LIBERO 91.8%、LIBERO-Plus OOD ↓18.8% | 2026 |
 | [TGM-VLA](vla/foundation/TGM_VLA_2026.md) | 关键帧采样优化、颜色反转投影、跨任务/任务内 Mixup、RLBench 90.5%、COLOSSEUM 68.8% | 2026 |
 | [UniVLA](vla/foundation/UniVLA_2025.md) | 任务中心潜在动作解耦（VQ-VAE + DINOv2 + 语言引导两阶段分离）、跨具身无标注视频预训练、1/20 算力超越 OpenVLA、LIBERO 95.2%、真实世界 81.7% | 2025 |
 

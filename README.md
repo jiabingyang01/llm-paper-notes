@@ -121,6 +121,7 @@
 
 - [3D-CAVLA (2025)](papers/06-embodied-ai/vla/foundation/3D_CAVLA_2025.md) — CoT 指令分解 + PointNet 深度编码器 + 任务感知 ROI，LIBERO 98.1%，零样本 +8.8%
 - [AimBot (2025)](papers/06-embodied-ai/vla/foundation/AimBot_2025.md) — 瞄准线+准星视觉线索编码 EE 空间状态到像素空间，<1 ms 模型无关，π₀ 真实世界 27→43/50
+- [AnchorVLA4D (2026)](papers/06-embodied-ai/vla/foundation/AnchorVLA4D_2026.md) — 首帧锚帧 + 冻结 Any4D 空间编码器，缓解遮挡遗忘和空间失定向，SimplerEnv +13.6%，真实世界 80%
 - [BridgeVLA (2025)](papers/06-embodied-ai/vla/foundation/BridgeVLA_2025.md) — 3D 正交投影 + 2D 热力图输入-输出对齐，RLBench 88.2%、3 条轨迹 95.4%
 - [ChatVLA (2025)](papers/06-embodied-ai/vla/foundation/ChatVLA_2025.md) — Phased Alignment Training + MoE 双专家，2B 参数统一多模态理解与机器人控制，MMMU 37.4、25 项真实任务超越 OpenVLA
 - [DAM-VLA (2026)](papers/06-embodied-ai/vla/foundation/DAM_VLA_2026.md) — 动作路由 + 手臂/夹爪双扩散模型 + 双尺度加权协调
@@ -135,6 +136,7 @@
 - [π₀ (2024)](papers/06-embodied-ai/vla/foundation/pi0_2024.md) — Flow Matching VLA 基础模型
 - [π₀.₅ (2025)](papers/06-embodied-ai/vla/foundation/pi05_2025.md) — 异构协同训练 + 分层推理
 - [SF (2025)](papers/06-embodied-ai/vla/foundation/SF_2025.md) — 隐式空间表征对齐（VGGT），推理零开销，LIBERO 98.5%，训练 3.8× 加速
+- [SPR (2026)](papers/06-embodied-ai/vla/foundation/SPR_2026.md) — See-Plan-Rewind 空间子目标进度感知 + 自主回退恢复，LIBERO 91.8%，LIBERO-Plus OOD 退化仅 18.8%
 - [TGM-VLA (2026)](papers/06-embodied-ai/vla/foundation/TGM_VLA_2026.md) — 关键帧采样优化 + 颜色反转 + 任务引导 Mixup，RLBench 90.5%
 - [UniVLA (2025)](papers/06-embodied-ai/vla/foundation/UniVLA_2025.md) — 任务中心潜在动作两阶段解耦 + 跨具身无标注视频预训练，1/20 算力超 OpenVLA，LIBERO 95.2%、真实世界 81.7%
 

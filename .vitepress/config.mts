@@ -161,6 +161,7 @@ export default defineConfig({
                       items: [
                         { text: '3D-CAVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/3D_CAVLA_2025' },
                         { text: 'AimBot (2025)', link: '/papers/06-embodied-ai/vla/foundation/AimBot_2025' },
+                        { text: 'AnchorVLA4D (2026)', link: '/papers/06-embodied-ai/vla/foundation/AnchorVLA4D_2026' },
                         { text: 'BridgeVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/BridgeVLA_2025' },
                         { text: 'ChatVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/ChatVLA_2025' },
                         { text: 'DAM-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/DAM_VLA_2026' },
@@ -175,6 +176,7 @@ export default defineConfig({
                         { text: 'π₀ (2024)', link: '/papers/06-embodied-ai/vla/foundation/pi0_2024' },
                         { text: 'π₀.₅ (2025)', link: '/papers/06-embodied-ai/vla/foundation/pi05_2025' },
                         { text: 'SF (2025)', link: '/papers/06-embodied-ai/vla/foundation/SF_2025' },
+                        { text: 'SPR (2026)', link: '/papers/06-embodied-ai/vla/foundation/SPR_2026' },
                         { text: 'TGM-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/TGM_VLA_2026' },
                         { text: 'UniVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/UniVLA_2025' },
                       ],

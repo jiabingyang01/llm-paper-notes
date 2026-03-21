@@ -67,6 +67,7 @@
 | --- | --- | --- | --- |
 | [3D-CAVLA](/papers/06-embodied-ai/vla/foundation/3D_CAVLA_2025) | 在 OpenVLA-OFT 上集成 CoT 叙事指令 + PointNet 轻量深度编码器 + 任务感知 ROI 检测，2D→3D 输入升级，LIBERO 双相机 98.1%，自建 LIBERO-Unseen 零样本基准上比 OpenVLA-OFT 绝对提升 8.8% | 3D 深度感知、CoT 指令分解、ROI 检测、零样本泛化、LIBERO | 2025.05 |
 | [AimBot](/papers/06-embodied-ai/vla/foundation/AimBot_2025) | 在 RGB 图像上叠加瞄准线（shooting line）和准星（scope reticle）编码 EE 位姿/朝向/夹爪状态到像素空间，<1 ms 无需改架构，π₀ 真实世界 27→43/50、LIBERO-Long +5.8，超越 TraceVLA/RoboPoint | 视觉空间线索、2.5D 空间编码、模型无关、深度可见性 | 2025.08 |
+| [AnchorVLA4D](/papers/06-embodied-ai/vla/foundation/AnchorVLA4D_2026) | 首帧作为锚帧保留初始场景上下文 + 冻结 Any4D 空间编码器联合处理锚帧与当前帧提取 3D 几何特征，缓解遮挡遗忘和空间失定向，SimplerEnv 64.6%（+13.6%），真实世界 80% | 锚帧机制、冻结空间编码器、遮挡遗忘、早期重试 | 2026.03 |
 | [BridgeVLA](/papers/06-embodied-ai/vla/foundation/BridgeVLA_2025) | 3D 点云正交投影为多视图 2D 图像 + 预测 2D 热力图对齐输入-输出，热力图预训练赋予 VLM 空间定位能力，RLBench 88.2%、3 条轨迹达 95.4% | 输入-输出对齐、2D 热力图、正交投影、样本效率 | 2025.06 |
 | [ChatVLA](/papers/06-embodied-ai/vla/foundation/ChatVLA_2025) | 系统分析 VLA 的 spurious forgetting 与 task interference，Phased Alignment Training 先控制后理解 + MoE 双专家隔离 MLP，2B 参数 MMMU 37.4（ECoT 的 6 倍）、25 项真实任务超越 OpenVLA | Spurious Forgetting、MoE、Phased Alignment Training、多模态理解+控制统一 | 2025.02 |
 | [DAM-VLA](/papers/06-embodied-ai/vla/foundation/DAM_VLA_2026) | VLM 推理驱动动作路由选择手臂/夹爪专用扩散模型（class token 全局 + register token 局部）+ 双尺度加权协调训练，SIMPLER 平均 78-83%、真实世界 86.8% | 动作路由、双扩散头、class/register token、双尺度加权 | 2026.03 |
@@ -81,6 +82,7 @@
 | [π₀](/papers/06-embodied-ai/vla/foundation/pi0_2024) | 用 Flow Matching 替代自回归生成动作，构建首个能完成高频灵巧操作的通用 VLA 基础模型 | Flow Matching VLA、Action Expert、跨构型预训练 | 2024.10 |
 | [π₀.₅](/papers/06-embodied-ai/vla/foundation/pi05_2025) | 通过异构多源数据协同训练和分层推理，首次实现端到端 VLA 在全新家庭环境中执行长时域灵巧操作 | 异构协同训练、分层推理、开放世界泛化 | 2025.04 |
 | [SF](/papers/06-embodied-ai/vla/foundation/SF_2025) | 将 VLA 中间层视觉 embedding 与 VGGT 3D 表征做余弦对齐，无需 3D 输入、推理零开销，LIBERO 98.5% 超越所有 2D/3D VLA，训练 3.8× 加速、数据 5.9× 高效 | 隐式空间对齐、VGGT、表征监督、训练/数据效率 | 2025.10 |
+| [SPR](/papers/06-embodied-ai/vla/foundation/SPR_2026) | 将任务分解为带 2D 坐标的空间子目标序列，See-Plan 闭环进度监控 + Rewind 自主回退恢复，LIBERO 91.8%（+5% over MolmoAct），LIBERO-Plus OOD 仅 18.8% 退化（SOTA） | 进度感知、空间子目标、Rewind 错误恢复、OOD 鲁棒性 | 2026.03 |
 | [TGM-VLA](/papers/06-embodied-ai/vla/foundation/TGM_VLA_2026) | 优化关键帧采样（存储 -85%、训练 5× 加速）+ 颜色反转投影分支 + 任务引导点云 Mixup，RLBench 90.5% SOTA、COLOSSEUM 68.8% | 关键帧采样优化、颜色反转、跨任务/任务内 Mixup、3D VLA | 2026.02 |
 | [UniVLA](/papers/06-embodied-ai/vla/foundation/UniVLA_2025) | 语言引导两阶段解耦任务中心潜在动作（DINOv2 特征空间 + VQ-VAE 离散化），跨具身无标注视频预训练通才策略，1/20 算力超越 OpenVLA，LIBERO 95.2%、CALVIN 3.80、R2R 47.1%、真实世界 81.7% | 任务中心潜在动作、跨具身无标注预训练、VQ-VAE、DINOv2 | 2025.05 |
 
