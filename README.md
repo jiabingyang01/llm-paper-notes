@@ -124,6 +124,7 @@
 - [AnchorVLA4D (2026)](papers/06-embodied-ai/vla/foundation/AnchorVLA4D_2026.md) — 首帧锚帧 + 冻结 Any4D 空间编码器，缓解遮挡遗忘和空间失定向，SimplerEnv +13.6%，真实世界 80%
 - [BridgeVLA (2025)](papers/06-embodied-ai/vla/foundation/BridgeVLA_2025.md) — 3D 正交投影 + 2D 热力图输入-输出对齐，RLBench 88.2%、3 条轨迹 95.4%
 - [ChatVLA (2025)](papers/06-embodied-ai/vla/foundation/ChatVLA_2025.md) — Phased Alignment Training + MoE 双专家，2B 参数统一多模态理解与机器人控制，MMMU 37.4、25 项真实任务超越 OpenVLA
+- [CronusVLA (2026)](papers/06-embodied-ai/vla/foundation/CronusVLA_2026.md) — Feature Chunking 多帧特征聚合 + DiT 跨帧解码器，SimplerEnv 70.9%、LIBERO 97.0%、SimplerEnv-OR R-Score 86.9
 - [DAM-VLA (2026)](papers/06-embodied-ai/vla/foundation/DAM_VLA_2026.md) — 动作路由 + 手臂/夹爪双扩散模型 + 双尺度加权协调
 - [DreamVLA (2025)](papers/06-embodied-ai/vla/foundation/DreamVLA_2025.md) — 预测三类综合世界知识（动态区域/深度/语义）+ 结构化注意力解耦，CALVIN 4.44 SOTA
 - [Dexbotic (2025)](papers/06-embodied-ai/vla/foundation/Dexbotic_2025.md) — 开源 VLA 工具箱：统一框架 + Qwen2.5 预训练模型 + 实验驱动开发，最高 +46.2%
