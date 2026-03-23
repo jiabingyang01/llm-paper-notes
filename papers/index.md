@@ -83,6 +83,7 @@
 | [π₀.₅](/papers/06-embodied-ai/vla/foundation/pi05_2025) | 通过异构多源数据协同训练和分层推理，首次实现端到端 VLA 在全新家庭环境中执行长时域灵巧操作 | 异构协同训练、分层推理、开放世界泛化 | 2025.04 |
 | [SF](/papers/06-embodied-ai/vla/foundation/SF_2025) | 将 VLA 中间层视觉 embedding 与 VGGT 3D 表征做余弦对齐，无需 3D 输入、推理零开销，LIBERO 98.5% 超越所有 2D/3D VLA，训练 3.8× 加速、数据 5.9× 高效 | 隐式空间对齐、VGGT、表征监督、训练/数据效率 | 2025.10 |
 | [SPR](/papers/06-embodied-ai/vla/foundation/SPR_2026) | 将任务分解为带 2D 坐标的空间子目标序列，See-Plan 闭环进度监控 + Rewind 自主回退恢复，LIBERO 91.8%（+5% over MolmoAct），LIBERO-Plus OOD 仅 18.8% 退化（SOTA） | 进度感知、空间子目标、Rewind 错误恢复、OOD 鲁棒性 | 2026.03 |
+| [TCoT](/papers/06-embodied-ai/vla/foundation/TCoT_2026) | 全局/局部层次轨迹作为 VLA 的中间任务规划层（CoT），GLSR 算法统一失败检测与全局-局部策略切换恢复，多任务促进跨任务知识共享，LIBERO 83.3%（Multi），真实世界 +28% 超越 OpenVLA | 轨迹思维链、层次规划、GLSR 失败恢复、跨任务知识共享 | 2026 |
 | [TGM-VLA](/papers/06-embodied-ai/vla/foundation/TGM_VLA_2026) | 优化关键帧采样（存储 -85%、训练 5× 加速）+ 颜色反转投影分支 + 任务引导点云 Mixup，RLBench 90.5% SOTA、COLOSSEUM 68.8% | 关键帧采样优化、颜色反转、跨任务/任务内 Mixup、3D VLA | 2026.02 |
 | [UniVLA](/papers/06-embodied-ai/vla/foundation/UniVLA_2025) | 语言引导两阶段解耦任务中心潜在动作（DINOv2 特征空间 + VQ-VAE 离散化），跨具身无标注视频预训练通才策略，1/20 算力超越 OpenVLA，LIBERO 95.2%、CALVIN 3.80、R2R 47.1%、真实世界 81.7% | 任务中心潜在动作、跨具身无标注预训练、VQ-VAE、DINOv2 | 2025.05 |
 
@@ -92,6 +93,7 @@
 | --- | --- | --- | --- |
 | [BitVLA](/papers/06-embodied-ai/vla/efficient/BitVLA_2025) | 首个全参数三值化 VLA，BitNet b1.58 LLM + 蒸馏感知训练将 ViT 量化至 1.58-bit，无需大规模机器人预训练 LIBERO 平均 94.8%（匹配 OpenVLA-OFT INT4），显存仅 1.4GB（29.8%） | 1-bit 量化、蒸馏感知训练、三值化、边端部署 | 2025.06 |
 | [EfficientVLA](/papers/06-embodied-ai/vla/efficient/EfficientVLA_2025) | 结构化 training-free 加速：LLM 层剪枝 + 任务感知视觉 token 选择 + 扩散步缓存，三维度协同消除冗余，FLOPs 降至 28.9%、1.93× 加速 | LLM 层剪枝、任务感知 Token 选择、扩散步缓存、Training-Free、1.93× 加速 | 2025.06 |
+| [HeiSD](/papers/06-embodied-ai/vla/efficient/HeiSD_2026) | 混合推测解码（Drafter SD + Retrieval SD），运动学融合指标自动切换，自适应验证跳过 + 序列级宽松接受，LIBERO 最高 2.45× 加速，真实世界 2.06×-2.41× | 混合推测解码、运动学感知、Verify-Skip、序列级宽松接受、2.45× 加速 | 2026.03 |
 | [LAC](/papers/06-embodied-ai/vla/efficient/LAC_2026) | 可学习自适应 Token 缓存，光流运动先验 + Gumbel-Softmax 端到端优化，1.76× 加速 | 可学习 Token 缓存、光流运动先验、1.76× 加速 | 2026.01 |
 | [PD-VLA](/papers/06-embodied-ai/vla/efficient/PD_VLA_2025) | AR 解码重建为非线性方程组，Jacobi 不动点并行迭代，不修改模型不训练，action chunking VLA 2.52× 频率提升 | Jacobi 并行解码、Action Chunking、Training-Free、2.52× 加速 | 2025.03 |
 | [SD-VLA](/papers/06-embodied-ai/vla/efficient/SD_VLA_2026) | 静态-动态 Token 解耦 + 多级缓存层次 + 可学习重缓存门，长时程 VLA 2.26× 加速 | 静态-动态解耦、多级缓存、2.26× 加速 | 2026.02 |
@@ -154,6 +156,7 @@
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
 | [BridgeV2W](/papers/06-embodied-ai/world-models/BridgeV2W_2025) | 将坐标空间动作通过 URDF + 相机参数渲染为像素对齐 Embodiment Mask，经 ControlNet 注入预训练视频生成模型，辅以光流运动损失，统一解决动作-视频鸿沟、视角敏感性和跨构型架构不统一三大问题 | Embodiment Mask、ControlNet、光流运动损失、跨构型统一 | 2025 |
+| [Kinema4D](/papers/06-embodied-ai/world-models/Kinema4D_2026) | 将仿真解耦为运动学确定性 4D 机器人轨迹（URDF + FK/IK → pointmap）和生成式环境响应（DiT 联合预测 RGB+pointmap），Robo4D-200k 训练，PSNR 22.50、FVD 98.5、F-Score 0.4733，首次零样本真实世界迁移 | 4D Pointmap 控制、运动学-生成解耦、联合 RGB+Pointmap 合成、构型无关、零样本迁移 | 2026.03 |
 | [WorldVLA](/papers/06-embodied-ai/world-models/WorldVLA_2025) | 基于 Chameleon 将 VLA 动作模型与世界模型统一到单个自回归框架，共享权重混合训练实现双向增强，提出 Action Attention Mask 阻断 Action Chunking 误差累积 | 自回归统一模型、Action Attention Mask、Chameleon、双向增强 | 2025 |
 
 ### 🦾 Embodied AI — Imitation Learning

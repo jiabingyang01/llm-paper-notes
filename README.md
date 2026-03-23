@@ -137,6 +137,7 @@
 - [π₀.₅ (2025)](papers/06-embodied-ai/vla/foundation/pi05_2025.md) — 异构协同训练 + 分层推理
 - [SF (2025)](papers/06-embodied-ai/vla/foundation/SF_2025.md) — 隐式空间表征对齐（VGGT），推理零开销，LIBERO 98.5%，训练 3.8× 加速
 - [SPR (2026)](papers/06-embodied-ai/vla/foundation/SPR_2026.md) — See-Plan-Rewind 空间子目标进度感知 + 自主回退恢复，LIBERO 91.8%，LIBERO-Plus OOD 退化仅 18.8%
+- [TCoT (2026)](papers/06-embodied-ai/vla/foundation/TCoT_2026.md) — 全局/局部轨迹思维链 + GLSR 失败恢复，多任务促进跨任务共享，LIBERO 83.3%，真实世界 +28%
 - [TGM-VLA (2026)](papers/06-embodied-ai/vla/foundation/TGM_VLA_2026.md) — 关键帧采样优化 + 颜色反转 + 任务引导 Mixup，RLBench 90.5%
 - [UniVLA (2025)](papers/06-embodied-ai/vla/foundation/UniVLA_2025.md) — 任务中心潜在动作两阶段解耦 + 跨具身无标注视频预训练，1/20 算力超 OpenVLA，LIBERO 95.2%、真实世界 81.7%
 
@@ -149,6 +150,7 @@
 
 - [BitVLA (2025)](papers/06-embodied-ai/vla/efficient/BitVLA_2025.md) — 首个全参数三值化 VLA，蒸馏感知训练量化 ViT 至 1.58-bit，LIBERO 94.8%、显存仅 1.4GB
 - [EfficientVLA (2025)](papers/06-embodied-ai/vla/efficient/EfficientVLA_2025.md) — 结构化 training-free 加速：层剪枝 + Token 选择 + 扩散步缓存，1.93× 加速
+- [HeiSD (2026)](papers/06-embodied-ai/vla/efficient/HeiSD_2026.md) — 混合推测解码（Drafter + Retrieval SD）+ 运动学融合指标自动切换，LIBERO 2.45×、真实世界 2.41× 加速
 - [LAC (2026)](papers/06-embodied-ai/vla/efficient/LAC_2026.md) — 可学习自适应 Token 缓存加速 VLA
 - [PD-VLA (2025)](papers/06-embodied-ai/vla/efficient/PD_VLA_2025.md) — Jacobi 并行解码加速 Action Chunking VLA，不改模型不训练，2.52× 频率提升
 - [SD-VLA (2026)](papers/06-embodied-ai/vla/efficient/SD_VLA_2026.md) — 静态-动态解耦实现长时程高效 VLA
@@ -223,6 +225,7 @@
 <summary>World Models</summary>
 
 - [BridgeV2W (2025)](papers/06-embodied-ai/world-models/BridgeV2W_2025.md) — Embodiment Mask + ControlNet 像素空间动作注入，跨构型统一世界模型
+- [Kinema4D (2026)](papers/06-embodied-ai/world-models/Kinema4D_2026.md) — 运动学 4D pointmap 控制 + DiT 联合生成 RGB+Pointmap，20 万条 4D 数据训练，首次零样本真实世界迁移
 - [WorldVLA (2025)](papers/06-embodied-ai/world-models/WorldVLA_2025.md) — 自回归统一 VLA + 世界模型，Action Attention Mask 解决 Chunking 误差累积
 
 </details>

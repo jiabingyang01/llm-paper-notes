@@ -177,6 +177,7 @@ export default defineConfig({
                         { text: 'π₀.₅ (2025)', link: '/papers/06-embodied-ai/vla/foundation/pi05_2025' },
                         { text: 'SF (2025)', link: '/papers/06-embodied-ai/vla/foundation/SF_2025' },
                         { text: 'SPR (2026)', link: '/papers/06-embodied-ai/vla/foundation/SPR_2026' },
+                        { text: 'TCoT (2026)', link: '/papers/06-embodied-ai/vla/foundation/TCoT_2026' },
                         { text: 'TGM-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/TGM_VLA_2026' },
                         { text: 'UniVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/UniVLA_2025' },
                       ],
@@ -187,6 +188,7 @@ export default defineConfig({
                       items: [
                         { text: 'BitVLA (2025)', link: '/papers/06-embodied-ai/vla/efficient/BitVLA_2025' },
                         { text: 'EfficientVLA (2025)', link: '/papers/06-embodied-ai/vla/efficient/EfficientVLA_2025' },
+                        { text: 'HeiSD (2026)', link: '/papers/06-embodied-ai/vla/efficient/HeiSD_2026' },
                         { text: 'LAC (2026)', link: '/papers/06-embodied-ai/vla/efficient/LAC_2026' },
                         { text: 'PD-VLA (2025)', link: '/papers/06-embodied-ai/vla/efficient/PD_VLA_2025' },
                         { text: 'SD-VLA (2026)', link: '/papers/06-embodied-ai/vla/efficient/SD_VLA_2026' },
@@ -254,6 +256,7 @@ export default defineConfig({
                   collapsed: false,
                   items: [
                     { text: 'BridgeV2W (2025)', link: '/papers/06-embodied-ai/world-models/BridgeV2W_2025' },
+                    { text: 'Kinema4D (2026)', link: '/papers/06-embodied-ai/world-models/Kinema4D_2026' },
                     { text: 'WorldVLA (2025)', link: '/papers/06-embodied-ai/world-models/WorldVLA_2025' },
                   ],
                 },
