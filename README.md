@@ -80,6 +80,7 @@
 - [SENTINEL (2025)](papers/04-multimodal/vlm/hallucination/SENTINEL_2025.md) — 域内自举 + 句子级 C-DPO 早期干预，幻觉率降低 92% 且通用能力不降反升
 - [SIMA (2024)](papers/04-multimodal/vlm/hallucination/SIMA_2024.md) — 三视觉指标引导的上下文自评估 + 自生成偏好数据 DPO，无需外部模型，14 基准平均 +7.5%
 - [STIC (2024)](papers/04-multimodal/vlm/hallucination/STIC_2024.md) — 两阶段自训练：good/bad prompt + 图像腐蚀构造偏好数据 DPO + 描述注入式 SFT，仅用无标签图像，7 基准平均 +4.0%
+- [TAF (2026)](papers/04-multimodal/vlm/hallucination/TAF_2026.md) — Token 非对称过滤：隔离 phantom token 的 T2V 干扰 + 强调 anchor token 的视觉证据，training-free 全面 SOTA
 - [VACoDe (2024)](papers/04-multimodal/vlm/hallucination/VACoDe_2024.md) — Softmax L2 距离自适应选择对比增强 + 对比解码，Training-Free 跨模型一致提升
 - [VGA (2024)](papers/04-multimodal/vlm/hallucination/VGA_2024.md) — Referent Method + FAC 两阶段微调，63.8k GUI VQA 数据集，GUI 理解超越 GPT-4V/GPT-4o
 - [VisFlow (2025)](papers/04-multimodal/vlm/hallucination/VisFlow_2025.md) — 双层注意力干预（Token 级增强显著视觉 token + Head 级抑制系统/文本头），无训练缓解幻觉

@@ -27,6 +27,7 @@
 | [SENTINEL](vlm/hallucination/SENTINEL_2025.md) | 句子级早期干预、域内偏好学习、C-DPO、交叉验证 | 2025.07 |
 | [SIMA](vlm/hallucination/SIMA_2024.md) | 自生成响应、上下文自评估、三视觉指标、DPO、Self-Improvement | 2024.05 |
 | [STIC](vlm/hallucination/STIC_2024.md) | 自训练、图像理解、描述注入微调、正则化 DPO、Self-Training | 2024.05 |
+| [TAF](vlm/hallucination/TAF_2026.md) | Phantom Token 隔离、Anchor Token 强调、非对称注意力过滤、Training-Free | 2026 |
 | [VACoDe](vlm/hallucination/VACoDe_2024.md) | 视觉增强选择、Softmax Distance、对比解码、Training-Free、Plug-and-Play | 2024 |
 | [VGA](vlm/hallucination/VGA_2024.md) | GUI 理解、Referent Method、两阶段微调、Image-Centric | 2024.06 |
 | [VisFlow](vlm/hallucination/VisFlow_2025.md) | 双层注意力干预、Visual Sink/Salient Token、Head 分类抑制、Training-Free | 2025.06 |

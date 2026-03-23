@@ -124,6 +124,7 @@ export default defineConfig({
                         { text: 'SENTINEL (2025)', link: '/papers/04-multimodal/vlm/hallucination/SENTINEL_2025' },
                         { text: 'SIMA (2024)', link: '/papers/04-multimodal/vlm/hallucination/SIMA_2024' },
                         { text: 'STIC (2024)', link: '/papers/04-multimodal/vlm/hallucination/STIC_2024' },
+                        { text: 'TAF (2026)', link: '/papers/04-multimodal/vlm/hallucination/TAF_2026' },
                         { text: 'VACoDe (2024)', link: '/papers/04-multimodal/vlm/hallucination/VACoDe_2024' },
                         { text: 'VGA (2024)', link: '/papers/04-multimodal/vlm/hallucination/VGA_2024' },
                         { text: 'VisFlow (2025)', link: '/papers/04-multimodal/vlm/hallucination/VisFlow_2025' },
