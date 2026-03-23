@@ -121,6 +121,7 @@
 | [π₀.₆*](/papers/06-embodied-ai/vla/rl/pi06star_2025) | 通过 RECAP（优势条件化离线 RL）整合自主 rollout、专家干预和演示数据，VLA 吞吐量翻倍、失败率减半 | 优势条件化、离线 RL、分布式价值函数、RECAP | 2025.11 |
 | [π-StepNFT](/papers/06-embodied-ai/vla/rl/pi_StepNFT_2026) | 无 Critic 无似然在线 RL：SDE 拓宽探索 + 逐步监督 + 对比排序损失，ManiSkill OOD 超 PPO 11.1% | SDE 探索、逐步监督、对比排序、无 Critic | 2026.03 |
 | [PLD](/papers/06-embodied-ai/vla/rl/PLD_2026) | 冻结 VLA 主干训练轻量残差 RL 专家探索失败区域，基础策略探针 + 混合轨迹蒸馏实现 VLA 自改进，LIBERO 达 99% 成功率 | 残差 RL、基础策略探针、混合数据蒸馏、VLA 自改进 | 2026.01 |
+| [PTR](/papers/06-embodied-ai/vla/rl/PTR_2026) | 无奖励保守离线后训练：post-action identification posterior 评分 + 指数化裁剪权重重缩放 SFT 损失，兼容 diffusion/flow 动作头，三构型 12 任务 Generalist +13.8 pp | Posterior-Transition Reweighting、InfoNCE identification、保守加权、跨构型迁移 | 2026.03 |
 | [ReWiND](/papers/06-embodied-ai/vla/rl/ReWiND_2025) | 从少量演示训练语言条件化奖励模型（Video Rewind + Open-X + 仅首帧位置编码），无需新演示即可语言引导 RL 学新任务，仿真超基线 2×、真实世界提升 5× | 语言条件化奖励、Video Rewind、进度预测、零演示泛化 | 2025.05 |
 | [RISE](/papers/06-embodied-ai/vla/rl/RISE_2026) | 用组合式世界模型在想象空间做 RL，让 VLA 不靠真实交互就能自我改进 | 世界模型、Imagination RL、VLA 自改进 | 2026.02 |
 | [Robo-Dopamine](/papers/06-embodied-ai/vla/rl/RoboDopamine_2025) | 35M 多视角数据训练步感知 GRM + Hop-based 进度归一化 + 多视角融合 + 策略不变奖励塑形，One-shot 适配新任务 150 次交互达 95% 成功率 | 通用过程奖励模型、Hop-based 进度归一化、多视角融合、策略不变奖励塑形 | 2025.12 |
@@ -160,6 +161,12 @@
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
 | [EC-Flow](/papers/06-embodied-ai/imitation-learning/EC_Flow_2025) | 将光流预测从物体中心转为具身中心（预测机器人上采样点轨迹），配合目标图像辅助对齐和 URDF 感知运动学动作计算，仅用 5 条无动作标注 RGB 视频学习操作策略，在遮挡（+62%）、柔性物体（+45%）和非位移操作（+80%）场景大幅超越物体中心方法 | 具身中心光流、目标图像对齐、URDF 运动学、无动作标注、DiT 扩散 | 2025.07 |
+
+### 🎯 Reinforcement Learning
+
+| 论文 | 一句话概括 | 关键词 | 时间 |
+| --- | --- | --- | --- |
+| [FLAC](/papers/10-reinforcement-learning/FLAC_2026) | 将 MaxEnt RL 建模为 Generalized Schrödinger Bridge 问题，用速度场动能作为无似然的熵代理，上界终端分布散度，NFE=2 超越 DIME（NFE=16） | Generalized Schrödinger Bridge、Kinetic Energy、Flow/Diffusion 策略、无似然 MaxEnt RL | 2026.02 |
 
 ### ⚡ Efficiency — 视觉 Token 压缩
 

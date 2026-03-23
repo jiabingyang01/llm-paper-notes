@@ -184,6 +184,7 @@
 - [π₀.₆* (2025)](papers/06-embodied-ai/vla/rl/pi06star_2025.md) — RECAP 优势条件化离线 RL 训练 VLA
 - [π-StepNFT (2026)](papers/06-embodied-ai/vla/rl/pi_StepNFT_2026.md) — 无 Critic 无似然在线 RL：SDE 探索 + 逐步监督 + 对比排序，ManiSkill OOD 超 PPO 11.1%
 - [PLD (2026)](papers/06-embodied-ai/vla/rl/PLD_2026.md) — 残差 RL 专家探索 + 基础策略探针混合蒸馏实现 VLA 自改进
+- [PTR (2026)](papers/06-embodied-ai/vla/rl/PTR_2026.md) — 无奖励保守离线后训练：post-action identification 评分 + 保守权重，跨构型 Generalist +13.8 pp
 - [ReWiND (2025)](papers/06-embodied-ai/vla/rl/ReWiND_2025.md) — 语言条件化奖励模型 + Video Rewind，无需新演示语言引导 RL 学新任务
 - [RISE (2026)](papers/06-embodied-ai/vla/rl/RISE_2026.md) — 组合式世界模型 + 想象空间 RL
 - [Robo-Dopamine (2025)](papers/06-embodied-ai/vla/rl/RoboDopamine_2025.md) — 35M 多视角 GRM + Hop-based 进度归一化 + 策略不变奖励塑形，One-shot 适配 150 次交互达 95%
@@ -257,6 +258,13 @@
 <summary>📊 Evaluation</summary>
 
 > 暂无笔记
+
+</details>
+
+<details open>
+<summary>🎯 Reinforcement Learning</summary>
+
+- [FLAC (2026)](papers/10-reinforcement-learning/FLAC_2026.md) — GSB 框架下的无似然 MaxEnt RL：动能正则化 flow/diffusion 策略，NFE=2 达到 DIME（NFE=16）水平
 
 </details>
 

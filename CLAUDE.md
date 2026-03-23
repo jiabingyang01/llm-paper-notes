@@ -122,6 +122,7 @@ index.md                              # 网站首页
 | 07 | Efficiency | 量化、蒸馏、剪枝、推测解码 |
 | 08 | RAG & Knowledge | RAG 架构、向量检索、知识图谱 |
 | 09 | Evaluation | Benchmark 设计、评估方法论 |
+| 10 | Reinforcement Learning | RL 基础方法、连续控制、生成式策略、策略优化 |
 
 一篇论文可以在多个分类的索引中出现，但 .md 文件只存一份，放在最核心的分类下。
 

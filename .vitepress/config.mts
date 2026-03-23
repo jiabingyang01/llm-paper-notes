@@ -218,6 +218,7 @@ export default defineConfig({
                         { text: 'π₀.₆* (2025)', link: '/papers/06-embodied-ai/vla/rl/pi06star_2025' },
                         { text: 'π-StepNFT (2026)', link: '/papers/06-embodied-ai/vla/rl/pi_StepNFT_2026' },
                         { text: 'PLD (2026)', link: '/papers/06-embodied-ai/vla/rl/PLD_2026' },
+                        { text: 'PTR (2026)', link: '/papers/06-embodied-ai/vla/rl/PTR_2026' },
                         { text: 'ReWiND (2025)', link: '/papers/06-embodied-ai/vla/rl/ReWiND_2025' },
                         { text: 'RISE (2026)', link: '/papers/06-embodied-ai/vla/rl/RISE_2026' },
                         { text: 'Robo-Dopamine (2025)', link: '/papers/06-embodied-ai/vla/rl/RoboDopamine_2025' },
@@ -285,6 +286,14 @@ export default defineConfig({
               collapsed: true,
               link: '/papers/09-evaluation-and-benchmarks/',
               items: [],
+            },
+            {
+              text: '10 Reinforcement Learning',
+              collapsed: false,
+              link: '/papers/10-reinforcement-learning/',
+              items: [
+                { text: 'FLAC (2026)', link: '/papers/10-reinforcement-learning/FLAC_2026' },
+              ],
             },
           ],
         },
