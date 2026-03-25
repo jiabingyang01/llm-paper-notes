@@ -9,6 +9,7 @@
 | 论文 | 关键词 | 时间 |
 | --- | --- | --- |
 | [AGLA](vlm/hallucination/AGLA_2025.md) | GradCAM、全局-局部注意力组装、自适应遮蔽、Training-Free | 2024.06 |
+| [CIPHER](vlm/hallucination/CIPHER_2026.md) | 扩散反事实图像、SVD 幻觉子空间、特征投影、Training-Free、零推理开销 | 2026.03 |
 | [CSR](vlm/hallucination/CSR_2024.md) | 校准自奖励、CLIP Score、迭代 DPO、模态对齐、Self-Rewarding | 2024 |
 | [DLC](vlm/hallucination/DLC_2025.md) | 动态 Logits 校准、CLIP 探针、相对视觉优势、自适应引导、Training-Free | 2025 |
 | [EFUF](vlm/hallucination/EFUF_2024.md) | 细粒度遗忘、CLIP 数据筛选、梯度上升、三重损失 | 2024.02 |
@@ -24,6 +25,7 @@
 | [MMHalSnowball](vlm/hallucination/MMHalSnowball_2024.md) | 幻觉雪球效应、残差视觉解码、自适应分布混合、Training-Free | 2024.07 |
 | [OPERA](vlm/hallucination/OPERA_2024.md) | 注意力聚合模式、Over-Trust Penalty、Beam Search 回溯、Training-Free | 2024 |
 | [REVERIE](vlm/hallucination/REVERIE_2024.md) | 反思微调、正负 Rationale、细粒度推理监督、REVERIE 数据集 | 2024.07 |
+| [RFI](vlm/hallucination/RFI_2026.md) | Rectified Flow、动态干预向量、输入自适应、SVD 去噪、Plug-and-Play | 2026 |
 | [SENTINEL](vlm/hallucination/SENTINEL_2025.md) | 句子级早期干预、域内偏好学习、C-DPO、交叉验证 | 2025.07 |
 | [SIMA](vlm/hallucination/SIMA_2024.md) | 自生成响应、上下文自评估、三视觉指标、DPO、Self-Improvement | 2024.05 |
 | [STIC](vlm/hallucination/STIC_2024.md) | 自训练、图像理解、描述注入微调、正则化 DPO、Self-Training | 2024.05 |

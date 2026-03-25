@@ -62,6 +62,7 @@
 <summary>幻觉缓解</summary>
 
 - [AGLA (2025)](papers/04-multimodal/vlm/hallucination/AGLA_2025.md) — GradCAM + Image-Prompt Matching 生成增强图像，全局-局部 logit 融合 training-free 缓解幻觉，POPE +5.5%
+- [CIPHER (2026)](papers/04-multimodal/vlm/hallucination/CIPHER_2026.md) — 扩散反事实图像构建 OHC-25K + SVD 提取视觉幻觉子空间 + 推理时投影抑制，零额外推理开销，CHAIR$_S$ 13.05%
 - [CSR (2024)](papers/04-multimodal/vlm/hallucination/CSR_2024.md) — CLIP 校准自奖励 + 句子级 beam search + 迭代 DPO，三轮迭代 CHAIR$_S$ 降低 57%
 - [DLC (2025)](papers/04-multimodal/vlm/hallucination/DLC_2025.md) — CLIP 动态探针 + 相对视觉优势 + 自适应 Logits 调制，Training-Free 高效缓解 LVLM 幻觉
 - [EFUF (2024)](papers/04-multimodal/vlm/hallucination/EFUF_2024.md) — CLIP 筛选 + 细粒度梯度上升遗忘幻觉子句，无需配对数据仅 3 GPU 小时，CHAIR$_S$ 平均降低 ~15%
@@ -77,6 +78,7 @@
 - [MMHalSnowball (2024)](papers/04-multimodal/vlm/hallucination/MMHalSnowball_2024.md) — 多模态幻觉雪球效应评估框架 + 残差视觉解码自适应缓解多轮对话幻觉累积
 - [OPERA (2024)](papers/04-multimodal/vlm/hallucination/OPERA_2024.md) — 注意力柱状聚合模式检测 + 过度信任惩罚 + 回溯重分配，无训练 Beam Search 解码缓解幻觉
 - [REVERIE (2024)](papers/04-multimodal/vlm/hallucination/REVERIE_2024.md) — 正负 rationale 反思式指令微调，254k 三元组数据集提供细粒度推理监督，POPE +12.7、MME +348
+- [RFI (2026)](papers/04-multimodal/vlm/hallucination/RFI_2026.md) — Rectified Flow 动态预测输入特定干预向量 + SVD 去噪，仅 1.09x 延迟，POPE 平均 F1 +7.59%
 - [SENTINEL (2025)](papers/04-multimodal/vlm/hallucination/SENTINEL_2025.md) — 域内自举 + 句子级 C-DPO 早期干预，幻觉率降低 92% 且通用能力不降反升
 - [SIMA (2024)](papers/04-multimodal/vlm/hallucination/SIMA_2024.md) — 三视觉指标引导的上下文自评估 + 自生成偏好数据 DPO，无需外部模型，14 基准平均 +7.5%
 - [STIC (2024)](papers/04-multimodal/vlm/hallucination/STIC_2024.md) — 两阶段自训练：good/bad prompt + 图像腐蚀构造偏好数据 DPO + 描述注入式 SFT，仅用无标签图像，7 基准平均 +4.0%

@@ -106,6 +106,7 @@ export default defineConfig({
                       collapsed: false,
                       items: [
                         { text: 'AGLA (2025)', link: '/papers/04-multimodal/vlm/hallucination/AGLA_2025' },
+                        { text: 'CIPHER (2026)', link: '/papers/04-multimodal/vlm/hallucination/CIPHER_2026' },
                         { text: 'CSR (2024)', link: '/papers/04-multimodal/vlm/hallucination/CSR_2024' },
                         { text: 'DLC (2025)', link: '/papers/04-multimodal/vlm/hallucination/DLC_2025' },
                         { text: 'EFUF (2024)', link: '/papers/04-multimodal/vlm/hallucination/EFUF_2024' },
@@ -121,6 +122,7 @@ export default defineConfig({
                         { text: 'MMHalSnowball (2024)', link: '/papers/04-multimodal/vlm/hallucination/MMHalSnowball_2024' },
                         { text: 'OPERA (2024)', link: '/papers/04-multimodal/vlm/hallucination/OPERA_2024' },
                         { text: 'REVERIE (2024)', link: '/papers/04-multimodal/vlm/hallucination/REVERIE_2024' },
+                        { text: 'RFI (2026)', link: '/papers/04-multimodal/vlm/hallucination/RFI_2026' },
                         { text: 'SENTINEL (2025)', link: '/papers/04-multimodal/vlm/hallucination/SENTINEL_2025' },
                         { text: 'SIMA (2024)', link: '/papers/04-multimodal/vlm/hallucination/SIMA_2024' },
                         { text: 'STIC (2024)', link: '/papers/04-multimodal/vlm/hallucination/STIC_2024' },

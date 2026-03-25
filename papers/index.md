@@ -33,6 +33,7 @@
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
 | [AGLA](/papers/04-multimodal/vlm/hallucination/AGLA_2025) | GradCAM 驱动的 Image-Prompt Matching 生成增强图像，融合原始图像全局生成特征与增强图像局部判别特征进行校准解码，training-free 即插即用，POPE 平均提升 5.5% Accuracy / 5.1% F1 | GradCAM、全局-局部注意力组装、自适应遮蔽、Training-Free | 2024.06 |
+| [CIPHER](/papers/04-multimodal/vlm/hallucination/CIPHER_2026) | 扩散模型生成 25K 反事实图像（结构保留 + 语义篡改），对比真实/反事实隐藏表示差异经 SVD 提取视觉诱导幻觉子空间，推理时投影到正交补，training-free 零推理开销，LLaVA-1.5 CHAIR$_S$ 降至 13.05%（vs Nullu 15.20%） | 扩散反事实图像、SVD 幻觉子空间、特征投影、Training-Free | 2026.03 |
 | [CSR](/papers/04-multimodal/vlm/hallucination/CSR_2024) | 句子级 beam search + CLIP 视觉校准奖励迭代构造自生成偏好数据 + DPO 微调，三轮迭代 10 个基准平均提升 7.62%，CHAIR$_S$ 降低 57% | 校准自奖励、CLIP Score、迭代 DPO、模态对齐、Self-Rewarding | 2024.05 |
 | [DLC](/papers/04-multimodal/vlm/hallucination/DLC_2025) | 解码时用 CLIP 逐步评估候选 token 的相对视觉优势 (RVA)，相对动态历史基线自适应调整 logits，无需额外前向传播高效缓解语义漂移幻觉 | 动态 Logits 校准、CLIP 探针、相对视觉优势、自适应引导、Training-Free | 2025.06 |
 | [EFUF](/papers/04-multimodal/vlm/hallucination/EFUF_2024) | CLIP 分数自动区分幻觉/非幻觉对象，细粒度梯度上升遗忘幻觉子句 + 正向训练保留正确子句 + 句子损失维持流畅度，无需配对数据仅 3 GPU 小时，4 个 MLLM 上 CHAIR$_S$ 平均降低 ~15% 且生成质量同步提升 | 细粒度遗忘、CLIP 数据筛选、梯度上升、三重损失 | 2024.02 |
@@ -48,6 +49,7 @@
 | [MMHalSnowball](/papers/04-multimodal/vlm/hallucination/MMHalSnowball_2024) | 首次系统研究多模态幻觉雪球效应（前轮幻觉误导后续回答），提出 MMHalSnowball 评估框架（4,973 样本）+ 残差视觉解码（RVD）自适应强调视觉信息，缓解 24%+ 雪球幻觉 | 幻觉雪球效应、残差视觉解码、自适应分布混合、Training-Free | 2024.07 |
 | [OPERA](/papers/04-multimodal/vlm/hallucination/OPERA_2024) | 发现幻觉与注意力柱状聚合模式共现，Beam Search 中引入列乘积过度信任惩罚 + 回溯重分配策略，无训练/无数据/无外部知识，Shikra CHAIR$_S$ 降低 ~35% | 注意力聚合模式、Over-Trust Penalty、Beam Search 回溯、Training-Free | 2023.10 |
 | [REVERIE](/papers/04-multimodal/vlm/hallucination/REVERIE_2024) | 在视觉指令微调中引入正向/负向 rationale 的反思学习，构建 115k 指令 × 254k 三元组的 REVERIE 数据集，多轮对话解耦 rationale 与回答预测，POPE +12.7、MME +348 | 反思微调、正负 Rationale、细粒度推理监督、REVERIE 数据集 | 2024.07 |
+| [RFI](/papers/04-multimodal/vlm/hallucination/RFI_2026) | 利用 Rectified Flow 从正负样本隐藏状态差异学习线性轨迹，推理时动态预测输入特定干预向量 + SVD 去噪后注入解码器隐藏层，仅 1.09x 延迟开销，LLaVA-v1.5 POPE 平均 F1 +7.59%，9 个子集全面 SOTA | Rectified Flow、动态干预向量、输入自适应、SVD 去噪 | 2026 |
 | [SENTINEL](/papers/04-multimodal/vlm/hallucination/SENTINEL_2025) | 域内自举采样 + 检测器交叉验证构建句子级偏好数据，C-DPO 在幻觉首次出现处早期干预，Object HalBench 幻觉率降低 92% 且通用能力不降反升 | 句子级早期干预、域内偏好学习、C-DPO、交叉验证 | 2025.07 |
 | [SIMA](/papers/04-multimodal/vlm/hallucination/SIMA_2024) | LVLM 自生成候选响应 + 三视觉指标引导的上下文自评估构造偏好对，DPO 微调无需外部模型或数据，14 个基准平均提升 7.5%、CHAIR$_S$ -19.5% | 自生成响应、上下文自评估、三视觉指标、DPO、Self-Improvement | 2024.05 |
 | [STIC](/papers/04-multimodal/vlm/hallucination/STIC_2024) | 两阶段自训练——good/bad prompt + 图像腐蚀构造偏好数据正则化 DPO 提升图像描述能力，再将自生成描述注入 SFT 数据提升推理，仅 6k 无标签图像 + 5k 复用 SFT 数据，LLaVA-v1.6 7B 七基准平均 +4.0% | 自训练、图像理解、描述注入微调、正则化 DPO、Self-Training | 2024.05 |
