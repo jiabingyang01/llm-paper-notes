@@ -169,6 +169,7 @@ export default defineConfig({
                         { text: 'ChatVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/ChatVLA_2025' },
                         { text: 'CronusVLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/CronusVLA_2026' },
                         { text: 'DAM-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/DAM_VLA_2026' },
+                        { text: 'DeepVision-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/DeepVisionVLA_2026' },
                         { text: 'DreamVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/DreamVLA_2025' },
                         { text: 'Dexbotic (2025)', link: '/papers/06-embodied-ai/vla/foundation/Dexbotic_2025' },
                         { text: 'FutureVLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/FutureVLA_2026' },

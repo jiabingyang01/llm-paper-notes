@@ -19,6 +19,7 @@
 | [ChatVLA](vla/foundation/ChatVLA_2025.md) | Spurious Forgetting 分析、Phased Alignment Training、MoE 双专家（共享 Attention 隔离 MLP）、2B 参数统一理解+控制、MMMU 37.4 | 2025 |
 | [CronusVLA](vla/foundation/CronusVLA_2026.md) | Feature Chunking 多帧特征聚合、DiT 跨帧解码器、多帧正则化、SimplerEnv 70.9%、LIBERO 97.0%、SimplerEnv-OR R-Score 86.9 | 2026 |
 | [DAM-VLA](vla/foundation/DAM_VLA_2026.md) | 动作路由、双扩散动作头（手臂 class token + 夹爪 register token）、双尺度加权 | 2026 |
+| [DeepVision-VLA](vla/foundation/DeepVisionVLA_2026.md) | 视觉敏感性衰减诊断、VL-MoT DINOv3 视觉专家深层耦合、AGVP 动作引导 Token 剪枝、RLBench 83%、真实世界 91.7% | 2026 |
 | [DreamVLA](vla/foundation/DreamVLA_2025.md) | 综合世界知识预测（动态区域/深度/语义）、Block-Wise 结构化注意力、DiT 动作头、GPT-2 Medium、CALVIN 4.44 SOTA、LIBERO 92.6% | 2025 |
 | [Dexbotic](vla/foundation/Dexbotic_2025.md) | VLA Toolbox、统一模块化框架（VLM + AE）、DexboticVLM（Qwen2.5）、Exp 脚本实验开发、SimplerEnv +46.2% | 2025 |
 | [FutureVLA](vla/foundation/FutureVLA_2026.md) | 联合视觉运动预测（JVPM）、3D-VAE 连续 17 帧编码、双流解耦监督、门控交叉注意力、潜在嵌入对齐、SimplerEnv 80.1%、真实机器人 +26.7% | 2026 |

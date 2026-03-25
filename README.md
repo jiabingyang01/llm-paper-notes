@@ -129,6 +129,7 @@
 - [ChatVLA (2025)](papers/06-embodied-ai/vla/foundation/ChatVLA_2025.md) — Phased Alignment Training + MoE 双专家，2B 参数统一多模态理解与机器人控制，MMMU 37.4、25 项真实任务超越 OpenVLA
 - [CronusVLA (2026)](papers/06-embodied-ai/vla/foundation/CronusVLA_2026.md) — Feature Chunking 多帧特征聚合 + DiT 跨帧解码器，SimplerEnv 70.9%、LIBERO 97.0%、SimplerEnv-OR R-Score 86.9
 - [DAM-VLA (2026)](papers/06-embodied-ai/vla/foundation/DAM_VLA_2026.md) — 动作路由 + 手臂/夹爪双扩散模型 + 双尺度加权协调
+- [DeepVision-VLA (2026)](papers/06-embodied-ai/vla/foundation/DeepVisionVLA_2026.md) — VL-MoT 将 DINOv3 视觉专家与 LLM 深层共享 QKV，AGVP 动作引导视觉剪枝，RLBench 83%、真实世界 91.7%
 - [DreamVLA (2025)](papers/06-embodied-ai/vla/foundation/DreamVLA_2025.md) — 预测三类综合世界知识（动态区域/深度/语义）+ 结构化注意力解耦，CALVIN 4.44 SOTA
 - [Dexbotic (2025)](papers/06-embodied-ai/vla/foundation/Dexbotic_2025.md) — 开源 VLA 工具箱：统一框架 + Qwen2.5 预训练模型 + 实验驱动开发，最高 +46.2%
 - [FutureVLA (2026)](papers/06-embodied-ai/vla/foundation/FutureVLA_2026.md) — 双流解耦 + 门控交叉注意力联合视觉运动预测，潜在对齐迁移时序先验，SimplerEnv 80.1%、真实机器人超 π₀ 达 26.7%
