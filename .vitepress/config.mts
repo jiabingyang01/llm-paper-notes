@@ -105,6 +105,7 @@ export default defineConfig({
                       text: '幻觉缓解',
                       collapsed: false,
                       items: [
+                        { text: 'ACPO (2026)', link: '/papers/04-multimodal/vlm/hallucination/ACPO_2026' },
                         { text: 'AGLA (2025)', link: '/papers/04-multimodal/vlm/hallucination/AGLA_2025' },
                         { text: 'CIPHER (2026)', link: '/papers/04-multimodal/vlm/hallucination/CIPHER_2026' },
                         { text: 'CSR (2024)', link: '/papers/04-multimodal/vlm/hallucination/CSR_2024' },

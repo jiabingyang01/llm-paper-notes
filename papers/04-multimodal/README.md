@@ -8,6 +8,7 @@
 
 | 论文 | 关键词 | 时间 |
 | --- | --- | --- |
+| [ACPO](vlm/hallucination/ACPO_2026.md) | 似然位移、视觉锚点崩塌、非对称标定系数、长度自适应优势目标 | 2026.03 |
 | [AGLA](vlm/hallucination/AGLA_2025.md) | GradCAM、全局-局部注意力组装、自适应遮蔽、Training-Free | 2024.06 |
 | [CIPHER](vlm/hallucination/CIPHER_2026.md) | 扩散反事实图像、SVD 幻觉子空间、特征投影、Training-Free、零推理开销 | 2026.03 |
 | [CSR](vlm/hallucination/CSR_2024.md) | 校准自奖励、CLIP Score、迭代 DPO、模态对齐、Self-Rewarding | 2024 |

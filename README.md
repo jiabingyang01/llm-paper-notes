@@ -61,6 +61,7 @@
 <details open>
 <summary>幻觉缓解</summary>
 
+- [ACPO (2026)](papers/04-multimodal/vlm/hallucination/ACPO_2026.md) — 非对称标定系数仅压制 rejected 梯度 + 长度自适应优势目标 τ，逆转视觉锚点崩塌，InternVL3-14B POPE 89.22、MM-IFEval 0.570
 - [AGLA (2025)](papers/04-multimodal/vlm/hallucination/AGLA_2025.md) — GradCAM + Image-Prompt Matching 生成增强图像，全局-局部 logit 融合 training-free 缓解幻觉，POPE +5.5%
 - [CIPHER (2026)](papers/04-multimodal/vlm/hallucination/CIPHER_2026.md) — 扩散反事实图像构建 OHC-25K + SVD 提取视觉幻觉子空间 + 推理时投影抑制，零额外推理开销，CHAIR$_S$ 13.05%
 - [CSR (2024)](papers/04-multimodal/vlm/hallucination/CSR_2024.md) — CLIP 校准自奖励 + 句子级 beam search + 迭代 DPO，三轮迭代 CHAIR$_S$ 降低 57%

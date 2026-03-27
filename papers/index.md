@@ -32,6 +32,7 @@
 
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
+| [ACPO](/papers/04-multimodal/vlm/hallucination/ACPO_2026) | 定义视觉锚点崩塌（chosen 似然随 DPO 训练下降导致放弃视觉证据），引入长度自适应优势目标 τ=δ(|yw|+|yl|) 缩放目标间距，stop-gradient 的非对称系数 α 仅作用于 rejected 梯度，InternVL3-14B POPE 89.22、MM-IFEval 0.570，8B 同样多基准 SOTA | 似然位移、视觉锚点崩塌、非对称标定系数、长度自适应目标 | 2026.03 |
 | [AGLA](/papers/04-multimodal/vlm/hallucination/AGLA_2025) | GradCAM 驱动的 Image-Prompt Matching 生成增强图像，融合原始图像全局生成特征与增强图像局部判别特征进行校准解码，training-free 即插即用，POPE 平均提升 5.5% Accuracy / 5.1% F1 | GradCAM、全局-局部注意力组装、自适应遮蔽、Training-Free | 2024.06 |
 | [CIPHER](/papers/04-multimodal/vlm/hallucination/CIPHER_2026) | 扩散模型生成 25K 反事实图像（结构保留 + 语义篡改），对比真实/反事实隐藏表示差异经 SVD 提取视觉诱导幻觉子空间，推理时投影到正交补，training-free 零推理开销，LLaVA-1.5 CHAIR$_S$ 降至 13.05%（vs Nullu 15.20%） | 扩散反事实图像、SVD 幻觉子空间、特征投影、Training-Free | 2026.03 |
 | [CSR](/papers/04-multimodal/vlm/hallucination/CSR_2024) | 句子级 beam search + CLIP 视觉校准奖励迭代构造自生成偏好数据 + DPO 微调，三轮迭代 10 个基准平均提升 7.62%，CHAIR$_S$ 降低 57% | 校准自奖励、CLIP Score、迭代 DPO、模态对齐、Self-Rewarding | 2024.05 |
