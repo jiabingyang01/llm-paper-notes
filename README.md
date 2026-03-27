@@ -231,6 +231,7 @@
 <summary>World Models</summary>
 
 - [BridgeV2W (2025)](papers/06-embodied-ai/world-models/BridgeV2W_2025.md) — Embodiment Mask + ControlNet 像素空间动作注入，跨构型统一世界模型
+- [Fast-WAM (2026)](papers/06-embodied-ai/world-models/FastWAM_2026.md) — 训练时视频协同目标是 WAM 性能主因、测试时未来想象非必要，跳过视频生成 190 ms 推理，RoboTwin 91.8%、LIBERO 97.6%
 - [Kinema4D (2026)](papers/06-embodied-ai/world-models/Kinema4D_2026.md) — 运动学 4D pointmap 控制 + DiT 联合生成 RGB+Pointmap，20 万条 4D 数据训练，首次零样本真实世界迁移
 - [WorldVLA (2025)](papers/06-embodied-ai/world-models/WorldVLA_2025.md) — 自回归统一 VLA + 世界模型，Action Attention Mask 解决 Chunking 误差累积
 
