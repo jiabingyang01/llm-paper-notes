@@ -225,6 +225,7 @@ export default defineConfig({
                         { text: 'MoRE (2025)', link: '/papers/06-embodied-ai/vla/rl/MoRE_2025' },
                         { text: 'π₀.₆* (2025)', link: '/papers/06-embodied-ai/vla/rl/pi06star_2025' },
                         { text: 'π-StepNFT (2026)', link: '/papers/06-embodied-ai/vla/rl/pi_StepNFT_2026' },
+                        { text: 'πRL (2025)', link: '/papers/06-embodied-ai/vla/rl/piRL_2025' },
                         { text: 'PLD (2026)', link: '/papers/06-embodied-ai/vla/rl/PLD_2026' },
                         { text: 'PTR (2026)', link: '/papers/06-embodied-ai/vla/rl/PTR_2026' },
                         { text: 'ReWiND (2025)', link: '/papers/06-embodied-ai/vla/rl/ReWiND_2025' },

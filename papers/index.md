@@ -128,6 +128,7 @@
 | [MoRE](/papers/06-embodied-ai/vla/rl/MoRE_2025) | Fuyu 8B 上构建 Mixture of LoRA Experts + 自回归 Q-learning 离线 RL，从混合质量数据学习，四足 6 任务平均成功率 44%→60% | MoE-LoRA、自回归 Q-learning、混合质量数据、四足 VLA | 2025.03 |
 | [π₀.₆*](/papers/06-embodied-ai/vla/rl/pi06star_2025) | 通过 RECAP（优势条件化离线 RL）整合自主 rollout、专家干预和演示数据，VLA 吞吐量翻倍、失败率减半 | 优势条件化、离线 RL、分布式价值函数、RECAP | 2025.11 |
 | [π-StepNFT](/papers/06-embodied-ai/vla/rl/pi_StepNFT_2026) | 无 Critic 无似然在线 RL：SDE 拓宽探索 + 逐步监督 + 对比排序损失，ManiSkill OOD 超 PPO 11.1% | SDE 探索、逐步监督、对比排序、无 Critic | 2026.03 |
+| [πRL](/papers/06-embodied-ai/vla/rl/piRL_2025) | 首个 flow-based VLA 在线 RL 框架，Flow-Noise（可学习噪声链联合似然）和 Flow-SDE（ODE→SDE 两层 MDP + 混合采样），PPO 微调 π₀/π₀.₅，LIBERO 57.6→97.6%/77.1→98.3%，ManiSkill 4352 组合 38.4→78.8% | Flow-Noise、Flow-SDE、PPO、log-likelihood 估计、ODE-SDE 转换 | 2025.11 |
 | [PLD](/papers/06-embodied-ai/vla/rl/PLD_2026) | 冻结 VLA 主干训练轻量残差 RL 专家探索失败区域，基础策略探针 + 混合轨迹蒸馏实现 VLA 自改进，LIBERO 达 99% 成功率 | 残差 RL、基础策略探针、混合数据蒸馏、VLA 自改进 | 2026.01 |
 | [PTR](/papers/06-embodied-ai/vla/rl/PTR_2026) | 无奖励保守离线后训练：post-action identification posterior 评分 + 指数化裁剪权重重缩放 SFT 损失，兼容 diffusion/flow 动作头，三构型 12 任务 Generalist +13.8 pp | Posterior-Transition Reweighting、InfoNCE identification、保守加权、跨构型迁移 | 2026.03 |
 | [ReWiND](/papers/06-embodied-ai/vla/rl/ReWiND_2025) | 从少量演示训练语言条件化奖励模型（Video Rewind + Open-X + 仅首帧位置编码），无需新演示即可语言引导 RL 学新任务，仿真超基线 2×、真实世界提升 5× | 语言条件化奖励、Video Rewind、进度预测、零演示泛化 | 2025.05 |

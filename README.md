@@ -191,6 +191,7 @@
 - [MoRE (2025)](papers/06-embodied-ai/vla/rl/MoRE_2025.md) — Mixture of LoRA Experts + 离线 Q-learning，四足多任务 VLA 成功率提升 36%
 - [π₀.₆* (2025)](papers/06-embodied-ai/vla/rl/pi06star_2025.md) — RECAP 优势条件化离线 RL 训练 VLA
 - [π-StepNFT (2026)](papers/06-embodied-ai/vla/rl/pi_StepNFT_2026.md) — 无 Critic 无似然在线 RL：SDE 探索 + 逐步监督 + 对比排序，ManiSkill OOD 超 PPO 11.1%
+- [πRL (2025)](papers/06-embodied-ai/vla/rl/piRL_2025.md) — Flow-Noise/Flow-SDE 两条路线解决 flow VLA 的 log-likelihood 难题，PPO 微调 π₀/π₀.₅，LIBERO 97.6%/98.3%
 - [PLD (2026)](papers/06-embodied-ai/vla/rl/PLD_2026.md) — 残差 RL 专家探索 + 基础策略探针混合蒸馏实现 VLA 自改进
 - [PTR (2026)](papers/06-embodied-ai/vla/rl/PTR_2026.md) — 无奖励保守离线后训练：post-action identification 评分 + 保守权重，跨构型 Generalist +13.8 pp
 - [ReWiND (2025)](papers/06-embodied-ai/vla/rl/ReWiND_2025.md) — 语言条件化奖励模型 + Video Rewind，无需新演示语言引导 RL 学新任务
