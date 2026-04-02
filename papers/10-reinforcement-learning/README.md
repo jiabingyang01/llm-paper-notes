@@ -6,4 +6,5 @@
 
 | 论文 | 关键词 | 年份 |
 | --- | --- | --- |
+| [DiffusionNFT](DiffusionNFT_2025.md) | 前向过程 RL、Negative-aware Fine-Tuning、隐式引导集成、CFG-Free、Flow Matching、SD3.5 | 2025 |
 | [FLAC](FLAC_2026.md) | Generalized Schrödinger Bridge、Kinetic Energy 正则化、Flow/Diffusion 策略、无似然最大熵 RL、Lagrangian 自动调参 | 2026 |

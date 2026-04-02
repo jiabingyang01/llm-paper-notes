@@ -95,6 +95,8 @@
 <details open>
 <summary>Token 压缩</summary>
 
+- [DART (2025)](papers/04-multimodal/vlm/efficiency/DART_2025.md) — 基于 token 重复度而非重要性剪枝视觉 token，兼容 FlashAttention，88.9% 剪枝率保持 93.7% 性能，1.99× 加速
+- [Elastic Cache (2024)](papers/04-multimodal/vlm/efficiency/ElasticCache_2024.md) — Importance-driven cache merging + 固定截断点淘汰，training-free KV Cache 压缩实现 78% 加速
 - [Token Pruning Survey (2025)](papers/04-multimodal/vlm/efficiency/TokenPruningSurvey_2025.md) — 系统性分析 MLLM 视觉 token 剪枝五大问题：位置偏差、语言引导条件、重要性 vs. 冗余性、FLOPs 评估偏差、训练感知压缩优势
 
 </details>
@@ -129,6 +131,7 @@
 - [AnchorVLA4D (2026)](papers/06-embodied-ai/vla/foundation/AnchorVLA4D_2026.md) — 首帧锚帧 + 冻结 Any4D 空间编码器，缓解遮挡遗忘和空间失定向，SimplerEnv +13.6%，真实世界 80%
 - [BridgeVLA (2025)](papers/06-embodied-ai/vla/foundation/BridgeVLA_2025.md) — 3D 正交投影 + 2D 热力图输入-输出对齐，RLBench 88.2%、3 条轨迹 95.4%
 - [ChatVLA (2025)](papers/06-embodied-ai/vla/foundation/ChatVLA_2025.md) — Phased Alignment Training + MoE 双专家，2B 参数统一多模态理解与机器人控制，MMMU 37.4、25 项真实任务超越 OpenVLA
+- [CoWVLA (2026)](papers/06-embodied-ai/vla/foundation/CoWVLA_2026.md) — Video VAE 结构-运动解耦 + 潜在运动链推理 + 终端帧预测，统一世界模型与潜在动作，LIBERO 95.6%
 - [CronusVLA (2026)](papers/06-embodied-ai/vla/foundation/CronusVLA_2026.md) — Feature Chunking 多帧特征聚合 + DiT 跨帧解码器，SimplerEnv 70.9%、LIBERO 97.0%、SimplerEnv-OR R-Score 86.9
 - [DAM-VLA (2026)](papers/06-embodied-ai/vla/foundation/DAM_VLA_2026.md) — 动作路由 + 手臂/夹爪双扩散模型 + 双尺度加权协调
 - [DeepVision-VLA (2026)](papers/06-embodied-ai/vla/foundation/DeepVisionVLA_2026.md) — VL-MoT 将 DINOv3 视觉专家与 LLM 深层共享 QKV，AGVP 动作引导视觉剪枝，RLBench 83%、真实世界 91.7%
@@ -256,8 +259,7 @@
 <details open>
 <summary>⚡ Efficiency</summary>
 
-- [DART (2025)](papers/07-efficiency/DART_2025.md) — 基于 token 重复度而非重要性剪枝视觉 token，兼容 FlashAttention，88.9% 剪枝率保持 93.7% 性能，1.99× 加速
-- [Elastic Cache (2024)](papers/07-efficiency/ElasticCache_2024.md) — Importance-driven cache merging + 固定截断点淘汰，training-free KV Cache 压缩实现 78% 加速
+> 暂无笔记
 
 </details>
 
@@ -278,6 +280,7 @@
 <details open>
 <summary>🎯 Reinforcement Learning</summary>
 
+- [DiffusionNFT (2025)](papers/10-reinforcement-learning/DiffusionNFT_2025.md) — 前向过程扩散 RL：正/负对比隐式策略改进 + flow matching 目标，无需似然/CFG，效率比 FlowGRPO 高 3-25 倍
 - [FLAC (2026)](papers/10-reinforcement-learning/FLAC_2026.md) — GSB 框架下的无似然 MaxEnt RL：动能正则化 flow/diffusion 策略，NFE=2 达到 DIME（NFE=16）水平
 
 </details>

@@ -4,14 +4,4 @@
 
 ---
 
-## 视觉 Token 压缩
-
-| 论文 | 关键词 | 时间 |
-| --- | --- | --- |
-| [DART](DART_2025.md) | Token Duplication、Pivot Token、FlashAttention 兼容、Training-Free | 2025.02 |
-
-## KV Cache 优化
-
-| 论文 | 关键词 | 时间 |
-| --- | --- | --- |
-| [Elastic Cache](ElasticCache_2024.md) | KV Cache 压缩、Cache Merging、两阶段策略、Training-Free | 2024.07 |
+> 暂无笔记（视觉 Token 压缩 / KV Cache 相关论文已迁移至 [04 Multimodal — Token 压缩](/papers/04-multimodal/)）

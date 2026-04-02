@@ -39,4 +39,6 @@
 
 | 论文 | 关键词 | 时间 |
 | --- | --- | --- |
+| [DART](vlm/efficiency/DART_2025.md) | Token Duplication、Pivot Token、FlashAttention 兼容、Training-Free | 2025.02 |
+| [Elastic Cache](vlm/efficiency/ElasticCache_2024.md) | KV Cache 压缩、Cache Merging、两阶段策略、Training-Free | 2024.07 |
 | [Token Pruning Survey](vlm/efficiency/TokenPruningSurvey_2025.md) | Token Pruning、位置偏差、重要性 vs. 冗余性、训练感知压缩、评估方法论 | 2025.02 |

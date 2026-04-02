@@ -63,6 +63,8 @@
 
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
+| [DART](/papers/04-multimodal/vlm/efficiency/DART_2025) | 揭示 importance-based token pruning 在 2/3 场景不如随机剪枝，转而基于 token 重复度选择少量 pivot 并移除高重复视觉 token，兼容 FlashAttention，LLaVA-1.5-7B 88.9% 剪枝率保持 93.7% 性能实现 1.99× 加速 | Token Duplication、Pivot Token、FlashAttention 兼容、Training-Free | 2025.02 |
+| [Elastic Cache](/papers/04-multimodal/vlm/efficiency/ElasticCache_2024) | 指令编码阶段用注意力驱动的 importance-driven cache merging 合并冗余 KV 向量，生成阶段用固定截断点淘汰策略，training-free 即插即用，0.2 KV Budget 实现 78% 加速且全面超越 H2O/StreamingLLM | KV Cache 压缩、Cache Merging、两阶段策略、Training-Free | 2024.07 |
 | [Token Pruning Survey](/papers/04-multimodal/vlm/efficiency/TokenPruningSurvey_2025) | 系统性分析 MLLM 视觉 token 剪枝五大核心问题：注意力位置偏差导致精心设计方法不如随机剪枝、语言引导仅在文本强关联任务有效、重要性 vs. 冗余性需按任务自适应平衡、FLOPs 不等于真实延迟、训练感知压缩远优于推理阶段剪枝 | Token Pruning、位置偏差、重要性 vs. 冗余性、训练感知压缩、评估方法论 | 2025.02 |
 
 ### 🦾 Embodied AI — VLA 基础模型
@@ -75,6 +77,7 @@
 | [AnchorVLA4D](/papers/06-embodied-ai/vla/foundation/AnchorVLA4D_2026) | 首帧作为锚帧保留初始场景上下文 + 冻结 Any4D 空间编码器联合处理锚帧与当前帧提取 3D 几何特征，缓解遮挡遗忘和空间失定向，SimplerEnv 64.6%（+13.6%），真实世界 80% | 锚帧机制、冻结空间编码器、遮挡遗忘、早期重试 | 2026.03 |
 | [BridgeVLA](/papers/06-embodied-ai/vla/foundation/BridgeVLA_2025) | 3D 点云正交投影为多视图 2D 图像 + 预测 2D 热力图对齐输入-输出，热力图预训练赋予 VLM 空间定位能力，RLBench 88.2%、3 条轨迹达 95.4% | 输入-输出对齐、2D 热力图、正交投影、样本效率 | 2025.06 |
 | [ChatVLA](/papers/06-embodied-ai/vla/foundation/ChatVLA_2025) | 系统分析 VLA 的 spurious forgetting 与 task interference，Phased Alignment Training 先控制后理解 + MoE 双专家隔离 MLP，2B 参数 MMMU 37.4（ECoT 的 6 倍）、25 项真实任务超越 OpenVLA | Spurious Forgetting、MoE、Phased Alignment Training、多模态理解+控制统一 | 2025.02 |
+| [CoWVLA](/papers/06-embodied-ai/vla/foundation/CoWVLA_2026) | Video VAE（VidTwin）显式解耦结构-运动潜变量，预训练推断潜在运动链 + 终端帧预测，协同微调联合建模关键帧与动作，统一世界模型时序推理与潜在动作紧凑性，LIBERO 95.6%、SimplerEnv 76.0%、CALVIN 4.21 | 结构-运动解耦、潜在运动链、Video VAE、Chain-of-World、终端帧预测 | 2026.03 |
 | [CronusVLA](/papers/06-embodied-ai/vla/foundation/CronusVLA_2026) | 两阶段单帧预训练→多帧后训练：Feature Chunking 特征层聚合历史帧 + DiT 跨帧解码器 + 多帧正则化解耦骨干与时序建模，SimplerEnv 70.9% SOTA、LIBERO 97.0%，提出 SimplerEnv-OR 鲁棒性基准 R-Score 86.9 | Feature Chunking、多帧正则化、跨帧解码器、观测鲁棒性、SimplerEnv-OR | 2026 |
 | [DAM-VLA](/papers/06-embodied-ai/vla/foundation/DAM_VLA_2026) | VLM 推理驱动动作路由选择手臂/夹爪专用扩散模型（class token 全局 + register token 局部）+ 双尺度加权协调训练，SIMPLER 平均 78-83%、真实世界 86.8% | 动作路由、双扩散头、class/register token、双尺度加权 | 2026.03 |
 | [DeepVision-VLA](/papers/06-embodied-ai/vla/foundation/DeepVisionVLA_2026) | 诊断 VLA 深层视觉敏感性衰减（Grad-CAM + ROI 掩码 MSE），VL-MoT 将 DINOv3 视觉专家与深层 LLM 共享 QKV 注意力，AGVP 用浅层动作-视觉注意力图选取 Top-K 视觉 token，RLBench 83%（vs QwenVLA-OFT 69%）、真实世界 91.7%（vs π₀.₅ 84.2%） | 视觉敏感性衰减、Mixture-of-Transformers、DINOv3 视觉专家、动作引导 Token 剪枝 | 2026.03 |
@@ -180,16 +183,6 @@
 
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
+| [DiffusionNFT](/papers/10-reinforcement-learning/DiffusionNFT_2025) | 在前向加噪过程上做扩散模型在线 RL：正/负样本对比定义隐式策略改进方向，嵌入 flow matching 目标，无需似然估计/CFG/特定采样器，效率比 FlowGRPO 高 3-25 倍，SD3.5-M GenEval 0.24→0.98 | 前向过程 RL、Negative-aware Fine-Tuning、隐式引导集成、CFG-Free、Flow Matching | 2025.09 |
 | [FLAC](/papers/10-reinforcement-learning/FLAC_2026) | 将 MaxEnt RL 建模为 Generalized Schrödinger Bridge 问题，用速度场动能作为无似然的熵代理，上界终端分布散度，NFE=2 超越 DIME（NFE=16） | Generalized Schrödinger Bridge、Kinetic Energy、Flow/Diffusion 策略、无似然 MaxEnt RL | 2026.02 |
 
-### ⚡ Efficiency — 视觉 Token 压缩
-
-| 论文 | 一句话概括 | 关键词 | 时间 |
-| --- | --- | --- | --- |
-| [DART](/papers/07-efficiency/DART_2025) | 揭示 importance-based token pruning 在 2/3 场景不如随机剪枝，转而基于 token 重复度选择少量 pivot 并移除高重复视觉 token，兼容 FlashAttention，LLaVA-1.5-7B 88.9% 剪枝率保持 93.7% 性能实现 1.99× 加速 | Token Duplication、Pivot Token、FlashAttention 兼容、Training-Free | 2025.02 |
-
-### ⚡ Efficiency — KV Cache 优化
-
-| 论文 | 一句话概括 | 关键词 | 时间 |
-| --- | --- | --- | --- |
-| [Elastic Cache](/papers/07-efficiency/ElasticCache_2024) | 指令编码阶段用注意力驱动的 importance-driven cache merging 合并冗余 KV 向量，生成阶段用固定截断点淘汰策略，training-free 即插即用，0.2 KV Budget 实现 78% 加速且全面超越 H2O/StreamingLLM | KV Cache 压缩、Cache Merging、两阶段策略、Training-Free | 2024.07 |

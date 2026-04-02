@@ -137,6 +137,8 @@ export default defineConfig({
                       text: 'Token 压缩',
                       collapsed: false,
                       items: [
+                        { text: 'DART (2025)', link: '/papers/04-multimodal/vlm/efficiency/DART_2025' },
+                        { text: 'Elastic Cache (2024)', link: '/papers/04-multimodal/vlm/efficiency/ElasticCache_2024' },
                         { text: 'Token Pruning Survey (2025)', link: '/papers/04-multimodal/vlm/efficiency/TokenPruningSurvey_2025' },
                       ],
                     },
@@ -169,6 +171,7 @@ export default defineConfig({
                         { text: 'AnchorVLA4D (2026)', link: '/papers/06-embodied-ai/vla/foundation/AnchorVLA4D_2026' },
                         { text: 'BridgeVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/BridgeVLA_2025' },
                         { text: 'ChatVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/ChatVLA_2025' },
+                        { text: 'CoWVLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/CoWVLA_2026' },
                         { text: 'CronusVLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/CronusVLA_2026' },
                         { text: 'DAM-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/DAM_VLA_2026' },
                         { text: 'DeepVision-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/DeepVisionVLA_2026' },
@@ -282,12 +285,9 @@ export default defineConfig({
             },
             {
               text: '07 Efficiency',
-              collapsed: false,
+              collapsed: true,
               link: '/papers/07-efficiency/',
-              items: [
-                { text: 'DART (2025)', link: '/papers/07-efficiency/DART_2025' },
-                { text: 'Elastic Cache (2024)', link: '/papers/07-efficiency/ElasticCache_2024' },
-              ],
+              items: [],
             },
             {
               text: '08 RAG & Knowledge',
@@ -306,6 +306,7 @@ export default defineConfig({
               collapsed: false,
               link: '/papers/10-reinforcement-learning/',
               items: [
+                { text: 'DiffusionNFT (2025)', link: '/papers/10-reinforcement-learning/DiffusionNFT_2025' },
                 { text: 'FLAC (2026)', link: '/papers/10-reinforcement-learning/FLAC_2026' },
               ],
             },
