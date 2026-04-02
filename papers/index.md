@@ -94,6 +94,7 @@
 | [TCoT](/papers/06-embodied-ai/vla/foundation/TCoT_2026) | 全局/局部层次轨迹作为 VLA 的中间任务规划层（CoT），GLSR 算法统一失败检测与全局-局部策略切换恢复，多任务促进跨任务知识共享，LIBERO 83.3%（Multi），真实世界 +28% 超越 OpenVLA | 轨迹思维链、层次规划、GLSR 失败恢复、跨任务知识共享 | 2026 |
 | [TGM-VLA](/papers/06-embodied-ai/vla/foundation/TGM_VLA_2026) | 优化关键帧采样（存储 -85%、训练 5× 加速）+ 颜色反转投影分支 + 任务引导点云 Mixup，RLBench 90.5% SOTA、COLOSSEUM 68.8% | 关键帧采样优化、颜色反转、跨任务/任务内 Mixup、3D VLA | 2026.02 |
 | [UniVLA](/papers/06-embodied-ai/vla/foundation/UniVLA_2025) | 语言引导两阶段解耦任务中心潜在动作（DINOv2 特征空间 + VQ-VAE 离散化），跨具身无标注视频预训练通才策略，1/20 算力超越 OpenVLA，LIBERO 95.2%、CALVIN 3.80、R2R 47.1%、真实世界 81.7% | 任务中心潜在动作、跨具身无标注预训练、VQ-VAE、DINOv2 | 2025.05 |
+| [VP-VLA](/papers/06-embodied-ai/vla/foundation/VP_VLA_2026) | 双系统解耦架构，VLM 事件驱动任务分解 + SAM3 生成十字准星/边框视觉提示作为空间锚点，辅以视觉接地损失，RoboCasa +5.0%、SimplerEnv +8.3%，超越 $\pi_{0.5}$ 和 GR00T-N1.6 | 视觉提示、双系统架构、事件驱动分解、空间接地、OOD 泛化 | 2026.03 |
 
 ### 🦾 Embodied AI — VLA 高效推理
 

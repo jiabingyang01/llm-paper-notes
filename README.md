@@ -148,6 +148,7 @@
 - [TCoT (2026)](papers/06-embodied-ai/vla/foundation/TCoT_2026.md) — 全局/局部轨迹思维链 + GLSR 失败恢复，多任务促进跨任务共享，LIBERO 83.3%，真实世界 +28%
 - [TGM-VLA (2026)](papers/06-embodied-ai/vla/foundation/TGM_VLA_2026.md) — 关键帧采样优化 + 颜色反转 + 任务引导 Mixup，RLBench 90.5%
 - [UniVLA (2025)](papers/06-embodied-ai/vla/foundation/UniVLA_2025.md) — 任务中心潜在动作两阶段解耦 + 跨具身无标注视频预训练，1/20 算力超 OpenVLA，LIBERO 95.2%、真实世界 81.7%
+- [VP-VLA (2026)](papers/06-embodied-ai/vla/foundation/VP_VLA_2026.md) — 双系统解耦 + VLM 事件驱动任务分解 + SAM3 视觉提示空间锚点 + 接地辅助损失，RoboCasa +5%、SimplerEnv +8.3%
 
 </details>
 </blockquote>

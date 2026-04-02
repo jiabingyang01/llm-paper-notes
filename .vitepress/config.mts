@@ -188,6 +188,7 @@ export default defineConfig({
                         { text: 'TCoT (2026)', link: '/papers/06-embodied-ai/vla/foundation/TCoT_2026' },
                         { text: 'TGM-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/TGM_VLA_2026' },
                         { text: 'UniVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/UniVLA_2025' },
+                        { text: 'VP-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/VP_VLA_2026' },
                       ],
                     },
                     {

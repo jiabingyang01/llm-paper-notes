@@ -37,6 +37,7 @@
 | [TCoT](vla/foundation/TCoT_2026.md) | 全局/局部轨迹思维链、GLSR 失败检测与策略切换恢复、跨任务知识共享、LIBERO 83.3%（Multi）、真实世界 +28% | 2026 |
 | [TGM-VLA](vla/foundation/TGM_VLA_2026.md) | 关键帧采样优化、颜色反转投影、跨任务/任务内 Mixup、RLBench 90.5%、COLOSSEUM 68.8% | 2026 |
 | [UniVLA](vla/foundation/UniVLA_2025.md) | 任务中心潜在动作解耦（VQ-VAE + DINOv2 + 语言引导两阶段分离）、跨具身无标注视频预训练、1/20 算力超越 OpenVLA、LIBERO 95.2%、真实世界 81.7% | 2025 |
+| [VP-VLA](vla/foundation/VP_VLA_2026.md) | 双系统架构、视觉提示接口（十字准星+边框）、事件驱动任务分解、视觉接地辅助损失、RoboCasa +5%、SimplerEnv +8.3% | 2026 |
 
 ### 高效推理
 
