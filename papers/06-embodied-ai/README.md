@@ -24,6 +24,7 @@
 | [DeepVision-VLA](vla/foundation/DeepVisionVLA_2026.md) | 视觉敏感性衰减诊断、VL-MoT DINOv3 视觉专家深层耦合、AGVP 动作引导 Token 剪枝、RLBench 83%、真实世界 91.7% | 2026 |
 | [DreamVLA](vla/foundation/DreamVLA_2025.md) | 综合世界知识预测（动态区域/深度/语义）、Block-Wise 结构化注意力、DiT 动作头、GPT-2 Medium、CALVIN 4.44 SOTA、LIBERO 92.6% | 2025 |
 | [Dexbotic](vla/foundation/Dexbotic_2025.md) | VLA Toolbox、统一模块化框架（VLM + AE）、DexboticVLM（Qwen2.5）、Exp 脚本实验开发、SimplerEnv +46.2% | 2025 |
+| [FAST](vla/foundation/FAST_2025.md) | DCT + BPE 频域压缩动作 tokenization、高频灵巧任务、π₀-FAST 匹配扩散 π₀ 训练 5× 加速、FAST+ 通用 tokenizer | 2025 |
 | [FutureVLA](vla/foundation/FutureVLA_2026.md) | 联合视觉运动预测（JVPM）、3D-VAE 连续 17 帧编码、双流解耦监督、门控交叉注意力、潜在嵌入对齐、SimplerEnv 80.1%、真实机器人 +26.7% | 2026 |
 | [GR-3](vla/foundation/GR3_2025.md) | MoT 架构（Qwen2.5-VL + Action DiT）、VL 协同训练、VR 人类轨迹少样本适配、Task Status 辅助监督、全面超越 π₀ | 2025 |
 | [MoH](vla/foundation/MoH_2025.md) | 多 Horizon 动作块并行融合、轻量门控（2k 参数）、跨 Horizon 共识动态推理、Plug-and-Play、LIBERO 99% | 2025 |
@@ -34,6 +35,7 @@
 | [π₀](vla/foundation/pi0_2024.md) | Flow Matching VLA、VLM 骨架 + Action Expert、跨构型预训练、预训练/后训练范式 | 2024 |
 | [π₀.₅](vla/foundation/pi05_2025.md) | 异构多源数据协同训练、分层推理（子任务预测 + 低层控制）、开放世界泛化 | 2025 |
 | [SF](vla/foundation/SF_2025.md) | 隐式空间表征对齐（VGGT）、中间层视觉 embedding 监督、推理零开销、3.8× 训练加速、LIBERO 98.5% | 2025 |
+| [SpatialVLA](vla/foundation/SpatialVLA_2025.md) | 3D 空间感知、Ego3D 位置编码、自适应高斯动作网格、3 token/step、20 Hz | 2025 |
 | [SPR](vla/foundation/SPR_2026.md) | 进度感知空间子目标规划、See-Plan-Rewind 闭环、自主错误恢复、LIBERO 91.8%、LIBERO-Plus OOD ↓18.8% | 2026 |
 | [TCoT](vla/foundation/TCoT_2026.md) | 全局/局部轨迹思维链、GLSR 失败检测与策略切换恢复、跨任务知识共享、LIBERO 83.3%（Multi）、真实世界 +28% | 2026 |
 | [TGM-VLA](vla/foundation/TGM_VLA_2026.md) | 关键帧采样优化、颜色反转投影、跨任务/任务内 Mixup、RLBench 90.5%、COLOSSEUM 68.8% | 2026 |

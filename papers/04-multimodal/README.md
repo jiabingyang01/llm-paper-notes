@@ -10,6 +10,7 @@
 | --- | --- | --- |
 | [ACPO](vlm/hallucination/ACPO_2026.md) | 似然位移、视觉锚点崩塌、非对称标定系数、长度自适应优势目标 | 2026.03 |
 | [AGLA](vlm/hallucination/AGLA_2025.md) | GradCAM、全局-局部注意力组装、自适应遮蔽、Training-Free | 2024.06 |
+| [AVISC](vlm/hallucination/AVISC_2025.md) | Blind Token、层选择注意力校准、对比解码、Training-Free | 2024.05 |
 | [CIPHER](vlm/hallucination/CIPHER_2026.md) | 扩散反事实图像、SVD 幻觉子空间、特征投影、Training-Free、零推理开销 | 2026.03 |
 | [CSR](vlm/hallucination/CSR_2024.md) | 校准自奖励、CLIP Score、迭代 DPO、模态对齐、Self-Rewarding | 2024 |
 | [DLC](vlm/hallucination/DLC_2025.md) | 动态 Logits 校准、CLIP 探针、相对视觉优势、自适应引导、Training-Free | 2025 |
@@ -17,10 +18,13 @@
 | [FarSight](vlm/hallucination/FarSight_2025.md) | 注意力寄存器、因果掩码优化、位置感知编码、Training-Free、Image+Video | 2025 |
 | [HALC](vlm/hallucination/HALC_2024.md) | FOV 对比解码、JSD 双向对比、视觉匹配 Beam Search、Plug-and-Play | 2024 |
 | [HIME](vlm/hallucination/HIME_2026.md) | HIS、层自适应模型编辑、零空间投影、Training-Free | 2026.02 |
+| [IBD](vlm/hallucination/IBD_2024.md) | 图像偏置注意力、内容词/功能词动态调节、Prompt Tuning、74K 参数 | 2024.02 |
 | [HIO](vlm/hallucination/HIO_2024.md) | 反转 BT 模型、Evil LVLM 对比解码、多幻觉诱导、Logit 约束 | 2024.05 |
 | [ICD](vlm/hallucination/ICD_2024.md) | 指令对比解码、多模态对齐不确定性、自适应截断、Training-Free | 2024.03 |
 | [LessIsMore](vlm/hallucination/LessIsMore_2024.md) | EOS 决策、Selective EOS Supervision、数据过滤、训练目标修改 | 2024.02 |
 | [LogicCheckGPT](vlm/hallucination/LogicCheckGPT_2024.md) | 逻辑闭环、逻辑一致性、Training-Free、Plug-and-Play | 2024.02 |
+| [LPOI](vlm/hallucination/LPOI_2025.md) | 列表级偏好优化、对象遮蔽、渐进插值、硬负样本、Visual Prompting | 2025.05 |
+| [LURE](vlm/hallucination/LURE_2024.md) | 共现/不确定性/位置统计分析、GPT-3.5 幻觉数据构造、[IDK] 占位修正器、Post-hoc | 2023.10 |
 | [mDPO](vlm/hallucination/mDPO_2024.md) | 条件偏好优化、图像对比偏好、奖励锚定、无条件偏好问题 | 2024.06 |
 | [MemVR](vlm/hallucination/MemVR_2025.md) | FFN Key-Value Memory、视觉回溯、不确定性触发、Training-Free、Plug-and-Play | 2025.05 |
 | [MMHalSnowball](vlm/hallucination/MMHalSnowball_2024.md) | 幻觉雪球效应、残差视觉解码、自适应分布混合、Training-Free | 2024.07 |
@@ -32,6 +36,7 @@
 | [STIC](vlm/hallucination/STIC_2024.md) | 自训练、图像理解、描述注入微调、正则化 DPO、Self-Training | 2024.05 |
 | [TAF](vlm/hallucination/TAF_2026.md) | Phantom Token 隔离、Anchor Token 强调、非对称注意力过滤、Training-Free | 2026 |
 | [VACoDe](vlm/hallucination/VACoDe_2024.md) | 视觉增强选择、Softmax Distance、对比解码、Training-Free、Plug-and-Play | 2024 |
+| [VCD](vlm/hallucination/VCD_2026.md) | 视觉对比解码、高斯噪声扰动、统计偏差、语言先验、Training-Free | 2023.11 |
 | [VGA](vlm/hallucination/VGA_2024.md) | GUI 理解、Referent Method、两阶段微调、Image-Centric | 2024.06 |
 | [VisFlow](vlm/hallucination/VisFlow_2025.md) | 双层注意力干预、Visual Sink/Salient Token、Head 分类抑制、Training-Free | 2025.06 |
 
@@ -42,3 +47,10 @@
 | [DART](vlm/efficiency/DART_2025.md) | Token Duplication、Pivot Token、FlashAttention 兼容、Training-Free | 2025.02 |
 | [Elastic Cache](vlm/efficiency/ElasticCache_2024.md) | KV Cache 压缩、Cache Merging、两阶段策略、Training-Free | 2024.07 |
 | [Token Pruning Survey](vlm/efficiency/TokenPruningSurvey_2025.md) | Token Pruning、位置偏差、重要性 vs. 冗余性、训练感知压缩、评估方法论 | 2025.02 |
+| [VisionZip](vlm/efficiency/VisionZip_2024.md) | Dominant Token Selection、Token Merging、Text-Agnostic、Training-Free | 2024.12 |
+
+## 视频生成
+
+| 论文 | 关键词 | 时间 |
+| --- | --- | --- |
+| [WorldForge](video-generation/WorldForge_2025.md) | Video Diffusion、3D/4D Generation、Training-Free、Trajectory Control、Inference-Time Guidance | 2025.09 |

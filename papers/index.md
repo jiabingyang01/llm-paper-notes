@@ -34,6 +34,7 @@
 | --- | --- | --- | --- |
 | [ACPO](/papers/04-multimodal/vlm/hallucination/ACPO_2026) | 定义视觉锚点崩塌（chosen 似然随 DPO 训练下降导致放弃视觉证据），引入长度自适应优势目标 τ=δ(|yw|+|yl|) 缩放目标间距，stop-gradient 的非对称系数 α 仅作用于 rejected 梯度，InternVL3-14B POPE 89.22、MM-IFEval 0.570，8B 同样多基准 SOTA | 似然位移、视觉锚点崩塌、非对称标定系数、长度自适应目标 | 2026.03 |
 | [AGLA](/papers/04-multimodal/vlm/hallucination/AGLA_2025) | GradCAM 驱动的 Image-Prompt Matching 生成增强图像，融合原始图像全局生成特征与增强图像局部判别特征进行校准解码，training-free 即插即用，POPE 平均提升 5.5% Accuracy / 5.1% F1 | GradCAM、全局-局部注意力组装、自适应遮蔽、Training-Free | 2024.06 |
+| [AVISC](/papers/04-multimodal/vlm/hallucination/AVISC_2025) | 发现 LVLM 中盲 token 垄断注意力却不携带判别信息，三步解码校准（层选择 + 盲 token 识别 + 对比解码）动态抑制注意力偏差，InstructBLIP POPE Accuracy +6%、AMBER 得分 85.95 | Blind Token、层选择注意力校准、对比解码、Training-Free | 2024.05 |
 | [CIPHER](/papers/04-multimodal/vlm/hallucination/CIPHER_2026) | 扩散模型生成 25K 反事实图像（结构保留 + 语义篡改），对比真实/反事实隐藏表示差异经 SVD 提取视觉诱导幻觉子空间，推理时投影到正交补，training-free 零推理开销，LLaVA-1.5 CHAIR$_S$ 降至 13.05%（vs Nullu 15.20%） | 扩散反事实图像、SVD 幻觉子空间、特征投影、Training-Free | 2026.03 |
 | [CSR](/papers/04-multimodal/vlm/hallucination/CSR_2024) | 句子级 beam search + CLIP 视觉校准奖励迭代构造自生成偏好数据 + DPO 微调，三轮迭代 10 个基准平均提升 7.62%，CHAIR$_S$ 降低 57% | 校准自奖励、CLIP Score、迭代 DPO、模态对齐、Self-Rewarding | 2024.05 |
 | [DLC](/papers/04-multimodal/vlm/hallucination/DLC_2025) | 解码时用 CLIP 逐步评估候选 token 的相对视觉优势 (RVA)，相对动态历史基线自适应调整 logits，无需额外前向传播高效缓解语义漂移幻觉 | 动态 Logits 校准、CLIP 探针、相对视觉优势、自适应引导、Training-Free | 2025.06 |
@@ -41,10 +42,13 @@
 | [FarSight](/papers/04-multimodal/vlm/hallucination/FarSight_2025) | 在因果掩码上三角引入注意力寄存器吸收 outlier token 多余注意力 + 渐减遮蔽率编码绝对位置信息对抗 RoPE 衰减，仅优化因果掩码即可 training-free 缓解图像和视频 MLLM 幻觉，LLaVA-1.5 CHAIR$_S$ -6.4 pp、POPE-R +3.5 pp | 注意力寄存器、因果掩码优化、位置感知编码、Training-Free、Image+Video | 2025 |
 | [HALC](/papers/04-multimodal/vlm/hallucination/HALC_2024) | 自适应 FOV 采样 + JSD 双向对比解码修正局部幻觉 + 视觉匹配 beam search 全局保障，无训练即插即用，CHAIR$_S$ 在 MiniGPT-4 上降低 36% | FOV 对比解码、JSD 选择、视觉匹配 Beam Search、Plug-and-Play | 2024.03 |
 | [HIME](/papers/04-multimodal/vlm/hallucination/HIME_2026) | 提出 HIS 量化每层幻觉敏感度，层自适应加权投影编辑 MLP 权重，无训练/无额外参数/无推理开销平均降低 61.8% 对象幻觉 | HIS、层自适应模型编辑、零空间投影、Training-Free | 2026.02 |
+| [IBD](/papers/04-multimodal/vlm/hallucination/IBD_2024) | 修改注意力权重构造图像偏置模型做对比解码，统计发现 CD score 对内容词有效/功能词无效，设计 $I_{sim} \times I_{con}$ 双指标动态调节 + prompt tuning 仅 74K 参数，4 个 LVLM 上全面超越 VCD/OPERA/Woodpecker，LLaVA-1.5 CHAIR$_S$ 降至 12.7 | 图像偏置注意力、内容词/功能词动态调节、Prompt Tuning、74K 参数 | 2024.02 |
 | [HIO](/papers/04-multimodal/vlm/hallucination/HIO_2024) | 反转 Bradley-Terry 模型训练"Evil LVLM"精准放大幻觉 token，多幻觉同时诱导 + logit 级约束，推理时对比解码消除幻觉，POPE Accuracy +3.5%、CHAIR$_I$ 降至 2.24 | 反转 BT 模型、Evil LVLM 对比解码、多幻觉诱导、Logit 约束 | 2024.05 |
 | [ICD](/papers/04-multimodal/vlm/hallucination/ICD_2024) | 发现指令前加角色前缀会放大 LVLM 幻觉，据此提出指令对比解码——标准指令分布减去扰动指令分布剥离幻觉概念 + 自适应截断约束，training-free 模型无关，POPE 平均提升 10.5%/6.0%，MME 幻觉子集 +80/+88 | 指令对比解码、多模态对齐不确定性、自适应截断、Training-Free | 2024.03 |
 | [LessIsMore](/papers/04-multimodal/vlm/hallucination/LessIsMore_2024) | 发现 LVLM 内在具备基于视觉感知评估文本完整性来决定终止生成的 EOS 决策能力，但被过度详细的训练数据抑制；Selective EOS Supervision 在非 EOS 位置排除 EOS 参与 softmax + Scoring EOS Supervision 过滤有害数据，LLaVA-1.5 CHAIR$_S$/CHAIR$_I$ 分别降低 26.4%/26.6% | EOS 决策、Selective EOS Supervision、数据过滤、训练目标修改 | 2024.02 |
 | [LogicCheckGPT](/papers/04-multimodal/vlm/hallucination/LogicCheckGPT_2024) | 逻辑闭环探测（对象→属性→对象）检测 LVLM 逻辑一致性差异，无训练即插即用黑盒后处理，mPLUG-Owl POPE 准确率提升超 30% | 逻辑闭环、逻辑一致性、Training-Free、Plug-and-Play | 2024.02 |
+| [LPOI](/papers/04-multimodal/vlm/hallucination/LPOI_2025) | 首次将列表级偏好优化引入 VLM 幻觉缓解：对象检测定位关键物体 → 渐进遮蔽生成硬负样本图像序列 → Plackett-Luce 列表级排序损失按对象可见度排列偏好，无需额外标注，Object HalBench CHAIR$_S$ 从 mDPO 30.7 降至 24.3 | 列表级偏好优化、对象遮蔽、渐进插值、硬负样本、Visual Prompting | 2025.05 |
+| [LURE](/papers/04-multimodal/vlm/hallucination/LURE_2024) | 统计分析揭示幻觉三因素（共现/不确定性/位置），GPT-3.5 构造针对性幻觉数据训练轻量修正器，[IDK] 占位符引导重评估可疑对象，后处理兼容任意 LVLM，6 模型 CHAIR$_S$ 平均降低 50%+ | 共现/不确定性/位置统计分析、GPT-3.5 幻觉数据、[IDK] 修正器、Post-hoc | 2023.10 |
 | [mDPO](/papers/04-multimodal/vlm/hallucination/mDPO_2024) | 发现多模态 DPO 存在无条件偏好问题（移除图像效果不变），增加图像条件偏好对比 + 锚定奖励正则化，3B+10K 数据媲美 7B+80K，CHAIR$_S$ 降低 37% | 条件偏好优化、图像对比偏好、奖励锚定、无条件偏好问题 | 2024.06 |
 | [MemVR](/papers/04-multimodal/vlm/hallucination/MemVR_2025) | 将视觉 token 通过 FFN key-value memory 机制重注入中间层，不确定性超阈值时动态触发 look-twice，POPE +7.0%、CHAIR$_I$ -15.6%，推理仅 1.04× 延迟且通用能力同步提升 | FFN Key-Value Memory、视觉回溯、不确定性触发、Training-Free、Plug-and-Play | 2025.05 |
 | [MMHalSnowball](/papers/04-multimodal/vlm/hallucination/MMHalSnowball_2024) | 首次系统研究多模态幻觉雪球效应（前轮幻觉误导后续回答），提出 MMHalSnowball 评估框架（4,973 样本）+ 残差视觉解码（RVD）自适应强调视觉信息，缓解 24%+ 雪球幻觉 | 幻觉雪球效应、残差视觉解码、自适应分布混合、Training-Free | 2024.07 |
@@ -56,6 +60,7 @@
 | [STIC](/papers/04-multimodal/vlm/hallucination/STIC_2024) | 两阶段自训练——good/bad prompt + 图像腐蚀构造偏好数据正则化 DPO 提升图像描述能力，再将自生成描述注入 SFT 数据提升推理，仅 6k 无标签图像 + 5k 复用 SFT 数据，LLaVA-v1.6 7B 七基准平均 +4.0% | 自训练、图像理解、描述注入微调、正则化 DPO、Self-Training | 2024.05 |
 | [TAF](/papers/04-multimodal/vlm/hallucination/TAF_2026) | Token 级分析发现 phantom token（文本→视觉异常高影响）和 anchor token（关键视觉证据不足），在视觉活跃层非对称过滤注意力 logits——隔离幻影 + 强调锚点，training-free 即插即用，POPE 全面 SOTA（LLaVA-1.5 Adversarial F1 86.21），CHAIR$_S$ 降至 42.5 | Phantom Token 隔离、Anchor Token 强调、非对称注意力过滤、Training-Free | 2026 |
 | [VACoDe](/papers/04-multimodal/vlm/hallucination/VACoDe_2024) | Softmax L2 距离自适应选择最具对比性的图像增强（7 种候选）用于对比解码，无需训练或外部模型，MME/VQAv2/MMBench 跨 3 种模型一致超越 VCD 和单一增强 | 视觉增强选择、Softmax Distance、对比解码、Training-Free、Plug-and-Play | 2024 |
+| [VCD](/papers/04-multimodal/vlm/hallucination/VCD_2026) | 高斯噪声放大视觉不确定性暴露语言先验和统计偏差，原始/噪声图像输出分布对比解码 + 自适应可信度约束，training-free 无需外部工具，POPE 最高 +5.8 Acc / +7.4 F1，MME 幻觉子集 +18% | 视觉对比解码、高斯噪声扰动、统计偏差、语言先验、Training-Free | 2023.11 |
 | [VGA](/papers/04-multimodal/vlm/hallucination/VGA_2024) | Referent Method 在数据中嵌入坐标/颜色/形状视觉指代 + FAC 两阶段微调（Foundation 聚焦图像 → Advanced 对齐意图），63.8k GUI VQA 数据集上训练，GUI 理解 benchmark 以 90.83 分超越 GPT-4V (81.82) 和 GPT-4o (80.75) | GUI 理解、Referent Method、两阶段微调、Image-Centric | 2024.06 |
 | [VisFlow](/papers/04-multimodal/vlm/hallucination/VisFlow_2025) | Token 级别增强视觉显著 token + Head 级别抑制系统提示头和文本跟随头，双层注意力干预无训练缓解幻觉，LLaVA-1.5 CHAIR$_S$ 降低 40%、POPE Adversarial F1 +10.8 pp | 双层注意力干预、Visual Sink/Salient Token、Head 分类抑制、Training-Free | 2025.06 |
 
@@ -66,6 +71,13 @@
 | [DART](/papers/04-multimodal/vlm/efficiency/DART_2025) | 揭示 importance-based token pruning 在 2/3 场景不如随机剪枝，转而基于 token 重复度选择少量 pivot 并移除高重复视觉 token，兼容 FlashAttention，LLaVA-1.5-7B 88.9% 剪枝率保持 93.7% 性能实现 1.99× 加速 | Token Duplication、Pivot Token、FlashAttention 兼容、Training-Free | 2025.02 |
 | [Elastic Cache](/papers/04-multimodal/vlm/efficiency/ElasticCache_2024) | 指令编码阶段用注意力驱动的 importance-driven cache merging 合并冗余 KV 向量，生成阶段用固定截断点淘汰策略，training-free 即插即用，0.2 KV Budget 实现 78% 加速且全面超越 H2O/StreamingLLM | KV Cache 压缩、Cache Merging、两阶段策略、Training-Free | 2024.07 |
 | [Token Pruning Survey](/papers/04-multimodal/vlm/efficiency/TokenPruningSurvey_2025) | 系统性分析 MLLM 视觉 token 剪枝五大核心问题：注意力位置偏差导致精心设计方法不如随机剪枝、语言引导仅在文本强关联任务有效、重要性 vs. 冗余性需按任务自适应平衡、FLOPs 不等于真实延迟、训练感知压缩远优于推理阶段剪枝 | Token Pruning、位置偏差、重要性 vs. 冗余性、训练感知压缩、评估方法论 | 2025.02 |
+| [VisionZip](/papers/04-multimodal/vlm/efficiency/VisionZip_2024) | Text-agnostic 视觉 token 压缩：CLS 注意力选出 dominant token + key 相似度合并 contextual token，LLM 输入前完成压缩，LLaVA-1.5 仅 64/576 token 达 94% 性能（超 FastV 18.4%），LLaVA-NeXT 实现 8× prefilling 加速，13B 推理速度超 7B | Dominant Token Selection、Token Merging、Text-Agnostic、Training-Free | 2024.12 |
+
+### 🖼️ Multimodal — 视频生成
+
+| 论文 | 一句话概括 | 关键词 | 时间 |
+| --- | --- | --- | --- |
+| [WorldForge](/papers/04-multimodal/video-generation/WorldForge_2025) | 完全 training-free 的推理时引导框架，通过 IRR（步内递归校正）、FLF（光流门控融合）、DSG（双路径自校正引导）三模块将精确轨迹控制注入预训练视频扩散模型，单图 3D 场景生成 FID 96.08、ATE 0.077 均 SOTA | Video Diffusion、3D/4D Generation、Training-Free、Trajectory Control、Inference-Time Guidance | 2025.09 |
 
 ### 🦾 Embodied AI — VLA 基础模型
 
@@ -83,6 +95,7 @@
 | [DeepVision-VLA](/papers/06-embodied-ai/vla/foundation/DeepVisionVLA_2026) | 诊断 VLA 深层视觉敏感性衰减（Grad-CAM + ROI 掩码 MSE），VL-MoT 将 DINOv3 视觉专家与深层 LLM 共享 QKV 注意力，AGVP 用浅层动作-视觉注意力图选取 Top-K 视觉 token，RLBench 83%（vs QwenVLA-OFT 69%）、真实世界 91.7%（vs π₀.₅ 84.2%） | 视觉敏感性衰减、Mixture-of-Transformers、DINOv3 视觉专家、动作引导 Token 剪枝 | 2026.03 |
 | [DreamVLA](/papers/06-embodied-ai/vla/foundation/DreamVLA_2025) | 感知-预测-动作闭环：预测三类综合世界知识（动态区域/深度/语义）+ block-wise 结构化注意力防止跨类泄露 + DiT 动作头，CALVIN ABC-D 4.44 SOTA、LIBERO 92.6%、真实世界 76.7% | 世界知识预测、结构化注意力、DiT 动作头、CoTracker/Depth Anything/DINOv2 | 2025.07 |
 | [Dexbotic](/papers/06-embodied-ai/vla/foundation/Dexbotic_2025) | 开源 VLA 工具箱：统一模块化框架（VLM + Action Expert）+ 基于 Qwen2.5 的更强预训练模型 + 实验驱动 Exp 脚本开发，SimplerEnv 最高 +46.2%、CALVIN +0.81 | VLA Toolbox、统一框架、DexboticVLM、实验驱动开发 | 2025.10 |
+| [FAST](/papers/06-embodied-ai/vla/foundation/FAST_2025) | DCT + BPE 频域压缩 tokenization 解决自回归 VLA 高频灵巧任务训练瓶颈，π₀-FAST 匹配扩散 π₀ 性能但训练 5× 加速，FAST+ 通用 tokenizer 覆盖多构型 | DCT、BPE、动作 tokenization、高频控制、通用 tokenizer | 2025.01 |
 | [FutureVLA](/papers/06-embodied-ai/vla/foundation/FutureVLA_2026) | 联合视觉-运动预测建模（JVPM）：3D-VAE 编码连续 17 帧 + 双流解耦监督 + 门控交叉注意力条件化交互，潜在嵌入对齐迁移时序先验，推理零开销，SimplerEnv 80.1%、真实机器人超 π₀ 达 26.7% | 联合视觉运动预测、双流解耦、门控交叉注意力、潜在对齐 | 2026.03 |
 | [GR-3](/papers/06-embodied-ai/vla/foundation/GR3_2025) | 4B VLA（Qwen2.5-VL + Action DiT），机器人轨迹 + VL 数据协同训练实现 OOD 指令零样本泛化，VR 人类轨迹 10-shot 适配新物体（57.8%→86.7%），Task Status 辅助监督 + DiT RMSNorm 强化指令跟随，全面超越 π₀ | MoT 架构、VL 协同训练、人类轨迹少样本适配、Task Status、ByteMini 双臂移动 | 2025.07 |
 | [MoH](/papers/06-embodied-ai/vla/foundation/MoH_2025) | 多 horizon 动作块在共享 Action Transformer 中并行处理 + 轻量门控融合（2k 参数）+ 跨 horizon 共识动态推理，plug-and-play 适用于 flow/regression 策略，$\pi_{0.5}$+MoH LIBERO 99% SOTA | 多 Horizon 融合、门控融合、动态推理、Action Chunking | 2025.11 |
@@ -93,6 +106,7 @@
 | [π₀](/papers/06-embodied-ai/vla/foundation/pi0_2024) | 用 Flow Matching 替代自回归生成动作，构建首个能完成高频灵巧操作的通用 VLA 基础模型 | Flow Matching VLA、Action Expert、跨构型预训练 | 2024.10 |
 | [π₀.₅](/papers/06-embodied-ai/vla/foundation/pi05_2025) | 通过异构多源数据协同训练和分层推理，首次实现端到端 VLA 在全新家庭环境中执行长时域灵巧操作 | 异构协同训练、分层推理、开放世界泛化 | 2025.04 |
 | [SF](/papers/06-embodied-ai/vla/foundation/SF_2025) | 将 VLA 中间层视觉 embedding 与 VGGT 3D 表征做余弦对齐，无需 3D 输入、推理零开销，LIBERO 98.5% 超越所有 2D/3D VLA，训练 3.8× 加速、数据 5.9× 高效 | 隐式空间对齐、VGGT、表征监督、训练/数据效率 | 2025.10 |
+| [SpatialVLA](/papers/06-embodied-ai/vla/foundation/SpatialVLA_2025) | Ego3D 位置编码注入 3D 信息 + 自适应高斯动作网格仅需 3 token 表征 7D 动作，1.1M 数据预训练 3.5B 零样本超越 55B RT-2-X，20 Hz 推理 | 3D 空间感知、自适应动作离散化、跨构型预训练 | 2025.01 |
 | [SPR](/papers/06-embodied-ai/vla/foundation/SPR_2026) | 将任务分解为带 2D 坐标的空间子目标序列，See-Plan 闭环进度监控 + Rewind 自主回退恢复，LIBERO 91.8%（+5% over MolmoAct），LIBERO-Plus OOD 仅 18.8% 退化（SOTA） | 进度感知、空间子目标、Rewind 错误恢复、OOD 鲁棒性 | 2026.03 |
 | [TCoT](/papers/06-embodied-ai/vla/foundation/TCoT_2026) | 全局/局部层次轨迹作为 VLA 的中间任务规划层（CoT），GLSR 算法统一失败检测与全局-局部策略切换恢复，多任务促进跨任务知识共享，LIBERO 83.3%（Multi），真实世界 +28% 超越 OpenVLA | 轨迹思维链、层次规划、GLSR 失败恢复、跨任务知识共享 | 2026 |
 | [TGM-VLA](/papers/06-embodied-ai/vla/foundation/TGM_VLA_2026) | 优化关键帧采样（存储 -85%、训练 5× 加速）+ 颜色反转投影分支 + 任务引导点云 Mixup，RLBench 90.5% SOTA、COLOSSEUM 68.8% | 关键帧采样优化、颜色反转、跨任务/任务内 Mixup、3D VLA | 2026.02 |
@@ -178,6 +192,12 @@
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
 | [EC-Flow](/papers/06-embodied-ai/imitation-learning/EC_Flow_2025) | 将光流预测从物体中心转为具身中心（预测机器人上采样点轨迹），配合目标图像辅助对齐和 URDF 感知运动学动作计算，仅用 5 条无动作标注 RGB 视频学习操作策略，在遮挡（+62%）、柔性物体（+45%）和非位移操作（+80%）场景大幅超越物体中心方法 | 具身中心光流、目标图像对齐、URDF 运动学、无动作标注、DiT 扩散 | 2025.07 |
+
+### 📊 Evaluation & Benchmarks
+
+| 论文 | 一句话概括 | 关键词 | 时间 |
+| --- | --- | --- | --- |
+| [MME](/papers/09-evaluation-and-benchmarks/MME_2024) | 首个 MLLM 综合评测基准：14 子任务覆盖感知（粗/细粒度识别、OCR）与认知（常识推理、计算、翻译、代码），Yes/No 人工指令对 + ACC/ACC+ 双指标实现精确量化，30 模型评测揭示指令跟随失败、感知缺陷、推理断裂、目标幻觉四大共性问题 | MLLM 评测、感知与认知、Yes/No 指令、手工标注、14 子任务、30 模型对比 | 2024.03 |
 
 ### 🎯 Reinforcement Learning
 
