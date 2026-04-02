@@ -164,6 +164,7 @@ export default defineConfig({
                       collapsed: false,
                       items: [
                         { text: '3D-CAVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/3D_CAVLA_2025' },
+                        { text: '3D-MIX (2026)', link: '/papers/06-embodied-ai/vla/foundation/3D_Mix_2026' },
                         { text: 'AimBot (2025)', link: '/papers/06-embodied-ai/vla/foundation/AimBot_2025' },
                         { text: 'AnchorVLA4D (2026)', link: '/papers/06-embodied-ai/vla/foundation/AnchorVLA4D_2026' },
                         { text: 'BridgeVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/BridgeVLA_2025' },
@@ -177,6 +178,7 @@ export default defineConfig({
                         { text: 'GR-3 (2025)', link: '/papers/06-embodied-ai/vla/foundation/GR3_2025' },
                         { text: 'MoH (2025)', link: '/papers/06-embodied-ai/vla/foundation/MoH_2025' },
                         { text: 'MemoryVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/MemoryVLA_2025' },
+                        { text: 'MMaDA-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/MMaDA_VLA_2026' },
                         { text: 'OptimusVLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/OptimusVLA_2026' },
                         { text: 'OTTER (2025)', link: '/papers/06-embodied-ai/vla/foundation/OTTER_2025' },
                         { text: 'π₀ (2024)', link: '/papers/06-embodied-ai/vla/foundation/pi0_2024' },

@@ -13,6 +13,7 @@
 | 论文 | 关键词 | 年份 |
 | --- | --- | --- |
 | [3D-CAVLA](vla/foundation/3D_CAVLA_2025.md) | 3D 深度感知、CoT 指令分解、ROI 检测、零样本泛化、LIBERO | 2025 |
+| [3D-MIX](vla/foundation/3D_Mix_2026.md) | VGGT 3D 融合、9 种策略对比、语义条件化门控、即插即用、GR00T/π-style、SIMPLER +7.0% | 2026 |
 | [AimBot](vla/foundation/AimBot_2025.md) | 瞄准线 + 准星视觉空间线索、EE 位姿/朝向/夹爪编码到像素空间、<1 ms 模型无关、LIBERO-Long +5.8、真实世界 27→43/50 | 2025 |
 | [AnchorVLA4D](vla/foundation/AnchorVLA4D_2026.md) | 首帧锚帧 + 冻结 Any4D 空间编码器、遮挡遗忘缓解、早期重试、SimplerEnv 64.6%（+13.6%）、真实世界 80% | 2026 |
 | [BridgeVLA](vla/foundation/BridgeVLA_2025.md) | 输入-输出 2D 对齐、正交投影、2D 热力图预训练、RLBench 88.2%、3 条轨迹 95.4% | 2025 |
@@ -26,6 +27,7 @@
 | [GR-3](vla/foundation/GR3_2025.md) | MoT 架构（Qwen2.5-VL + Action DiT）、VL 协同训练、VR 人类轨迹少样本适配、Task Status 辅助监督、全面超越 π₀ | 2025 |
 | [MoH](vla/foundation/MoH_2025.md) | 多 Horizon 动作块并行融合、轻量门控（2k 参数）、跨 Horizon 共识动态推理、Plug-and-Play、LIBERO 99% | 2025 |
 | [MemoryVLA](vla/foundation/MemoryVLA_2025.md) | 感知-认知双流记忆库（PCMB）、跨注意力检索 + 门控融合 + 合并压缩、长时域操作、SimplerEnv-Bridge +14.6、LIBERO 96.5%、真实世界时序 +26 | 2025 |
+| [MMaDA-VLA](vla/foundation/MMaDA_VLA_2026.md) | 原生离散扩散、统一多模态 token、并行去噪、混合注意力、目标观测生成、LIBERO 98.0%、CALVIN 4.78 | 2026 |
 | [OptimusVLA](vla/foundation/OptimusVLA_2026.md) | 双记忆增强（GPM 任务级先验检索 + LCM Mamba 时序一致性）、自适应 NFE、LIBERO 98.6%、2.9× 推理加速 | 2026 |
 | [OTTER](vla/foundation/OTTER_2025.md) | 冻结 CLIP、文本感知视觉特征提取、ClearCLIP $X_{\text{attn}}$、余弦相似度 Softmax 选择、零样本泛化 | 2025 |
 | [π₀](vla/foundation/pi0_2024.md) | Flow Matching VLA、VLM 骨架 + Action Expert、跨构型预训练、预训练/后训练范式 | 2024 |
