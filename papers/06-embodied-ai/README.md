@@ -25,6 +25,7 @@
 | [DreamVLA](vla/foundation/DreamVLA_2025.md) | 综合世界知识预测（动态区域/深度/语义）、Block-Wise 结构化注意力、DiT 动作头、GPT-2 Medium、CALVIN 4.44 SOTA、LIBERO 92.6% | 2025 |
 | [Dexbotic](vla/foundation/Dexbotic_2025.md) | VLA Toolbox、统一模块化框架（VLM + AE）、DexboticVLM（Qwen2.5）、Exp 脚本实验开发、SimplerEnv +46.2% | 2025 |
 | [FAST](vla/foundation/FAST_2025.md) | DCT + BPE 频域压缩动作 tokenization、高频灵巧任务、π₀-FAST 匹配扩散 π₀ 训练 5× 加速、FAST+ 通用 tokenizer | 2025 |
+| [FocusVLA](vla/foundation/FocusVLA_2026.md) | Modality Cascaded Attention + Focus Attention（Patch 剪枝 + Channel 门控）、视觉利用效率瓶颈诊断、0.5B 超越 7B、LIBERO 98.7%、训练 1.5× 加速 | 2026 |
 | [FutureVLA](vla/foundation/FutureVLA_2026.md) | 联合视觉运动预测（JVPM）、3D-VAE 连续 17 帧编码、双流解耦监督、门控交叉注意力、潜在嵌入对齐、SimplerEnv 80.1%、真实机器人 +26.7% | 2026 |
 | [GR-3](vla/foundation/GR3_2025.md) | MoT 架构（Qwen2.5-VL + Action DiT）、VL 协同训练、VR 人类轨迹少样本适配、Task Status 辅助监督、全面超越 π₀ | 2025 |
 | [MoH](vla/foundation/MoH_2025.md) | 多 Horizon 动作块并行融合、轻量门控（2k 参数）、跨 Horizon 共识动态推理、Plug-and-Play、LIBERO 99% | 2025 |

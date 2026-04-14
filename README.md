@@ -154,6 +154,7 @@
 - [DreamVLA (2025)](papers/06-embodied-ai/vla/foundation/DreamVLA_2025.md) — 预测三类综合世界知识（动态区域/深度/语义）+ 结构化注意力解耦，CALVIN 4.44 SOTA
 - [Dexbotic (2025)](papers/06-embodied-ai/vla/foundation/Dexbotic_2025.md) — 开源 VLA 工具箱：统一框架 + Qwen2.5 预训练模型 + 实验驱动开发，最高 +46.2%
 - [FAST (2025)](papers/06-embodied-ai/vla/foundation/FAST_2025.md) — DCT + BPE 频域压缩动作 tokenization，解决自回归 VLA 高频任务瓶颈，匹配扩散 π₀ 训练 5× 加速
+- [FocusVLA (2026)](papers/06-embodied-ai/vla/foundation/FocusVLA_2026.md) — Cascaded Attention 消除结构性捷径 + Focus Attention 聚焦任务相关视觉，0.5B 参数 LIBERO 98.7% 超越 7B 模型
 - [FutureVLA (2026)](papers/06-embodied-ai/vla/foundation/FutureVLA_2026.md) — 双流解耦 + 门控交叉注意力联合视觉运动预测，潜在对齐迁移时序先验，SimplerEnv 80.1%、真实机器人超 π₀ 达 26.7%
 - [GR-3 (2025)](papers/06-embodied-ai/vla/foundation/GR3_2025.md) — 4B VLA：VL 协同训练 + VR 人类轨迹 10-shot 适配 + Task Status 指令跟随，全面超越 π₀
 - [MoH (2025)](papers/06-embodied-ai/vla/foundation/MoH_2025.md) — 多 Horizon 动作块并行融合 + 轻量门控 + 动态推理，π₀.₅+MoH LIBERO 99%
