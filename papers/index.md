@@ -39,6 +39,7 @@
 | [CSR](/papers/04-multimodal/vlm/hallucination/CSR_2024) | 句子级 beam search + CLIP 视觉校准奖励迭代构造自生成偏好数据 + DPO 微调，三轮迭代 10 个基准平均提升 7.62%，CHAIR$_S$ 降低 57% | 校准自奖励、CLIP Score、迭代 DPO、模态对齐、Self-Rewarding | 2024.05 |
 | [DLC](/papers/04-multimodal/vlm/hallucination/DLC_2025) | 解码时用 CLIP 逐步评估候选 token 的相对视觉优势 (RVA)，相对动态历史基线自适应调整 logits，无需额外前向传播高效缓解语义漂移幻觉 | 动态 Logits 校准、CLIP 探针、相对视觉优势、自适应引导、Training-Free | 2025.06 |
 | [EFUF](/papers/04-multimodal/vlm/hallucination/EFUF_2024) | CLIP 分数自动区分幻觉/非幻觉对象，细粒度梯度上升遗忘幻觉子句 + 正向训练保留正确子句 + 句子损失维持流畅度，无需配对数据仅 3 GPU 小时，4 个 MLLM 上 CHAIR$_S$ 平均降低 ~15% 且生成质量同步提升 | 细粒度遗忘、CLIP 数据筛选、梯度上升、三重损失 | 2024.02 |
+| [FLB](/papers/04-multimodal/vlm/hallucination/FLB_2026) | 存储首 token logit 以指数递增权重叠加到后续解码步骤，通过直接视觉锚定和 "The" 效应双机制缓解长程视觉衰减，单次前向零推理开销，LLaVA-1.5 AMBER CHAIR 11.5→6.1、CHAIR$_S$ 57.5→43.5，全面超越 VCD/ICD/M3ID | 首 Token Logit、视觉锚定、长程衰减、"The" 效应、Training-Free、单次前向 | 2026.04 |
 | [FarSight](/papers/04-multimodal/vlm/hallucination/FarSight_2025) | 在因果掩码上三角引入注意力寄存器吸收 outlier token 多余注意力 + 渐减遮蔽率编码绝对位置信息对抗 RoPE 衰减，仅优化因果掩码即可 training-free 缓解图像和视频 MLLM 幻觉，LLaVA-1.5 CHAIR$_S$ -6.4 pp、POPE-R +3.5 pp | 注意力寄存器、因果掩码优化、位置感知编码、Training-Free、Image+Video | 2025 |
 | [HALC](/papers/04-multimodal/vlm/hallucination/HALC_2024) | 自适应 FOV 采样 + JSD 双向对比解码修正局部幻觉 + 视觉匹配 beam search 全局保障，无训练即插即用，CHAIR$_S$ 在 MiniGPT-4 上降低 36% | FOV 对比解码、JSD 选择、视觉匹配 Beam Search、Plug-and-Play | 2024.03 |
 | [HIME](/papers/04-multimodal/vlm/hallucination/HIME_2026) | 提出 HIS 量化每层幻觉敏感度，层自适应加权投影编辑 MLP 权重，无训练/无额外参数/无推理开销平均降低 61.8% 对象幻觉 | HIS、层自适应模型编辑、零空间投影、Training-Free | 2026.02 |

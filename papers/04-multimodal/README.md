@@ -15,6 +15,7 @@
 | [CSR](vlm/hallucination/CSR_2024.md) | 校准自奖励、CLIP Score、迭代 DPO、模态对齐、Self-Rewarding | 2024 |
 | [DLC](vlm/hallucination/DLC_2025.md) | 动态 Logits 校准、CLIP 探针、相对视觉优势、自适应引导、Training-Free | 2025 |
 | [EFUF](vlm/hallucination/EFUF_2024.md) | 细粒度遗忘、CLIP 数据筛选、梯度上升、三重损失 | 2024.02 |
+| [FLB](vlm/hallucination/FLB_2026.md) | 首 Token Logit、视觉锚定、长程衰减、"The" 效应、Training-Free、单次前向 | 2026.04 |
 | [FarSight](vlm/hallucination/FarSight_2025.md) | 注意力寄存器、因果掩码优化、位置感知编码、Training-Free、Image+Video | 2025 |
 | [HALC](vlm/hallucination/HALC_2024.md) | FOV 对比解码、JSD 双向对比、视觉匹配 Beam Search、Plug-and-Play | 2024 |
 | [HIME](vlm/hallucination/HIME_2026.md) | HIS、层自适应模型编辑、零空间投影、Training-Free | 2026.02 |

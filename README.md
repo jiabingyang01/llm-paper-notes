@@ -68,6 +68,7 @@
 - [CSR (2024)](papers/04-multimodal/vlm/hallucination/CSR_2024.md) — CLIP 校准自奖励 + 句子级 beam search + 迭代 DPO，三轮迭代 CHAIR$_S$ 降低 57%
 - [DLC (2025)](papers/04-multimodal/vlm/hallucination/DLC_2025.md) — CLIP 动态探针 + 相对视觉优势 + 自适应 Logits 调制，Training-Free 高效缓解 LVLM 幻觉
 - [EFUF (2024)](papers/04-multimodal/vlm/hallucination/EFUF_2024.md) — CLIP 筛选 + 细粒度梯度上升遗忘幻觉子句，无需配对数据仅 3 GPU 小时，CHAIR$_S$ 平均降低 ~15%
+- [FLB (2026)](papers/04-multimodal/vlm/hallucination/FLB_2026.md) — 首 token logit 指数递增叠加 + "The" 效应双机制对抗长程视觉衰减，单次前向零开销，AMBER CHAIR 11.5→6.1
 - [FarSight (2025)](papers/04-multimodal/vlm/hallucination/FarSight_2025.md) — 因果掩码上三角注意力寄存器 + 渐减遮蔽率位置编码，training-free 缓解图像/视频 MLLM 幻觉，CHAIR$_S$ -6.4 pp
 - [HALC (2024)](papers/04-multimodal/vlm/hallucination/HALC_2024.md) — 自适应 FOV 对比解码 + 视觉匹配 beam search，无训练即插即用缓解三种对象幻觉
 - [HIME (2026)](papers/04-multimodal/vlm/hallucination/HIME_2026.md) — HIS 层自适应加权投影编辑，无训练/无开销降低 61.8% 对象幻觉
