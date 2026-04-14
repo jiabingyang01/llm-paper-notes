@@ -199,6 +199,7 @@ export default defineConfig({
                         { text: 'MMaDA-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/MMaDA_VLA_2026' },
                         { text: 'OptimusVLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/OptimusVLA_2026' },
                         { text: 'OTTER (2025)', link: '/papers/06-embodied-ai/vla/foundation/OTTER_2025' },
+                        { text: 'ProgressVLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/ProgressVLA_2026' },
                         { text: 'π₀ (2024)', link: '/papers/06-embodied-ai/vla/foundation/pi0_2024' },
                         { text: 'π₀.₅ (2025)', link: '/papers/06-embodied-ai/vla/foundation/pi05_2025' },
                         { text: 'SF (2025)', link: '/papers/06-embodied-ai/vla/foundation/SF_2025' },

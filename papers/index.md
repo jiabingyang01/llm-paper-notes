@@ -104,6 +104,7 @@
 | [MMaDA-VLA](/papers/06-embodied-ai/vla/foundation/MMaDA_VLA_2026) | 基于原生离散扩散大模型 MMaDA-8B，将语言/图像/动作统一到离散 token 空间，并行去噪生成目标观测和动作块 + 混合注意力（模态内双向 + 模态间因果），LIBERO 98.0%、CALVIN 4.78 全面 SOTA | 原生离散扩散、统一多模态 token、并行去噪、混合注意力、目标观测生成 | 2026.03 |
 | [OptimusVLA](/papers/06-embodied-ai/vla/foundation/OptimusVLA_2026) | 双记忆增强 VLA：GPM 用检索到的任务级先验替代高斯噪声缩短 flow 生成路径 + LCM 用 Mamba 建模动作历史注入时序一致性，LIBERO 98.6%、真实世界 2.9× 推理加速 | 双记忆、任务级先验检索、时序一致性、自适应 NFE | 2026.02 |
 | [OTTER](/papers/06-embodied-ai/vla/foundation/OTTER_2025) | 冻结预训练 CLIP 编码器，利用 ClearCLIP 的 $X_{\text{attn}}$ 特征 + 余弦相似度 softmax 选择性提取与语言指令对齐的视觉 patch 特征，仅训练温度参数和轻量策略网络（~12M），真实机器人 4 种原语零样本泛化 77%，Octo/OpenVLA 几乎为 0% | 冻结 CLIP、文本感知视觉特征提取、ClearCLIP、零样本泛化 | 2025.03 |
+| [ProgressVLA](/papers/06-embodied-ai/vla/foundation/ProgressVLA_2026) | OXE 预训练视觉-语言进度估计器（残差 0.07）+ 世界模型想象未来视觉状态 + 进度梯度 classifier guidance 引导扩散采样朝最大进度方向 + KL 正则化在线 RL 微调，CALVIN 3.73、LIBERO 84.5%、真实世界 76%（Octo 23%），步数减少 47% | 进度估计、Classifier Guidance、潜在动作空间、世界模型、扩散策略 | 2026.03 |
 | [π₀](/papers/06-embodied-ai/vla/foundation/pi0_2024) | 用 Flow Matching 替代自回归生成动作，构建首个能完成高频灵巧操作的通用 VLA 基础模型 | Flow Matching VLA、Action Expert、跨构型预训练 | 2024.10 |
 | [π₀.₅](/papers/06-embodied-ai/vla/foundation/pi05_2025) | 通过异构多源数据协同训练和分层推理，首次实现端到端 VLA 在全新家庭环境中执行长时域灵巧操作 | 异构协同训练、分层推理、开放世界泛化 | 2025.04 |
 | [SF](/papers/06-embodied-ai/vla/foundation/SF_2025) | 将 VLA 中间层视觉 embedding 与 VGGT 3D 表征做余弦对齐，无需 3D 输入、推理零开销，LIBERO 98.5% 超越所有 2D/3D VLA，训练 3.8× 加速、数据 5.9× 高效 | 隐式空间对齐、VGGT、表征监督、训练/数据效率 | 2025.10 |

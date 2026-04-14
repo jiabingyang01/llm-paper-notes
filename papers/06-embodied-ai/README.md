@@ -32,6 +32,7 @@
 | [MMaDA-VLA](vla/foundation/MMaDA_VLA_2026.md) | 原生离散扩散、统一多模态 token、并行去噪、混合注意力、目标观测生成、LIBERO 98.0%、CALVIN 4.78 | 2026 |
 | [OptimusVLA](vla/foundation/OptimusVLA_2026.md) | 双记忆增强（GPM 任务级先验检索 + LCM Mamba 时序一致性）、自适应 NFE、LIBERO 98.6%、2.9× 推理加速 | 2026 |
 | [OTTER](vla/foundation/OTTER_2025.md) | 冻结 CLIP、文本感知视觉特征提取、ClearCLIP $X_{\text{attn}}$、余弦相似度 Softmax 选择、零样本泛化 | 2025 |
+| [ProgressVLA](vla/foundation/ProgressVLA_2026.md) | 进度估计、Classifier Guidance、潜在动作空间、世界模型、扩散策略、长时域操作 | 2026.03 |
 | [π₀](vla/foundation/pi0_2024.md) | Flow Matching VLA、VLM 骨架 + Action Expert、跨构型预训练、预训练/后训练范式 | 2024 |
 | [π₀.₅](vla/foundation/pi05_2025.md) | 异构多源数据协同训练、分层推理（子任务预测 + 低层控制）、开放世界泛化 | 2025 |
 | [SF](vla/foundation/SF_2025.md) | 隐式空间表征对齐（VGGT）、中间层视觉 embedding 监督、推理零开销、3.8× 训练加速、LIBERO 98.5% | 2025 |

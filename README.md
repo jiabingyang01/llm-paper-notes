@@ -161,6 +161,7 @@
 - [MMaDA-VLA (2026)](papers/06-embodied-ai/vla/foundation/MMaDA_VLA_2026.md) — 原生离散扩散统一多模态 VLA，并行去噪生成目标观测+动作块，LIBERO 98.0%、CALVIN 4.78 全面 SOTA
 - [OptimusVLA (2026)](papers/06-embodied-ai/vla/foundation/OptimusVLA_2026.md) — 双记忆增强 VLA：GPM 任务级先验检索 + LCM 时序一致性，LIBERO 98.6%、2.9× 加速
 - [OTTER (2025)](papers/06-embodied-ai/vla/foundation/OTTER_2025.md) — 冻结 CLIP + 文本感知视觉特征提取实现零样本泛化，4 种原语未见任务 77%，Octo/OpenVLA 几乎为 0%
+- [ProgressVLA (2026)](papers/06-embodied-ai/vla/foundation/ProgressVLA_2026.md) — 进度估计器 + 世界模型 + classifier guidance 引导扩散策略，CALVIN 3.73、LIBERO 84.5%、真实世界 76%（Octo 23%）
 - [π₀ (2024)](papers/06-embodied-ai/vla/foundation/pi0_2024.md) — Flow Matching VLA 基础模型
 - [π₀.₅ (2025)](papers/06-embodied-ai/vla/foundation/pi05_2025.md) — 异构协同训练 + 分层推理
 - [SF (2025)](papers/06-embodied-ai/vla/foundation/SF_2025.md) — 隐式空间表征对齐（VGGT），推理零开销，LIBERO 98.5%，训练 3.8× 加速
