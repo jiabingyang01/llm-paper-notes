@@ -6,9 +6,9 @@
 >
 > **机构**：清华大学、上海 AI Lab、上海交通大学、北京大学、香港大学、Nature Will、Frontis.AI
 >
-> **发布时间**：2025 年 5 月（ICLR 2026）
+> **发布时间**：2025 年 9 月（ICLR 2026）
 >
-> **链接**：[arXiv](https://arxiv.org/abs/2505.15853) | [代码](https://github.com/PRIME-RL/SimpleVLA-RL)
+> **链接**：[arXiv](https://arxiv.org/abs/2509.09674) | [代码](https://github.com/PRIME-RL/SimpleVLA-RL)
 
 ---
 
