@@ -273,6 +273,7 @@ export default defineConfig({
                         { text: 'TGRPO (2025)', link: '/papers/06-embodied-ai/vla/rl/TGRPO_2025' },
                         { text: 'TOPReward (2026)', link: '/papers/06-embodied-ai/vla/rl/TOPReward_2026' },
                         { text: 'TwinRL (2026)', link: '/papers/06-embodied-ai/vla/rl/TwinRL_2026' },
+                        { text: 'ViVa (2026)', link: '/papers/06-embodied-ai/vla/rl/ViVa_2026' },
                         { text: 'VLAC (2025)', link: '/papers/06-embodied-ai/vla/rl/VLAC_2025' },
                         { text: 'VLA-RFT (2025)', link: '/papers/06-embodied-ai/vla/rl/VLA_RFT_2025' },
                         { text: 'VLA-RL (2025)', link: '/papers/06-embodied-ai/vla/rl/VLA_RL_2025' },

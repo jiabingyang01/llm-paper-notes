@@ -241,6 +241,7 @@
 - [TGRPO (2025)](papers/06-embodied-ai/vla/rl/TGRPO_2025.md) — 双层组相对策略优化：LLM 稠密奖励 + 步级/轨迹级优势融合
 - [TOPReward (2026)](papers/06-embodied-ai/vla/rl/TOPReward_2026.md) — Token logits 零样本奖励：True 概率作进度信号，Qwen3-VL 0.947 VOC，ManiRewardBench
 - [TwinRL (2026)](papers/06-embodied-ai/vla/rl/TwinRL_2026.md) — 数字孪生驱动的真实世界机器人 RL
+- [ViVa (2026)](papers/06-embodied-ai/vla/rl/ViVa_2026.md) — 视频扩散 DiT 当 value 用：latent injection 联合预测未来本体感知 + 标量价值，替换 RECAP VLM value 后 box assembly 58%→73%
 - [VLAC (2025)](papers/06-embodied-ai/vla/rl/VLAC_2025.md) — 统一 Actor-Critic + pairwise progress 稠密奖励，真实世界 RL 自改进
 - [VLA-RFT (2025)](papers/06-embodied-ai/vla/rl/VLA_RFT_2025.md) — 视频世界模型 + Verified Reward + GRPO，400 步超越 SFT
 - [VLA-RL (2025)](papers/06-embodied-ai/vla/rl/VLA_RL_2025.md) — 在线 PPO 微调自回归 VLA

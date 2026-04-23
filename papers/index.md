@@ -175,6 +175,7 @@
 | [TGRPO](/papers/06-embodied-ai/vla/rl/TGRPO_2025) | 无 Critic 在线 RL 框架：LLM 自动生成多阶段稠密奖励 + 步级/轨迹级双层组相对优势融合微调 VLA | GRPO 扩展、双层优势、LLM 奖励设计 | 2025.06 |
 | [TOPReward](/papers/06-embodied-ai/vla/rl/TOPReward_2026) | 绕过 VLM 文本生成，直接从 token logits 提取 True 概率作为零样本任务进度信号，Qwen3-VL-8B 达 0.947 VOC 大幅超越 GVL，提出 130+ 真实任务的 ManiRewardBench | Token 概率奖励、零样本进度估计、ManiRewardBench、VOC | 2026.02 |
 | [TwinRL](/papers/06-embodied-ai/vla/rl/TwinRL_2026) | 用高保真数字孪生作为探索放大器和引导器，三阶段流程（探索空间扩展 + 孪生在线 RL + sim-to-real 引导）四任务平均 20 分钟逼近 100% 成功率 | 数字孪生、探索空间扩展、Sim-to-Real 引导、HiL | 2026.02 |
+| [ViVa](/papers/06-embodied-ai/vla/rl/ViVa_2026) | 把预训练视频扩散 DiT（Wan2.2）当价值模型用，通过 latent injection 联合预测未来本体感知 + 当前标量价值，替换 RECAP 的 VLM value 后 box assembly 成功率 58%→73% | 视频生成价值模型、Wan2.2、Latent Injection、RECAP、未来本体感知 | 2026.04 |
 | [VLAC](/papers/06-embodied-ai/vla/rl/VLAC_2025) | 基于 InternVL 构建统一 Actor-Critic 模型，pairwise progress delta 提供通用稠密奖励，配合异步真实世界 RL 和分级人机协作，200 episode 内成功率 30%→90% | 统一 Actor-Critic、Pairwise Progress、真实世界 RL、Human-in-the-Loop | 2025.09 |
 | [VLA-RFT](/papers/06-embodied-ai/vla/rl/VLA_RFT_2025) | 数据驱动视频世界模型充当模拟器，verified reward（MAE+LPIPS）+ GRPO 端到端微调 VLA，400 步超越 150K 步 SFT | 视频世界模型、Verified Reward、SDE-Policy、GRPO | 2025.10 |
 | [VLA-RL](/papers/06-embodied-ai/vla/rl/VLA_RL_2025) | 将机器人操作建模为多模态多轮对话，用 PPO 在线 RL 微调自回归 VLA，配合 Robotic PRM 解决稀疏奖励 | 在线 PPO、Robotic PRM、自回归 VLA + RL | 2025.05 |
