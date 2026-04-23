@@ -291,6 +291,7 @@ export default defineConfig({
                     { text: 'BridgeV2W (2025)', link: '/papers/06-embodied-ai/world-models/BridgeV2W_2025' },
                     { text: 'Fast-WAM (2026)', link: '/papers/06-embodied-ai/world-models/FastWAM_2026' },
                     { text: 'Kinema4D (2026)', link: '/papers/06-embodied-ai/world-models/Kinema4D_2026' },
+                    { text: 'MIND-V (2026)', link: '/papers/06-embodied-ai/world-models/MINDV_2026' },
                     { text: 'WorldVLA (2025)', link: '/papers/06-embodied-ai/world-models/WorldVLA_2025' },
                   ],
                 },

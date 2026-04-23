@@ -190,6 +190,7 @@
 | [BridgeV2W](/papers/06-embodied-ai/world-models/BridgeV2W_2025) | 将坐标空间动作通过 URDF + 相机参数渲染为像素对齐 Embodiment Mask，经 ControlNet 注入预训练视频生成模型，辅以光流运动损失，统一解决动作-视频鸿沟、视角敏感性和跨构型架构不统一三大问题 | Embodiment Mask、ControlNet、光流运动损失、跨构型统一 | 2025 |
 | [Fast-WAM](/papers/06-embodied-ai/world-models/FastWAM_2026) | 通过受控变体实验拆解 WAM 的两个因素，证明训练时视频协同目标（而非测试时未来想象）是性能主因；提出跳过测试时视频生成、单次前向传播动作预测，190 ms 延迟、RoboTwin 91.8%、LIBERO 97.6%，无具身预训练 | 视频协同训练、MoT 架构、训练-推理解耦、Flow Matching、测试时加速 | 2026.03 |
 | [Kinema4D](/papers/06-embodied-ai/world-models/Kinema4D_2026) | 将仿真解耦为运动学确定性 4D 机器人轨迹（URDF + FK/IK → pointmap）和生成式环境响应（DiT 联合预测 RGB+pointmap），Robo4D-200k 训练，PSNR 22.50、FVD 98.5、F-Score 0.4733，首次零样本真实世界迁移 | 4D Pointmap 控制、运动学-生成解耦、联合 RGB+Pointmap 合成、构型无关、零样本迁移 | 2026.03 |
+| [MIND-V](/papers/06-embodied-ai/world-models/MINDV_2026) | 认知三层世界模型 SRH + BSB + MVG，V-JEPA2 作物理裁判的 PFC 奖励 + GRPO 后训练 + Staged Visual Future Rollouts 推理期搜索，长时程任务 Task Success +76.7%，作为训练场把 OpenVLA-OFT 在 MimicGen 成功率 33.4%→43.5% | 分层 VWM、Behavioral Semantic Bridge、PFC 奖励、V-JEPA2 物理裁判、Staged Rollouts | 2026.03 |
 | [WorldVLA](/papers/06-embodied-ai/world-models/WorldVLA_2025) | 基于 Chameleon 将 VLA 动作模型与世界模型统一到单个自回归框架，共享权重混合训练实现双向增强，提出 Action Attention Mask 阻断 Action Chunking 误差累积 | 自回归统一模型、Action Attention Mask、Chameleon、双向增强 | 2025 |
 
 ### 🦾 Embodied AI — Imitation Learning
