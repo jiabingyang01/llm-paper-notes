@@ -250,7 +250,7 @@ World-VLA-Loop 的"闭环"思想更优雅——让数据驱动世界模型改进
 
 - [WoVR: World Models as Reliable Simulators for Post-Training VLA Policies with RL](https://arxiv.org/abs/2602.13977)：同期工作，幻觉感知的世界模型 RL，关注三级可靠性保障
 - [RISE: Self-Improving Robot Policy with Compositional World Model](https://arxiv.org/abs/2602.11075)：组合式世界模型（动力学 + 价值）在想象空间做 RL
-- [WMPO: World Model-Based Policy Optimization for VLA](https://arxiv.org/abs/2511.09515)：直接用世界模型做 imagination rollout + PPO
+- [WMPO: World Model-Based Policy Optimization for VLA](https://arxiv.org/abs/2511.09515)：像素级视频世界模型（OpenSora）+ on-policy GRPO 在想象空间微调 VLA
 - [GigaBrain: World-Model-Conditioned Policy Optimization](https://arxiv.org/abs/2602.14842)：世界模型预测未来状态 + 价值条件化 VLA
 - [SimpleVLA-RL: Scaling VLA Training via RL](https://arxiv.org/abs/2509.09674)：World-VLA-Loop 的 RL 训练框架基础
 - [OpenVLA-OFT: Fine-Tuning VLA Models](https://arxiv.org/abs/2502.19645)：基础 VLA 策略

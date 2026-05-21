@@ -218,6 +218,7 @@ export default defineConfig({
                       items: [
                         { text: 'BitVLA (2025)', link: '/papers/06-embodied-ai/vla/efficient/BitVLA_2025' },
                         { text: 'EfficientVLA (2025)', link: '/papers/06-embodied-ai/vla/efficient/EfficientVLA_2025' },
+                        { text: 'GridS (2026)', link: '/papers/06-embodied-ai/vla/efficient/GridS_2026' },
                         { text: 'HeiSD (2026)', link: '/papers/06-embodied-ai/vla/efficient/HeiSD_2026' },
                         { text: 'LAC (2026)', link: '/papers/06-embodied-ai/vla/efficient/LAC_2026' },
                         { text: 'PD-VLA (2025)', link: '/papers/06-embodied-ai/vla/efficient/PD_VLA_2025' },
@@ -292,6 +293,7 @@ export default defineConfig({
                     { text: 'Fast-WAM (2026)', link: '/papers/06-embodied-ai/world-models/FastWAM_2026' },
                     { text: 'Kinema4D (2026)', link: '/papers/06-embodied-ai/world-models/Kinema4D_2026' },
                     { text: 'MIND-V (2026)', link: '/papers/06-embodied-ai/world-models/MINDV_2026' },
+                    { text: 'SpatialVAM (2026)', link: '/papers/06-embodied-ai/world-models/SpatialVAM_2026' },
                     { text: 'WorldVLA (2025)', link: '/papers/06-embodied-ai/world-models/WorldVLA_2025' },
                   ],
                 },

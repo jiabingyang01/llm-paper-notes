@@ -288,11 +288,11 @@ RAMP 的独特价值在于：它不仅用世界模型计算优势信号，更关
 
 ### 6.4 与 WMPO 的对比
 
-WMPO 在隐空间做 PPO（策略梯度），RAMP 在观测空间做优势条件化（监督学习式）。RAMP 的优势在于：
+WMPO 在**像素空间**做 on-policy GRPO（策略梯度），RAMP 在观测空间做优势条件化（监督学习式）。二者都在像素空间，差别在于优化范式：
 
-- 避免了在 flow matching 模型上做策略梯度的不稳定性
-- 世界模型预测的未来状态直接可视化可解释（视频帧），而非 WMPO 的 MLP 隐表征
-- 支持迭代改进（HILR 闭环），而 WMPO 是纯离线方案
+- RAMP 避免了在 flow matching 模型上做策略梯度的不稳定性（WMPO 基于 OpenVLA-OFT 的离散 token，绕过了这个问题，但不适用于 flow policy）
+- RAMP 支持 HILR 闭环持续改进；WMPO 也支持 lifelong learning（policy rollout → WM 微调 → GRPO → 再 rollout 的循环），但强度不同
+- RAMP 直接把未来状态作为条件喂入策略；WMPO 把未来帧仅用于 GRPO 奖励计算
 
 ---
 
@@ -302,5 +302,5 @@ WMPO 在隐空间做 PPO（策略梯度），RAMP 在观测空间做优势条件
 - **GigaBrain-0 (2025)**：GigaBrain 系列 VLA 基础架构，GigaBrain-0.5 的前代
 - **RISE (2026)**：组合式世界模型 + 想象空间 RL，与 RAMP 互补的世界模型 + VLA 路线
 - **Wan2.2 (Wang et al., 2025)**：RAMP 世界模型的骨干架构
-- **WMPO (2025)**：隐空间世界模型 RL，另一种 model-based VLA RL 方案
+- **WMPO (2025)**：像素级视频世界模型 + on-policy GRPO，另一种 model-based VLA RL 方案
 - **AWR (Peng et al., 2019)**：优势加权回归，RAMP 的对比基线之一

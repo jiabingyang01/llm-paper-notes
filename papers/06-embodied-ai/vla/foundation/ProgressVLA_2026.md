@@ -209,7 +209,7 @@ CG 不仅提升成功率（66→76），还大幅减少冗余运动（步数 100
 - **与 RISE 的互补**：RISE 使用组合式世界模型在想象空间中做 RL 自改进，ProgressVLA 使用世界模型做进度引导的 classifier guidance。两者都利用世界模型避免真实交互，但策略改进机制不同——RISE 是完整的在线 RL 循环，ProgressVLA 是推理时的梯度引导 + 可选的轻量 RL 微调
 - **与 ReWiND / Robo-Dopamine / ROBOMETER 的关系**：这些工作都涉及**进度/奖励模型**的预训练。ReWiND 用 video rewind 学进度预测、Robo-Dopamine 训练通用过程奖励模型、ROBOMETER 用帧级进度+轨迹偏好。ProgressVLA 的进度估计器可视为同类工作，但独特之处在于**将进度信号直接嵌入扩散采样过程**（通过 classifier guidance），而非仅作为后处理排序器或 RL 奖励
 - **与 UniVLA 的架构关联**：ProgressVLA 的世界模型直接采用 UniVLA 的架构（DINOv2 特征空间 + VQ 离散化），Latent Action Expert 也使用 UniVLA 风格的潜在动作表示，说明潜在动作空间的标准化正在成为 VLA 领域的趋势
-- **与 WMPO 的对比**：WMPO 也使用世界模型在隐空间做 PPO 后训练，但其进度信号是标准的 RL 奖励。ProgressVLA 更进一步，将进度信号直接融入扩散去噪的每一步（classifier guidance），理论上比 RL 更细粒度地影响动作生成
+- **与 WMPO 的对比**：WMPO 也使用世界模型做后训练，但它是在**像素空间**视频扩散 WM 的想象轨迹上跑 on-policy GRPO，奖励是 VideoMAE 二分类成功信号。ProgressVLA 更进一步，将进度信号直接融入扩散去噪的每一步（classifier guidance），理论上比 RL 更细粒度地影响动作生成
 
 ### 5.3 Classifier Guidance 在机器人策略中的前景
 

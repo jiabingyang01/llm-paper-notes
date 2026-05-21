@@ -43,6 +43,8 @@ index.md                              # 网站首页
 
 参考 `templates/paper_template.md` 的结构，以及已有笔记的风格（如 `papers/06-embodied-ai/vla/rl/RISE_2026.md`）。
 
+**撰写前必须阅读 PDF 原文**：绝对不要根据论文标题 + 领域先验去"合理化"地编造方法骨架、实验设置、baseline、数字、作者/机构。曾经出现过整篇 WMPO 笔记的作者、机构、方法（latent+PPO vs 实际 pixel+GRPO）、实验（LIBERO/SimplerEnv vs 实际 Mimicgen）全部是幻觉的事故，还会传染到其他笔记的对比描述。如果用户没有附 PDF，必须通过 arXiv abs/pdf 页面或项目主页取得原文要点后再写，宁可推迟也不要凭想象写。
+
 笔记应包含：
 1. 标题 + 元信息（作者、机构、时间、链接、期刊/会议）——如果我没有显示提供，需联网检索论文是否已被期刊或会议录用，如已中稿则注明发表venue
 2. 一句话总结

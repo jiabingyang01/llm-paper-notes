@@ -182,6 +182,7 @@
 
 - [BitVLA (2025)](papers/06-embodied-ai/vla/efficient/BitVLA_2025.md) — 首个全参数三值化 VLA，蒸馏感知训练量化 ViT 至 1.58-bit，LIBERO 94.8%、显存仅 1.4GB
 - [EfficientVLA (2025)](papers/06-embodied-ai/vla/efficient/EfficientVLA_2025.md) — 结构化 training-free 加速：层剪枝 + Token 选择 + 扩散步缓存，1.93× 加速
+- [GridS (2026)](papers/06-embodied-ai/vla/efficient/GridS_2026.md) — 可微双线性采样把 Token 剪枝重构为连续重采样：MLP 预测 K 个浮点坐标端到端联合训练，π₀ LIBERO 16/256 Token 反超 +1.6%，K=1 仍保 96.6%，真实世界 OOD +28.6%
 - [HeiSD (2026)](papers/06-embodied-ai/vla/efficient/HeiSD_2026.md) — 混合推测解码（Drafter + Retrieval SD）+ 运动学融合指标自动切换，LIBERO 2.45×、真实世界 2.41× 加速
 - [LAC (2026)](papers/06-embodied-ai/vla/efficient/LAC_2026.md) — 可学习自适应 Token 缓存加速 VLA
 - [PD-VLA (2025)](papers/06-embodied-ai/vla/efficient/PD_VLA_2025.md) — Jacobi 并行解码加速 Action Chunking VLA，不改模型不训练，2.52× 频率提升
@@ -245,7 +246,7 @@
 - [VLAC (2025)](papers/06-embodied-ai/vla/rl/VLAC_2025.md) — 统一 Actor-Critic + pairwise progress 稠密奖励，真实世界 RL 自改进
 - [VLA-RFT (2025)](papers/06-embodied-ai/vla/rl/VLA_RFT_2025.md) — 视频世界模型 + Verified Reward + GRPO，400 步超越 SFT
 - [VLA-RL (2025)](papers/06-embodied-ai/vla/rl/VLA_RL_2025.md) — 在线 PPO 微调自回归 VLA
-- [WMPO (2025)](papers/06-embodied-ai/vla/rl/WMPO_2025.md) — 隐空间世界模型 imagination RL 后训练 VLA
+- [WMPO (2025)](papers/06-embodied-ai/vla/rl/WMPO_2025.md) — 像素级视频世界模型作想象环境 + on-policy GRPO 微调 VLA，无需真机交互
 - [World-VLA-Loop (2026)](papers/06-embodied-ai/vla/rl/World_VLA_Loop_2026.md) — 视频世界模型与 VLA 策略闭环联合优化，SANS 近成功数据 + 迭代 RL
 - [WoVR (2026)](papers/06-embodied-ai/vla/rl/WoVR_2026.md) — 幻觉感知世界模型 RL
 
@@ -263,6 +264,7 @@
 - [Fast-WAM (2026)](papers/06-embodied-ai/world-models/FastWAM_2026.md) — 训练时视频协同目标是 WAM 性能主因、测试时未来想象非必要，跳过视频生成 190 ms 推理，RoboTwin 91.8%、LIBERO 97.6%
 - [Kinema4D (2026)](papers/06-embodied-ai/world-models/Kinema4D_2026.md) — 运动学 4D pointmap 控制 + DiT 联合生成 RGB+Pointmap，20 万条 4D 数据训练，首次零样本真实世界迁移
 - [MIND-V (2026)](papers/06-embodied-ai/world-models/MINDV_2026.md) — 认知三层世界模型 SRH+BSB+MVG，V-JEPA2 物理裁判的 PFC 奖励 + GRPO 后训练 + Staged Rollouts 推理期搜索，Task Success +76.7%，OpenVLA-OFT 在 MimicGen 33.4%→43.5%
+- [SpatialVAM (2026)](papers/06-embodied-ai/world-models/SpatialVAM_2026.md) — 点云三视图投影 + 末端热力图视频，Wan2.2-5B 联合预测未来 RGB/热力图，10 demo 在 Meta-World/RoboCasa/真实 Franka 分别 +22%/10%/16%，单步去噪即 85.7%
 - [WorldVLA (2025)](papers/06-embodied-ai/world-models/WorldVLA_2025.md) — 自回归统一 VLA + 世界模型，Action Attention Mask 解决 Chunking 误差累积
 
 </details>

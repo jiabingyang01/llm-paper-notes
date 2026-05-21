@@ -122,6 +122,7 @@
 | --- | --- | --- | --- |
 | [BitVLA](/papers/06-embodied-ai/vla/efficient/BitVLA_2025) | 首个全参数三值化 VLA，BitNet b1.58 LLM + 蒸馏感知训练将 ViT 量化至 1.58-bit，无需大规模机器人预训练 LIBERO 平均 94.8%（匹配 OpenVLA-OFT INT4），显存仅 1.4GB（29.8%） | 1-bit 量化、蒸馏感知训练、三值化、边端部署 | 2025.06 |
 | [EfficientVLA](/papers/06-embodied-ai/vla/efficient/EfficientVLA_2025) | 结构化 training-free 加速：LLM 层剪枝 + 任务感知视觉 token 选择 + 扩散步缓存，三维度协同消除冗余，FLOPs 降至 28.9%、1.93× 加速 | LLM 层剪枝、任务感知 Token 选择、扩散步缓存、Training-Free、1.93× 加速 | 2025.06 |
+| [GridS](/papers/06-embodied-ai/vla/efficient/GridS_2026) | 将 Token 剪枝从离散 patch 选择重构为可微连续重采样：MLP 预测 K 个 [0,1]² 浮点坐标 + 双线性插值采样，端到端联合训练，π₀ LIBERO 16 Token (76% FLOPs↓) 反超 +1.6%，K=1 仍保 96.6%，OOD +28.6% | 可微双线性采样、连续坐标预测、几何感知剪枝、信息瓶颈、ICML 2026 | 2026.05 |
 | [HeiSD](/papers/06-embodied-ai/vla/efficient/HeiSD_2026) | 混合推测解码（Drafter SD + Retrieval SD），运动学融合指标自动切换，自适应验证跳过 + 序列级宽松接受，LIBERO 最高 2.45× 加速，真实世界 2.06×-2.41× | 混合推测解码、运动学感知、Verify-Skip、序列级宽松接受、2.45× 加速 | 2026.03 |
 | [LAC](/papers/06-embodied-ai/vla/efficient/LAC_2026) | 可学习自适应 Token 缓存，光流运动先验 + Gumbel-Softmax 端到端优化，1.76× 加速 | 可学习 Token 缓存、光流运动先验、1.76× 加速 | 2026.01 |
 | [PD-VLA](/papers/06-embodied-ai/vla/efficient/PD_VLA_2025) | AR 解码重建为非线性方程组，Jacobi 不动点并行迭代，不修改模型不训练，action chunking VLA 2.52× 频率提升 | Jacobi 并行解码、Action Chunking、Training-Free、2.52× 加速 | 2025.03 |
@@ -179,7 +180,7 @@
 | [VLAC](/papers/06-embodied-ai/vla/rl/VLAC_2025) | 基于 InternVL 构建统一 Actor-Critic 模型，pairwise progress delta 提供通用稠密奖励，配合异步真实世界 RL 和分级人机协作，200 episode 内成功率 30%→90% | 统一 Actor-Critic、Pairwise Progress、真实世界 RL、Human-in-the-Loop | 2025.09 |
 | [VLA-RFT](/papers/06-embodied-ai/vla/rl/VLA_RFT_2025) | 数据驱动视频世界模型充当模拟器，verified reward（MAE+LPIPS）+ GRPO 端到端微调 VLA，400 步超越 150K 步 SFT | 视频世界模型、Verified Reward、SDE-Policy、GRPO | 2025.10 |
 | [VLA-RL](/papers/06-embodied-ai/vla/rl/VLA_RL_2025) | 将机器人操作建模为多模态多轮对话，用 PPO 在线 RL 微调自回归 VLA，配合 Robotic PRM 解决稀疏奖励 | 在线 PPO、Robotic PRM、自回归 VLA + RL | 2025.05 |
-| [WMPO](/papers/06-embodied-ai/vla/rl/WMPO_2025) | 在隐空间世界模型中做 imagination rollout + PPO，无需在线交互即可 RL 后训练 VLA | 隐空间世界模型、Imagination RL、PPO、离线后训练 | 2025.12 |
+| [WMPO](/papers/06-embodied-ai/vla/rl/WMPO_2025) | 像素级视频世界模型（OpenSora+SDXL VAE）作想象环境，on-policy GRPO 在脑内轨迹上微调 OpenVLA-OFT，Mimicgen 四任务均值 33.6→57.6 | 像素空间世界模型、On-policy GRPO、OpenSora、Policy Behavior Alignment | 2025.11 |
 | [World-VLA-Loop](/papers/06-embodied-ai/vla/rl/World_VLA_Loop_2026) | 视频世界模型与 VLA 策略闭环联合优化：SANS 近成功数据 + 内嵌奖励预测头 + 迭代 RL 后训练，两轮迭代真实世界成功率 13.3%→50.0% | 闭环联合优化、SANS 数据集、奖励预测头、迭代 RL | 2026.02 |
 | [WoVR](/papers/06-embodied-ai/vla/rl/WoVR_2026) | 通过三级幻觉控制（稳定世界模型 + 关键帧初始化 Rollout + 策略-模型协同进化），在想象空间中可靠地 RL 后训练 VLA | 世界模型 RL、幻觉感知、KIR、PACE | 2026.02 |
 
@@ -191,6 +192,7 @@
 | [Fast-WAM](/papers/06-embodied-ai/world-models/FastWAM_2026) | 通过受控变体实验拆解 WAM 的两个因素，证明训练时视频协同目标（而非测试时未来想象）是性能主因；提出跳过测试时视频生成、单次前向传播动作预测，190 ms 延迟、RoboTwin 91.8%、LIBERO 97.6%，无具身预训练 | 视频协同训练、MoT 架构、训练-推理解耦、Flow Matching、测试时加速 | 2026.03 |
 | [Kinema4D](/papers/06-embodied-ai/world-models/Kinema4D_2026) | 将仿真解耦为运动学确定性 4D 机器人轨迹（URDF + FK/IK → pointmap）和生成式环境响应（DiT 联合预测 RGB+pointmap），Robo4D-200k 训练，PSNR 22.50、FVD 98.5、F-Score 0.4733，首次零样本真实世界迁移 | 4D Pointmap 控制、运动学-生成解耦、联合 RGB+Pointmap 合成、构型无关、零样本迁移 | 2026.03 |
 | [MIND-V](/papers/06-embodied-ai/world-models/MINDV_2026) | 认知三层世界模型 SRH + BSB + MVG，V-JEPA2 作物理裁判的 PFC 奖励 + GRPO 后训练 + Staged Visual Future Rollouts 推理期搜索，长时程任务 Task Success +76.7%，作为训练场把 OpenVLA-OFT 在 MimicGen 成功率 33.4%→43.5% | 分层 VWM、Behavioral Semantic Bridge、PFC 奖励、V-JEPA2 物理裁判、Staged Rollouts | 2026.03 |
+| [SpatialVAM](/papers/06-embodied-ai/world-models/SpatialVAM_2026) | 点云三视图正交投影 RGB + 末端位姿三视图热力图，Wan2.2-5B 视频 DiT 联合预测未来 RGB 视频与热力图视频，热力图反投影得到 3D 轨迹；10 demo 在 Meta-World/RoboCasa/真实 Franka 分别 +22%/10%/16%，单步去噪即 85.7% | 3D Video Action Model、多视图热力图、Wan2.2、LoRA、View-Attention、Meta-World 89.1% | 2026.04 |
 | [WorldVLA](/papers/06-embodied-ai/world-models/WorldVLA_2025) | 基于 Chameleon 将 VLA 动作模型与世界模型统一到单个自回归框架，共享权重混合训练实现双向增强，提出 Action Attention Mask 阻断 Action Chunking 误差累积 | 自回归统一模型、Action Attention Mask、Chameleon、双向增强 | 2025 |
 
 ### 🦾 Embodied AI — Imitation Learning
