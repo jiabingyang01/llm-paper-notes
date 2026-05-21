@@ -84,37 +84,46 @@
 
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
-| [3D-CAVLA](/papers/06-embodied-ai/vla/foundation/3D_CAVLA_2025) | 在 OpenVLA-OFT 上集成 CoT 叙事指令 + PointNet 轻量深度编码器 + 任务感知 ROI 检测，2D→3D 输入升级，LIBERO 双相机 98.1%，自建 LIBERO-Unseen 零样本基准上比 OpenVLA-OFT 绝对提升 8.8% | 3D 深度感知、CoT 指令分解、ROI 检测、零样本泛化、LIBERO | 2025.05 |
-| [3D-MIX](/papers/06-embodied-ai/vla/foundation/3D_Mix_2026) | 系统对比 9 种 VGGT 融合策略，提出语义条件化门控融合即插即用模块，GR00T/π-style 双架构一致提升，9 个 GR00T-style 变体 SIMPLER 平均 +7.0% | VGGT 3D 融合、Gated Fusion、即插即用、SimplerEnv、LIBERO | 2026.03 |
-| [AimBot](/papers/06-embodied-ai/vla/foundation/AimBot_2025) | 在 RGB 图像上叠加瞄准线（shooting line）和准星（scope reticle）编码 EE 位姿/朝向/夹爪状态到像素空间，<1 ms 无需改架构，π₀ 真实世界 27→43/50、LIBERO-Long +5.8，超越 TraceVLA/RoboPoint | 视觉空间线索、2.5D 空间编码、模型无关、深度可见性 | 2025.08 |
-| [AnchorVLA4D](/papers/06-embodied-ai/vla/foundation/AnchorVLA4D_2026) | 首帧作为锚帧保留初始场景上下文 + 冻结 Any4D 空间编码器联合处理锚帧与当前帧提取 3D 几何特征，缓解遮挡遗忘和空间失定向，SimplerEnv 64.6%（+13.6%），真实世界 80% | 锚帧机制、冻结空间编码器、遮挡遗忘、早期重试 | 2026.03 |
-| [BridgeVLA](/papers/06-embodied-ai/vla/foundation/BridgeVLA_2025) | 3D 点云正交投影为多视图 2D 图像 + 预测 2D 热力图对齐输入-输出，热力图预训练赋予 VLM 空间定位能力，RLBench 88.2%、3 条轨迹达 95.4% | 输入-输出对齐、2D 热力图、正交投影、样本效率 | 2025.06 |
 | [ChatVLA](/papers/06-embodied-ai/vla/foundation/ChatVLA_2025) | 系统分析 VLA 的 spurious forgetting 与 task interference，Phased Alignment Training 先控制后理解 + MoE 双专家隔离 MLP，2B 参数 MMMU 37.4（ECoT 的 6 倍）、25 项真实任务超越 OpenVLA | Spurious Forgetting、MoE、Phased Alignment Training、多模态理解+控制统一 | 2025.02 |
-| [CoWVLA](/papers/06-embodied-ai/vla/foundation/CoWVLA_2026) | Video VAE（VidTwin）显式解耦结构-运动潜变量，预训练推断潜在运动链 + 终端帧预测，协同微调联合建模关键帧与动作，统一世界模型时序推理与潜在动作紧凑性，LIBERO 95.6%、SimplerEnv 76.0%、CALVIN 4.21 | 结构-运动解耦、潜在运动链、Video VAE、Chain-of-World、终端帧预测 | 2026.03 |
-| [CronusVLA](/papers/06-embodied-ai/vla/foundation/CronusVLA_2026) | 两阶段单帧预训练→多帧后训练：Feature Chunking 特征层聚合历史帧 + DiT 跨帧解码器 + 多帧正则化解耦骨干与时序建模，SimplerEnv 70.9% SOTA、LIBERO 97.0%，提出 SimplerEnv-OR 鲁棒性基准 R-Score 86.9 | Feature Chunking、多帧正则化、跨帧解码器、观测鲁棒性、SimplerEnv-OR | 2026 |
-| [DAM-VLA](/papers/06-embodied-ai/vla/foundation/DAM_VLA_2026) | VLM 推理驱动动作路由选择手臂/夹爪专用扩散模型（class token 全局 + register token 局部）+ 双尺度加权协调训练，SIMPLER 平均 78-83%、真实世界 86.8% | 动作路由、双扩散头、class/register token、双尺度加权 | 2026.03 |
-| [DeepVision-VLA](/papers/06-embodied-ai/vla/foundation/DeepVisionVLA_2026) | 诊断 VLA 深层视觉敏感性衰减（Grad-CAM + ROI 掩码 MSE），VL-MoT 将 DINOv3 视觉专家与深层 LLM 共享 QKV 注意力，AGVP 用浅层动作-视觉注意力图选取 Top-K 视觉 token，RLBench 83%（vs QwenVLA-OFT 69%）、真实世界 91.7%（vs π₀.₅ 84.2%） | 视觉敏感性衰减、Mixture-of-Transformers、DINOv3 视觉专家、动作引导 Token 剪枝 | 2026.03 |
-| [DreamVLA](/papers/06-embodied-ai/vla/foundation/DreamVLA_2025) | 感知-预测-动作闭环：预测三类综合世界知识（动态区域/深度/语义）+ block-wise 结构化注意力防止跨类泄露 + DiT 动作头，CALVIN ABC-D 4.44 SOTA、LIBERO 92.6%、真实世界 76.7% | 世界知识预测、结构化注意力、DiT 动作头、CoTracker/Depth Anything/DINOv2 | 2025.07 |
 | [Dexbotic](/papers/06-embodied-ai/vla/foundation/Dexbotic_2025) | 开源 VLA 工具箱：统一模块化框架（VLM + Action Expert）+ 基于 Qwen2.5 的更强预训练模型 + 实验驱动 Exp 脚本开发，SimplerEnv 最高 +46.2%、CALVIN +0.81 | VLA Toolbox、统一框架、DexboticVLM、实验驱动开发 | 2025.10 |
 | [FAST](/papers/06-embodied-ai/vla/foundation/FAST_2025) | DCT + BPE 频域压缩 tokenization 解决自回归 VLA 高频灵巧任务训练瓶颈，π₀-FAST 匹配扩散 π₀ 性能但训练 5× 加速，FAST+ 通用 tokenizer 覆盖多构型 | DCT、BPE、动作 tokenization、高频控制、通用 tokenizer | 2025.01 |
-| [FocusVLA](/papers/06-embodied-ai/vla/foundation/FocusVLA_2026) | 揭示自回归 VLA 视觉利用三大瓶颈（结构性捷径、信息过载、任务无关噪声），提出 Modality Cascaded Attention + Focus Attention（Patch-level 剪枝 + Channel-level 门控），0.5B 参数 LIBERO 98.7% 超越 7B 模型 | Cascaded Attention、视觉利用效率、Token 选择、门控机制 | 2026.03 |
-| [FutureVLA](/papers/06-embodied-ai/vla/foundation/FutureVLA_2026) | 联合视觉-运动预测建模（JVPM）：3D-VAE 编码连续 17 帧 + 双流解耦监督 + 门控交叉注意力条件化交互，潜在嵌入对齐迁移时序先验，推理零开销，SimplerEnv 80.1%、真实机器人超 π₀ 达 26.7% | 联合视觉运动预测、双流解耦、门控交叉注意力、潜在对齐 | 2026.03 |
 | [GR-3](/papers/06-embodied-ai/vla/foundation/GR3_2025) | 4B VLA（Qwen2.5-VL + Action DiT），机器人轨迹 + VL 数据协同训练实现 OOD 指令零样本泛化，VR 人类轨迹 10-shot 适配新物体（57.8%→86.7%），Task Status 辅助监督 + DiT RMSNorm 强化指令跟随，全面超越 π₀ | MoT 架构、VL 协同训练、人类轨迹少样本适配、Task Status、ByteMini 双臂移动 | 2025.07 |
-| [MoH](/papers/06-embodied-ai/vla/foundation/MoH_2025) | 多 horizon 动作块在共享 Action Transformer 中并行处理 + 轻量门控融合（2k 参数）+ 跨 horizon 共识动态推理，plug-and-play 适用于 flow/regression 策略，$\pi_{0.5}$+MoH LIBERO 99% SOTA | 多 Horizon 融合、门控融合、动态推理、Action Chunking | 2025.11 |
-| [MemoryVLA](/papers/06-embodied-ai/vla/foundation/MemoryVLA_2025) | 借鉴认知科学双记忆系统设计感知-认知记忆库（PCMB），同时存储低层视觉细节和高层语义，跨注意力检索 + 门控融合 + 合并压缩建模长时域依赖，SimplerEnv-Bridge +14.6、LIBERO 96.5%、真实世界时序任务 +26 | 感知-认知记忆、时序建模、扩散策略、长时域操作 | 2025.08 |
 | [MMaDA-VLA](/papers/06-embodied-ai/vla/foundation/MMaDA_VLA_2026) | 基于原生离散扩散大模型 MMaDA-8B，将语言/图像/动作统一到离散 token 空间，并行去噪生成目标观测和动作块 + 混合注意力（模态内双向 + 模态间因果），LIBERO 98.0%、CALVIN 4.78 全面 SOTA | 原生离散扩散、统一多模态 token、并行去噪、混合注意力、目标观测生成 | 2026.03 |
-| [OptimusVLA](/papers/06-embodied-ai/vla/foundation/OptimusVLA_2026) | 双记忆增强 VLA：GPM 用检索到的任务级先验替代高斯噪声缩短 flow 生成路径 + LCM 用 Mamba 建模动作历史注入时序一致性，LIBERO 98.6%、真实世界 2.9× 推理加速 | 双记忆、任务级先验检索、时序一致性、自适应 NFE | 2026.02 |
 | [OTTER](/papers/06-embodied-ai/vla/foundation/OTTER_2025) | 冻结预训练 CLIP 编码器，利用 ClearCLIP 的 $X_{\text{attn}}$ 特征 + 余弦相似度 softmax 选择性提取与语言指令对齐的视觉 patch 特征，仅训练温度参数和轻量策略网络（~12M），真实机器人 4 种原语零样本泛化 77%，Octo/OpenVLA 几乎为 0% | 冻结 CLIP、文本感知视觉特征提取、ClearCLIP、零样本泛化 | 2025.03 |
-| [ProgressVLA](/papers/06-embodied-ai/vla/foundation/ProgressVLA_2026) | OXE 预训练视觉-语言进度估计器（残差 0.07）+ 世界模型想象未来视觉状态 + 进度梯度 classifier guidance 引导扩散采样朝最大进度方向 + KL 正则化在线 RL 微调，CALVIN 3.73、LIBERO 84.5%、真实世界 76%（Octo 23%），步数减少 47% | 进度估计、Classifier Guidance、潜在动作空间、世界模型、扩散策略 | 2026.03 |
+| [SpatialVLA](/papers/06-embodied-ai/vla/foundation/SpatialVLA_2025) | Ego3D 位置编码注入 3D 信息 + 自适应高斯动作网格仅需 3 token 表征 7D 动作，1.1M 数据预训练 3.5B 零样本超越 55B RT-2-X，20 Hz 推理 | 3D 空间感知、自适应动作离散化、跨构型预训练 | 2025.01 |
+| [UniVLA](/papers/06-embodied-ai/vla/foundation/UniVLA_2025) | 语言引导两阶段解耦任务中心潜在动作（DINOv2 特征空间 + VQ-VAE 离散化），跨具身无标注视频预训练通才策略，1/20 算力超越 OpenVLA，LIBERO 95.2%、CALVIN 3.80、R2R 47.1%、真实世界 81.7% | 任务中心潜在动作、跨具身无标注预训练、VQ-VAE、DINOv2 | 2025.05 |
 | [π₀](/papers/06-embodied-ai/vla/foundation/pi0_2024) | 用 Flow Matching 替代自回归生成动作，构建首个能完成高频灵巧操作的通用 VLA 基础模型 | Flow Matching VLA、Action Expert、跨构型预训练 | 2024.10 |
 | [π₀.₅](/papers/06-embodied-ai/vla/foundation/pi05_2025) | 通过异构多源数据协同训练和分层推理，首次实现端到端 VLA 在全新家庭环境中执行长时域灵巧操作 | 异构协同训练、分层推理、开放世界泛化 | 2025.04 |
-| [SF](/papers/06-embodied-ai/vla/foundation/SF_2025) | 将 VLA 中间层视觉 embedding 与 VGGT 3D 表征做余弦对齐，无需 3D 输入、推理零开销，LIBERO 98.5% 超越所有 2D/3D VLA，训练 3.8× 加速、数据 5.9× 高效 | 隐式空间对齐、VGGT、表征监督、训练/数据效率 | 2025.10 |
-| [SpatialVLA](/papers/06-embodied-ai/vla/foundation/SpatialVLA_2025) | Ego3D 位置编码注入 3D 信息 + 自适应高斯动作网格仅需 3 token 表征 7D 动作，1.1M 数据预训练 3.5B 零样本超越 55B RT-2-X，20 Hz 推理 | 3D 空间感知、自适应动作离散化、跨构型预训练 | 2025.01 |
-| [SPR](/papers/06-embodied-ai/vla/foundation/SPR_2026) | 将任务分解为带 2D 坐标的空间子目标序列，See-Plan 闭环进度监控 + Rewind 自主回退恢复，LIBERO 91.8%（+5% over MolmoAct），LIBERO-Plus OOD 仅 18.8% 退化（SOTA） | 进度感知、空间子目标、Rewind 错误恢复、OOD 鲁棒性 | 2026.03 |
-| [TCoT](/papers/06-embodied-ai/vla/foundation/TCoT_2026) | 全局/局部层次轨迹作为 VLA 的中间任务规划层（CoT），GLSR 算法统一失败检测与全局-局部策略切换恢复，多任务促进跨任务知识共享，LIBERO 83.3%（Multi），真实世界 +28% 超越 OpenVLA | 轨迹思维链、层次规划、GLSR 失败恢复、跨任务知识共享 | 2026 |
-| [TGM-VLA](/papers/06-embodied-ai/vla/foundation/TGM_VLA_2026) | 优化关键帧采样（存储 -85%、训练 5× 加速）+ 颜色反转投影分支 + 任务引导点云 Mixup，RLBench 90.5% SOTA、COLOSSEUM 68.8% | 关键帧采样优化、颜色反转、跨任务/任务内 Mixup、3D VLA | 2026.02 |
-| [UniVLA](/papers/06-embodied-ai/vla/foundation/UniVLA_2025) | 语言引导两阶段解耦任务中心潜在动作（DINOv2 特征空间 + VQ-VAE 离散化），跨具身无标注视频预训练通才策略，1/20 算力超越 OpenVLA，LIBERO 95.2%、CALVIN 3.80、R2R 47.1%、真实世界 81.7% | 任务中心潜在动作、跨具身无标注预训练、VQ-VAE、DINOv2 | 2025.05 |
-| [VP-VLA](/papers/06-embodied-ai/vla/foundation/VP_VLA_2026) | 双系统解耦架构，VLM 事件驱动任务分解 + SAM3 生成十字准星/边框视觉提示作为空间锚点，辅以视觉接地损失，RoboCasa +5.0%、SimplerEnv +8.3%，超越 $\pi_{0.5}$ 和 GR00T-N1.6 | 视觉提示、双系统架构、事件驱动分解、空间接地、OOD 泛化 | 2026.03 |
+
+### 🦾 Embodied AI — VLA 感知增强
+
+| 论文 | 一句话概括 | 关键词 | 时间 |
+| --- | --- | --- | --- |
+| [3D-CAVLA](/papers/06-embodied-ai/vla/perception/3D_CAVLA_2025) | 在 OpenVLA-OFT 上集成 CoT 叙事指令 + PointNet 轻量深度编码器 + 任务感知 ROI 检测，2D→3D 输入升级，LIBERO 双相机 98.1%，自建 LIBERO-Unseen 零样本基准上比 OpenVLA-OFT 绝对提升 8.8% | 3D 深度感知、CoT 指令分解、ROI 检测、零样本泛化、LIBERO | 2025.05 |
+| [3D-MIX](/papers/06-embodied-ai/vla/perception/3D_Mix_2026) | 系统对比 9 种 VGGT 融合策略，提出语义条件化门控融合即插即用模块，GR00T/π-style 双架构一致提升，9 个 GR00T-style 变体 SIMPLER 平均 +7.0% | VGGT 3D 融合、Gated Fusion、即插即用、SimplerEnv、LIBERO | 2026.03 |
+| [AimBot](/papers/06-embodied-ai/vla/perception/AimBot_2025) | 在 RGB 图像上叠加瞄准线（shooting line）和准星（scope reticle）编码 EE 位姿/朝向/夹爪状态到像素空间，<1 ms 无需改架构，π₀ 真实世界 27→43/50、LIBERO-Long +5.8，超越 TraceVLA/RoboPoint | 视觉空间线索、2.5D 空间编码、模型无关、深度可见性 | 2025.08 |
+| [AnchorVLA4D](/papers/06-embodied-ai/vla/perception/AnchorVLA4D_2026) | 首帧作为锚帧保留初始场景上下文 + 冻结 Any4D 空间编码器联合处理锚帧与当前帧提取 3D 几何特征，缓解遮挡遗忘和空间失定向，SimplerEnv 64.6%（+13.6%），真实世界 80% | 锚帧机制、冻结空间编码器、遮挡遗忘、早期重试 | 2026.03 |
+| [BridgeVLA](/papers/06-embodied-ai/vla/perception/BridgeVLA_2025) | 3D 点云正交投影为多视图 2D 图像 + 预测 2D 热力图对齐输入-输出，热力图预训练赋予 VLM 空间定位能力，RLBench 88.2%、3 条轨迹达 95.4% | 输入-输出对齐、2D 热力图、正交投影、样本效率 | 2025.06 |
+| [DeepVision-VLA](/papers/06-embodied-ai/vla/perception/DeepVisionVLA_2026) | 诊断 VLA 深层视觉敏感性衰减（Grad-CAM + ROI 掩码 MSE），VL-MoT 将 DINOv3 视觉专家与深层 LLM 共享 QKV 注意力，AGVP 用浅层动作-视觉注意力图选取 Top-K 视觉 token，RLBench 83%（vs QwenVLA-OFT 69%）、真实世界 91.7%（vs π₀.₅ 84.2%） | 视觉敏感性衰减、Mixture-of-Transformers、DINOv3 视觉专家、动作引导 Token 剪枝 | 2026.03 |
+| [SF](/papers/06-embodied-ai/vla/perception/SF_2025) | 将 VLA 中间层视觉 embedding 与 VGGT 3D 表征做余弦对齐，无需 3D 输入、推理零开销，LIBERO 98.5% 超越所有 2D/3D VLA，训练 3.8× 加速、数据 5.9× 高效 | 隐式空间对齐、VGGT、表征监督、训练/数据效率 | 2025.10 |
+| [TGM-VLA](/papers/06-embodied-ai/vla/perception/TGM_VLA_2026) | 优化关键帧采样（存储 -85%、训练 5× 加速）+ 颜色反转投影分支 + 任务引导点云 Mixup，RLBench 90.5% SOTA、COLOSSEUM 68.8% | 关键帧采样优化、颜色反转、跨任务/任务内 Mixup、3D VLA | 2026.02 |
+| [VP-VLA](/papers/06-embodied-ai/vla/perception/VP_VLA_2026) | 双系统解耦架构，VLM 事件驱动任务分解 + SAM3 生成十字准星/边框视觉提示作为空间锚点，辅以视觉接地损失，RoboCasa +5.0%、SimplerEnv +8.3%，超越 $\pi_{0.5}$ 和 GR00T-N1.6 | 视觉提示、双系统架构、事件驱动分解、空间接地、OOD 泛化 | 2026.03 |
+
+### 🦾 Embodied AI — VLA 推理与规划
+
+| 论文 | 一句话概括 | 关键词 | 时间 |
+| --- | --- | --- | --- |
+| [CoWVLA](/papers/06-embodied-ai/vla/reasoning/CoWVLA_2026) | Video VAE（VidTwin）显式解耦结构-运动潜变量，预训练推断潜在运动链 + 终端帧预测，协同微调联合建模关键帧与动作，统一世界模型时序推理与潜在动作紧凑性，LIBERO 95.6%、SimplerEnv 76.0%、CALVIN 4.21 | 结构-运动解耦、潜在运动链、Video VAE、Chain-of-World、终端帧预测 | 2026.03 |
+| [CronusVLA](/papers/06-embodied-ai/vla/reasoning/CronusVLA_2026) | 两阶段单帧预训练→多帧后训练：Feature Chunking 特征层聚合历史帧 + DiT 跨帧解码器 + 多帧正则化解耦骨干与时序建模，SimplerEnv 70.9% SOTA、LIBERO 97.0%，提出 SimplerEnv-OR 鲁棒性基准 R-Score 86.9 | Feature Chunking、多帧正则化、跨帧解码器、观测鲁棒性、SimplerEnv-OR | 2026 |
+| [DAM-VLA](/papers/06-embodied-ai/vla/reasoning/DAM_VLA_2026) | VLM 推理驱动动作路由选择手臂/夹爪专用扩散模型（class token 全局 + register token 局部）+ 双尺度加权协调训练，SIMPLER 平均 78-83%、真实世界 86.8% | 动作路由、双扩散头、class/register token、双尺度加权 | 2026.03 |
+| [DreamVLA](/papers/06-embodied-ai/vla/reasoning/DreamVLA_2025) | 感知-预测-动作闭环：预测三类综合世界知识（动态区域/深度/语义）+ block-wise 结构化注意力防止跨类泄露 + DiT 动作头，CALVIN ABC-D 4.44 SOTA、LIBERO 92.6%、真实世界 76.7% | 世界知识预测、结构化注意力、DiT 动作头、CoTracker/Depth Anything/DINOv2 | 2025.07 |
+| [FutureVLA](/papers/06-embodied-ai/vla/reasoning/FutureVLA_2026) | 联合视觉-运动预测建模（JVPM）：3D-VAE 编码连续 17 帧 + 双流解耦监督 + 门控交叉注意力条件化交互，潜在嵌入对齐迁移时序先验，推理零开销，SimplerEnv 80.1%、真实机器人超 π₀ 达 26.7% | 联合视觉运动预测、双流解耦、门控交叉注意力、潜在对齐 | 2026.03 |
+| [MemoryVLA](/papers/06-embodied-ai/vla/reasoning/MemoryVLA_2025) | 借鉴认知科学双记忆系统设计感知-认知记忆库（PCMB），同时存储低层视觉细节和高层语义，跨注意力检索 + 门控融合 + 合并压缩建模长时域依赖，SimplerEnv-Bridge +14.6、LIBERO 96.5%、真实世界时序任务 +26 | 感知-认知记忆、时序建模、扩散策略、长时域操作 | 2025.08 |
+| [MoH](/papers/06-embodied-ai/vla/reasoning/MoH_2025) | 多 horizon 动作块在共享 Action Transformer 中并行处理 + 轻量门控融合（2k 参数）+ 跨 horizon 共识动态推理，plug-and-play 适用于 flow/regression 策略，$\pi_{0.5}$+MoH LIBERO 99% SOTA | 多 Horizon 融合、门控融合、动态推理、Action Chunking | 2025.11 |
+| [OptimusVLA](/papers/06-embodied-ai/vla/reasoning/OptimusVLA_2026) | 双记忆增强 VLA：GPM 用检索到的任务级先验替代高斯噪声缩短 flow 生成路径 + LCM 用 Mamba 建模动作历史注入时序一致性，LIBERO 98.6%、真实世界 2.9× 推理加速 | 双记忆、任务级先验检索、时序一致性、自适应 NFE | 2026.02 |
+| [ProgressVLA](/papers/06-embodied-ai/vla/reasoning/ProgressVLA_2026) | OXE 预训练视觉-语言进度估计器（残差 0.07）+ 世界模型想象未来视觉状态 + 进度梯度 classifier guidance 引导扩散采样朝最大进度方向 + KL 正则化在线 RL 微调，CALVIN 3.73、LIBERO 84.5%、真实世界 76%（Octo 23%），步数减少 47% | 进度估计、Classifier Guidance、潜在动作空间、世界模型、扩散策略 | 2026.03 |
+| [SPR](/papers/06-embodied-ai/vla/reasoning/SPR_2026) | 将任务分解为带 2D 坐标的空间子目标序列，See-Plan 闭环进度监控 + Rewind 自主回退恢复，LIBERO 91.8%（+5% over MolmoAct），LIBERO-Plus OOD 仅 18.8% 退化（SOTA） | 进度感知、空间子目标、Rewind 错误恢复、OOD 鲁棒性 | 2026.03 |
+| [TCoT](/papers/06-embodied-ai/vla/reasoning/TCoT_2026) | 全局/局部层次轨迹作为 VLA 的中间任务规划层（CoT），GLSR 算法统一失败检测与全局-局部策略切换恢复，多任务促进跨任务知识共享，LIBERO 83.3%（Multi），真实世界 +28% 超越 OpenVLA | 轨迹思维链、层次规划、GLSR 失败恢复、跨任务知识共享 | 2026 |
 
 ### 🦾 Embodied AI — VLA 高效推理
 
@@ -122,6 +131,7 @@
 | --- | --- | --- | --- |
 | [BitVLA](/papers/06-embodied-ai/vla/efficient/BitVLA_2025) | 首个全参数三值化 VLA，BitNet b1.58 LLM + 蒸馏感知训练将 ViT 量化至 1.58-bit，无需大规模机器人预训练 LIBERO 平均 94.8%（匹配 OpenVLA-OFT INT4），显存仅 1.4GB（29.8%） | 1-bit 量化、蒸馏感知训练、三值化、边端部署 | 2025.06 |
 | [EfficientVLA](/papers/06-embodied-ai/vla/efficient/EfficientVLA_2025) | 结构化 training-free 加速：LLM 层剪枝 + 任务感知视觉 token 选择 + 扩散步缓存，三维度协同消除冗余，FLOPs 降至 28.9%、1.93× 加速 | LLM 层剪枝、任务感知 Token 选择、扩散步缓存、Training-Free、1.93× 加速 | 2025.06 |
+| [FocusVLA](/papers/06-embodied-ai/vla/efficient/FocusVLA_2026) | 揭示自回归 VLA 视觉利用三大瓶颈（结构性捷径、信息过载、任务无关噪声），提出 Modality Cascaded Attention + Focus Attention（Patch-level 剪枝 + Channel-level 门控），0.5B 参数 LIBERO 98.7% 超越 7B 模型 | Cascaded Attention、视觉利用效率、Token 选择、门控机制 | 2026.03 |
 | [GridS](/papers/06-embodied-ai/vla/efficient/GridS_2026) | 将 Token 剪枝从离散 patch 选择重构为可微连续重采样：MLP 预测 K 个 [0,1]² 浮点坐标 + 双线性插值采样，端到端联合训练，π₀ LIBERO 16 Token (76% FLOPs↓) 反超 +1.6%，K=1 仍保 96.6%，OOD +28.6% | 可微双线性采样、连续坐标预测、几何感知剪枝、信息瓶颈、ICML 2026 | 2026.05 |
 | [HeiSD](/papers/06-embodied-ai/vla/efficient/HeiSD_2026) | 混合推测解码（Drafter SD + Retrieval SD），运动学融合指标自动切换，自适应验证跳过 + 序列级宽松接受，LIBERO 最高 2.45× 加速，真实世界 2.06×-2.41× | 混合推测解码、运动学感知、Verify-Skip、序列级宽松接受、2.45× 加速 | 2026.03 |
 | [LAC](/papers/06-embodied-ai/vla/efficient/LAC_2026) | 可学习自适应 Token 缓存，光流运动先验 + Gumbel-Softmax 端到端优化，1.76× 加速 | 可学习 Token 缓存、光流运动先验、1.76× 加速 | 2026.01 |

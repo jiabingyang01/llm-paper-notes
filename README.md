@@ -141,37 +141,52 @@
 <details open>
 <summary>基础模型</summary>
 
-- [3D-CAVLA (2025)](papers/06-embodied-ai/vla/foundation/3D_CAVLA_2025.md) — CoT 指令分解 + PointNet 深度编码器 + 任务感知 ROI，LIBERO 98.1%，零样本 +8.8%
-- [3D-MIX (2026)](papers/06-embodied-ai/vla/foundation/3D_Mix_2026.md) — 9 种 VGGT 融合策略系统对比 + 语义条件化门控即插即用模块，GR00T/π-style 双架构 SIMPLER 平均 +7.0%
-- [AimBot (2025)](papers/06-embodied-ai/vla/foundation/AimBot_2025.md) — 瞄准线+准星视觉线索编码 EE 空间状态到像素空间，<1 ms 模型无关，π₀ 真实世界 27→43/50
-- [AnchorVLA4D (2026)](papers/06-embodied-ai/vla/foundation/AnchorVLA4D_2026.md) — 首帧锚帧 + 冻结 Any4D 空间编码器，缓解遮挡遗忘和空间失定向，SimplerEnv +13.6%，真实世界 80%
-- [BridgeVLA (2025)](papers/06-embodied-ai/vla/foundation/BridgeVLA_2025.md) — 3D 正交投影 + 2D 热力图输入-输出对齐，RLBench 88.2%、3 条轨迹 95.4%
 - [ChatVLA (2025)](papers/06-embodied-ai/vla/foundation/ChatVLA_2025.md) — Phased Alignment Training + MoE 双专家，2B 参数统一多模态理解与机器人控制，MMMU 37.4、25 项真实任务超越 OpenVLA
-- [CoWVLA (2026)](papers/06-embodied-ai/vla/foundation/CoWVLA_2026.md) — Video VAE 结构-运动解耦 + 潜在运动链推理 + 终端帧预测，统一世界模型与潜在动作，LIBERO 95.6%
-- [CronusVLA (2026)](papers/06-embodied-ai/vla/foundation/CronusVLA_2026.md) — Feature Chunking 多帧特征聚合 + DiT 跨帧解码器，SimplerEnv 70.9%、LIBERO 97.0%、SimplerEnv-OR R-Score 86.9
-- [DAM-VLA (2026)](papers/06-embodied-ai/vla/foundation/DAM_VLA_2026.md) — 动作路由 + 手臂/夹爪双扩散模型 + 双尺度加权协调
-- [DeepVision-VLA (2026)](papers/06-embodied-ai/vla/foundation/DeepVisionVLA_2026.md) — VL-MoT 将 DINOv3 视觉专家与 LLM 深层共享 QKV，AGVP 动作引导视觉剪枝，RLBench 83%、真实世界 91.7%
-- [DreamVLA (2025)](papers/06-embodied-ai/vla/foundation/DreamVLA_2025.md) — 预测三类综合世界知识（动态区域/深度/语义）+ 结构化注意力解耦，CALVIN 4.44 SOTA
 - [Dexbotic (2025)](papers/06-embodied-ai/vla/foundation/Dexbotic_2025.md) — 开源 VLA 工具箱：统一框架 + Qwen2.5 预训练模型 + 实验驱动开发，最高 +46.2%
 - [FAST (2025)](papers/06-embodied-ai/vla/foundation/FAST_2025.md) — DCT + BPE 频域压缩动作 tokenization，解决自回归 VLA 高频任务瓶颈，匹配扩散 π₀ 训练 5× 加速
-- [FocusVLA (2026)](papers/06-embodied-ai/vla/foundation/FocusVLA_2026.md) — Cascaded Attention 消除结构性捷径 + Focus Attention 聚焦任务相关视觉，0.5B 参数 LIBERO 98.7% 超越 7B 模型
-- [FutureVLA (2026)](papers/06-embodied-ai/vla/foundation/FutureVLA_2026.md) — 双流解耦 + 门控交叉注意力联合视觉运动预测，潜在对齐迁移时序先验，SimplerEnv 80.1%、真实机器人超 π₀ 达 26.7%
 - [GR-3 (2025)](papers/06-embodied-ai/vla/foundation/GR3_2025.md) — 4B VLA：VL 协同训练 + VR 人类轨迹 10-shot 适配 + Task Status 指令跟随，全面超越 π₀
-- [MoH (2025)](papers/06-embodied-ai/vla/foundation/MoH_2025.md) — 多 Horizon 动作块并行融合 + 轻量门控 + 动态推理，π₀.₅+MoH LIBERO 99%
-- [MemoryVLA (2025)](papers/06-embodied-ai/vla/foundation/MemoryVLA_2025.md) — 感知-认知双流记忆库建模长时域依赖，SimplerEnv-Bridge +14.6、LIBERO 96.5%、真实世界时序 +26
 - [MMaDA-VLA (2026)](papers/06-embodied-ai/vla/foundation/MMaDA_VLA_2026.md) — 原生离散扩散统一多模态 VLA，并行去噪生成目标观测+动作块，LIBERO 98.0%、CALVIN 4.78 全面 SOTA
-- [OptimusVLA (2026)](papers/06-embodied-ai/vla/foundation/OptimusVLA_2026.md) — 双记忆增强 VLA：GPM 任务级先验检索 + LCM 时序一致性，LIBERO 98.6%、2.9× 加速
 - [OTTER (2025)](papers/06-embodied-ai/vla/foundation/OTTER_2025.md) — 冻结 CLIP + 文本感知视觉特征提取实现零样本泛化，4 种原语未见任务 77%，Octo/OpenVLA 几乎为 0%
-- [ProgressVLA (2026)](papers/06-embodied-ai/vla/foundation/ProgressVLA_2026.md) — 进度估计器 + 世界模型 + classifier guidance 引导扩散策略，CALVIN 3.73、LIBERO 84.5%、真实世界 76%（Octo 23%）
+- [SpatialVLA (2025)](papers/06-embodied-ai/vla/foundation/SpatialVLA_2025.md) — Ego3D 位置编码 + 自适应高斯动作网格（3 token/step），1.1M 数据预训练 3.5B 零样本超 55B RT-2-X，20 Hz
+- [UniVLA (2025)](papers/06-embodied-ai/vla/foundation/UniVLA_2025.md) — 任务中心潜在动作两阶段解耦 + 跨具身无标注视频预训练，1/20 算力超 OpenVLA，LIBERO 95.2%、真实世界 81.7%
 - [π₀ (2024)](papers/06-embodied-ai/vla/foundation/pi0_2024.md) — Flow Matching VLA 基础模型
 - [π₀.₅ (2025)](papers/06-embodied-ai/vla/foundation/pi05_2025.md) — 异构协同训练 + 分层推理
-- [SF (2025)](papers/06-embodied-ai/vla/foundation/SF_2025.md) — 隐式空间表征对齐（VGGT），推理零开销，LIBERO 98.5%，训练 3.8× 加速
-- [SpatialVLA (2025)](papers/06-embodied-ai/vla/foundation/SpatialVLA_2025.md) — Ego3D 位置编码 + 自适应高斯动作网格（3 token/step），1.1M 数据预训练 3.5B 零样本超 55B RT-2-X，20 Hz
-- [SPR (2026)](papers/06-embodied-ai/vla/foundation/SPR_2026.md) — See-Plan-Rewind 空间子目标进度感知 + 自主回退恢复，LIBERO 91.8%，LIBERO-Plus OOD 退化仅 18.8%
-- [TCoT (2026)](papers/06-embodied-ai/vla/foundation/TCoT_2026.md) — 全局/局部轨迹思维链 + GLSR 失败恢复，多任务促进跨任务共享，LIBERO 83.3%，真实世界 +28%
-- [TGM-VLA (2026)](papers/06-embodied-ai/vla/foundation/TGM_VLA_2026.md) — 关键帧采样优化 + 颜色反转 + 任务引导 Mixup，RLBench 90.5%
-- [UniVLA (2025)](papers/06-embodied-ai/vla/foundation/UniVLA_2025.md) — 任务中心潜在动作两阶段解耦 + 跨具身无标注视频预训练，1/20 算力超 OpenVLA，LIBERO 95.2%、真实世界 81.7%
-- [VP-VLA (2026)](papers/06-embodied-ai/vla/foundation/VP_VLA_2026.md) — 双系统解耦 + VLM 事件驱动任务分解 + SAM3 视觉提示空间锚点 + 接地辅助损失，RoboCasa +5%、SimplerEnv +8.3%
+
+</details>
+</blockquote>
+
+<blockquote>
+<details open>
+<summary>感知增强</summary>
+
+- [3D-CAVLA (2025)](papers/06-embodied-ai/vla/perception/3D_CAVLA_2025.md) — CoT 指令分解 + PointNet 深度编码器 + 任务感知 ROI，LIBERO 98.1%，零样本 +8.8%
+- [3D-MIX (2026)](papers/06-embodied-ai/vla/perception/3D_Mix_2026.md) — 9 种 VGGT 融合策略系统对比 + 语义条件化门控即插即用模块，GR00T/π-style 双架构 SIMPLER 平均 +7.0%
+- [AimBot (2025)](papers/06-embodied-ai/vla/perception/AimBot_2025.md) — 瞄准线+准星视觉线索编码 EE 空间状态到像素空间，<1 ms 模型无关，π₀ 真实世界 27→43/50
+- [AnchorVLA4D (2026)](papers/06-embodied-ai/vla/perception/AnchorVLA4D_2026.md) — 首帧锚帧 + 冻结 Any4D 空间编码器，缓解遮挡遗忘和空间失定向，SimplerEnv +13.6%，真实世界 80%
+- [BridgeVLA (2025)](papers/06-embodied-ai/vla/perception/BridgeVLA_2025.md) — 3D 正交投影 + 2D 热力图输入-输出对齐，RLBench 88.2%、3 条轨迹 95.4%
+- [DeepVision-VLA (2026)](papers/06-embodied-ai/vla/perception/DeepVisionVLA_2026.md) — VL-MoT 将 DINOv3 视觉专家与 LLM 深层共享 QKV，AGVP 动作引导视觉剪枝，RLBench 83%、真实世界 91.7%
+- [SF (2025)](papers/06-embodied-ai/vla/perception/SF_2025.md) — 隐式空间表征对齐（VGGT），推理零开销，LIBERO 98.5%，训练 3.8× 加速
+- [TGM-VLA (2026)](papers/06-embodied-ai/vla/perception/TGM_VLA_2026.md) — 关键帧采样优化 + 颜色反转 + 任务引导 Mixup，RLBench 90.5%
+- [VP-VLA (2026)](papers/06-embodied-ai/vla/perception/VP_VLA_2026.md) — 双系统解耦 + VLM 事件驱动任务分解 + SAM3 视觉提示空间锚点 + 接地辅助损失，RoboCasa +5%、SimplerEnv +8.3%
+
+</details>
+</blockquote>
+
+<blockquote>
+<details open>
+<summary>推理与规划</summary>
+
+- [CoWVLA (2026)](papers/06-embodied-ai/vla/reasoning/CoWVLA_2026.md) — Video VAE 结构-运动解耦 + 潜在运动链推理 + 终端帧预测，统一世界模型与潜在动作，LIBERO 95.6%
+- [CronusVLA (2026)](papers/06-embodied-ai/vla/reasoning/CronusVLA_2026.md) — Feature Chunking 多帧特征聚合 + DiT 跨帧解码器，SimplerEnv 70.9%、LIBERO 97.0%、SimplerEnv-OR R-Score 86.9
+- [DAM-VLA (2026)](papers/06-embodied-ai/vla/reasoning/DAM_VLA_2026.md) — 动作路由 + 手臂/夹爪双扩散模型 + 双尺度加权协调
+- [DreamVLA (2025)](papers/06-embodied-ai/vla/reasoning/DreamVLA_2025.md) — 预测三类综合世界知识（动态区域/深度/语义）+ 结构化注意力解耦，CALVIN 4.44 SOTA
+- [FutureVLA (2026)](papers/06-embodied-ai/vla/reasoning/FutureVLA_2026.md) — 双流解耦 + 门控交叉注意力联合视觉运动预测，潜在对齐迁移时序先验，SimplerEnv 80.1%、真实机器人超 π₀ 达 26.7%
+- [MemoryVLA (2025)](papers/06-embodied-ai/vla/reasoning/MemoryVLA_2025.md) — 感知-认知双流记忆库建模长时域依赖，SimplerEnv-Bridge +14.6、LIBERO 96.5%、真实世界时序 +26
+- [MoH (2025)](papers/06-embodied-ai/vla/reasoning/MoH_2025.md) — 多 Horizon 动作块并行融合 + 轻量门控 + 动态推理，π₀.₅+MoH LIBERO 99%
+- [OptimusVLA (2026)](papers/06-embodied-ai/vla/reasoning/OptimusVLA_2026.md) — 双记忆增强 VLA：GPM 任务级先验检索 + LCM 时序一致性，LIBERO 98.6%、2.9× 加速
+- [ProgressVLA (2026)](papers/06-embodied-ai/vla/reasoning/ProgressVLA_2026.md) — 进度估计器 + 世界模型 + classifier guidance 引导扩散策略，CALVIN 3.73、LIBERO 84.5%、真实世界 76%（Octo 23%）
+- [SPR (2026)](papers/06-embodied-ai/vla/reasoning/SPR_2026.md) — See-Plan-Rewind 空间子目标进度感知 + 自主回退恢复，LIBERO 91.8%，LIBERO-Plus OOD 退化仅 18.8%
+- [TCoT (2026)](papers/06-embodied-ai/vla/reasoning/TCoT_2026.md) — 全局/局部轨迹思维链 + GLSR 失败恢复，多任务促进跨任务共享，LIBERO 83.3%，真实世界 +28%
 
 </details>
 </blockquote>
@@ -182,6 +197,7 @@
 
 - [BitVLA (2025)](papers/06-embodied-ai/vla/efficient/BitVLA_2025.md) — 首个全参数三值化 VLA，蒸馏感知训练量化 ViT 至 1.58-bit，LIBERO 94.8%、显存仅 1.4GB
 - [EfficientVLA (2025)](papers/06-embodied-ai/vla/efficient/EfficientVLA_2025.md) — 结构化 training-free 加速：层剪枝 + Token 选择 + 扩散步缓存，1.93× 加速
+- [FocusVLA (2026)](papers/06-embodied-ai/vla/efficient/FocusVLA_2026.md) — Cascaded Attention 消除结构性捷径 + Focus Attention 聚焦任务相关视觉，0.5B 参数 LIBERO 98.7% 超越 7B 模型
 - [GridS (2026)](papers/06-embodied-ai/vla/efficient/GridS_2026.md) — 可微双线性采样把 Token 剪枝重构为连续重采样：MLP 预测 K 个浮点坐标端到端联合训练，π₀ LIBERO 16/256 Token 反超 +1.6%，K=1 仍保 96.6%，真实世界 OOD +28.6%
 - [HeiSD (2026)](papers/06-embodied-ai/vla/efficient/HeiSD_2026.md) — 混合推测解码（Drafter + Retrieval SD）+ 运动学融合指标自动切换，LIBERO 2.45×、真实世界 2.41× 加速
 - [LAC (2026)](papers/06-embodied-ai/vla/efficient/LAC_2026.md) — 可学习自适应 Token 缓存加速 VLA

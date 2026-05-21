@@ -18,8 +18,11 @@ papers/
 ├── 05-agents/
 ├── 06-embodied-ai/
 │   └── vla/
-│       ├── foundation/               # VLA 基础模型（π₀、π₀.₅ 等）
-│       ├── efficient/                # VLA 高效推理（LAC、VLA-Cache 等）
+│       ├── foundation/               # VLA 基础模型 / 训练范式（π₀、π₀.₅、GR-3、FAST、MMaDA-VLA 等）
+│       ├── perception/               # VLA 感知增强（3D/空间/视觉表征：BridgeVLA、SF、AnchorVLA4D、VP-VLA 等）
+│       ├── reasoning/                # VLA 推理与规划（记忆/世界模型/进度/CoT：MemoryVLA、DreamVLA、TCoT、SPR 等）
+│       ├── efficient/                # VLA 高效推理（FocusVLA、LAC、VLA-Cache 等）
+│       ├── inference/                # VLA 推理增强（training-free / 测试时增强：UAOR 等）
 │       └── rl/                       # VLA RL 后训练（RISE、VLA-RL 等）
 ├── 07-efficiency/
 ├── 08-rag-and-knowledge/
@@ -134,11 +137,29 @@ index.md                              # 网站首页
 
 ```
 VLA/
-├── foundation/    # VLA 基础模型
-├── efficient/     # VLA 高效推理
-└── rl/            # VLA RL 后训练
+├── foundation/    # 真·基础模型 / 训练范式：π₀、π₀.₅、GR-3、SpatialVLA、ChatVLA、UniVLA、OTTER、Dexbotic、FAST、MMaDA-VLA
+├── perception/    # 感知 / 空间 / 视觉表征增强：3D 编码、VGGT 对齐、视觉提示、关键帧采样等
+├── reasoning/     # 推理 / 规划 / 记忆 / 世界模型：CoT、进度估计、子目标、未来帧预测、多 horizon 决策等
+├── efficient/     # 高效推理：Token 剪枝/缓存、量化、并行/推测解码、训练加速
+├── inference/     # 推理增强：训练免费、测试时增强、即插即用
+└── rl/            # RL 后训练
 World Models/      # 世界模型（暂无笔记）
 ```
+
+### 子分类判别准则（避免 foundation/ 沦为兜底箱）
+
+放 `foundation/` 的硬条件——满足任一即可：
+1. **新的训练范式**（动作 tokenization、离散扩散、潜在动作预训练等改变 VLA 范式定义）；
+2. **大规模预训练 / 开源 foundation 模型**（π₀、GR-3、SpatialVLA、UniVLA 等）；
+3. **首次提出某条主线**（如 OTTER 冻结 CLIP + 文本感知特征提取的范式）。
+
+仅"在已有 base 之上做架构改进"的论文 **不应** 进 `foundation/`，而应按主要贡献落到：
+- 改视觉/3D/空间表征 → `perception/`
+- 改时序记忆/规划/世界模型/多 horizon → `reasoning/`
+- 主打 token 剪枝/缓存/量化/解码加速 → `efficient/`
+- 训练免费的测试时增强 → `inference/`
+
+判别歧义时按"论文核心叙事"优先：作者讲故事的主轴是什么，就归到对应分类。例如 FocusVLA 虽是策略架构改造，但核心是 token 剪枝 + 训练加速，归 `efficient/`；DAM-VLA 虽改动作头，但核心是 VLM 推理驱动的动作路由 + 双扩散协调，归 `reasoning/`。
 
 如果新论文不属于已有子分类，可以新建目录并更新 config.mts 中的侧边栏结构。
 
