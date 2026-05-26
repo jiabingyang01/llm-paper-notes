@@ -167,6 +167,7 @@
 - [DeepVision-VLA (2026)](papers/06-embodied-ai/vla/perception/DeepVisionVLA_2026.md) — VL-MoT 将 DINOv3 视觉专家与 LLM 深层共享 QKV，AGVP 动作引导视觉剪枝，RLBench 83%、真实世界 91.7%
 - [SF (2025)](papers/06-embodied-ai/vla/perception/SF_2025.md) — 隐式空间表征对齐（VGGT），推理零开销，LIBERO 98.5%，训练 3.8× 加速
 - [TGM-VLA (2026)](papers/06-embodied-ai/vla/perception/TGM_VLA_2026.md) — 关键帧采样优化 + 颜色反转 + 任务引导 Mixup，RLBench 90.5%
+- [UAOR (2026)](papers/06-embodied-ai/vla/perception/UAOR_2026.md) — Action Entropy 检测观测遗忘层 + 注意力检索把观测特征重注入 FFN，training-free 即插即用一致提升多种 VLA
 - [VP-VLA (2026)](papers/06-embodied-ai/vla/perception/VP_VLA_2026.md) — 双系统解耦 + VLM 事件驱动任务分解 + SAM3 视觉提示空间锚点 + 接地辅助损失，RoboCasa +5%、SimplerEnv +8.3%
 
 </details>
@@ -207,15 +208,6 @@
 - [RTC (2025)](papers/06-embodied-ai/vla/efficient/RTC_2025.md) — 异步动作块执行建模为修复问题：冻结前缀 + 引导修复 + 软掩码，Training-Free 实时 VLA，π₀.₅ 快 20%
 - [VLA-Cache (2025)](papers/06-embodied-ai/vla/efficient/VLA_Cache_2025.md) — 训练无关跨帧 Token 缓存加速 VLA
 - [VLA-Pruner (2025)](papers/06-embodied-ai/vla/efficient/VLA_Pruner_2025.md) — 双层 Token 剪枝（语义级 + 动作级注意力时序平滑）+ mRMR 选择，50% 剪枝率反超原模型
-
-</details>
-</blockquote>
-
-<blockquote>
-<details open>
-<summary>推理增强</summary>
-
-- [UAOR (2026)](papers/06-embodied-ai/vla/inference/UAOR_2026.md) — Action Entropy 检测不确定性 + 观测重注入 FFN，无训练即插即用增强 VLA
 
 </details>
 </blockquote>

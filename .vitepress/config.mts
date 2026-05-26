@@ -203,6 +203,7 @@ export default defineConfig({
                         { text: 'DeepVision-VLA (2026)', link: '/papers/06-embodied-ai/vla/perception/DeepVisionVLA_2026' },
                         { text: 'SF (2025)', link: '/papers/06-embodied-ai/vla/perception/SF_2025' },
                         { text: 'TGM-VLA (2026)', link: '/papers/06-embodied-ai/vla/perception/TGM_VLA_2026' },
+                        { text: 'UAOR (2026)', link: '/papers/06-embodied-ai/vla/perception/UAOR_2026' },
                         { text: 'VP-VLA (2026)', link: '/papers/06-embodied-ai/vla/perception/VP_VLA_2026' },
                       ],
                     },
@@ -239,13 +240,6 @@ export default defineConfig({
                         { text: 'RTC (2025)', link: '/papers/06-embodied-ai/vla/efficient/RTC_2025' },
                         { text: 'VLA-Cache (2025)', link: '/papers/06-embodied-ai/vla/efficient/VLA_Cache_2025' },
                         { text: 'VLA-Pruner (2025)', link: '/papers/06-embodied-ai/vla/efficient/VLA_Pruner_2025' },
-                      ],
-                    },
-                    {
-                      text: '推理增强',
-                      collapsed: false,
-                      items: [
-                        { text: 'UAOR (2026)', link: '/papers/06-embodied-ai/vla/inference/UAOR_2026' },
                       ],
                     },
                     {

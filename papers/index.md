@@ -107,6 +107,7 @@
 | [DeepVision-VLA](/papers/06-embodied-ai/vla/perception/DeepVisionVLA_2026) | 诊断 VLA 深层视觉敏感性衰减（Grad-CAM + ROI 掩码 MSE），VL-MoT 将 DINOv3 视觉专家与深层 LLM 共享 QKV 注意力，AGVP 用浅层动作-视觉注意力图选取 Top-K 视觉 token，RLBench 83%（vs QwenVLA-OFT 69%）、真实世界 91.7%（vs π₀.₅ 84.2%） | 视觉敏感性衰减、Mixture-of-Transformers、DINOv3 视觉专家、动作引导 Token 剪枝 | 2026.03 |
 | [SF](/papers/06-embodied-ai/vla/perception/SF_2025) | 将 VLA 中间层视觉 embedding 与 VGGT 3D 表征做余弦对齐，无需 3D 输入、推理零开销，LIBERO 98.5% 超越所有 2D/3D VLA，训练 3.8× 加速、数据 5.9× 高效 | 隐式空间对齐、VGGT、表征监督、训练/数据效率 | 2025.10 |
 | [TGM-VLA](/papers/06-embodied-ai/vla/perception/TGM_VLA_2026) | 优化关键帧采样（存储 -85%、训练 5× 加速）+ 颜色反转投影分支 + 任务引导点云 Mixup，RLBench 90.5% SOTA、COLOSSEUM 68.8% | 关键帧采样优化、颜色反转、跨任务/任务内 Mixup、3D VLA | 2026.02 |
+| [UAOR](/papers/06-embodied-ai/vla/perception/UAOR_2026) | 诊断 VLA Transformer 前几层就"遗忘"观测信号导致动作不确定性飙升，用 Action Entropy 检测高不确定性层、注意力检索把观测特征重注入 FFN，training-free 即插即用一致提升多种 VLA | Action Entropy、观测重注入、FFN-as-Memory、Training-Free、视觉遗忘 | 2026.02 |
 | [VP-VLA](/papers/06-embodied-ai/vla/perception/VP_VLA_2026) | 双系统解耦架构，VLM 事件驱动任务分解 + SAM3 生成十字准星/边框视觉提示作为空间锚点，辅以视觉接地损失，RoboCasa +5.0%、SimplerEnv +8.3%，超越 $\pi_{0.5}$ 和 GR00T-N1.6 | 视觉提示、双系统架构、事件驱动分解、空间接地、OOD 泛化 | 2026.03 |
 
 ### 🦾 Embodied AI — VLA 推理与规划
@@ -141,12 +142,6 @@
 | [RTC](/papers/06-embodied-ai/vla/efficient/RTC_2025) | 将动作块异步执行建模为修复问题：冻结已执行前缀 + ΠGDM 引导修复 + 软掩码指数衰减约束跨块一致性，无需重训练即可让 flow-based VLA 实时执行，π₀.₅ 真实世界比同步推理快 20%，300ms+ 延迟下吞吐量无下降 | 异步动作块执行、Flow Inpainting、软掩码、Training-Free | 2025.06 |
 | [VLA-Cache](/papers/06-embodied-ai/vla/efficient/VLA_Cache_2025) | 训练无关跨帧 Token 缓存 + 注意力驱动任务相关性过滤，1.7× 加速 | 跨帧 Token 缓存、注意力过滤、1.7× 加速 | 2025.02 |
 | [VLA-Pruner](/papers/06-embodied-ai/vla/efficient/VLA_Pruner_2025) | 双层重要性准则（语义级 prefill + 动作级 decode 注意力时序平滑）+ mRMR 双层选择策略，50% 剪枝率反超原模型，87.5% 剪枝率保持 88.9% 准确率 | 双层 Token 剪枝、时序平滑、mRMR 选择、Training-Free、1.8× 加速 | 2025.11 |
-
-### 🦾 Embodied AI — VLA 推理增强
-
-| 论文 | 一句话概括 | 关键词 | 时间 |
-| --- | --- | --- | --- |
-| [UAOR](/papers/06-embodied-ai/vla/inference/UAOR_2026) | 用 Action Entropy 检测高不确定性层，通过注意力检索将观测特征重注入 FFN，无训练即插即用一致提升多种 VLA | Action Entropy、观测重注入、FFN-as-Memory、Training-Free | 2026.02 |
 
 ### 🦾 Embodied AI — VLA / RL 后训练
 

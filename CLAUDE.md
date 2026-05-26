@@ -19,10 +19,9 @@ papers/
 ├── 06-embodied-ai/
 │   └── vla/
 │       ├── foundation/               # VLA 基础模型 / 训练范式（π₀、π₀.₅、GR-3、FAST、MMaDA-VLA 等）
-│       ├── perception/               # VLA 感知增强（3D/空间/视觉表征：BridgeVLA、SF、AnchorVLA4D、VP-VLA 等）
+│       ├── perception/               # VLA 感知增强（3D/空间/视觉表征 + 视觉信号利用：BridgeVLA、SF、AnchorVLA4D、UAOR、VP-VLA 等）
 │       ├── reasoning/                # VLA 推理与规划（记忆/世界模型/进度/CoT：MemoryVLA、DreamVLA、TCoT、SPR 等）
 │       ├── efficient/                # VLA 高效推理（FocusVLA、LAC、VLA-Cache 等）
-│       ├── inference/                # VLA 推理增强（training-free / 测试时增强：UAOR 等）
 │       └── rl/                       # VLA RL 后训练（RISE、VLA-RL 等）
 ├── 07-efficiency/
 ├── 08-rag-and-knowledge/
@@ -138,10 +137,9 @@ index.md                              # 网站首页
 ```
 VLA/
 ├── foundation/    # 真·基础模型 / 训练范式：π₀、π₀.₅、GR-3、SpatialVLA、ChatVLA、UniVLA、OTTER、Dexbotic、FAST、MMaDA-VLA
-├── perception/    # 感知 / 空间 / 视觉表征增强：3D 编码、VGGT 对齐、视觉提示、关键帧采样等
+├── perception/    # 感知 / 空间 / 视觉表征增强：3D 编码、VGGT 对齐、视觉提示、视觉信号利用（含观测重注入等 training-free 视觉增强）
 ├── reasoning/     # 推理 / 规划 / 记忆 / 世界模型：CoT、进度估计、子目标、未来帧预测、多 horizon 决策等
 ├── efficient/     # 高效推理：Token 剪枝/缓存、量化、并行/推测解码、训练加速
-├── inference/     # 推理增强：训练免费、测试时增强、即插即用
 └── rl/            # RL 后训练
 World Models/      # 世界模型（暂无笔记）
 ```
@@ -157,7 +155,8 @@ World Models/      # 世界模型（暂无笔记）
 - 改视觉/3D/空间表征 → `perception/`
 - 改时序记忆/规划/世界模型/多 horizon → `reasoning/`
 - 主打 token 剪枝/缓存/量化/解码加速 → `efficient/`
-- 训练免费的测试时增强 → `inference/`
+
+**Training-free / 测试时增强不单独立类**：method property（是否需训练）不是分类轴，应按 *作用对象* 归类。例如 UAOR 是 training-free，但核心叙事是"观测信号在深层被遗忘 → 重注入感知"，归 `perception/` 而非单独的 inference/ 类（避免出现只有一篇论文的光棍分类）。当某类 training-free 方法累计到独立成族（如 3+ 篇）再考虑独立子目录。
 
 判别歧义时按"论文核心叙事"优先：作者讲故事的主轴是什么，就归到对应分类。例如 FocusVLA 虽是策略架构改造，但核心是 token 剪枝 + 训练加速，归 `efficient/`；DAM-VLA 虽改动作头，但核心是 VLM 推理驱动的动作路由 + 双扩散协调，归 `reasoning/`。
 
