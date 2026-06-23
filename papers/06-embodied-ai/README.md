@@ -50,6 +50,7 @@
 | [CronusVLA](vla/reasoning/CronusVLA_2026.md) | Feature Chunking 多帧特征聚合、DiT 跨帧解码器、多帧正则化、SimplerEnv 70.9%、LIBERO 97.0%、SimplerEnv-OR R-Score 86.9 | 2026 |
 | [DAM-VLA](vla/reasoning/DAM_VLA_2026.md) | 动作路由、双扩散动作头（手臂 class token + 夹爪 register token）、双尺度加权 | 2026 |
 | [DreamVLA](vla/reasoning/DreamVLA_2025.md) | 综合世界知识预测（动态区域/深度/语义）、Block-Wise 结构化注意力、DiT 动作头、GPT-2 Medium、CALVIN 4.44 SOTA、LIBERO 92.6% | 2025 |
+| [DUST](vla/reasoning/DUST_2026.md) | 世界模型增强 VLA、MMDiT 双流（共享跨模态注意力）、解耦噪声调度（per-modality 独立加噪，学正/逆双向因果）、异步联合采样推理缩放、超 FLARE 5-6%、真实 Franka +10%、ICML 2026 | 2026 |
 | [FLARE](vla/reasoning/FLARE_2025.md) | 隐式世界模型、未来潜在表示对齐（cos 相似度，λ=0.2）、可学习未来 token、动作感知 Q-former 嵌入、EMA target、RoboCasa 70.1%/GR1 55.0%、真实 GR1 95.1%、无动作人类视频协同训练 | 2025 |
 | [FutureVLA](vla/reasoning/FutureVLA_2026.md) | 联合视觉运动预测（JVPM）、3D-VAE 连续 17 帧编码、双流解耦监督、门控交叉注意力、潜在嵌入对齐、SimplerEnv 80.1%、真实机器人 +26.7% | 2026 |
 | [MemoryVLA](vla/reasoning/MemoryVLA_2025.md) | 感知-认知双流记忆库（PCMB）、跨注意力检索 + 门控融合 + 合并压缩、长时域操作、SimplerEnv-Bridge +14.6、LIBERO 96.5%、真实世界时序 +26 | 2025 |

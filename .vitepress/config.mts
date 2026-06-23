@@ -215,6 +215,7 @@ export default defineConfig({
                         { text: 'CronusVLA (2026)', link: '/papers/06-embodied-ai/vla/reasoning/CronusVLA_2026' },
                         { text: 'DAM-VLA (2026)', link: '/papers/06-embodied-ai/vla/reasoning/DAM_VLA_2026' },
                         { text: 'DreamVLA (2025)', link: '/papers/06-embodied-ai/vla/reasoning/DreamVLA_2025' },
+                        { text: 'DUST (2026)', link: '/papers/06-embodied-ai/vla/reasoning/DUST_2026' },
                         { text: 'FLARE (2025)', link: '/papers/06-embodied-ai/vla/reasoning/FLARE_2025' },
                         { text: 'FutureVLA (2026)', link: '/papers/06-embodied-ai/vla/reasoning/FutureVLA_2026' },
                         { text: 'MemoryVLA (2025)', link: '/papers/06-embodied-ai/vla/reasoning/MemoryVLA_2025' },
