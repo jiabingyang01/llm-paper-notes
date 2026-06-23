@@ -181,6 +181,7 @@
 - [CronusVLA (2026)](papers/06-embodied-ai/vla/reasoning/CronusVLA_2026.md) — Feature Chunking 多帧特征聚合 + DiT 跨帧解码器，SimplerEnv 70.9%、LIBERO 97.0%、SimplerEnv-OR R-Score 86.9
 - [DAM-VLA (2026)](papers/06-embodied-ai/vla/reasoning/DAM_VLA_2026.md) — 动作路由 + 手臂/夹爪双扩散模型 + 双尺度加权协调
 - [DreamVLA (2025)](papers/06-embodied-ai/vla/reasoning/DreamVLA_2025.md) — 预测三类综合世界知识（动态区域/深度/语义）+ 结构化注意力解耦，CALVIN 4.44 SOTA
+- [FLARE (2025)](papers/06-embodied-ai/vla/reasoning/FLARE_2025.md) — 流匹配 DiT 加可学习未来 token，中间层激活对齐未来观测的动作感知潜在嵌入，隐式世界建模无需重建未来帧，RoboCasa 70.1%/GR1 55.0% 超 UWM、真实 GR1 95.1%，解锁无动作人类视频协同训练
 - [FutureVLA (2026)](papers/06-embodied-ai/vla/reasoning/FutureVLA_2026.md) — 双流解耦 + 门控交叉注意力联合视觉运动预测，潜在对齐迁移时序先验，SimplerEnv 80.1%、真实机器人超 π₀ 达 26.7%
 - [MemoryVLA (2025)](papers/06-embodied-ai/vla/reasoning/MemoryVLA_2025.md) — 感知-认知双流记忆库建模长时域依赖，SimplerEnv-Bridge +14.6、LIBERO 96.5%、真实世界时序 +26
 - [MoH (2025)](papers/06-embodied-ai/vla/reasoning/MoH_2025.md) — 多 Horizon 动作块并行融合 + 轻量门控 + 动态推理，π₀.₅+MoH LIBERO 99%
