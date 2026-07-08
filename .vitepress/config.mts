@@ -298,13 +298,19 @@ export default defineConfig({
                   collapsed: false,
                   items: [
                     { text: 'BridgeV2W (2025)', link: '/papers/06-embodied-ai/world-models/BridgeV2W_2025' },
-                    { text: 'Fast-WAM (2026)', link: '/papers/06-embodied-ai/world-models/FastWAM_2026' },
                     { text: 'Kinema4D (2026)', link: '/papers/06-embodied-ai/world-models/Kinema4D_2026' },
-                    { text: 'LDA-1B (2026)', link: '/papers/06-embodied-ai/world-models/LDA_1B_2026' },
                     { text: 'MIND-V (2026)', link: '/papers/06-embodied-ai/world-models/MINDV_2026' },
-                    { text: 'SpatialVAM (2026)', link: '/papers/06-embodied-ai/world-models/SpatialVAM_2026' },
-                    { text: 'WAM Survey (2026)', link: '/papers/06-embodied-ai/world-models/WAM_Survey_2026' },
-                    { text: 'WorldVLA (2025)', link: '/papers/06-embodied-ai/world-models/WorldVLA_2025' },
+                  ],
+                },
+                {
+                  text: 'World Action Models',
+                  collapsed: false,
+                  items: [
+                    { text: 'Fast-WAM (2026)', link: '/papers/06-embodied-ai/world-action-models/FastWAM_2026' },
+                    { text: 'LDA-1B (2026)', link: '/papers/06-embodied-ai/world-action-models/LDA_1B_2026' },
+                    { text: 'SpatialVAM (2026)', link: '/papers/06-embodied-ai/world-action-models/SpatialVAM_2026' },
+                    { text: 'WAM Survey (2026)', link: '/papers/06-embodied-ai/world-action-models/WAM_Survey_2026' },
+                    { text: 'WorldVLA (2025)', link: '/papers/06-embodied-ai/world-action-models/WorldVLA_2025' },
                   ],
                 },
                 {

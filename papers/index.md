@@ -193,16 +193,25 @@
 
 ### 🦾 Embodied AI — World Models
 
+> 纯世界模型 / 模拟器：预测未来状态 $p(o'\mid o,a)$，作数据生成、RL 训练场或策略评估用，本身不联合产出策略。（联合建模状态与动作的 World Action Model 见下一节）
+
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
 | [BridgeV2W](/papers/06-embodied-ai/world-models/BridgeV2W_2025) | 将坐标空间动作通过 URDF + 相机参数渲染为像素对齐 Embodiment Mask，经 ControlNet 注入预训练视频生成模型，辅以光流运动损失，统一解决动作-视频鸿沟、视角敏感性和跨构型架构不统一三大问题 | Embodiment Mask、ControlNet、光流运动损失、跨构型统一 | 2025 |
-| [Fast-WAM](/papers/06-embodied-ai/world-models/FastWAM_2026) | 通过受控变体实验拆解 WAM 的两个因素，证明训练时视频协同目标（而非测试时未来想象）是性能主因；提出跳过测试时视频生成、单次前向传播动作预测，190 ms 延迟、RoboTwin 91.8%、LIBERO 97.6%，无具身预训练 | 视频协同训练、MoT 架构、训练-推理解耦、Flow Matching、测试时加速 | 2026.03 |
 | [Kinema4D](/papers/06-embodied-ai/world-models/Kinema4D_2026) | 将仿真解耦为运动学确定性 4D 机器人轨迹（URDF + FK/IK → pointmap）和生成式环境响应（DiT 联合预测 RGB+pointmap），Robo4D-200k 训练，PSNR 22.50、FVD 98.5、F-Score 0.4733，首次零样本真实世界迁移 | 4D Pointmap 控制、运动学-生成解耦、联合 RGB+Pointmap 合成、构型无关、零样本迁移 | 2026.03 |
-| [LDA-1B](/papers/06-embodied-ai/world-models/LDA_1B_2026) | 1.6B 机器人基础模型，用统一世界模型（策略+正逆动力学+视觉预测）+ 质量分层数据摄入（无动作视频/低质量轨迹各司其职）+ 结构化 DINO 潜在预测，RoboCasa-GR1 55.4% 超 3B 的 GR00T-N1.6，真机接触/灵巧/长时程较 π₀.₅ +21%/48%/23%，低质量数据反涨 10% | 机器人基础模型、统一世界模型 UWM、通用数据摄入、DINO 潜在、MM-DiT、质量分层监督、RSS 2026 | 2026.02 |
-| [WAM Survey](/papers/06-embodied-ai/world-models/WAM_Survey_2026) | 首篇 World Action Models 系统综述：定义 WAM 为联合建模 $p(o',a\mid o,l)$ 的具身基础模型并与 VLA/WM/VAM/Video Policy/AWM 划界，按 Cascaded / Joint（自回归 vs 扩散、单流 vs 多流、显式 vs 隐式未来）分类，梳理四类数据与三维评估协议，提出七大开放挑战 | 综述、World Action Model、Cascaded/Joint 分类、数据生态、评估协议、开放挑战 | 2026.05 |
 | [MIND-V](/papers/06-embodied-ai/world-models/MINDV_2026) | 认知三层世界模型 SRH + BSB + MVG，V-JEPA2 作物理裁判的 PFC 奖励 + GRPO 后训练 + Staged Visual Future Rollouts 推理期搜索，长时程任务 Task Success +76.7%，作为训练场把 OpenVLA-OFT 在 MimicGen 成功率 33.4%→43.5% | 分层 VWM、Behavioral Semantic Bridge、PFC 奖励、V-JEPA2 物理裁判、Staged Rollouts | 2026.03 |
-| [SpatialVAM](/papers/06-embodied-ai/world-models/SpatialVAM_2026) | 点云三视图正交投影 RGB + 末端位姿三视图热力图，Wan2.2-5B 视频 DiT 联合预测未来 RGB 视频与热力图视频，热力图反投影得到 3D 轨迹；10 demo 在 Meta-World/RoboCasa/真实 Franka 分别 +22%/10%/16%，单步去噪即 85.7% | 3D Video Action Model、多视图热力图、Wan2.2、LoRA、View-Attention、Meta-World 89.1% | 2026.04 |
-| [WorldVLA](/papers/06-embodied-ai/world-models/WorldVLA_2025) | 基于 Chameleon 将 VLA 动作模型与世界模型统一到单个自回归框架，共享权重混合训练实现双向增强，提出 Action Attention Mask 阻断 Action Chunking 误差累积 | 自回归统一模型、Action Attention Mask、Chameleon、双向增强 | 2025 |
+
+### 🦾 Embodied AI — World Action Models
+
+> 世界动作模型：联合建模未来状态与动作 $p(o',a\mid o,l)$，世界预测与动作生成 co-equal，直接产出策略（VAM 视为 WAM 子集）。与"世界模型辅助的 VLA"（见 VLA 推理与规划）的区别在于世界建模是否为一级输出。
+
+| 论文 | 一句话概括 | 关键词 | 时间 |
+| --- | --- | --- | --- |
+| [Fast-WAM](/papers/06-embodied-ai/world-action-models/FastWAM_2026) | 通过受控变体实验拆解 WAM 的两个因素，证明训练时视频协同目标（而非测试时未来想象）是性能主因；提出跳过测试时视频生成、单次前向传播动作预测，190 ms 延迟、RoboTwin 91.8%、LIBERO 97.6%，无具身预训练 | 视频协同训练、MoT 架构、训练-推理解耦、Flow Matching、测试时加速 | 2026.03 |
+| [LDA-1B](/papers/06-embodied-ai/world-action-models/LDA_1B_2026) | 1.6B 机器人基础模型，用统一世界模型（策略+正逆动力学+视觉预测）+ 质量分层数据摄入（无动作视频/低质量轨迹各司其职）+ 结构化 DINO 潜在预测，RoboCasa-GR1 55.4% 超 3B 的 GR00T-N1.6，真机接触/灵巧/长时程较 π₀.₅ +21%/48%/23%，低质量数据反涨 10% | 机器人基础模型、统一世界模型 UWM、通用数据摄入、DINO 潜在、MM-DiT、质量分层监督、RSS 2026 | 2026.02 |
+| [SpatialVAM](/papers/06-embodied-ai/world-action-models/SpatialVAM_2026) | 点云三视图正交投影 RGB + 末端位姿三视图热力图，Wan2.2-5B 视频 DiT 联合预测未来 RGB 视频与热力图视频，热力图反投影得到 3D 轨迹；10 demo 在 Meta-World/RoboCasa/真实 Franka 分别 +22%/10%/16%，单步去噪即 85.7% | 3D Video Action Model、多视图热力图、Wan2.2、LoRA、View-Attention、Meta-World 89.1% | 2026.04 |
+| [WAM Survey](/papers/06-embodied-ai/world-action-models/WAM_Survey_2026) | 首篇 World Action Models 系统综述：定义 WAM 为联合建模 $p(o',a\mid o,l)$ 的具身基础模型并与 VLA/WM/VAM/Video Policy/AWM 划界，按 Cascaded / Joint（自回归 vs 扩散、单流 vs 多流、显式 vs 隐式未来）分类，梳理四类数据与三维评估协议，提出七大开放挑战 | 综述、World Action Model、Cascaded/Joint 分类、数据生态、评估协议、开放挑战 | 2026.05 |
+| [WorldVLA](/papers/06-embodied-ai/world-action-models/WorldVLA_2025) | 基于 Chameleon 将 VLA 动作模型与世界模型统一到单个自回归框架，共享权重混合训练实现双向增强，提出 Action Attention Mask 阻断 Action Chunking 误差累积 | 自回归统一模型、Action Attention Mask、Chameleon、双向增强 | 2025 |
 
 ### 🦾 Embodied AI — Imitation Learning
 

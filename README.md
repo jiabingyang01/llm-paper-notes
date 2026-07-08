@@ -268,16 +268,22 @@
 
 <blockquote>
 <details open>
-<summary>World Models</summary>
+<summary>World Models（纯世界模型 / 模拟器，预测未来状态）</summary>
 
 - [BridgeV2W (2025)](papers/06-embodied-ai/world-models/BridgeV2W_2025.md) — Embodiment Mask + ControlNet 像素空间动作注入，跨构型统一世界模型
-- [Fast-WAM (2026)](papers/06-embodied-ai/world-models/FastWAM_2026.md) — 训练时视频协同目标是 WAM 性能主因、测试时未来想象非必要，跳过视频生成 190 ms 推理，RoboTwin 91.8%、LIBERO 97.6%
 - [Kinema4D (2026)](papers/06-embodied-ai/world-models/Kinema4D_2026.md) — 运动学 4D pointmap 控制 + DiT 联合生成 RGB+Pointmap，20 万条 4D 数据训练，首次零样本真实世界迁移
-- [LDA-1B (2026)](papers/06-embodied-ai/world-models/LDA_1B_2026.md) — 1.6B 统一世界模型基础模型（策略+正逆动力学+视觉预测）+ 质量分层数据摄入 + 结构化 DINO 潜在预测，RoboCasa-GR1 55.4% 超 3B GR00T，真机较 π₀.₅ 提升 21%/48%/23%，低质量数据反涨 10%，RSS 2026
 - [MIND-V (2026)](papers/06-embodied-ai/world-models/MINDV_2026.md) — 认知三层世界模型 SRH+BSB+MVG，V-JEPA2 物理裁判的 PFC 奖励 + GRPO 后训练 + Staged Rollouts 推理期搜索，Task Success +76.7%，OpenVLA-OFT 在 MimicGen 33.4%→43.5%
-- [SpatialVAM (2026)](papers/06-embodied-ai/world-models/SpatialVAM_2026.md) — 点云三视图投影 + 末端热力图视频，Wan2.2-5B 联合预测未来 RGB/热力图，10 demo 在 Meta-World/RoboCasa/真实 Franka 分别 +22%/10%/16%，单步去噪即 85.7%
-- [WAM Survey (2026)](papers/06-embodied-ai/world-models/WAM_Survey_2026.md) — 首篇 World Action Models 系统综述，定义 WAM（联合建模未来状态与动作）并与 VLA/WM/VAM/Video Policy 划界，Cascaded/Joint 架构分类 + 四类数据生态 + 三维评估协议 + 七大开放挑战
-- [WorldVLA (2025)](papers/06-embodied-ai/world-models/WorldVLA_2025.md) — 自回归统一 VLA + 世界模型，Action Attention Mask 解决 Chunking 误差累积
+
+</details>
+
+<details open>
+<summary>World Action Models（联合建模未来状态与动作，直接产出策略）</summary>
+
+- [Fast-WAM (2026)](papers/06-embodied-ai/world-action-models/FastWAM_2026.md) — 训练时视频协同目标是 WAM 性能主因、测试时未来想象非必要，跳过视频生成 190 ms 推理，RoboTwin 91.8%、LIBERO 97.6%
+- [LDA-1B (2026)](papers/06-embodied-ai/world-action-models/LDA_1B_2026.md) — 1.6B 统一世界模型基础模型（策略+正逆动力学+视觉预测）+ 质量分层数据摄入 + 结构化 DINO 潜在预测，RoboCasa-GR1 55.4% 超 3B GR00T，真机较 π₀.₅ 提升 21%/48%/23%，低质量数据反涨 10%，RSS 2026
+- [SpatialVAM (2026)](papers/06-embodied-ai/world-action-models/SpatialVAM_2026.md) — 点云三视图投影 + 末端热力图视频，Wan2.2-5B 联合预测未来 RGB/热力图，10 demo 在 Meta-World/RoboCasa/真实 Franka 分别 +22%/10%/16%，单步去噪即 85.7%
+- [WAM Survey (2026)](papers/06-embodied-ai/world-action-models/WAM_Survey_2026.md) — 首篇 World Action Models 系统综述，定义 WAM（联合建模未来状态与动作）并与 VLA/WM/VAM/Video Policy 划界，Cascaded/Joint 架构分类 + 四类数据生态 + 三维评估协议 + 七大开放挑战
+- [WorldVLA (2025)](papers/06-embodied-ai/world-action-models/WorldVLA_2025.md) — 自回归统一 VLA + 世界模型，Action Attention Mask 解决 Chunking 误差累积
 
 </details>
 </blockquote>

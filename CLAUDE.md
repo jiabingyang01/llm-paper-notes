@@ -26,7 +26,8 @@ papers/
 │   │   ├── reasoning/                # VLA 推理与规划
 │   │   ├── efficient/                # VLA 高效推理
 │   │   └── rl/                       # VLA RL 后训练
-│   ├── world-models/                 # 世界模型（WorldVLA、FastWAM、MINDV 等）
+│   ├── world-models/                 # 纯世界模型 / 模拟器（BridgeV2W、Kinema4D、MIND-V）
+│   ├── world-action-models/          # 世界动作模型 WAM（LDA-1B、FastWAM、WorldVLA、SpatialVAM、WAM 综述）
 │   └── imitation-learning/           # 模仿学习（EC-Flow 等）
 ├── 07-efficiency/
 ├── 08-rag-and-knowledge/
@@ -49,7 +50,7 @@ index.md                              # 网站首页
 
 ### 第 2 步：撰写笔记
 
-结构以 `templates/paper_template.md` 为准，风格参考近期笔记（如 `papers/06-embodied-ai/world-models/FastWAM_2026.md`）。
+结构以 `templates/paper_template.md` 为准，风格参考近期笔记（如 `papers/06-embodied-ai/world-action-models/FastWAM_2026.md`）。
 
 **撰写前必须阅读 PDF 原文**：绝对不要根据论文标题 + 领域先验去"合理化"地编造方法骨架、实验设置、baseline、数字、作者/机构。曾经出现过整篇 WMPO 笔记的作者、机构、方法（latent+PPO vs 实际 pixel+GRPO）、实验（LIBERO/SimplerEnv vs 实际 Mimicgen）全部是幻觉的事故，还会传染到其他笔记的对比描述。如果用户没有附 PDF，必须通过 arXiv abs/pdf 页面或项目主页取得原文要点后再写，宁可推迟也不要凭想象写。
 
@@ -170,14 +171,23 @@ npm run docs:build
 vla/
 ├── foundation/    # 真·基础模型 / 训练范式：π₀、π₀.₅、GR-3、SpatialVLA、ChatVLA、UniVLA、OTTER、Dexbotic、FAST、MMaDA-VLA
 ├── perception/    # 感知 / 空间 / 视觉表征增强：3D 编码、VGGT 对齐、视觉提示、视觉信号利用（含观测重注入等 training-free 视觉增强）
-├── reasoning/     # 推理 / 规划 / 记忆 / 世界模型辅助决策：CoT、进度估计、子目标、未来帧预测、多 horizon 决策等
+├── reasoning/     # 推理 / 规划 / 记忆 / 世界模型辅助决策：CoT、进度估计、子目标、未来帧预测、多 horizon 决策等（含 DreamVLA、FLARE、DUST 等"世界模型增强 VLA"）
 ├── efficient/     # 高效推理：Token 剪枝/缓存、量化、并行/推测解码、训练加速
 └── rl/            # RL 后训练
-world-models/      # 独立世界模型 / 世界-动作模型：WorldVLA、FastWAM、MINDV、SpatialVAM、Kinema4D、BridgeV2W 等
-imitation-learning/ # 模仿学习：EC-Flow 等
+world-models/       # 纯世界模型 / 模拟器：BridgeV2W、Kinema4D、MIND-V（预测未来、作数据生成/RL 训练场/评估用，不联合产出策略）
+world-action-models/ # 世界动作模型 WAM：LDA-1B、FastWAM、WorldVLA、SpatialVAM、WAM 综述（联合建模状态与动作、直接产出策略；VAM 视为 WAM 子集）
+imitation-learning/  # 模仿学习：EC-Flow 等
 ```
 
-**vla/reasoning/ 与 world-models/ 的边界**：论文核心产出是 VLA 策略、世界模型只是辅助模块（提供预测特征/规划信号）→ `vla/reasoning/`；论文核心产出是世界模型本身（视频预测/动作条件生成，策略只是下游应用之一）→ `world-models/`。
+**三分类边界（世界建模相关论文如何落位，按"世界建模是不是一级输出"判定）**：
+
+| 落位 | 判据 | 例子 |
+| --- | --- | --- |
+| `vla/reasoning/` | 核心产出是 **VLA 策略**，世界模型只是辅助模块（提供预测特征 / 规划信号 / 对齐目标） | DreamVLA、FLARE、DUST（自称"世界模型增强 VLA"） |
+| `world-action-models/` | **联合建模未来状态与动作** $p(o',a\mid o,l)$，世界预测与动作生成 co-equal、直接产出策略；含 VAM（Video Action Model，WAM 子集） | LDA-1B、WorldVLA、FastWAM、SpatialVAM |
+| `world-models/` | 核心产出是**世界模型/模拟器本身**（视频/4D/动作条件生成），策略只是下游应用之一或干脆不产出策略 | BridgeV2W、Kinema4D、MIND-V（当 RL 训练场用） |
+
+要点：**WAM ≠ World Model**。World Model 只预测未来（$p(o'\mid o,a)$）；World Action Model 联合建模状态+动作、把世界与动作放平级。`vla/reasoning/` 与 `world-action-models/` 都会用到世界建模，区别在于世界建模是"辅助策略的手段"还是"与动作平级的一级输出"——判不准时看论文自我定位与评测形式（只报策略成功率、世界建模是内部正则 → reasoning；把联合状态-动作预测当核心贡献 → WAM）。术语参见 `world-action-models/WAM_Survey_2026.md`（WAM 综述，含 Cascaded/Joint 完整分类）。
 
 ### 子分类判别准则（避免 foundation/ 沦为兜底箱）
 
