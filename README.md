@@ -147,6 +147,7 @@
 - [GR-3 (2025)](papers/06-embodied-ai/vla/foundation/GR3_2025.md) — 4B VLA：VL 协同训练 + VR 人类轨迹 10-shot 适配 + Task Status 指令跟随，全面超越 π₀
 - [MMaDA-VLA (2026)](papers/06-embodied-ai/vla/foundation/MMaDA_VLA_2026.md) — 原生离散扩散统一多模态 VLA，并行去噪生成目标观测+动作块，LIBERO 98.0%、CALVIN 4.78 全面 SOTA
 - [OTTER (2025)](papers/06-embodied-ai/vla/foundation/OTTER_2025.md) — 冻结 CLIP + 文本感知视觉特征提取实现零样本泛化，4 种原语未见任务 77%，Octo/OpenVLA 几乎为 0%
+- [Qwen-RobotManip (2026)](papers/06-embodied-ai/vla/foundation/Qwen_RobotManip_2026.md) — Qwen3.5-4B VLA，"先对齐再规模化"：统一状态-动作表征 + 相机系相对位姿 + in-context 适配三层对齐，人到机器人合成 24808h + 纯开源 ~38100h 语料，OOD 全面超 π₀.₅、RoboChallenge Table30-v1 generalist 第一
 - [SpatialVLA (2025)](papers/06-embodied-ai/vla/foundation/SpatialVLA_2025.md) — Ego3D 位置编码 + 自适应高斯动作网格（3 token/step），1.1M 数据预训练 3.5B 零样本超 55B RT-2-X，20 Hz
 - [UniVLA (2025)](papers/06-embodied-ai/vla/foundation/UniVLA_2025.md) — 任务中心潜在动作两阶段解耦 + 跨具身无标注视频预训练，1/20 算力超 OpenVLA，LIBERO 95.2%、真实世界 81.7%
 - [π₀ (2024)](papers/06-embodied-ai/vla/foundation/pi0_2024.md) — Flow Matching VLA 基础模型

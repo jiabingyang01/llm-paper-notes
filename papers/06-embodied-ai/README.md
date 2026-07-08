@@ -18,6 +18,7 @@
 | [GR-3](vla/foundation/GR3_2025.md) | MoT 架构（Qwen2.5-VL + Action DiT）、VL 协同训练、VR 人类轨迹少样本适配、Task Status 辅助监督、全面超越 π₀ | 2025 |
 | [MMaDA-VLA](vla/foundation/MMaDA_VLA_2026.md) | 原生离散扩散、统一多模态 token、并行去噪、混合注意力、目标观测生成、LIBERO 98.0%、CALVIN 4.78 | 2026 |
 | [OTTER](vla/foundation/OTTER_2025.md) | 冻结 CLIP、文本感知视觉特征提取、ClearCLIP $X_{\text{attn}}$、余弦相似度 Softmax 选择、零样本泛化 | 2025 |
+| [Qwen-RobotManip](vla/foundation/Qwen_RobotManip_2026.md) | 对齐解锁规模化、统一 80 维状态-动作表征、camera-frame delta pose、in-context 行为适配、人到机器人合成 24808h、纯开源 ~38100h、OOD 超 π₀.₅、RoboChallenge Table30-v1 第一 | 2026 |
 | [SpatialVLA](vla/foundation/SpatialVLA_2025.md) | 3D 空间感知、Ego3D 位置编码、自适应高斯动作网格、3 token/step、20 Hz | 2025 |
 | [UniVLA](vla/foundation/UniVLA_2025.md) | 任务中心潜在动作解耦（VQ-VAE + DINOv2 + 语言引导两阶段分离）、跨具身无标注视频预训练、1/20 算力超越 OpenVLA、LIBERO 95.2%、真实世界 81.7% | 2025 |
 | [π₀](vla/foundation/pi0_2024.md) | Flow Matching VLA、VLM 骨架 + Action Expert、跨构型预训练、预训练/后训练范式 | 2024 |

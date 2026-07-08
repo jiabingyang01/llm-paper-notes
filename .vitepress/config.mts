@@ -192,6 +192,7 @@ export default defineConfig({
                         { text: 'OTTER (2025)', link: '/papers/06-embodied-ai/vla/foundation/OTTER_2025' },
                         { text: 'π₀ (2024)', link: '/papers/06-embodied-ai/vla/foundation/pi0_2024' },
                         { text: 'π₀.₅ (2025)', link: '/papers/06-embodied-ai/vla/foundation/pi05_2025' },
+                        { text: 'Qwen-RobotManip (2026)', link: '/papers/06-embodied-ai/vla/foundation/Qwen_RobotManip_2026' },
                         { text: 'SpatialVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/SpatialVLA_2025' },
                         { text: 'UniVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/UniVLA_2025' },
                       ],
