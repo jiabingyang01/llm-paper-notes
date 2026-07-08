@@ -124,16 +124,18 @@ index.md                              # 网站首页
 
 ### 第 5 步：构建验证
 
-写完笔记和索引后，本地构建一次以捕获渲染错误：
+写完笔记和索引后，本地构建一次以捕获渲染错误（**push 前务必做**——GitHub Pages 与 Vercel 都跑同一个 vitepress build，构建失败两边都会红，站点停在上一次成功的旧版本）：
 
 ```bash
-npm install        # 仅首次（当前机器可能没有 node_modules）
+export PATH="/data/yjb/miniconda3/envs/ageshub/bin:$PATH"   # 本机 node 在 ageshub conda 环境（v20），系统 PATH 里没有
+npm install        # 仅首次（当前机器默认没有 node_modules）
 npm run docs:build
 ```
 
 - build 能捕获 Vue 模板解析错误（裸 `<`、`{{`，见下方渲染陷阱）和 markdown 编译问题
 - **build 不检查死链**（`config.mts` 设置了 `ignoreDeadLinks: true`）：4 个索引文件中新增链接的路径、大小写、是否带 `.md` 后缀必须人工核对
 - 本地预览：`npm run docs:dev`
+- **本文件（CLAUDE.md）、README.md、templates/ 已在 `config.mts` 的 `srcExclude` 中排除**，不会被当作页面编译。这是必需的：本文件"渲染陷阱"一节会写 `{{`、`<` 作反面示例，若被 Vue 当页面编译会报 `Interpolation end sign was not found` 并使整个构建失败。新增此类 meta / 说明文件时记得一并加进 `srcExclude`。
 
 ## VitePress / 数学渲染陷阱（写笔记必读）
 

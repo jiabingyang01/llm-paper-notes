@@ -28,6 +28,11 @@ export default defineConfig({
 
   ignoreDeadLinks: true,
 
+  // 排除非页面的 meta / 说明文件，避免它们被当作 VitePress 页面编译。
+  // 尤其 CLAUDE.md 的"渲染陷阱"一节会写 {{ 、< 等反面示例，若被 Vue 编译会报
+  // "Interpolation end sign was not found" 而使整个构建失败。
+  srcExclude: ['CLAUDE.md', 'README.md', 'templates/*.md'],
+
   transformPageData(pageData, { siteConfig }) {
     if (pageData.frontmatter.layout === 'home' && pageData.frontmatter.features) {
       for (const feature of pageData.frontmatter.features) {
