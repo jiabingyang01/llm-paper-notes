@@ -28,7 +28,8 @@ papers/
 │   │   └── rl/                       # VLA RL 后训练
 │   ├── world-models/                 # 纯世界模型 / 模拟器（BridgeV2W、Kinema4D、MIND-V）
 │   ├── world-action-models/          # 世界动作模型 WAM（LDA-1B、FastWAM、WorldVLA、SpatialVAM、WAM 综述）
-│   └── imitation-learning/           # 模仿学习（EC-Flow 等）
+│   ├── imitation-learning/           # 模仿学习（EC-Flow 等）
+│   └── data-synthesis/               # 数据合成：人类演示 / 世界模型 → 机器人可训练数据（MimicDreamer、Wh0）
 ├── 07-efficiency/
 ├── 08-rag-and-knowledge/
 ├── 09-evaluation-and-benchmarks/
@@ -179,7 +180,13 @@ vla/
 world-models/       # 纯世界模型 / 模拟器：BridgeV2W、Kinema4D、MIND-V（预测未来、作数据生成/RL 训练场/评估用，不联合产出策略）
 world-action-models/ # 世界动作模型 WAM：LDA-1B、FastWAM、WorldVLA、SpatialVAM、WAM 综述（联合建模状态与动作、直接产出策略；VAM 视为 WAM 子集）
 imitation-learning/  # 模仿学习：EC-Flow 等
+data-synthesis/      # 数据合成：MimicDreamer、Wh0（把人类演示或生成式世界模型转成机器人可训练监督数据，复用现成骨架后训练，核心贡献是"怎么造数据"）
 ```
+
+**data-synthesis 落位判据**：论文核心贡献是**生成/对齐 VLA 训练数据**（human-to-robot 迁移、生成式世界模型造数据、数据增强 pipeline），策略骨架直接复用现成模型（π₀ / VITRA 等）后训练，而非提出新策略架构或新训练范式。注意与相邻类的区别：
+- **用世界模型 ≠ 做世界模型**：MimicDreamer 的 H2R Aligner、Wh0 用的 Wan-I2V 都是视频扩散/生成模型，但只作数据生成的一个环节，不以"世界模型本身"为一级产出（那才归 `world-models/`）。
+- 若论文是**完整基础模型**、数据合成只是其中一个组件（如 Qwen-RobotManip 的 H2R 管线），仍归 `vla/foundation/`；只有当数据 pipeline + 训练配方本身就是全部贡献时才落 `data-synthesis/`。
+- 与 `imitation-learning/` 的区别：后者核心是"从演示学策略的算法"（如无动作光流 IL），前者核心是"造出这些演示数据"。
 
 **三分类边界（世界建模相关论文如何落位，按"世界建模是不是一级输出"判定）**：
 

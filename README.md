@@ -298,6 +298,16 @@
 </details>
 </blockquote>
 
+<blockquote>
+<details open>
+<summary>Data Synthesis（人类演示 / 世界模型 → 机器人可训练数据）</summary>
+
+- [MimicDreamer (2025)](papers/06-embodied-ai/data-synthesis/MimicDreamer_2025.md) — 三件套（EgoStabilizer 稳视点 + IK 动作对齐 + H2R Aligner 视频扩散换手）把人类演示转机器人监督，后训练 π₀，六任务平均 +14.7% SR，随人类数据规模单调提升
+- [Wh0 (2026)](papers/06-embodied-ai/data-synthesis/Wh0_2026.md) — 生成式世界模型当可控人手数据引擎造 5 万条 WM-H，配 400 条真机共训 VITRA，Unitree G1 灵巧手 18 任务零样本 8.3%→38.9%（4.7×），WM-H 解锁预训练先验
+
+</details>
+</blockquote>
+
 </details>
 
 <details open>

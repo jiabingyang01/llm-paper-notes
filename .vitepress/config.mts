@@ -326,6 +326,14 @@ export default defineConfig({
                     { text: 'EC-Flow (2025)', link: '/papers/06-embodied-ai/imitation-learning/EC_Flow_2025' },
                   ],
                 },
+                {
+                  text: 'Data Synthesis',
+                  collapsed: false,
+                  items: [
+                    { text: 'MimicDreamer (2025)', link: '/papers/06-embodied-ai/data-synthesis/MimicDreamer_2025' },
+                    { text: 'Wh0 (2026)', link: '/papers/06-embodied-ai/data-synthesis/Wh0_2026' },
+                  ],
+                },
               ],
             },
             {

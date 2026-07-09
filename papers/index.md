@@ -13,7 +13,7 @@
 | 💡 | [Reasoning](/papers/03-reasoning/) | CoT、ToT、o1/o3、数学推理、Test-time Compute |
 | 🖼️ | [Multimodal](/papers/04-multimodal/) | GPT-4V、LLaVA、视频理解、语音模型 |
 | 🤖 | [Agents](/papers/05-agents/) | ReAct、Toolformer、WebAgent、SWE-Agent |
-| 🦾 | [Embodied AI](/papers/06-embodied-ai/) | VLA、世界模型、机器人 RL、模仿学习 |
+| 🦾 | [Embodied AI](/papers/06-embodied-ai/) | VLA、世界模型、机器人 RL、模仿学习、数据合成 |
 | ⚡ | [Efficiency](/papers/07-efficiency/) | GPTQ、AWQ、LoRA、Speculative Decoding |
 | 🔍 | [RAG & Knowledge](/papers/08-rag-and-knowledge/) | Dense Retrieval、RAPTOR、GraphRAG |
 | 📊 | [Evaluation](/papers/09-evaluation-and-benchmarks/) | MMLU、HumanEval、Arena、LLM-as-Judge |
@@ -219,6 +219,15 @@
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
 | [EC-Flow](/papers/06-embodied-ai/imitation-learning/EC_Flow_2025) | 将光流预测从物体中心转为具身中心（预测机器人上采样点轨迹），配合目标图像辅助对齐和 URDF 感知运动学动作计算，仅用 5 条无动作标注 RGB 视频学习操作策略，在遮挡（+62%）、柔性物体（+45%）和非位移操作（+80%）场景大幅超越物体中心方法 | 具身中心光流、目标图像对齐、URDF 运动学、无动作标注、DiT 扩散 | 2025.07 |
+
+### 🦾 Embodied AI — Data Synthesis
+
+> 数据合成：把人类演示或生成式世界模型转成机器人可训练的监督数据，破解 VLA 数据稀缺。复用现成骨架（π₀ / VITRA）后训练，核心贡献在"怎么造数据"而非新策略架构。
+
+| 论文 | 一句话概括 | 关键词 | 时间 |
+| --- | --- | --- | --- |
+| [MimicDreamer](/papers/06-embodied-ai/data-synthesis/MimicDreamer_2025) | 三件套把低成本第一人称人类演示转成机器人可用监督：EgoStabilizer 单应稳视点 + 补洞、IK 动作对齐（只对齐 pitch/yaw 软屏蔽 roll）、H2R Aligner（CogVideoX-5b 多条件视频扩散把人手换机械臂）；仅用合成数据后训练 π₀，六任务平均成功率较纯真机 +14.7%，且随人类数据规模单调提升 | Human-to-Robot、视频扩散、视点稳定、IK 动作对齐、π₀ 后训练、EgoDex | 2025.09 |
+| [Wh0](/papers/06-embodied-ai/data-synthesis/Wh0_2026) | 把生成式视频世界模型当可控人手数据引擎，造 5 万条 WM-H 数据集（Wan-I2V + Qwen-Image-Edit + 场景/具身对齐），经 HaWoR 手部重建转监督，配 400 条真机共训 VITRA；Unitree G1 灵巧手 18 任务零样本 8.3%→38.9%（4.7×），证明 WM-H 是解锁预训练先验而非从零学 | 生成式世界模型、灵巧操作、Egocentric 人手数据、VITRA 后训练、MANO、场景/具身对齐 | 2026.06 |
 
 ### 📊 Evaluation & Benchmarks
 
