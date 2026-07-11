@@ -4,7 +4,7 @@
 >
 > **作者**：Peiyan Li, Yixiang Chen, Hongtao Wu, Xiao Ma, Xiangnan Wu, Yan Huang, Liang Wang, Tao Kong, Tieniu Tan
 >
-> **机构**：中科院自动化所（NLPR）、字节跳动 Seed、FiveAges、南京大学
+> **机构**：中科院自动化所（NLPR）、字节跳动 Seed、南京大学
 >
 > **发布时间**：2025年6月
 >

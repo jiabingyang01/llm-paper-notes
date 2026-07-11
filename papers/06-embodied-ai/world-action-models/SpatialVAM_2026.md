@@ -4,7 +4,7 @@
 >
 > **作者**：Peiyan Li, Yixiang Chen, Yuan Xu, Jiabing Yang, Xiangnan Wu, Jun Guo, Nan Sun, Long Qian, Xinghang Li, Xin Xiao, Jing Liu, Nianfeng Liu, Tao Kong, Yan Huang, Liang Wang, Tieniu Tan
 >
-> **机构**：中科院自动化所（NLPR/MAIS）+ 字节跳动 Seed + FiveAges + 清华大学 + 西安交通大学 + 武汉大学 + 南京大学
+> **机构**：中科院自动化所（NLPR/MAIS）+ 字节跳动 Seed + 清华大学 + 西安交通大学 + 武汉大学 + 南京大学
 >
 > **发布时间**：2026 年 4 月（arXiv 2604.03181）
 >
@@ -255,7 +255,7 @@ Fig. 5 左最让我意外：**1 步去噪即 85.7%**。视频生成领域 CogVid
 
 ### 6.4 与同组 VLA 工作的连贯叙事
 
-NLPR-Bytedance Seed-FiveAges 团队在 2024–2026 的工作线条非常清晰：
+NLPR-Bytedance Seed 团队在 2024–2026 的工作线条非常清晰：
 
 > EC-Flow (2025, 具身光流, 无动作标注) → BridgeVLA (2025, 2D 多视图热力图 + VLM) → AnchorVLA4D (2026, 首帧锚帧 + 4D 编码器) → SpatialVAM (2026, 3D 多视图热力图 + 视频基座)
 
