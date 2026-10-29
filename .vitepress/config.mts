@@ -53,6 +53,23 @@ export default defineConfig({
 
   markdown: {
     math: true,
+    config(md) {
+      const mathCache = new Map<string, string>()
+      for (const ruleName of ['math_inline', 'math_block'] as const) {
+        const orig = md.renderer.rules[ruleName]
+        if (orig) {
+          md.renderer.rules[ruleName] = (tokens, idx, options, env, self) => {
+            const key = `${ruleName}:${tokens[idx].content}`
+            let html = mathCache.get(key)
+            if (html === undefined) {
+              html = orig(tokens, idx, options, env, self)
+              mathCache.set(key, html)
+            }
+            return html
+          }
+        }
+      }
+    },
   },
 
   head: [

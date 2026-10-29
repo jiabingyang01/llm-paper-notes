@@ -4,7 +4,7 @@
 >
 > **作者**：Yixiang Chen, Peiyan Li, Yan Huang, Jiabing Yang, Kehan Chen, Liang Wang
 >
-> **机构**：中科院自动化所（NLPR）、中国科学院大学、FiveAges
+> **机构**：中科院自动化所（NLPR）、中国科学院大学
 >
 > **发布时间**：2025年7月
 >

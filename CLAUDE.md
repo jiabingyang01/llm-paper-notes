@@ -148,6 +148,7 @@ npm run docs:build
 4. **正文避免裸尖括号**：`<s, a>` 这类写法会被 Vue 当作组件标签，导致构建报错或内容被吞。数学元组用 `$\langle s, a \rangle$`，占位符用反引号包裹
 5. **正文避免裸 `{{`**：是 Vue 的插值语法。需要连续两个大括号时放进行内公式或代码 span 中
 6. **`$$` 公式块与上下文之间留空行**：紧贴列表或表格可能导致解析纠缠
+7. **批量新增多公式笔记时的 V8 内存上限与 MathJax 缓存**：`markdown-it-mathjax3` 默认对每个公式生成无字体缓存的内联 SVG 并执行 CSS 内联，全站数百篇笔记累计万级公式时易撑爆 Node 默认 4GB 堆内存导致 CI 构建 OOM（线上站点将卡在旧版本）。`package.json` 与 `.github/workflows/deploy.yml` 已配置 `NODE_OPTIONS="--max-old-space-size=6144"`（适配 GitHub Actions `ubuntu-latest` 7GB 物理内存上限），且 `.vitepress/config.mts` 已对 `math_inline` / `math_block` 启用公式级渲染缓存；另外不仅正文表格，**索引表（`papers/index.md`、分类 `README.md`）摘要中也严禁裸 `|` 和裸 `<字母`**（如 `|y|` 应写 `$\lvert y\rvert$`，层级链用 `→` 而非 `<`）。
 
 ## 分类体系
 

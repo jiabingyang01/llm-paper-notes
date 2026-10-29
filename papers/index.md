@@ -17,6 +17,7 @@
 | ⚡ | [Efficiency](/papers/07-efficiency/) | GPTQ、AWQ、LoRA、Speculative Decoding |
 | 🔍 | [RAG & Knowledge](/papers/08-rag-and-knowledge/) | Dense Retrieval、RAPTOR、GraphRAG |
 | 📊 | [Evaluation](/papers/09-evaluation-and-benchmarks/) | MMLU、HumanEval、Arena、LLM-as-Judge |
+| 🎮 | [Reinforcement Learning](/papers/10-reinforcement-learning/) | RL 基础方法、连续控制、生成式策略、策略优化 |
 
 ---
 
@@ -32,7 +33,7 @@
 
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
-| [ACPO](/papers/04-multimodal/vlm/hallucination/ACPO_2026) | 定义视觉锚点崩塌（chosen 似然随 DPO 训练下降导致放弃视觉证据），引入长度自适应优势目标 τ=δ(|yw|+|yl|) 缩放目标间距，stop-gradient 的非对称系数 α 仅作用于 rejected 梯度，InternVL3-14B POPE 89.22、MM-IFEval 0.570，8B 同样多基准 SOTA | 似然位移、视觉锚点崩塌、非对称标定系数、长度自适应目标 | 2026.03 |
+| [ACPO](/papers/04-multimodal/vlm/hallucination/ACPO_2026) | 定义视觉锚点崩塌（chosen 似然随 DPO 训练下降导致放弃视觉证据），引入长度自适应优势目标 $\tau=\delta(\lvert y_w\rvert+\lvert y_l\rvert)$ 缩放目标间距，stop-gradient 的非对称系数 α 仅作用于 rejected 梯度，InternVL3-14B POPE 89.22、MM-IFEval 0.570，8B 同样多基准 SOTA | 似然位移、视觉锚点崩塌、非对称标定系数、长度自适应目标 | 2026.03 |
 | [AGLA](/papers/04-multimodal/vlm/hallucination/AGLA_2025) | GradCAM 驱动的 Image-Prompt Matching 生成增强图像，融合原始图像全局生成特征与增强图像局部判别特征进行校准解码，training-free 即插即用，POPE 平均提升 5.5% Accuracy / 5.1% F1 | GradCAM、全局-局部注意力组装、自适应遮蔽、Training-Free | 2024.06 |
 | [AVISC](/papers/04-multimodal/vlm/hallucination/AVISC_2025) | 发现 LVLM 中盲 token 垄断注意力却不携带判别信息，三步解码校准（层选择 + 盲 token 识别 + 对比解码）动态抑制注意力偏差，InstructBLIP POPE Accuracy +6%、AMBER 得分 85.95 | Blind Token、层选择注意力校准、对比解码、Training-Free | 2024.05 |
 | [CIPHER](/papers/04-multimodal/vlm/hallucination/CIPHER_2026) | 扩散模型生成 25K 反事实图像（结构保留 + 语义篡改），对比真实/反事实隐藏表示差异经 SVD 提取视觉诱导幻觉子空间，推理时投影到正交补，training-free 零推理开销，LLaVA-1.5 CHAIR$_S$ 降至 13.05%（vs Nullu 15.20%） | 扩散反事实图像、SVD 幻觉子空间、特征投影、Training-Free | 2026.03 |
@@ -90,7 +91,7 @@
 | [GR-3](/papers/06-embodied-ai/vla/foundation/GR3_2025) | 4B VLA（Qwen2.5-VL + Action DiT），机器人轨迹 + VL 数据协同训练实现 OOD 指令零样本泛化，VR 人类轨迹 10-shot 适配新物体（57.8%→86.7%），Task Status 辅助监督 + DiT RMSNorm 强化指令跟随，全面超越 π₀ | MoT 架构、VL 协同训练、人类轨迹少样本适配、Task Status、ByteMini 双臂移动 | 2025.07 |
 | [MMaDA-VLA](/papers/06-embodied-ai/vla/foundation/MMaDA_VLA_2026) | 基于原生离散扩散大模型 MMaDA-8B，将语言/图像/动作统一到离散 token 空间，并行去噪生成目标观测和动作块 + 混合注意力（模态内双向 + 模态间因果），LIBERO 98.0%、CALVIN 4.78 全面 SOTA | 原生离散扩散、统一多模态 token、并行去噪、混合注意力、目标观测生成 | 2026.03 |
 | [OTTER](/papers/06-embodied-ai/vla/foundation/OTTER_2025) | 冻结预训练 CLIP 编码器，利用 ClearCLIP 的 $X_{\text{attn}}$ 特征 + 余弦相似度 softmax 选择性提取与语言指令对齐的视觉 patch 特征，仅训练温度参数和轻量策略网络（~12M），真实机器人 4 种原语零样本泛化 77%，Octo/OpenVLA 几乎为 0% | 冻结 CLIP、文本感知视觉特征提取、ClearCLIP、零样本泛化 | 2025.03 |
-| [Qwen-RobotManip](/papers/06-embodied-ai/vla/foundation/Qwen_RobotManip_2026) | Qwen3.5-4B VLA 基础模型，主张"先对齐再规模化"：统一 80 维状态-动作表征 + 相机系相对位姿 + in-context 行为适配三层对齐，人到机器人合成把 1933h 人类视频渲染成跨 15 平台 24808h 机器人数据，纯开源语料 ~38100h，OOD 全面超 π₀.₅、RoboChallenge Table30-v1 generalist 第一 | 机器人操作基础模型、跨本体对齐、人到机器人合成、camera-frame delta pose、OOD 评测、DiT flow matching | 2026.06 |
+| [Qwen-RobotManip](/papers/06-embodied-ai/vla/foundation/Qwen_RobotManip_2026) | 提出“先对齐后规模化”范式：80 维掩码统一表征 + 解耦相机系相对位姿与 CaPE + episode 内随机采样上下文适配，配合跨 15 构型 H2R 合成与五阶信号清洗构建纯开源 38,100 小时语料，六大 OOD 基准全面超 $\pi_{0.5}$、RoboChallenge Table30-v1 通才榜第一（45%） | 跨构型对齐、相机系相对位姿、人到机器人合成、In-Context 适配、OOD 评测 | 2026.06 |
 | [SpatialVLA](/papers/06-embodied-ai/vla/foundation/SpatialVLA_2025) | Ego3D 位置编码注入 3D 信息 + 自适应高斯动作网格仅需 3 token 表征 7D 动作，1.1M 数据预训练 3.5B 零样本超越 55B RT-2-X，20 Hz 推理 | 3D 空间感知、自适应动作离散化、跨构型预训练 | 2025.01 |
 | [UniVLA](/papers/06-embodied-ai/vla/foundation/UniVLA_2025) | 语言引导两阶段解耦任务中心潜在动作（DINOv2 特征空间 + VQ-VAE 离散化），跨具身无标注视频预训练通才策略，1/20 算力超越 OpenVLA，LIBERO 95.2%、CALVIN 3.80、R2R 47.1%、真实世界 81.7% | 任务中心潜在动作、跨具身无标注预训练、VQ-VAE、DINOv2 | 2025.05 |
 | [π₀](/papers/06-embodied-ai/vla/foundation/pi0_2024) | 用 Flow Matching 替代自回归生成动作，构建首个能完成高频灵巧操作的通用 VLA 基础模型 | Flow Matching VLA、Action Expert、跨构型预训练 | 2024.10 |
