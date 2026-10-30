@@ -12,15 +12,23 @@
 
 | 论文 | 关键词 | 年份 |
 | --- | --- | --- |
+| [Being-H0](vla/foundation/Being_H0_2025.md) | UniHand 千小时人手库、物理指令微调（PIT）、部位级 GRQ-VAE 运动分词（1.29 mm）、弱透视空间对齐、多指灵巧手真机 74.3%、ICML 2026 | 2025 |
+| [Being-H0.5](vla/foundation/Being_H0_5_2026.md) | 35kh UniHand-2.0 母本体语料、统一状态-动作语义槽、分层 Mixture-of-Flow、流形保持门控（MPG）、通用异步动作块（UAC）、跨 5 真机超 $\pi_{0.5}$、LIBERO 98.9%、CoRL 2026 Oral | 2026 |
 | [ChatVLA](vla/foundation/ChatVLA_2025.md) | Spurious Forgetting 分析、Phased Alignment Training、MoE 双专家（共享 Attention 隔离 MLP）、2B 参数统一理解+控制、MMMU 37.4 | 2025 |
+| [CLAP](vla/foundation/CLAP_2026.md) | 对比潜在动作预训练、Act-VAE 物理码本 + 双流 VD-VAE 跨模态对齐、消除视觉纠缠、CLAP-NTP & 知识匹配 CLAP-RF（70.1 ms）、Astribot 真机 62.7%、LIBERO 97.2% | 2026 |
 | [Dexbotic](vla/foundation/Dexbotic_2025.md) | VLA Toolbox、统一模块化框架（VLM + AE）、DexboticVLM（Qwen2.5）、Exp 脚本实验开发、SimplerEnv +46.2% | 2025 |
+| [EgoScale](vla/foundation/EgoScale_2026.md) | 20,854h 人类 Ego 视频预训练、对数线性缩放律（$R^2=0.9983$）、轻量人机中期对齐、22-DoF Sharpa 灵巧手 +54 pp、1-shot 叠衣 88%、CoRL 2026 Oral | 2026 |
+| [EgoVLA](vla/foundation/EgoVLA_2025.md) | 500K 多源 Ego 人类样本、瞬时相机系手腕 + MANO PCA 统一动作空间、0.05 mm 指尖重定向、Unitree H1 双灵巧手未见背景 +17.8 pp、IROS 2026 | 2025 |
+| [Emergence-H2R](vla/foundation/Emergence_H2R_2025.md) | 零显式对齐 $\pi_{0.5}+\text{ego}$ 共训、H2R 迁移随预训练多样性涌现、VLM 人机表征自发收敛、仅人类视频新任务真机 34%→59%、RSS 2026 | 2025 |
 | [FAST](vla/foundation/FAST_2025.md) | DCT + BPE 频域压缩动作 tokenization、高频灵巧任务、π₀-FAST 匹配扩散 π₀ 训练 5× 加速、FAST+ 通用 tokenizer | 2025 |
 | [GR-3](vla/foundation/GR3_2025.md) | MoT 架构（Qwen2.5-VL + Action DiT）、VL 协同训练、VR 人类轨迹少样本适配、Task Status 辅助监督、全面超越 π₀ | 2025 |
+| [H-RDT](vla/foundation/H_RDT_2025.md) | 2B 双臂流匹配 DiT、EgoDex 829h 48 维人手超集预训练、5 步 ODE 30 Hz、跨 5 种双臂构型迁移、真机 +40.5%（折毛巾 0%→52%）、AAAI 2026 | 2025 |
 | [MMaDA-VLA](vla/foundation/MMaDA_VLA_2026.md) | 原生离散扩散、统一多模态 token、并行去噪、混合注意力、目标观测生成、LIBERO 98.0%、CALVIN 4.78 | 2026 |
 | [OTTER](vla/foundation/OTTER_2025.md) | 冻结 CLIP、文本感知视觉特征提取、ClearCLIP $X_{\text{attn}}$、余弦相似度 Softmax 选择、零样本泛化 | 2025 |
 | [Qwen-RobotManip](vla/foundation/Qwen_RobotManip_2026.md) | 先对齐后规模化、80 维掩码统一状态-动作表征、解耦相机系相对位姿 + CaPE、In-Context 执行历史适配、跨 15 构型 H2R 合成（24,808h）、纯开源 38,100h 语料、六大 OOD 基准超 $\pi_{0.5}$、Table30-v1 通才第一（45%） | 2026 |
 | [SpatialVLA](vla/foundation/SpatialVLA_2025.md) | 3D 空间感知、Ego3D 位置编码、自适应高斯动作网格、3 token/step、20 Hz | 2025 |
 | [UniVLA](vla/foundation/UniVLA_2025.md) | 任务中心潜在动作解耦（VQ-VAE + DINOv2 + 语言引导两阶段分离）、跨具身无标注视频预训练、1/20 算力超越 OpenVLA、LIBERO 95.2%、真实世界 81.7% | 2025 |
+| [VITRA](vla/foundation/VITRA_2025.md) | 野外日常人类视频引擎（VITRA-1M）、MoGe-2+MegaSAM+HaWoR 米制世界系追踪、三维腕速原子切分、轨迹投影 GPT-4.1 标注、FoV 因果扩散 VLA、XHand 真机 OOD 64.6%、ICRA 2026 | 2025 |
 | [π₀](vla/foundation/pi0_2024.md) | Flow Matching VLA、VLM 骨架 + Action Expert、跨构型预训练、预训练/后训练范式 | 2024 |
 | [π₀.₅](vla/foundation/pi05_2025.md) | 异构多源数据协同训练、分层推理（子任务预测 + 低层控制）、开放世界泛化 | 2025 |
 
@@ -137,6 +145,7 @@ VLA 模型推理加速，包括 Token 缓存/剪枝、动态计算、量化等�
 | 论文 | 关键词 | 年份 |
 | --- | --- | --- |
 | [BridgeV2W](world-models/BridgeV2W_2025.md) | Embodiment Mask（URDF + 相机参数）、ControlNet 像素空间动作注入、光流运动损失、跨构型统一、视角鲁棒 | 2025 |
+| [DreamDojo](world-models/DreamDojo_2026.md) | 44,711h 人类 Ego 视频预训练、32 维连续潜动作 VAE、相对动作重分块、Self Forcing 蒸馏 10.81 FPS 实时交互、策略评估 $r=0.995$、测试时规划 +17%、ICML 2026 | 2026 |
 | [Kinema4D](world-models/Kinema4D_2026.md) | 4D Pointmap 运动学控制、DiT 联合 RGB+Pointmap 合成、Robo4D-200k、构型无关、零样本真实世界迁移、PSNR 22.50、F-Score 0.4733 | 2026 |
 | [MIND-V](world-models/MINDV_2026.md) | 认知分层 VWM（SRH + BSB + MVG）、CogVideoX-5B 底座、V-JEPA2 物理裁判 PFC 奖励、GRPO 后训练、Staged Visual Future Rollouts、PFC +9.0%、Task Success +76.7% | 2026 |
 
@@ -150,6 +159,7 @@ VLA 模型推理加速，包括 Token 缓存/剪枝、动态计算、量化等�
 | --- | --- | --- |
 | [EgoWAM](world-action-models/EgoWAM_2026.md) | 受控人机 WAM 协同训练（HPT 主干 + 可插拔世界头 + 30 Hz 纯动作推理）、三大世界表征对比（Pixel VAE / RAE DINO / 相机稳像 3D Flow）、解锁 EgoVerse 10:1 野外人类数据、DINO OOD 泛化超 4×（折衣 85%）、3D Flow 域内 90% 且抗失配、CoRL 2026 | 2026.07 |
 | [Fast-WAM](world-action-models/FastWAM_2026.md) | 视频协同训练 vs. 测试时未来想象受控拆解、MoT 架构（Wan2.2-5B + Action DiT）、训练-推理解耦、190 ms 延迟、RoboTwin 91.8%、LIBERO 97.6% | 2026.03 |
+| [HumanScale](world-action-models/HumanScale_2026.md) | Wan 2.2 自回归 MoT WAM、100h–5,000h 人机同规模受控对决、5.6× 轨迹密度与 25.6× 交互词汇、OOD 对数线性缩放（$R^2=0.94$，500h 超 20kh LingBot-VA）、AgiBot OOD 90.0% | 2026.06 |
 | [LDA-1B](world-action-models/LDA_1B_2026.md) | 统一世界模型基础模型（策略+正逆动力学+视觉预测）、通用数据摄入（质量分层监督）、结构化 DINO 潜在预测、MM-DiT、EI-30k、RoboCasa-GR1 55.4% 超 3B GR00T、真机 +21%/48%/23%、RSS 2026 | 2026 |
 | [SpatialVAM](world-action-models/SpatialVAM_2026.md) | 3D Video Action Model、多视图正交投影 RGB + 热力图、Wan2.2-5B + View-Attention LoRA、双扩散损失、Meta-World 89.1%、RoboCasa 42%、真实 Franka 57.1%、单步去噪 85.7% | 2026 |
 | [WAM Survey](world-action-models/WAM_Survey_2026.md) | 首篇 World Action Models 系统综述、定义 WAM 与相邻概念划界、Cascaded/Joint 架构分类、四类数据生态、三维评估协议（视觉保真/物理常识/动作可行性）、七大开放挑战 | 2026 |
@@ -173,5 +183,7 @@ VLA 模型推理加速，包括 Token 缓存/剪枝、动态计算、量化等�
 
 | 论文 | 关键词 | 年份 |
 | --- | --- | --- |
+| [EgoDex](data-synthesis/EgoDex_2025.md) | Apple Vision Pro 采集 829h / 33.8 万条 / 194 项双手灵巧任务、68 关节毫米级 3D 骨骼真值、48 维轨迹预测与逆动力学基准、ICLR 2026 | 2025 |
+| [EgoVerse](data-synthesis/EgoVerse_2026.md) | 全球多源 1,362h / 240 场景 / 2,087 演示者 3D 手姿 Ego 数据集、跨 4 实验室 2,000+ 次真机评测（夹爪/灵巧手/人形）、OOD 相对提升 50%–100%+、域内人类锚定律、RSS 2026 | 2026 |
 | [MimicDreamer](data-synthesis/MimicDreamer_2025.md) | Human-to-Robot、视频扩散、EgoStabilizer 稳视点、IK 动作对齐（软屏蔽 roll）、H2R Aligner（CogVideoX-5b 换手）、π₀ 后训练、EgoDex、六任务平均 +14.7% SR | 2025 |
 | [Wh0](data-synthesis/Wh0_2026.md) | 生成式世界模型作可控人手数据引擎、5 万条 WM-H、Wan-I2V + Qwen-Image-Edit、场景/具身对齐、HaWoR + MANO、VITRA 共训、Unitree G1 灵巧手 8.3%→38.9%、解锁预训练先验 | 2026 |

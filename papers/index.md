@@ -85,15 +85,23 @@
 
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
+| [Being-H0](/papers/06-embodied-ai/vla/foundation/Being_H0_2025) | 基于千小时多源人手库 UniHand 的物理指令微调（PIT）范式，腕-指解耦部位级分组残差量化分词器（1.29 mm 重建精度）+ 弱透视物理空间对齐在 InternVL3 上学习 3D MANO 先验，多指灵巧手真机 74.3%（超 GR00T N1.5 的 63.6%） | 物理指令微调、部位级 GRQ-VAE、3D MANO 先验、空间对齐、ICML 2026 | 2025.07 |
+| [Being-H0.5](/papers/06-embodied-ai/vla/foundation/Being_H0_5_2026) | 构建 3.5 万小时 UniHand-2.0（1.6kh 人类操作 + 30 构型 1.4kh 机器人 + 5kh 空间推理），提出统一状态-动作语义槽、分层路由 Mixture-of-Flow 及 MPG/UAC，单一通用权重跨 5 种异构真机超 $\pi_{0.5}$，LIBERO 98.9%、RoboCasa 53.9% | 人本母本体、统一语义槽、Mixture-of-Flow、流形保持门控、CoRL 2026 Oral | 2026.01 |
 | [ChatVLA](/papers/06-embodied-ai/vla/foundation/ChatVLA_2025) | 系统分析 VLA 的 spurious forgetting 与 task interference，Phased Alignment Training 先控制后理解 + MoE 双专家隔离 MLP，2B 参数 MMMU 37.4（ECoT 的 6 倍）、25 项真实任务超越 OpenVLA | Spurious Forgetting、MoE、Phased Alignment Training、多模态理解+控制统一 | 2025.02 |
+| [CLAP](/papers/06-embodied-ai/vla/foundation/CLAP_2026) | 先以 Act-VAE 建立物理可执行离散动作词表，再以双流解耦 VD-VAE 在 DINOv3 空间经 SigLIP 对比学习将无标签人类视频对齐到物理码本消除视觉纠缠，结合 Qwen3-VL-4B 构建自回归 CLAP-NTP 与知识匹配流匹配策略 CLAP-RF（70.1 ms），Astribot 真机 62.7%、LIBERO 97.2% | 对比潜在动作预训练、Act-VAE / VD-VAE、无标注人类视频、知识匹配、双形态 VLA | 2026.01 |
 | [Dexbotic](/papers/06-embodied-ai/vla/foundation/Dexbotic_2025) | 开源 VLA 工具箱：统一模块化框架（VLM + Action Expert）+ 基于 Qwen2.5 的更强预训练模型 + 实验驱动 Exp 脚本开发，SimplerEnv 最高 +46.2%、CALVIN +0.81 | VLA Toolbox、统一框架、DexboticVLM、实验驱动开发 | 2025.10 |
+| [EgoScale](/papers/06-embodied-ai/vla/foundation/EgoScale_2026) | 在 20,854 小时带腕部相对 $\mathrm{SE}(3)$ 与 22-DoF 关节重定向的第一视角人类视频上预训练流匹配 VLA，揭示人类动作验证损失对数线性缩放律（$R^2=0.9983$），经轻量人机对齐中期训练（50h 人 + 4h 机）在 22-DoF Sharpa 灵巧手上平均 +54 pp、解锁 1-shot 叠衣（88%）并跨构型迁移至 7-DoF 三指手 | 第一视角人类视频、对数线性缩放律、22-DoF 灵巧手、人机中期对齐、CoRL 2026 Oral | 2026.02 |
+| [EgoVLA](/papers/06-embodied-ai/vla/foundation/EgoVLA_2025) | 整合 HOI4D / HOT3D / HoloAssist / TACO 共 500K 样本，基于 NVILA-2B 与“瞬时相机系手腕 9-DoF + MANO 15 维 PCA”统一动作空间及 0.05 mm 误差指尖重定向无缝微调至 Unitree H1 双 Inspire 灵巧手（36-DoF），12 任务基准未见背景短/长时程 +17.83 pp / +17.58 pp | 第一视角人类视频、MANO 统一动作空间、指尖重定向、人形双臂灵巧手、IROS 2026 | 2025.07 |
+| [Emergence-H2R](/papers/06-embodied-ai/vla/foundation/Emergence_H2R_2025) | 提出零显式域对齐的 $\pi_{0.5}+\text{ego}$ 协同微调配方（无夹爪伪标签三视角人类视频与机器人数据 50:50 共训），揭示 H2R 技能迁移随跨场景/任务/构型预训练多样性越过阈值自发涌现（VLM 人机表征自然收敛），使仅在人类视频出现的新任务真机均分近翻倍（34%→59%） | 人到机器人涌现迁移、$\pi_{0.5}$ 协同训练、零显式对齐、跨具身表征收敛、RSS 2026 | 2025.12 |
 | [FAST](/papers/06-embodied-ai/vla/foundation/FAST_2025) | DCT + BPE 频域压缩 tokenization 解决自回归 VLA 高频灵巧任务训练瓶颈，π₀-FAST 匹配扩散 π₀ 性能但训练 5× 加速，FAST+ 通用 tokenizer 覆盖多构型 | DCT、BPE、动作 tokenization、高频控制、通用 tokenizer | 2025.01 |
 | [GR-3](/papers/06-embodied-ai/vla/foundation/GR3_2025) | 4B VLA（Qwen2.5-VL + Action DiT），机器人轨迹 + VL 数据协同训练实现 OOD 指令零样本泛化，VR 人类轨迹 10-shot 适配新物体（57.8%→86.7%），Task Status 辅助监督 + DiT RMSNorm 强化指令跟随，全面超越 π₀ | MoT 架构、VL 协同训练、人类轨迹少样本适配、Task Status、ByteMini 双臂移动 | 2025.07 |
+| [H-RDT](/papers/06-embodied-ai/vla/foundation/H_RDT_2025) | 构建 2B 参数双臂流匹配扩散 Transformer，在完整 EgoDex（829h、338K+ 轨迹）48 维人手超集预训练并通过重初始化轻量编解码器迁移至 5 种异构双臂机器人（5 步 ODE 达 30 Hz），RoboTwin 2.0 与三大真机较从零训分别 +13.9% 与 +40.5%（真机折毛巾 0%→52%） | 双臂灵巧操作、EgoDex 预训练、流匹配 DiT、跨构型迁移、AAAI 2026 | 2025.07 |
 | [MMaDA-VLA](/papers/06-embodied-ai/vla/foundation/MMaDA_VLA_2026) | 基于原生离散扩散大模型 MMaDA-8B，将语言/图像/动作统一到离散 token 空间，并行去噪生成目标观测和动作块 + 混合注意力（模态内双向 + 模态间因果），LIBERO 98.0%、CALVIN 4.78 全面 SOTA | 原生离散扩散、统一多模态 token、并行去噪、混合注意力、目标观测生成 | 2026.03 |
 | [OTTER](/papers/06-embodied-ai/vla/foundation/OTTER_2025) | 冻结预训练 CLIP 编码器，利用 ClearCLIP 的 $X_{\text{attn}}$ 特征 + 余弦相似度 softmax 选择性提取与语言指令对齐的视觉 patch 特征，仅训练温度参数和轻量策略网络（~12M），真实机器人 4 种原语零样本泛化 77%，Octo/OpenVLA 几乎为 0% | 冻结 CLIP、文本感知视觉特征提取、ClearCLIP、零样本泛化 | 2025.03 |
 | [Qwen-RobotManip](/papers/06-embodied-ai/vla/foundation/Qwen_RobotManip_2026) | 提出“先对齐后规模化”范式：80 维掩码统一表征 + 解耦相机系相对位姿与 CaPE + episode 内随机采样上下文适配，配合跨 15 构型 H2R 合成与五阶信号清洗构建纯开源 38,100 小时语料，六大 OOD 基准全面超 $\pi_{0.5}$、RoboChallenge Table30-v1 通才榜第一（45%） | 跨构型对齐、相机系相对位姿、人到机器人合成、In-Context 适配、OOD 评测 | 2026.06 |
 | [SpatialVLA](/papers/06-embodied-ai/vla/foundation/SpatialVLA_2025) | Ego3D 位置编码注入 3D 信息 + 自适应高斯动作网格仅需 3 token 表征 7D 动作，1.1M 数据预训练 3.5B 零样本超越 55B RT-2-X，20 Hz 推理 | 3D 空间感知、自适应动作离散化、跨构型预训练 | 2025.01 |
 | [UniVLA](/papers/06-embodied-ai/vla/foundation/UniVLA_2025) | 语言引导两阶段解耦任务中心潜在动作（DINOv2 特征空间 + VQ-VAE 离散化），跨具身无标注视频预训练通才策略，1/20 算力超越 OpenVLA，LIBERO 95.2%、CALVIN 3.80、R2R 47.1%、真实世界 81.7% | 任务中心潜在动作、跨具身无标注预训练、VQ-VAE、DINOv2 | 2025.05 |
+| [VITRA](/papers/06-embodied-ai/vla/foundation/VITRA_2025) | 融合 MoGe-2 增强 MegaSAM 与 HaWoR 米制世界系追踪、三维腕速极小值零开销原子切分及未来三维掌心轨迹叠加 GPT-4.1 标注，从野外无标注人类视频自动构建百万片段 VITRA-1M，配合注入相机 FoV 的因果扩散动作专家（VITRA-VLA-3B），12-DoF XHand 真机已见 71.0%、OOD 泛化 64.6%（达 $\pi_0$ 的 4×） | 野外日常人类视频、米制三维手-机追踪、腕速原子切分、因果扩散 VLA、ICRA 2026 | 2025.10 |
 | [π₀](/papers/06-embodied-ai/vla/foundation/pi0_2024) | 用 Flow Matching 替代自回归生成动作，构建首个能完成高频灵巧操作的通用 VLA 基础模型 | Flow Matching VLA、Action Expert、跨构型预训练 | 2024.10 |
 | [π₀.₅](/papers/06-embodied-ai/vla/foundation/pi05_2025) | 通过异构多源数据协同训练和分层推理，首次实现端到端 VLA 在全新家庭环境中执行长时域灵巧操作 | 异构协同训练、分层推理、开放世界泛化 | 2025.04 |
 
@@ -200,6 +208,7 @@
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
 | [BridgeV2W](/papers/06-embodied-ai/world-models/BridgeV2W_2025) | 将坐标空间动作通过 URDF + 相机参数渲染为像素对齐 Embodiment Mask，经 ControlNet 注入预训练视频生成模型，辅以光流运动损失，统一解决动作-视频鸿沟、视角敏感性和跨构型架构不统一三大问题 | Embodiment Mask、ControlNet、光流运动损失、跨构型统一 | 2025 |
+| [DreamDojo](/papers/06-embodied-ai/world-models/DreamDojo_2026) | 在跨 6,000+ 技能与 1.13 万场景的 44,711 小时第一视角人类视频上用时空 Transformer VAE 提取 32 维连续潜动作预训练 14B 通用机器人世界模型，结合相对动作重分块与 Self Forcing 自回归蒸馏实现单 H100 上 10.81 FPS 实时交互，真机策略评估 $r=0.995$、测试时模型规划 +17% | 人类视频世界模型、连续潜动作、Self Forcing 蒸馏、10.81 FPS 实时仿真、策略评估与规划、ICML 2026 | 2026.02 |
 | [Kinema4D](/papers/06-embodied-ai/world-models/Kinema4D_2026) | 将仿真解耦为运动学确定性 4D 机器人轨迹（URDF + FK/IK → pointmap）和生成式环境响应（DiT 联合预测 RGB+pointmap），Robo4D-200k 训练，PSNR 22.50、FVD 98.5、F-Score 0.4733，首次零样本真实世界迁移 | 4D Pointmap 控制、运动学-生成解耦、联合 RGB+Pointmap 合成、构型无关、零样本迁移 | 2026.03 |
 | [MIND-V](/papers/06-embodied-ai/world-models/MINDV_2026) | 认知三层世界模型 SRH + BSB + MVG，V-JEPA2 作物理裁判的 PFC 奖励 + GRPO 后训练 + Staged Visual Future Rollouts 推理期搜索，长时程任务 Task Success +76.7%，作为训练场把 OpenVLA-OFT 在 MimicGen 成功率 33.4%→43.5% | 分层 VWM、Behavioral Semantic Bridge、PFC 奖励、V-JEPA2 物理裁判、Staged Rollouts | 2026.03 |
 
@@ -211,6 +220,7 @@
 | --- | --- | --- | --- |
 | [EgoWAM](/papers/06-embodied-ai/world-action-models/EgoWAM_2026) | 基于 HPT 主干的受控人机 WAM 协同训练框架（固定策略主干/流匹配动作头/数据配比，推理期剥离世界头保持 30 Hz 零开销），系统对比 Pixel VAE、DINO (RAE) 与相机稳像 3D Motion Flow 三大世界目标；证明像素重建迁移微弱，而满足外观抽象/跨具身一致性/自运动解耦的目标能解锁野外第一视角人类数据（EgoVerse 10:1）：DINO 将 OOD 泛化提升超 4×（折衣 15%→85%），3D Flow 域内提升 20–30 pp（达 90%）且抗动作/头动失配 | World Action Model、人机协同训练、第一视角人类数据、DINO / RAE、3D Motion Flow、训练时表征塑形、CoRL 2026 | 2026.07 |
 | [Fast-WAM](/papers/06-embodied-ai/world-action-models/FastWAM_2026) | 通过受控变体实验拆解 WAM 的两个因素，证明训练时视频协同目标（而非测试时未来想象）是性能主因；提出跳过测试时视频生成、单次前向传播动作预测，190 ms 延迟、RoboTwin 91.8%、LIBERO 97.6%，无具身预训练 | 视频协同训练、MoT 架构、训练-推理解耦、Flow Matching、测试时加速 | 2026.03 |
+| [HumanScale](/papers/06-embodied-ai/world-action-models/HumanScale_2026) | 基于 Wan 2.2 初始化的自回归 MoT 世界动作模型，在 100h–5,000h 严格同规模与相同后训练协议下正面对决第一视角人类视频（HumanNet 伪动作重定向）与多构型真机遥操作数据，证明人类视频凭高 5.6× 轨迹密度与 25.6× 交互词汇在 25 项 OOD 任务呈对数线性下降（$R^2=0.94$，500h 超 20kh 真机 LingBot-VA），AgiBot 真机域内 92.5%、OOD 90.0% | World Action Model、人机同规模受控对决、数据缩放定律、Wan 2.2 MoT、信息密度与 OOD 泛化 | 2026.06 |
 | [LDA-1B](/papers/06-embodied-ai/world-action-models/LDA_1B_2026) | 1.6B 机器人基础模型，用统一世界模型（策略+正逆动力学+视觉预测）+ 质量分层数据摄入（无动作视频/低质量轨迹各司其职）+ 结构化 DINO 潜在预测，RoboCasa-GR1 55.4% 超 3B 的 GR00T-N1.6，真机接触/灵巧/长时程较 π₀.₅ +21%/48%/23%，低质量数据反涨 10% | 机器人基础模型、统一世界模型 UWM、通用数据摄入、DINO 潜在、MM-DiT、质量分层监督、RSS 2026 | 2026.02 |
 | [SpatialVAM](/papers/06-embodied-ai/world-action-models/SpatialVAM_2026) | 点云三视图正交投影 RGB + 末端位姿三视图热力图，Wan2.2-5B 视频 DiT 联合预测未来 RGB 视频与热力图视频，热力图反投影得到 3D 轨迹；10 demo 在 Meta-World/RoboCasa/真实 Franka 分别 +22%/10%/16%，单步去噪即 85.7% | 3D Video Action Model、多视图热力图、Wan2.2、LoRA、View-Attention、Meta-World 89.1% | 2026.04 |
 | [WAM Survey](/papers/06-embodied-ai/world-action-models/WAM_Survey_2026) | 首篇 World Action Models 系统综述：定义 WAM 为联合建模 $p(o',a\mid o,l)$ 的具身基础模型并与 VLA/WM/VAM/Video Policy/AWM 划界，按 Cascaded / Joint（自回归 vs 扩散、单流 vs 多流、显式 vs 隐式未来）分类，梳理四类数据与三维评估协议，提出七大开放挑战 | 综述、World Action Model、Cascaded/Joint 分类、数据生态、评估协议、开放挑战 | 2026.05 |
@@ -228,6 +238,8 @@
 
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
+| [EgoDex](/papers/06-embodied-ai/data-synthesis/EgoDex_2025) | 基于 Apple Vision Pro 采集 829 小时 / 33.8 万条演示 / 194 项双手灵巧操作任务，提供带置信度的 68 关节（双臂五指 50 关节）毫米级 3D 骨骼追踪真值，并在 48 维双手轨迹预测与视觉目标逆动力学基准上系统评测 14 组大模型策略与数据缩放规律 | 第一视角人类数据集、Apple Vision Pro、3D 手部骨骼追踪、双手五指灵巧操作、ICLR 2026 | 2025.05 |
+| [EgoVerse](/papers/06-embodied-ai/data-synthesis/EgoVerse_2026) | 联合全球多机构构建持续增长的 1,362 小时 / 240 个真实场景 / 2,087 名演示者带 3D 手腕与手指位姿标注的第一视角人类操作数据集，在 4 大实验室（双臂夹爪、五指灵巧手、全身人形）超 2,000 次真机评测中使 OOD 成功率相对提升 50%–100%+，揭示场景多样性主导与域内人类锚定翻倍激活规律 | 全球第一视角人类数据集、跨实验室真机基准、人机协同训练、域内锚定效应、RSS 2026 | 2026.04 |
 | [MimicDreamer](/papers/06-embodied-ai/data-synthesis/MimicDreamer_2025) | 三件套把低成本第一人称人类演示转成机器人可用监督：EgoStabilizer 单应稳视点 + 补洞、IK 动作对齐（只对齐 pitch/yaw 软屏蔽 roll）、H2R Aligner（CogVideoX-5b 多条件视频扩散把人手换机械臂）；仅用合成数据后训练 π₀，六任务平均成功率较纯真机 +14.7%，且随人类数据规模单调提升 | Human-to-Robot、视频扩散、视点稳定、IK 动作对齐、π₀ 后训练、EgoDex | 2025.09 |
 | [Wh0](/papers/06-embodied-ai/data-synthesis/Wh0_2026) | 把生成式视频世界模型当可控人手数据引擎，造 5 万条 WM-H 数据集（Wan-I2V + Qwen-Image-Edit + 场景/具身对齐），经 HaWoR 手部重建转监督，配 400 条真机共训 VITRA；Unitree G1 灵巧手 18 任务零样本 8.3%→38.9%（4.7×），证明 WM-H 是解锁预训练先验而非从零学 | 生成式世界模型、灵巧操作、Egocentric 人手数据、VITRA 后训练、MANO、场景/具身对齐 | 2026.06 |
 

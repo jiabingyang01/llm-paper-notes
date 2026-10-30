@@ -201,10 +201,17 @@ export default defineConfig({
                       text: '基础模型',
                       collapsed: false,
                       items: [
+                        { text: 'Being-H0 (2025)', link: '/papers/06-embodied-ai/vla/foundation/Being_H0_2025' },
+                        { text: 'Being-H0.5 (2026)', link: '/papers/06-embodied-ai/vla/foundation/Being_H0_5_2026' },
                         { text: 'ChatVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/ChatVLA_2025' },
+                        { text: 'CLAP (2026)', link: '/papers/06-embodied-ai/vla/foundation/CLAP_2026' },
                         { text: 'Dexbotic (2025)', link: '/papers/06-embodied-ai/vla/foundation/Dexbotic_2025' },
+                        { text: 'EgoScale (2026)', link: '/papers/06-embodied-ai/vla/foundation/EgoScale_2026' },
+                        { text: 'EgoVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/EgoVLA_2025' },
+                        { text: 'Emergence-H2R (2025)', link: '/papers/06-embodied-ai/vla/foundation/Emergence_H2R_2025' },
                         { text: 'FAST (2025)', link: '/papers/06-embodied-ai/vla/foundation/FAST_2025' },
                         { text: 'GR-3 (2025)', link: '/papers/06-embodied-ai/vla/foundation/GR3_2025' },
+                        { text: 'H-RDT (2025)', link: '/papers/06-embodied-ai/vla/foundation/H_RDT_2025' },
                         { text: 'MMaDA-VLA (2026)', link: '/papers/06-embodied-ai/vla/foundation/MMaDA_VLA_2026' },
                         { text: 'OTTER (2025)', link: '/papers/06-embodied-ai/vla/foundation/OTTER_2025' },
                         { text: 'π₀ (2024)', link: '/papers/06-embodied-ai/vla/foundation/pi0_2024' },
@@ -212,6 +219,7 @@ export default defineConfig({
                         { text: 'Qwen-RobotManip (2026)', link: '/papers/06-embodied-ai/vla/foundation/Qwen_RobotManip_2026' },
                         { text: 'SpatialVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/SpatialVLA_2025' },
                         { text: 'UniVLA (2025)', link: '/papers/06-embodied-ai/vla/foundation/UniVLA_2025' },
+                        { text: 'VITRA (2025)', link: '/papers/06-embodied-ai/vla/foundation/VITRA_2025' },
                       ],
                     },
                     {
@@ -321,6 +329,7 @@ export default defineConfig({
                   collapsed: false,
                   items: [
                     { text: 'BridgeV2W (2025)', link: '/papers/06-embodied-ai/world-models/BridgeV2W_2025' },
+                    { text: 'DreamDojo (2026)', link: '/papers/06-embodied-ai/world-models/DreamDojo_2026' },
                     { text: 'Kinema4D (2026)', link: '/papers/06-embodied-ai/world-models/Kinema4D_2026' },
                     { text: 'MIND-V (2026)', link: '/papers/06-embodied-ai/world-models/MINDV_2026' },
                   ],
@@ -331,6 +340,7 @@ export default defineConfig({
                   items: [
                     { text: 'EgoWAM (2026)', link: '/papers/06-embodied-ai/world-action-models/EgoWAM_2026' },
                     { text: 'Fast-WAM (2026)', link: '/papers/06-embodied-ai/world-action-models/FastWAM_2026' },
+                    { text: 'HumanScale (2026)', link: '/papers/06-embodied-ai/world-action-models/HumanScale_2026' },
                     { text: 'LDA-1B (2026)', link: '/papers/06-embodied-ai/world-action-models/LDA_1B_2026' },
                     { text: 'SpatialVAM (2026)', link: '/papers/06-embodied-ai/world-action-models/SpatialVAM_2026' },
                     { text: 'WAM Survey (2026)', link: '/papers/06-embodied-ai/world-action-models/WAM_Survey_2026' },
@@ -348,6 +358,8 @@ export default defineConfig({
                   text: 'Data Synthesis',
                   collapsed: false,
                   items: [
+                    { text: 'EgoDex (2025)', link: '/papers/06-embodied-ai/data-synthesis/EgoDex_2025' },
+                    { text: 'EgoVerse (2026)', link: '/papers/06-embodied-ai/data-synthesis/EgoVerse_2026' },
                     { text: 'MimicDreamer (2025)', link: '/papers/06-embodied-ai/data-synthesis/MimicDreamer_2025' },
                     { text: 'Wh0 (2026)', link: '/papers/06-embodied-ai/data-synthesis/Wh0_2026' },
                   ],
