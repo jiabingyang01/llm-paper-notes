@@ -54,9 +54,15 @@
 
 .vp-doc h2 {
   font-size: 1.4rem;
-  margin-top: 2.5rem;
+  margin-top: 2.2rem;
+  padding-top: 0;
   padding-bottom: 0.5rem;
+  border-top: none;
   border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc h2 .header-anchor {
+  top: 0;
 }
 
 .vp-doc h3 {

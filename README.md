@@ -7,8 +7,6 @@
 
 👉 **在线阅读**：[llm-paper-notes.jiabingyang.cn](https://llm-paper-notes.jiabingyang.cn/)
 
----
-
 ## 🗺️ 分类体系
 
 | | 分类 | 覆盖方向 |
@@ -25,8 +23,6 @@
 | 🎮 | Reinforcement Learning | RL 基础方法、连续控制、生成式策略、策略优化 |
 
 > 一篇论文可以出现在多个分类的索引中，但笔记 `.md` 只存一份，放在最核心的分类下。
-
----
 
 ## 📚 已收录论文
 
@@ -353,8 +349,6 @@
 
 </details>
 
----
-
 ## 🚀 本地部署
 
 ### 环境要求
@@ -415,8 +409,6 @@ npm run docs:preview
 
 如需手动部署到vercel，将 `.vitepress/dist` 目录部署为静态站点即可。
 
----
-
 ## 📝 如何添加新笔记
 
 ```bash
@@ -434,8 +426,6 @@ git push
 **命名规范**：`论文简称_年份.md`，如 `RISE_2026.md`、`DPO_2023.md`
 
 详细模板见 → [templates/paper_template.md](templates/paper_template.md)
-
----
 
 ## 📄 License
 

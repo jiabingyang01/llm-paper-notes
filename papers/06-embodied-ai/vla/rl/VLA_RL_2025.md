@@ -8,13 +8,9 @@
 >
 > 🔗 [arXiv](https://arxiv.org/abs/2505.18719) | [PDF](https://arxiv.org/pdf/2505.18719) | [代码](https://github.com/GuanxingLu/vlarl)
 
----
-
 ## 一句话总结
 
 VLA-RL 将机器人操作轨迹建模为**多模态多轮对话**，用 PPO 在线强化学习微调自回归 VLA（OpenVLA-7B），配合自动生成伪奖励标签训练的 **Robotic Process Reward Model** 解决稀疏奖励问题，在 LIBERO 基准 40 个任务上超越最强 SFT 基线 4.5%，并展现出机器人领域推理时扩展定律（inference scaling law）的早期信号。
-
----
 
 ## 一、问题与动机
 
@@ -50,8 +46,6 @@ VLA-RL 的关键洞察是：**自回归 VLA 本质上就是一个 LLM**（只不
 | Process Reward Model（评价推理过程） | Robotic PRM（评价操作过程） |
 | 推理时扩展（更多 token → 更好推理） | 测试时优化（更多训练 → 更好操作） |
 
----
-
 ## 二、预备知识
 
 ### 2.1 OpenVLA 回顾
@@ -74,8 +68,6 @@ $$\mathcal{L}_{\text{PPO}}(\theta) = \mathbb{E}_t\left[\min\left(\frac{\pi_\thet
 ### 2.3 Process Reward Model
 
 Process Reward Model（PRM）是 LLM 推理领域的重要工具：不是只在最终结果给奖励（Outcome RM），而是在**推理过程的每一步**给出奖励信号。这解决了稀疏奖励导致的信用分配问题——模型能知道哪一步做对了、哪一步做错了。
-
----
 
 ## 三、核心方法
 
@@ -189,8 +181,6 @@ $$P(task_j) \propto \exp\left((0.5 - s_j) / \tau\right)$$
 2. 用 PPO 目标函数更新策略网络（LoRA 参数）
 3. 同时更新值网络
 
----
-
 ## 四、实验结果
 
 ### 4.1 实验设置
@@ -255,8 +245,6 @@ $$P(task_j) \propto \exp\left((0.5 - s_j) / \tau\right)$$
 
 **案例分析**：在 "拿起碗并放到盘子上" 的任务中，SFT 策略在抓取时偏移了目标点导致失败，而 VLA-RL 策略能精确抓取。RL 训练特别有助于解决**接触丰富任务**中的对齐问题和过早关合夹爪的问题。
 
----
-
 ## 五、核心原理类比
 
 ### 类比：学开车
@@ -277,8 +265,6 @@ $$P(task_j) \propto \exp\left((0.5 - s_j) / \tau\right)$$
 
 不是一开始就把你扔到最复杂的路况里，而是先在你"刚好能应付"的难度上练习，等熟练了再升级。
 
----
-
 ## 六、局限性与未来方向
 
 ### 6.1 伪奖励标签的启发式局限
@@ -296,8 +282,6 @@ $$P(task_j) \propto \exp\left((0.5 - s_j) / \tau\right)$$
 ### 6.4 RL 训练的工程脆弱性
 
 消融实验表明，学习率高一个数量级就直接崩溃。大模型 RL 的稳定训练仍然高度依赖精心调参。
-
----
 
 ## 七、个人思考
 
@@ -320,8 +304,6 @@ VLA-RL 训练中 episode 长度逐渐缩短（模型学会更高效的操作路�
 ### 7.5 Critic Warmup 的启示
 
 消融实验中 Critic Warmup 影响最大（去掉直接降 10 个百分点），这验证了一个直觉：对大模型做 RL 时，**值函数的初始化质量决定了训练能否起步**。未来工作可能需要更好的值函数初始化方案，比如从 SFT 模型直接蒸馏值估计。
-
----
 
 ## 参考
 

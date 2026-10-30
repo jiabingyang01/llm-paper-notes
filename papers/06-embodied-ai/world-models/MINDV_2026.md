@@ -10,13 +10,9 @@
 >
 > 🔗 [arXiv](https://arxiv.org/abs/2512.06628)
 
----
-
 ## 一句话总结
 
 把人脑"皮层 → 小脑"的分层运动控制迁移到视频世界模型:**SRH**(Gemini-2.5-Pro + Affordance-R1)做任务规划、**BSB**(掩码 + 三段式轨迹 + 相位转移点)做域无关中间表征、**MVG**(CogVideoX-5B + 时空引导张量注入)做像素级渲染;再用 **GRPO + PFC 奖励**(V-JEPA2 作"物理裁判"在隐空间比对预测与真值)做物理对齐,辅以推理期 **Staged Visual Future Rollouts**(Propose-Verify-Refine)抑制长时程误差累积。最终长时程任务上 PFC +9.0%、Task Success Rate +76.7%、User Preference +172.2%,并作为训练场把 OpenVLA-OFT 在 MimicGen 上成功率从 33.4% 提到 43.5%。
-
----
 
 ## 一、问题与动机
 
@@ -44,8 +40,6 @@ VLA 训练所需的"多样 + 长时程 + 高质量"机器人操作数据极度�
 - 小脑/运动系统:精细肌肉控制(相当于 MVG)
 
 MIND-V 把这种"认知 → 执行"管线搬到视频世界模型中。
-
----
 
 ## 二、核心方法
 
@@ -121,8 +115,6 @@ $$R(x_0) = w_p \cdot R_\text{physics}(x_0) + w_a \cdot R_\text{aesthetic}(x_0), 
 
 这两项分别负责**物理对齐**和**视觉美观**,下文展开。
 
----
-
 ## 三、Physical Foresight Coherence (PFC) 奖励
 
 这是本文最核心的原创设计:用另一个预训练世界模型(**V-JEPA2**)当"物理裁判"。
@@ -162,8 +154,6 @@ PPO-style clipped 目标 + KL 正则向 SFT 初始化 $\pi_\text{ref}$ 靠拢:
 $$\mathcal{J}_\text{GRPO}(\theta) = \mathbb{E}\left[\frac{1}{G}\sum_{i=1}^G\left(\min(r_i\hat{A}^i, \text{clip}(r_i, 1-\epsilon, 1+\epsilon)\hat{A}^i) - \beta D_\text{KL}(\pi_\theta \| \pi_\text{ref})\right)\right] \tag{7}$$
 
 其中 $r_i = \pi_\theta(x_0^i)/\pi_\text{ref}(x_0^i)$。1,500 次迭代,lr $5\times 10^{-5}$,KL 防止 reward hacking。
-
----
 
 ## 四、实验
 
@@ -243,8 +233,6 @@ $$\mathcal{L} = \lambda_\text{pix}\|\hat{o} - o\|_1 + \lambda_\text{perc} d_\tex
 
 $K=3$ 是性价比拐点,$K=5$ 只比 $K=3$ 好 1.2pp 但显存几乎翻倍。
 
----
-
 ## 五、局限性与未来方向
 
 1. **依赖商业 API**:SRH 默认用 Gemini-2.5-Pro(开源替代 Qwen3-VL 有掉点),不利于完全离线部署
@@ -252,8 +240,6 @@ $K=3$ 是性价比拐点,$K=5$ 只比 $K=3$ 好 1.2pp 但显存几乎翻倍。
 3. **下游 VLA 实验规模小**:只在 MimicGen 3 个任务 ×128 demo 验证,真机未做
 4. **合成视频直接做 VLA 监督**:L1 + LPIPS 对生成视频的视觉细节高度敏感,如果生成帧有局部瑕疵(比如贴图错位),会误导策略学习。本文未讨论这个风险
 5. **训练 cost 较高**:CogVideoX-5B + 30K SFT + 1.5K GRPO iterations + 4×H200,对学术组不友好
-
----
 
 ## 六、个人思考
 
@@ -301,8 +287,6 @@ BSB 的关键价值不是"多准确",而是**解耦任务逻辑和视觉外观**
 - MIND-V 路线:WM 一次性产出 target video → 只需 WM 产物质量高
 
 两者并不矛盾:**MIND-V 产出的高质量 demo 完全可以作为 WMPO 路线的 bootstrapping 数据**。
-
----
 
 ## 参考
 

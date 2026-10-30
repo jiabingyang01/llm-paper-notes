@@ -12,13 +12,9 @@
 >
 > **分类标签**：`LVLM` `Hallucination` `Decoding Strategy` `Training-Free` `Attention` `Contrastive Decoding`
 
----
-
 ## 一句话总结
 
 发现 LVLM 中存在**盲 token (blind tokens)**——少数图像 token 垄断注意力权重却不携带物体判别信息，提出 AVISC 在解码阶段通过层选择、盲 token 识别和对比解码三步动态校准注意力分布，training-free 即插即用，POPE 上 InstructBLIP 平均 Accuracy 提升 6%+、AMBER 得分达 85.95。
-
----
 
 ## 一、问题与动机
 
@@ -45,8 +41,6 @@
 
 **关键差距**：VCD 通过向图像添加扩散噪声构造"坏"分布，M3ID 对比有图/无图分布——两者都不直接针对注意力偏差的根因。AVISC 直接从注意力模式出发，精准识别并抑制盲 token 的影响。
 
----
-
 ## 二、预备知识
 
 ### 2.1 LVLM 框架
@@ -64,8 +58,6 @@ $$\ell_t = \log p(\xi_t \mid \mathcal{V}, \mathcal{Q}, \xi_{<t}; \theta)$$
 $$\xi_t \sim \text{Softmax}\left((1+\alpha)\ell_t^{\text{orig}} - \alpha \ell_t^{\text{bad}}\right)$$
 
 AVISC 的创新在于：不使用外部构造的"坏"输入，而是**从模型自身的注意力模式中提取盲 token 构造有针对性的对比基准**。
-
----
 
 ## 三、核心方法
 
@@ -132,8 +124,6 @@ $\alpha$ 控制对比强度：InstructBLIP 使用 $\alpha = 3$，LLaVA-1.5 使�
 $$\mathcal{H}(\xi_{<t}) = \{\xi_t \in \mathcal{V}_{\text{vocab}} : p(\xi_t \mid \mathcal{V}, \mathcal{Q}, \xi_{<t}; \theta) \geq \beta \cdot \max_w p(w \mid \mathcal{V}, \mathcal{Q}, \xi_{<t}; \theta)\}$$
 
 实验中 $\beta = 0.1$，仅保留概率不低于最大概率 10% 的 token 参与采样。
-
----
 
 ## 四、实验结果
 
@@ -208,16 +198,12 @@ Zeros 在两个模型上综合表现最稳定。Ones 效果最差——将非盲
 - $\alpha$（对比强度）：InstructBLIP 在 $\alpha = 3$、LLaVA 在 $\alpha = 2.5$ 达到最优 Total Score；$\alpha$ 越大整体越好，但 Count 类别可能下降
 - $\lambda$（盲 token 阈值）：$\lambda$ 从 0 增加到 1 时性能持续提升（$\lambda = 0$ 即将所有 token 视为盲 token，Total Score 仅 430 vs $\lambda = 1$ 的 478），说明精准定位少数极端盲 token 比泛化抑制更有效
 
----
-
 ## 五、局限性与未来方向
 
 1. **Count 任务性能下降**：AVISC 在 MME Count 和 AMBER Numbers 上表现不佳。论文推测在计数场景中盲 token 可能承载了重要的空间布局信息，简单抑制它们会损害计数能力。
 2. **需要双次前向传播**：每步解码需分别对原始和偏置输入计算 logits，推理延迟约为 2×。
 3. **仅验证 7B 模型**：实验仅在 InstructBLIP 和 LLaVA-1.5（均为 Vicuna 7B 骨干）上验证，未测试更大规模模型或更新架构。
 4. **静态阈值**：$\lambda$ 在所有 token 生成步中保持固定，未考虑不同解码阶段可能需要不同程度的校准。
-
----
 
 ## 六、个人思考
 
@@ -238,8 +224,6 @@ Zeros 在两个模型上综合表现最稳定。Ones 效果最差——将非盲
 ### 6.3 方法简洁性
 
 AVISC 的三步流程（层选择 → 盲 token 识别 → 对比解码）设计简洁，且三个超参数（$\gamma$、$\lambda$、$\alpha$）的语义清晰、可解释。特别是 $\lambda$ 的消融实验表明 $\lambda = 0$（将所有 token 视为盲 token）效果极差，验证了"精准打击"优于"全面抑制"的直觉。
-
----
 
 ## 参考
 

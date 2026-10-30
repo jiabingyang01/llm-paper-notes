@@ -12,13 +12,9 @@
 >
 > **分类标签**：`MLLM` `Hallucination` `Causal Mask` `Attention Register` `Positional Encoding` `Training-Free` `Plug-and-Play` `Image+Video`
 
----
-
 ## 一句话总结
 
 提出 FarSight，通过在因果掩码的上三角区域引入**注意力寄存器**吸收分散到 outlier token 的多余注意力，并设计**渐减遮蔽率**编码绝对位置信息缓解 RoPE 长程衰减导致的视觉信息丢失，仅优化因果掩码即可 training-free 即插即用缓解图像和视频 MLLM 的初始幻觉与雪球幻觉，LLaVA-1.5 CHAIR$_S$ 降低 6.4 pp、POPE-R 提升 3.5 pp。
-
----
 
 ## 一、问题与动机
 
@@ -59,8 +55,6 @@
 
 **FarSight 的核心优势**：仅修改因果掩码，**同时解决注意力坍塌和位置衰减两个问题**，不需要额外前向传播、外部模型或 Beam Search，计算开销几乎为零。
 
----
-
 ## 二、预备知识
 
 ### 2.1 MLLM 生成范式
@@ -94,8 +88,6 @@ RoPE 通过旋转矩阵编码相对位置：
 $$\tilde{\omega}_{ij} = \frac{q_i \cdot R_{j-i} \cdot k_j^\top}{\sqrt{d_l}}$$
 
 $R_{j-i}$ 的长程衰减导致 $\tilde{\omega}_{ij}$ 随相对距离 $|j - i|$ 增大而减小——视觉 token 与后续生成的文本 token 距离越远，信息传递越弱。
-
----
 
 ## 三、核心方法
 
@@ -158,8 +150,6 @@ $$\sum_{j \leq i} \text{SoftMax}_{j=1}^n(\omega_{i,j}) < \sum_{j \leq i+1} \text
 - 序列长度 $\text{seq} = 256$
 - 衰减率 $\sigma = \log_\alpha(\text{seq})$，其中 $\alpha = 1024$（典型最大 token 限制）
 - 支持 Greedy、Sampling 和 Beam Search 三种解码策略
-
----
 
 ## 四、实验结果
 
@@ -225,16 +215,12 @@ FarSight 大幅超越仅修改位置编码的方法（FixVPE/EDVT），因为它
 
 GPT-4o 辅助评估 600 张 MSCOCO 图像的生成文本质量（Fig. 8）：FarSight 在 PPL、Grammar、Fluency、Naturalness 四个维度上与 Greedy 解码持平或更优，**缓解幻觉的同时不损害文本质量**。
 
----
-
 ## 五、局限性与未来方向
 
 1. **超参数依赖**：$\sigma$ 和 $\text{seq}$ 需要针对不同模型和任务调优，尽管论文给出了基于最大 token 限制的简洁公式。
 2. **模型规模验证**：实验主要在 7B 级别 MLLM 上进行，未验证更大规模模型（30B+）是否有相同的注意力坍塌和位置衰减问题。
 3. **与 Flash Attention 的兼容性**：FarSight 修改了因果掩码的上三角区域，可能需要适配 Flash Attention 等高效注意力实现。
 4. **Prefill 阶段的影响**：论文主要讨论了生成阶段的注意力优化，Prefill 阶段的 token 交互是否也存在类似问题值得探索。
-
----
 
 ## 六、个人思考
 
@@ -272,8 +258,6 @@ FarSight 明确区分了初始幻觉和雪球幻觉，并展示了其方法对�
 - **雪球幻觉**：位置感知编码维持视觉 token 的长程可达性，让模型在生成后段仍能"回头看"图像 → 阻断错误累积链
 
 这种双管齐下的思路为理解和缓解不同类型的幻觉提供了清晰的框架。
-
----
 
 ## 参考
 

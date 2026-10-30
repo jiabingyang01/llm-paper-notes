@@ -12,21 +12,15 @@
 >
 > 🔗 [arXiv](https://arxiv.org/abs/2605.12090) | [PDF](https://arxiv.org/pdf/2605.12090) | [项目主页 Awesome-WAM](https://openmoss.ai/Awesome-WAM/) | [代码/Repo](https://github.com/OpenMOSS/Awesome-WAM)
 
----
-
 ## 一句话总结
 
 这是第一篇系统梳理 **World Action Models（WAMs，世界动作模型）** 的综述：把 WAM 定义为"联合预测未来状态与动作、目标是联合分布 $p(o', a \mid o, l)$ 而非仅动作 $p(a \mid o, l)$"的具身基础模型，将其与 VLA、世界模型、Video Action Model、Video Policy、Action World Model 逐一厘清边界；再按结构把现有方法组织成 **Cascaded（级联）** 与 **Joint（联合）** 两大范式（Joint 再细分自回归 / 扩散、单流 / 多流、显式 / 隐式未来预测），系统分析驱动 WAM 的四类数据（机器人遥操作、便携人类演示、仿真、互联网 egocentric 视频）与三维评估协议（视觉保真、物理常识、动作可行性），最后提出七大开放挑战。
-
----
 
 ## 一、问题与动机：为什么需要 WAM
 
 标准 **VLA** 模型（RT-2、OpenVLA、π₀）把动作生成建模成"观测 → 动作"的条件 token 预测，在大规模视觉语言预训练之上取得了强语义泛化。但它们学的是**反应式映射** $p(a \mid o, l)$，**不显式建模世界在干预下如何演化**——缺乏对未来状态的预测性物理推理，泛化因此受限，尤其在需要预判后果的接触密集 / 长时程任务上。
 
 给策略装上世界模型能力就成了自然方向：用环境动力学的预测模型给智能体"物理前瞻"。这条路快速积累出一大批方法（视频规划、潜在动力学条件化、统一状态-动作生成），但文献碎片化、术语混乱、缺乏统一概念框架。本综述要做的就是：**给这个新范式一个正式定义、一张设计空间地图、一份进场指南**。
-
----
 
 ## 二、定义与形式化：WAM 到底是什么
 
@@ -57,8 +51,6 @@ $$\mathcal{L}_{\text{WAM}} = \mathbb{E}\big[-\log p(o', a \mid o, l)\big]$$
 | **Video Policy** | 部分重叠但不等同 | Video Policy 由"结构血统"定义（用视频生成骨架如 DiT 抽时空表征）；WAM 骨架无关，要求**主动的预测性承诺**——合成下一状态 $o'$ 必须是模型推理与输出的显式组成，而非骨架里的隐式特征 |
 | **Action World Model（AWM）** | 功能相似，层级不同 | AWM 里名词是"世界模型"（被增强的模拟器）；WAM 把系统重定位为一级的 Agent 范畴，"世界"（预测物理）与"动作"（运动控制）co-equal，是 VLA 血统的直接概念继承者 |
 
----
-
 ## 三、背景：从模型基 RL 到基础模型
 
 综述追溯了世界建模与动作生成两条线的交织演化：
@@ -71,8 +63,6 @@ $$\mathcal{L}_{\text{WAM}} = \mathbb{E}\big[-\log p(o', a \mid o, l)\big]$$
   - **评估**：当数据驱动模拟器做策略回滚测试（Ctrl-World、Veo Robotics、Interactive World Simulator、WorldEval、WorldGym）。
 
 关键转折：世界模型从"策略外部的工具（模拟器 / 奖励 / 基准）"内化为"策略内部的预测核心"，才诞生了能实时推理世界动力学的 WAM。
-
----
 
 ## 四、架构分类：两大范式（综述的核心骨架）
 
@@ -116,8 +106,6 @@ $$\mathcal{L}_{\text{WAM}} = \mathbb{E}\big[-\log p(o', a \mid o, l)\big]$$
 
 本仓库已有笔记的坐标：[WorldVLA](WorldVLA_2025.md) = 自回归统一离散；[Fast-WAM](FastWAM_2026.md) = 多流隐状态耦合；[LDA-1B](LDA_1B_2026.md) 与 [DUST](../vla/reasoning/DUST_2026.md) = 多流交叉注意力耦合；[FLARE](../vla/reasoning/FLARE_2025.md) = 单流隐式未来预测。
 
----
-
 ## 五、训练数据：四类范式的权衡
 
 WAM 独特优势在**统一数据摄入**——既用高质量 $(o_t, a_t, o_{t+1})$ 三元组紧耦合内部表征，又能靠联合训练策略吃海量无配对数据（如无动作视频）。综述用"迁移难度（Y 轴）× 扩展难度（X 轴）"给数据版图定位（Fig 7）：
@@ -130,8 +118,6 @@ WAM 独特优势在**统一数据摄入**——既用高质量 $(o_t, a_t, o_{t+
 | **人类 / Egocentric** | 近乎无界规模、被动世界动力学先验；但迁移难度大 | Ego4D（3670h）、HowTo100M（1.36 亿 clip）、Kinetics-700、DreamDojo-HV（43,827h）、EgoDex（829h）、Ego-Exo4D、EgoScale、EgoVerse |
 
 数据构建的核心不再是"堆机器人数据"，而是**战略性混合**——把严格耦合的少量演示与无约束的海量观测混起来，弥合"精确低层控制 ↔ 广域开放世界泛化"的鸿沟。最新趋势是把分散数据集聚合成单一学习引擎的通才预训练混合物（Ego-Centric Human Manipulation、UniHand、EgoDex、Humanoid Everyday、PH²D）。
-
----
 
 ## 六、评估：解耦的三维协议
 
@@ -153,8 +139,6 @@ WAM 独特优势在**统一数据摄入**——既用高质量 $(o_t, a_t, o_{t+
 - **接触 / 形变操作**：SoftGym、PlasticineLab、DaXBench；TacSL、ManiFeel（触觉）。
 - **真机基准**：RoboArena、RoboChallenge、Maniparena（1 万+ 真机轨迹，目前最大真机操作基准）。
 
----
-
 ## 七、开放挑战与机会（七条）
 
 1. **架构耦合无系统对比**：级联 / 联合扩散 / 离散 tokenization / 隐式对齐百花齐放，但没有在同等规模-数据-协议下的受控研究。**显式像素预测是否物理接地所必需？** 一条有前景的方向是 latent-predictive（JEPA 式）——预测抽象未来状态而非重建高维像素，绕开像素预测瓶颈。
@@ -165,8 +149,6 @@ WAM 独特优势在**统一数据摄入**——既用高质量 $(o_t, a_t, o_{t+
 6. **评估方法论**：世界建模按像素指标测（允许物体悬浮/流体违反重力却拿高分）、动作只按任务成功测，二者脱节，恰恰漏掉 WAM 的核心前提。缺失的是**量化"想象未来 ↔ 生成动作"因果一致性的联合指标**——如 Counterfactual Consistency（动作是否随想象未来的扰动而适配）、Foresight-Conditioned Success。
 7. **安全与可靠物理部署**：预测能力越强，错误的物理想象越可能诱发难以中断/恢复的长动作序列后果。但预测性也带来机会——**prediction-integrated safety**：把对想象未来的不确定性估计当作安全监控的一级输入，在执行前用物理约束核验预测。
 
----
-
 ## 八、个人思考
 
 - **这篇综述最大的贡献是"立范式 + 划边界"**：WAM 之前，UniPi、GR-1、UWM、DreamVLA、FLARE、WorldVLA 各说各话，"video policy / world model / action world model / video action model"术语混用。综述用 $p(o', a \mid o, l)$ 这一个联合分布把它们收编，并用"是否有主动预测承诺、世界与动作是否 co-equal"两条判据把 WAM 从 Video Policy / AWM 里切出来——这套判据本身就很有 load-bearing 的价值。
@@ -174,8 +156,6 @@ WAM 独特优势在**统一数据摄入**——既用高质量 $(o_t, a_t, o_{t+
 - **对本仓库的直接用处**：它是一张"把 [LDA-1B](LDA_1B_2026.md)、[DUST](../vla/reasoning/DUST_2026.md)、[Fast-WAM](FastWAM_2026.md)、[WorldVLA](WorldVLA_2025.md)、[FLARE](../vla/reasoning/FLARE_2025.md)、[DreamVLA](../vla/reasoning/DreamVLA_2025.md)、[SpatialVAM](SpatialVAM_2026.md) 摆到同一坐标系"的地图。之后读到任何一篇 WAM/世界模型新作，都可以先问：级联还是联合？自回归还是扩散？未来预测是显式像素还是隐式潜在？世界与动作在哪一层耦合（共享注意力 / 隐状态 / 共享编码器）？
 - **三个我认为最尖锐的开放问题**：(1) 开放挑战 #1 与 #6 其实是同一枚硬币——"显式像素预测是否必需"没法回答，正因为缺"联合评估因果一致性"的指标；Fast-WAM 已经用"推理时丢掉视频分支不掉点"给出反例，暗示训练期梯度可能才是世界建模的主要红利。(2) #2 的多模态物理状态是真正的护城河问题：只要世界建模停留在 RGB，接触密集操作的天花板就摆在那。(3) #5 的延迟税决定 WAM 能不能真正上高频闭环控制——生成式前瞻与实时性之间的张力，可能才是 WAM 从"论文 SOTA"走向"真机默认范式"的最后一公里。
 - **一个小遗憾**：综述自己承认现状是解耦评估，因此它给出的所有方法对比表（Table 1/2/3）基本是"结构 + 骨架 + I/O 模态 + 评测环境"的定性归类，**没有跨方法的统一成功率横评**——这不是综述的锅（本就没有公共联合基准），但也说明"WAM 到底谁更强"目前无法从文献直接回答，正呼应它自己提的开放挑战 #6。
-
----
 
 ## 参考
 

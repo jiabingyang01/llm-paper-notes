@@ -10,13 +10,9 @@
 >
 > **链接**：[arXiv](https://arxiv.org/abs/2603.02083) | [项目主页](https://wangst0181.github.io/pi-StepNFT/)
 
----
-
 ## 一句话总结
 
 提出 π-StepNFT，一个**无 Critic、无似然**的在线 RL 框架：通过 SDE 采样拓宽探索空间，将监督目标从终端 $x_0$ 下移到逐步转移 $x_t \to x_{t^-}$，并用 logistic 对比排序损失替代 weighted-MSE 消除隐式惩罚，在 LIBERO few-shot 上比 SFT 提升 32.9%，ManiSkill OOD 场景比 PPO 高 11.1%。
-
----
 
 ## 一、问题与动机
 
@@ -51,8 +47,6 @@
 **右栏（π-StepNFT）**：保留 SDE 的宽探索空间，但将监督目标**下移到每一步转移** $x_t \to x_{t^-}$，提供精确的局部梯度。同时用方差归一化消除不同时间步的尺度差异。
 
 **用大白话说**：如果你在一个大迷宫里探索（SDE 扩大了探索范围），光告诉你终点在哪里（终端监督）是不够的——你需要在每个岔路口都有路标（逐步监督）才不会迷路。迷宫越大，路标就需要越密集。
-
----
 
 ## 二、预备知识
 
@@ -95,8 +89,6 @@ $$\mu_{\theta,t}(x_t, c) = U_t(x_t, t) + B_t(t) \cdot v_\theta(x_t, t, c) \tag{3
 $$\nabla_\theta J(\theta) = \mathbb{E}_\tau\left[\sum_i \nabla_\theta \log \pi_\theta(a_i|s_i) \cdot \Psi_i\right]$$
 
 但 flow policy 的 $\log \pi_\theta(a_i|s_i)$ 需要沿生成轨迹积分变量变换公式中的 Jacobian 迹，计算代价高且数值不稳定。这就是 **likelihood gap**——标准 RL 算法无法直接用于 flow-based VLA。
-
----
 
 ## 三、核心方法
 
@@ -215,8 +207,6 @@ $$\ell^{\text{wMSE}}_t(\theta) = \text{const} - 2y\langle\Sigma_t^{-1} e_t, d_t\
 - 信任域正则 $\lambda_{\text{TR}}\|\Delta v_\theta\|^2$ 防止偏离 rollout 策略太远
 - EMA 衰减率从 0.1 动态增长到 0.995，平衡早期加速与后期稳定
 
----
-
 ## 四、实验结果
 
 ### 4.1 实验设置
@@ -305,16 +295,12 @@ $$\ell^{\text{wMSE}}_t(\theta) = \text{const} - 2y\langle\Sigma_t^{-1} e_t, d_t\
 - **信任域 $\beta$**：$[1.0, 2.0]$ 最优。太大违反局部线性假设，太小梯度不稳
 - **EMA 衰减 $\alpha$**：动态策略（0.1 → 0.995）最优。常数或过高/过低衰减都不好
 
----
-
 ## 五、局限性与未来方向
 
 1. **长时域任务的信用分配**：π-StepNFT 使用 episode 级别的二元奖励，在 Long-horizon 任务上不如 PPO 的 Critic 提供的时间信用分配。论文指出可以无缝替换为离线学习的逐步成功概率预测器
 2. **探索效率**：SDE 注入均匀噪声，未考虑任务结构，可能在高维动作空间中探索效率较低
 3. **真实世界验证**：实验全部在仿真中完成，真实机器人上的效果有待验证
 4. **与 Critic 方法的结合**：论文定位为 Critic-free 方案，但在 IND 场景下 PPO 仍有优势，两者的互补可能是有价值的方向
-
----
 
 ## 六、个人思考
 
@@ -343,8 +329,6 @@ $$\ell^{\text{wMSE}}_t(\theta) = \text{const} - 2y\langle\Sigma_t^{-1} e_t, d_t\
 - 二元奖励在长时域任务上的信用分配不如 Critic
 - IND 性能被 PPO 压制
 - 需要仔细调节 $\sigma$、$\beta$、$\alpha$ 三个超参数
-
----
 
 ## 参考
 

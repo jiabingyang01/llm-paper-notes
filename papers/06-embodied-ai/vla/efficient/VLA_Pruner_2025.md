@@ -10,13 +10,9 @@
 >
 > **论文链接**：[arXiv](https://arxiv.org/abs/2511.16449)
 
----
-
 ## 一句话总结
 
 现有 VLM Token 剪枝方法仅依赖语义级注意力（prefill attention）选择 token，忽视了 VLA 模型内在的"高层语义理解 + 低层动作执行"**双系统特性**，导致丢失对动作生成至关重要的视觉信息。VLA-Pruner 提出**双层重要性准则**（语义级 prefill 注意力 + 动作级 decode 注意力，后者通过时序平滑估计）和**双层 token 选择策略**（最大相关性池化 + 最小冗余过滤），在 50% 剪枝率下甚至**提升**模型性能，87.5% 剪枝率下仍保持 88.9% 相对准确率，全面超越所有 training-free 基线。
-
----
 
 ## 一、问题与动机
 
@@ -44,8 +40,6 @@ VLA-Pruner 通过注意力分析揭示了一个关键发现：
 ### 1.4 VLA-Cache 的局限
 
 VLA-Cache 虽然利用了时序连续性做跨帧缓存，但其 token 选择仍依赖 text-to-vision 注意力，属于**粗粒度的语义级选择**，在高压缩比下效果有限。且缓存机制本身比直接剪枝效率更低。
-
----
 
 ## 二、预备知识
 
@@ -78,8 +72,6 @@ $\mathcal{S}_{\text{vl}}$ 量化语义理解的重要性，$\mathcal{S}_{\text{a
 $$\min_f \mathcal{L}(\mathcal{P}, \tilde{\mathcal{P}}), \quad \text{s.t.} \; |\tilde{\mathbf{E}}_v| = \tilde{M}$$
 
 其中 $\mathcal{P} = P(A \mid \mathbf{E}_\tau, \mathbf{E}_v)$，$\tilde{\mathcal{P}} = P(A \mid \mathbf{E}_\tau, f(\mathbf{E}_v))$。将 $\mathcal{P}$ 分解为 prefill $\mathcal{P}_{\text{vl}}$ 和 decode $\mathcal{P}_{\text{act}}$ 两部分，仅优化单一层级目标（$\mathcal{L}(\mathcal{P}_{\text{vl}}, \tilde{\mathcal{P}}_{\text{vl}})$ 或 $\mathcal{L}(\mathcal{P}_{\text{act}}, \tilde{\mathcal{P}}_{\text{act}})$）会导致次优剪枝。
-
----
 
 ## 三、核心方法
 
@@ -165,8 +157,6 @@ $$r_{\text{FLOPs}} = \frac{(K-1)C(\mu) + (T-K+1)C(\tilde{\mu})}{T \cdot C(\mu)}$
 
 额外开销：时序平滑 $O(wM)$/步，贪心 MMDP $O((\rho M)^2)$/prefill，均远小于 Transformer 主体计算。
 
----
-
 ## 四、实验结果
 
 ### 4.1 实验设置
@@ -242,8 +232,6 @@ VLA-Pruner 在 OpenVLA-OFT（512 visual tokens）上表现一致：50% 保留率
 
 **剪枝层消融**：$K=3$ 最优（74.53%），$K=2$ 过早剪枝信息不足（58.48%），$K=4, 5$ 略差且 FLOPs 更高。
 
----
-
 ## 五、局限性与未来方向
 
 ### 5.1 动态场景下的局限
@@ -255,8 +243,6 @@ VLA-Pruner 在 OpenVLA-OFT（512 visual tokens）上表现一致：50% 保留率
 - **自适应预测模块**：根据视觉动态幅度或 action attention 方差自适应调整有效窗口
 - **轻量时序注意力网络**：学习从历史直接预测每个 token 的重要性
 - **与其他加速方法正交组合**：VLA-Pruner 的 token 剪枝可与层剪枝、扩散步缓存等方法叠加
-
----
 
 ## 六、个人思考
 
@@ -283,8 +269,6 @@ VLA-Pruner 在 50% 剪枝率下性能超过原模型（102.45%），与 [VLA-Cac
 ### 6.4 与 EfficientVLA 的互补性
 
 [EfficientVLA](/papers/06-embodied-ai/vla/efficient/EfficientVLA_2025) 是多维度协同加速（层剪枝 + token 选择 + 扩散步缓存），但其 token 选择仍基于语义注意力。VLA-Pruner 可以直接替换 EfficientVLA 的 token 选择模块，在不改变其他加速策略的前提下获得更好的 token 剪枝效果。论文中也展示了在 25% 保留率下 VLA-Pruner 仅靠 token 剪枝就超越了 EfficientVLA 完整框架（50% token + 层剪枝）的性能，且 FLOPs 更低。
-
----
 
 ## 参考
 

@@ -12,13 +12,9 @@
 >
 > **发表会议**：NeurIPS 2025
 
----
-
 ## 一句话总结
 
 针对 Diffusion-based VLA 的三大冗余源（语言模块深度冗余、视觉 token 冗余、扩散动作头时序冗余），提出结构化 training-free 加速框架 EfficientVLA，协同执行 LLM 层剪枝 + 任务感知视觉 token 选择 + 扩散步缓存，在 CogACT 上实现 **1.93× 加速、FLOPs 降至 28.9%**，成功率仅降 0.6%。
-
----
 
 ## 一、问题与动机
 
@@ -55,8 +51,6 @@ EfficientVLA 通过系统分析识别了三类冗余：
 
 > 核心洞察：**优化单一模块只是把瓶颈转移到别处，必须协同优化三个模块才能实现真正的加速。**
 
----
-
 ## 二、预备知识
 
 ### 2.1 Diffusion-based VLA 架构
@@ -74,8 +68,6 @@ EfficientVLA 通过系统分析识别了三类冗余：
 $$\boldsymbol{x}^{(\ell+1)} = \boldsymbol{x}^{(\ell)} + f(\boldsymbol{x}^{(\ell)}, \theta^{(\ell)})$$
 
 当 $f(\boldsymbol{x}^{(\ell)}, \theta^{(\ell)}) \approx \boldsymbol{0}$ 时，该层对表征的变换贡献极小，可以被安全移除。
-
----
 
 ## 三、核心方法
 
@@ -171,8 +163,6 @@ $$\boldsymbol{h}^{\text{attn}}_t \leftarrow \mathcal{C}_{\text{attn}}, \quad \bo
 | 视觉 Token 选择 | Token 冗余 | 任务相关性 + 多样性双重驱动 | 256→56 token（↓78%） |
 | 扩散步缓存 | 时序冗余 | 静态 N 步 Attn/MLP 缓存复用 | 去噪步 10→2 等效（↓80%） |
 
----
-
 ## 四、实验结果
 
 ### 4.1 实验设置
@@ -247,15 +237,11 @@ $$\boldsymbol{h}^{\text{attn}}_t \leftarrow \mathcal{C}_{\text{attn}}, \quad \bo
 - 模型压缩（Layer+MLP）贡献 1.43× 加速
 - **三者协同才能达到 1.93×**，且成功率还提升了 2pp
 
----
-
 ## 五、局限性与未来方向
 
 1. **Training-free 的天花板**：固定的缓存间隔 $N$ 无法自适应调整，未来可探索 adaptive caching
 2. **模型覆盖有限**：目前仅在 CogACT 上验证，尚未扩展到 π₀ 等 Flow Matching 架构
 3. **剪枝策略的泛化性**：基于余弦相似度的层重要性评分在不同 LLM 骨架上的表现有待验证
-
----
 
 ## 六、个人思考
 
@@ -287,8 +273,6 @@ EfficientVLA 最重要的分析贡献是明确揭示了 VLA 推理中 computatio
 ### 6.4 与 VLA-Cache 的互补性
 
 VLA-Cache 利用的是**帧间时间冗余**（连续帧之间静态区域的 KV 可复用），而 EfficientVLA 利用的是**帧内冗余**（单帧内的 token 选择 + LLM 深度压缩）以及**扩散步间冗余**。两者在不同维度工作，理论上可以叠加——先用 EfficientVLA 压缩模型和选择 token，再用 VLA-Cache 在帧间复用剩余 token 的 KV，有望实现更大幅度的加速。
-
----
 
 ## 参考
 

@@ -10,13 +10,9 @@
 >
 > **分类标签**：`VLA Toolbox` `统一框架` `预训练基础模型` `实验驱动开发`
 
----
-
 ## 一句话总结
 
 Dexbotic 是一个基于 PyTorch 的开源 VLA 工具箱，通过统一模块化架构（VLM + Action Expert）、更强的预训练基础模型（DexboticVLM → Dexbotic-Base → Dexbotic-CogACT）和以实验为中心的 Exp 脚本开发范式，让用户在**单一环境**中复现、对比和开发多种主流 VLA 策略（$\pi_0$、CogACT、OpenVLA-OFT、MemoryVLA 等），并在 SimplerEnv、CALVIN、LIBERO、ManiSkill2、RoboTwin2.0 等基准上实现大幅性能提升（最高 +46.2%）。
-
----
 
 ## 一、问题与动机
 
@@ -31,8 +27,6 @@ Dexbotic 是一个基于 PyTorch 的开源 VLA 工具箱，通过统一模块化
 ### 1.2 类比 AI 1.0 时代的工具箱发展
 
 回顾目标检测领域，mmdetection 将检测器统一拆解为 backbone、neck、head，极大推动了算法对比和迭代。Dexbotic 试图在 VLA 领域做同样的事——将所有 VLA 策略统一拆解为 **VLM + Action Expert** 两部分，提供统一的模块化开发框架。
-
----
 
 ## 二、核心方法
 
@@ -153,8 +147,6 @@ Dexbotic 提出 DOS-Twins（Dexbotic Open Source-Twins），基于 Isaac Sim + 3
 
 用户可在真实世界训练策略，然后在 DOS-Twins 中进行一致的评估。
 
----
-
 ## 三、实验结果
 
 ### 3.1 SimplerEnv-Bridge（WidowX）
@@ -228,8 +220,6 @@ DB-OFT 在 ManiSkill2 上从 21% 提升到 63%，绝对提升 42%——原始 OF
 
 精细操作任务（碎纸、倒薯条）仍然是现有 VLA 策略的挑战。
 
----
-
 ## 四、局限性与未来方向
 
 1. **预训练数据组成不透明**：论文未分析不同数据源对最终性能的贡献，哪些数据在帮忙、哪些可能在拖后腿，尚不清楚
@@ -237,8 +227,6 @@ DB-OFT 在 ManiSkill2 上从 21% 提升到 63%，绝对提升 42%——原始 OF
 3. **缺乏系统性消融**：对 DexboticVLM 的各设计选择（Qwen2.5 vs 其他 LLM、CLIP vs SigLIP、训练数据量）缺少详细消融
 4. **精细操作瓶颈**：真实世界实验中，碎纸（40%）和倒薯条（20%）等精细任务成功率仍低，说明更强的预训练模型不能完全解决精细操作问题
 5. **DOS-Twins 评估规模有限**：Real2Sim 评估仅展示了少数任务的定性对比，缺少系统性的 sim-real gap 量化分析
-
----
 
 ## 五、个人思考
 
@@ -259,8 +247,6 @@ Dexbotic 本质上是 VLA 领域的"mmdetection"——它的核心贡献不是�
 ### 5.4 Dexdata 格式的权衡
 
 Dexdata 用 mp4 视频 + jsonl 元数据的方式存储，相比 LeRobot 的逐帧存储确实节省空间。但 mp4 压缩是有损的，对于需要精确像素信息的任务（如精细操作），压缩损失是否会影响训练质量？论文未讨论这一点。
-
----
 
 ## 参考
 

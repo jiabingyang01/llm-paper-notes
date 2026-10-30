@@ -2,8 +2,6 @@
 
 [LLM Paper Notes](https://llm-paper-notes.jiabingyang.cn/) 是一个开源的论文精读笔记站，聚焦大语言模型及相关领域。每篇笔记包含问题动机、前置知识、方法拆解、公式推导、实验分析和个人思考。
 
----
-
 ## 分类导航
 
 | | 分类 | 覆盖方向 |
@@ -18,8 +16,6 @@
 | 🔍 | [RAG & Knowledge](/papers/08-rag-and-knowledge/) | Dense Retrieval、RAPTOR、GraphRAG |
 | 📊 | [Evaluation](/papers/09-evaluation-and-benchmarks/) | MMLU、HumanEval、Arena、LLM-as-Judge |
 | 🎮 | [Reinforcement Learning](/papers/10-reinforcement-learning/) | RL 基础方法、连续控制、生成式策略、策略优化 |
-
----
 
 ## 全部论文
 

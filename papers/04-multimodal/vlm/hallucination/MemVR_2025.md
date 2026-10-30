@@ -12,13 +12,9 @@
 >
 > **分类标签**：`视觉幻觉` `FFN Key-Value Memory` `视觉回溯` `不确定性触发` `Training-Free` `Plug-and-Play`
 
----
-
 ## 一句话总结
 
 受"看过的图片记忆模糊时会再看一遍"这一认知直觉启发，MemVR 在 MLLM 推理时**将视觉 token 作为补充证据通过 FFN 的 key-value memory 机制重新注入**中间触发层，当模型不确定性超过阈值时动态触发"look-twice"，无需训练即插即用，在 POPE 上提升 +7.0%、CHAIR$_I$ 改善 15.6%，同时推理延迟仅为贪心解码的 1.04×。
-
----
 
 ## 一、问题与动机
 
@@ -61,8 +57,6 @@
 - 简单 token（如功能词"image""with"）从中间层开始不确定性就很低
 - 结论：不确定性可以作为触发视觉回溯的信号
 
----
-
 ## 二、预备知识
 
 ### 2.1 FFN 即 Key-Value Memory
@@ -90,8 +84,6 @@ $$\text{FFN}(\boldsymbol{x}) = \sum_i \phi(\langle \boldsymbol{x}, \boldsymbol{k
 $$u^{(l)} = \frac{\sum -p_i^{(l)} \log p_i^{(l)}}{\log N}$$
 
 其中 $\{p_i\}_{i=1}^N$ 是词表上的概率分布，$N$ 为词表大小。$u \in [0, 1]$，越高表示越不确定。
-
----
 
 ## 三、核心方法
 
@@ -143,8 +135,6 @@ $$\alpha = 2(u - \gamma)$$
 
 当不确定性刚超过阈值时 $\alpha$ 接近 0，不确定性越高注入越多。实验表明 MemVR† 与固定 $\alpha$ 的 MemVR 性能接近。
 
----
-
 ## 四、理论分析
 
 论文从信息论角度提供了三个定理，解释 MemVR 为什么有效。
@@ -168,8 +158,6 @@ $$H(\boldsymbol{y} \mid \hat{\boldsymbol{x}}) \leq H(\boldsymbol{y} \mid \boldsy
 ### 定理 3：Information Bottleneck 优化
 
 在 IB 框架下，MemVR 优化了目标函数 $\mathcal{L}(\hat{\boldsymbol{x}}) \leq \mathcal{L}(\boldsymbol{x})$，其中 $\mathcal{L}(\boldsymbol{x}) = I(\boldsymbol{x}; \boldsymbol{c}) - \beta I(\boldsymbol{x}; \boldsymbol{y})$。当 $\beta$ 足够大时（即更重视预测准确性），MemVR 通过增强 $I(\hat{\boldsymbol{x}}; \boldsymbol{y})$ 来降低 IB 损失。
-
----
 
 ## 五、实验结果
 
@@ -255,15 +243,11 @@ MemVR 在 Qwen-VL-Chat 和 GLM-4V-9B 上同样有效：
 
 相比之下，VCD 和 ICD 在 Qwen-VL 和 GLM-4V 上通常导致严重的性能下降（LLaVA-Bench 降幅 5-15 分）。
 
----
-
 ## 六、局限性与未来方向
 
 1. **超参数调优**：注入比例 $\alpha$ 和阈值 $\gamma$ 的最优值依赖于具体模型和任务，虽然 MemVR† 通过绑定 $\alpha$ 与不确定性缓解了这一问题，但仍需进一步简化
 2. **多模态扩展**：虽然论文聚焦于视觉模态，但 MemVR 的框架理论上可以扩展到 listen-twice（音频）、scan-twice（空间感知）、check-twice（fMRI）等
 3. **失败案例**：当原始视觉特征已经足够推理时，重新注入的 token 可能反而干扰推理（Type 1 failure）；当图像过于复杂或模型本身知识不足时，VR 也无法修复（Type 2 failure）
-
----
 
 ## 七、个人思考
 
@@ -291,8 +275,6 @@ MemVR 使用层级不确定性来决定是否触发干预，这种**按需干预
 ### 7.4 与对比解码方法的根本区别
 
 MemVR 操作的是 hidden states（前向传播中间），而 CD 方法操作的是 logits（前向传播末端）。这意味着 MemVR 的修正信息可以被后续所有层**进一步加工和整合**，而 CD 方法的修正是"一锤子买卖"。从信息论角度看，在中间层注入信息允许后续层通过非线性变换将视觉信息与文本信息**深度融合**，而非简单地在概率分布上做加减。
-
----
 
 ## 参考
 

@@ -12,13 +12,9 @@
 >
 > **发表会议**：EMNLP 2025
 
----
-
 ## 一句话总结
 
 ChatVLA 首次系统分析了 VLA 训练中的 spurious forgetting 和 task interference 问题，提出 Phased Alignment Training（先学控制再恢复理解）+ MoE 双专家架构（共享 attention 隔离 MLP），在仅 2B 参数下同时实现接近基座 VLM 的多模态理解能力和优于 OpenVLA 的 25 项真实机器人控制任务表现。
-
----
 
 ## 二、问题与动机
 
@@ -47,8 +43,6 @@ ChatVLA 首次系统分析了 VLA 训练中的 spurious forgetting 和 task inte
 2. **再恢复理解能力**——预训练 VLM 的对齐仅需少量 visual-text 数据即可"重激活"
 3. **隔离任务表征**——用独立参数处理两类任务，但保留共享层促进知识迁移
 
----
-
 ## 三、预备知识
 
 ### 3.1 VLA 形式化定义
@@ -62,8 +56,6 @@ ChatVLA 首次系统分析了 VLA 训练中的 spurious forgetting 和 task inte
 ### 3.2 Dual Coding Theory
 
 Paivio (1991) 提出人脑通过两个独立但互联的系统处理信息——一个负责物理运动技能，另一个负责语言和视觉。ChatVLA 的架构设计直接受此启发：共享 attention 层对应"互联"，独立 MLP 专家对应"独立系统"。
-
----
 
 ## 四、核心方法
 
@@ -124,8 +116,6 @@ $$\text{MoE}(x^{l'}) = \begin{cases} f(\text{FFN}_{v\text{-}t})(x^{l'}) & m = 0 
 - 学习率：2e-5
 - 数据比例：visual-text : robot = 1:3（Stage 2）
 - Visual-text 数据来源：LLaVA-1.5 数据集（54K）
-
----
 
 ## 五、实验结果
 
@@ -190,8 +180,6 @@ Task 5-8（移积木到篮子→放玩具进抽屉）的平均成功长度 0.94�
 
 与 Qwen2-VL 相比，ChatVLA 在 Art Theory、Lab Medicine、Pharmacy、Literature、Psychology 五个子领域差距最大。原因：LLaVA 数据集（COCO、GQA、OCR-VQA、TextVQA、VisualGenome）缺乏这些领域的专业知识。这说明性能差距主要来自数据覆盖而非方法缺陷。
 
----
-
 ## 六、局限性与未来方向
 
 1. **专业领域理解受限于 co-training 数据**：LLaVA 数据缺乏医学、文学等专业领域知识。作者指出更合适的专业数据有望进一步缩小与基座 VLM 的差距
@@ -203,8 +191,6 @@ Task 5-8（移积木到篮子→放玩具进抽屉）的平均成功长度 0.94�
 4. **MoE 增加了参数量**：虽然推理时只激活一条路径，但训练时需要维护两套 MLP 参数
 
 5. **单一动作表征**：沿用 DiffusionVLA 的动作头设计，未探索不同动作表征（离散 token、flow matching 等）对统一框架的影响
-
----
 
 ## 七、个人思考
 
@@ -236,8 +222,6 @@ ChatVLA 是目前唯一认真对待"理解 + 控制统一"的 VLA 模型。其�
 ### 7.5 1:3 数据比例的启示
 
 消融实验中最反直觉的发现：visual-text 数据越少（1:3），理解性能反而越好。可能的解释：(1) 过多的 visual-text 数据在 Stage 2 引入更强的 task interference，MoE 难以完全隔离；(2) 少量高质量数据恰好"唤醒"对齐而不破坏控制表征。这为后续工作指明了方向——**精选少量高质量 visual-text 数据可能比大规模混合训练更有效**。
-
----
 
 ## 参考
 

@@ -12,13 +12,9 @@
 >
 > **分类标签**：`视觉 Token 压缩` `Dominant Token Selection` `Token Merging` `Text-Agnostic` `Training-Free`
 
----
-
 ## 一句话总结
 
 提出 VisionZip——一种 text-agnostic 的视觉 token 压缩方法：在视觉编码器内部利用 CLS token（CLIP）或平均注意力（SigLIP）选出聚合了大量信息的 **dominant token**，再将剩余 token 基于 key 相似度合并为 **contextual token**，从而在 LLM 输入前大幅削减视觉 token 数量。在 LLaVA-1.5 上仅保留 64/576 token（↓88.9%）即达 94% 原始性能（大幅超越 FastV 18.4%、SparseVLM 8.2%），LLaVA-NeXT 上实现 **8× prefilling 加速**，甚至使 13B 模型推理速度超过 7B 同时性能更优。
-
----
 
 ## 一、问题与动机
 
@@ -49,8 +45,6 @@ $$\frac{\partial \text{softmax}(z_i)}{\partial z_i} = \text{softmax}(z_i) \cdot 
 现有方法（FastV、SparseVLM）在 LLM forward 过程中基于文本-视觉 token 间的注意力来选择 token。但这种 text-relevant 策略存在 **特征错位**（feature misalignment）问题：
 
 视觉编码器已经将信息 "预聚合" 到少数 dominant token 中，这些 token 往往**位于图像的边缘或背景区域**而非主体上。当 text-relevant 方法选择语义上与文本相关的 token（如图中的 "人" 或 "车"）时，实际选到的是**信息含量较低**的 token，因为真正的信息已被聚合到背景区域的 dominant token 中。
-
----
 
 ## 二、核心方法
 
@@ -100,8 +94,6 @@ $$\text{attn\_rec}_j = \frac{1}{H \cdot S} \sum_h \sum_i S_{h,i,j}$$
 - 8 × A800 上仅需 **30 分钟**（也可在 3090 上完成）
 
 消融实验表明，使用更匹配的数据集（如 LLaVA-NeXT 数据微调 LLaVA-NeXT 模型）增益不超过 0.5%，说明性能提升来自于**适应 token 数量变化**而非额外知识注入。
-
----
 
 ## 三、实验结果
 
@@ -175,8 +167,6 @@ VisionZip 在 prefilling 上实现 **7.8× 加速**——因为它在 token 进�
 
 Text-relevant 方法（如 SparseVLM）在第一轮对话中基于当前问题选择视觉 token 并存入 KV Cache，但这些 token 与后续问题可能无关，导致多轮对话性能急剧下降。VisionZip 以 text-agnostic 方式选择信息量最大的 token，在多轮对话中天然具有优势。
 
----
-
 ## 四、局限性与未来方向
 
 ### 4.1 依赖特定层的注意力模式
@@ -190,8 +180,6 @@ VisionZip 的 dominant token 选择依赖于视觉编码器倒数第二层的注
 ### 4.3 视觉编码器冗余的根本问题
 
 论文最后指出一个更深层的方向：与其在下游压缩冗余 token，不如从源头设计**低冗余的视觉编码器**。当前 CLIP/SigLIP 的注意力汇聚现象本身就是编码效率低的体现——大量参数和计算被浪费在生成 "无信息" 的 token 上。
-
----
 
 ## 五、个人思考
 
@@ -234,8 +222,6 @@ Token Pruning Survey（同一作者 Zichen Wen）指出的 5 个核心问题中�
 - **位置偏差**：VisionZip 用 CLS 注意力而非层间注意力，减轻了位置偏差问题
 - **FLOPs ≠ 延迟**：VisionZip 在 LLM 之前完成压缩，避免了 text-relevant 方法 "FLOPs 低但实际不快" 的问题
 - **训练感知压缩**：VisionZip 的 efficient tuning 模式本质上就是一种轻量的训练感知压缩
-
----
 
 ## 参考
 

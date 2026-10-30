@@ -12,13 +12,9 @@
 >
 > **分类标签**：`反思微调` `正负 Rationale` `细粒度推理监督` `数据集` `指令微调`
 
----
-
 ## 一句话总结
 
 在视觉指令微调中引入**正向 rationale（解释正确答案的理由）和负向 rationale（解释错误答案的错误原因）**的反思学习，构建首个包含 115k 指令 × 254k (指令, 回答, rationale) 三元组的 REVERIE 数据集，以多轮对话格式将 rationale 学习与回答预测解耦，POPE 提升 12.7 点，MME 提升 321 点。
-
----
 
 ## 一、问题与动机
 
@@ -50,8 +46,6 @@
 1. **没有负面回答标注**：无法提供区分正确与错误回答的判别性监督
 2. **正向 rationale 有限**：LLaVA/InstructBLIP 仅在开放式推理任务中有部分 rationale，且仅覆盖正确回答
 3. **没有负向 rationale**：缺乏解释错误原因的监督信号
-
----
 
 ## 二、REVERIE 数据集
 
@@ -98,8 +92,6 @@
 
 Rationale 质量：50%+ 的 rationale 超过 25 词，包含 8+ 名词，表明 rationale 提供了大量信息和知识。
 
----
-
 ## 三、反思式指令微调
 
 ### 3.1 整体架构
@@ -136,8 +128,6 @@ Rationale 质量：50%+ 的 rationale 超过 25 词，包含 8+ 名词，表明 
 | REVERIE-1.5-7b-lora | LLaVA-1.5-7b-lora | REVERIE + 原始 665k 指令 |
 
 训练设置：LoRA（attention dim=128, alpha=256），batch size 128，1 epoch，3% warmup + cosine decay。
-
----
 
 ## 四、实验结果
 
@@ -234,16 +224,12 @@ Rationale 质量：50%+ 的 rationale 超过 25 词，包含 8+ 名词，表明 
 
 在 MoE 架构和更强 LLM（Phi-3）上也一致提升。
 
----
-
 ## 五、局限性与未来方向
 
 1. **数据依赖 Gemini**：REVERIE 的 rationale 由 Gemini-Vision-Pro 生成，质量受限于生成模型本身的能力。一致性过滤虽能部分缓解噪声，但无法完全消除
 2. **基座模型受限**：实验仅在 LLaVA 系列 7B 模型上验证，对更大或更新的模型（如 InternVL、Qwen-VL-2）的效果未知
 3. **推理时不使用 rationale**：rationale 仅在训练时使用，推理时只取第一轮回答。能否在推理时也利用 rationale（如 Chain-of-Thought）可能带来更大收益
 4. **负面回答质量**：每条指令仅 1.2 个负面回答，且依赖 Gemini 生成"易混淆"回答的质量
-
----
 
 ## 六、个人思考
 
@@ -280,8 +266,6 @@ rationale 的作用类似于**知识蒸馏中的 soft label**：不仅告诉模�
 ### 6.4 分离上下文的信息论解释
 
 将正负 rationale 分离为独立样本（而非同一对话中的连续轮次）效果最好。这可以从信息论角度理解：在同一上下文中，模型可能直接"抄"前一个 rationale 的信息来生成当前 rationale，导致**因果推理被信息泄露替代**。分离后，每个 rationale 必须从图像和指令中独立推导，真正实现了推理能力的训练。
-
----
 
 ## 参考
 

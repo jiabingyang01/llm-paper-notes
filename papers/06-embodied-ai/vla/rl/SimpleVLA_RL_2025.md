@@ -10,13 +10,9 @@
 >
 > **链接**：[arXiv](https://arxiv.org/abs/2509.09674) | [代码](https://github.com/PRIME-RL/SimpleVLA-RL)
 
----
-
 ## 一句话总结
 
 SimpleVLA-RL 基于 veRL 框架构建面向 VLA 的端到端在线 RL 训练系统，通过**二元结果奖励 + GRPO + 三种探索增强策略**（Dynamic Sampling、Clip Higher、高温 Rollout），在 LIBERO 上将 OpenVLA-OFT 从 91% 提升到 **99.1%** 成功率，仅用 1 条演示的 RL 就超越全量 SFT（96.9% vs 91.0%），在 RoboTwin 2.0 上相对提升 80%（38.3% → 68.8%），并发现 RL 涌现出演示数据中不存在的新行为模式"pushcut"。
-
----
 
 ## 一、问题与动机
 
@@ -47,8 +43,6 @@ SimpleVLA-RL 基于 veRL 框架构建面向 VLA 的端到端在线 RL 训练系�
 | 探索效率 | 文本采样自然多样 | 高维动作空间 + 稀疏奖励，探索困难 |
 | 基础设施 | 成熟的 LLM-RL 框架 | 缺乏 VLA 特定的推理+渲染并行基础设施 |
 
----
-
 ## 二、预备知识
 
 ### 2.1 VLA 的 RL 建模
@@ -66,8 +60,6 @@ Group Relative Policy Optimization (GRPO) 通过组内归一化计算优势，**
 $$\hat{A}_i = \frac{R_i - \text{mean}(\{R_i\}_{i=1}^G)}{\text{std}(\{R_i\}_{i=1}^G)}$$
 
 其中 $G$ 是组内轨迹数。优势直接由同一初始状态下多条轨迹的奖励对比得出。
-
----
 
 ## 三、核心方法
 
@@ -120,8 +112,6 @@ $$0 < |\{\text{traj}_i(a_i, s_i) \mid \text{is\_successful}[\text{traj}_i(a_i, s
 $$\mathcal{J}(\theta) = \mathbb{E}_{s_0 \sim \mathcal{D}, \{a_t\}_{i=1}^G \sim \pi_{\theta_{old}}(\cdot|s_t)} \left[ \frac{1}{G} \sum_{i=1}^G \frac{1}{|a_i|} \sum_{t=1}^{|a_i|} \min\left(r_{i,t}(\theta)\hat{A}_i, \; \text{clip}(r_{i,t}(\theta), 1-\epsilon_L, 1+\epsilon_H)\hat{A}_i\right) \right]$$
 
 其中 $r_{i,t}(\theta) = \frac{\pi_\theta(a_{i,t}|s_{i,t})}{\pi_{\theta_{old}}(a_{i,t}|s_{i,t})}$，$\epsilon_L = 0.2$，$\epsilon_H = 0.28$。
-
----
 
 ## 四、实验结果
 
@@ -192,8 +182,6 @@ RL 训练使 VLA 保持已有能力的同时学习可迁移的技能。
 
 全程仅用仿真数据训练，无真实世界演示。RL 训练在 sim-to-real 迁移中持续有效。
 
----
-
 ## 五、关键发现
 
 ### 5.1 "Pushcut"现象：RL 涌现新策略
@@ -213,16 +201,12 @@ RL 训练使 VLA 保持已有能力的同时学习可迁移的技能。
 
 **模型先验是 RL 有效性的决定性因素**。存在一个"能力阈值"——低于此阈值，稀疏结果奖励下的探索无法产生有意义的改进。
 
----
-
 ## 六、局限性与未来方向
 
 1. **仅适用于 token-based VLA**：当前框架依赖离散 action token 的概率分布进行策略梯度计算，不适用于 diffusion/flow matching 架构的 VLA（如 π₀）
 2. **稀疏结果奖励的局限**：对初始能力太弱的模型无效，无法为 0% 成功率的模型提供学习信号
 3. **仿真依赖**：在线 RL 需要大量环境交互，目前仅在仿真器中高效可行，直接在真实世界做大规模在线 RL 仍然困难
 4. **超参数敏感**：学习率高一个数量级直接崩溃，需精心调参
-
----
 
 ## 七、个人思考
 
@@ -246,8 +230,6 @@ SimpleVLA-RL 与本项目中已有的 [VLA-RL](/papers/06-embodied-ai/vla/rl/VLA
 ### 7.4 1 条演示 + RL 的意义
 
 每个任务仅 1 条演示就能通过 RL 达到 96.9%，这几乎消除了对大规模人类演示的依赖。结合 [RLinf-USER](/papers/06-embodied-ai/vla/rl/RLinf_USER_2026) 和 [TwinRL](/papers/06-embodied-ai/vla/rl/TwinRL_2026) 等真实世界 RL 系统，可以设想一种新范式：**极少量演示引导 + 大规模仿真 RL + sim-to-real 迁移**。
-
----
 
 ## 参考
 

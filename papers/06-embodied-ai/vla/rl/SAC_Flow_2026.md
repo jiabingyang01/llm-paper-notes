@@ -8,8 +8,6 @@
 >
 > 🔗 [arXiv](https://arxiv.org/abs/2509.25756) | [PDF](https://arxiv.org/pdf/2509.25756) | [代码](https://github.com/Elessar123/SAC-FLOW)
 
----
-
 ## 一、论文要解决什么问题？
 
 ### 1.1 Flow-based 策略的兴起
@@ -52,8 +50,6 @@ $$A_{t_{i+1}} = A_{t_i} + f_\theta(t_i, A_{t_i}, s)$$
 
 既然问题等价于 RNN 的梯度不稳定，那解决方案也很明确——借鉴 **GRU 和 Transformer** 等现代序列模型的稳定梯度设计，**重参数化速度网络**。
 
----
-
 ## 二、预备知识
 
 ### 2.1 强化学习基本设定
@@ -93,8 +89,6 @@ $$\hat{\theta} = \arg\min_\theta \mathbb{E}_{A_0, A_1, t} \left[\|A_1 - A_0 - v_
 $$A_{t_{i+1}} = A_{t_i} + \Delta t_i \cdot v_\theta(t_i, A_{t_i}, s), \quad 0 = t_0 < \cdots < t_K = 1$$
 
 最终 $a = A_1 \sim \pi_\theta(\cdot|s)$ 就是策略输出的动作。
-
----
 
 ## 三、方法论详解：从 Flow Rollout 到序列模型
 
@@ -176,8 +170,6 @@ $$A_{t_{i+1}} = A_{t_i} + \Delta t_i \cdot W_o(\text{LN}(\Phi_{A_i}^{(L)}))$$
 
 这三种参数化都是 $v_\theta$ 的**即插即用替换**，不改变 Flow rollout 框架和外围算法。
 
----
-
 ## 四、训练 Flow 策略的 SAC 算法
 
 梯度稳定性解决后，下一个关键问题是：SAC 的熵正则化需要计算 $\log \pi_\theta(a|s)$，但 $K$ 步确定性 rollout 的密度是**不可解析的**。
@@ -228,8 +220,6 @@ $$L_{\text{actor}}^o(\theta) = \alpha \log p_c(\mathcal{A}^\theta | s_h) - Q_\ps
 
 训练流程：先用 Flow Matching 目标在离线数据上预训练，然后切换到带近邻正则的在线 SAC 训练。$\beta$ 在离线阶段设大值以保持保守，在线阶段逐步减小以释放探索。
 
----
-
 ## 五、实验设置
 
 ### 5.1 评估环境
@@ -269,8 +259,6 @@ $$L_{\text{actor}}^o(\theta) = \alpha \log p_c(\mathcal{A}^\theta | s_h) - Q_\ps
 - 优化器：Adam（$b_1 = 0.5$ for Flow）
 - Batch size：512（from-scratch）/ 256（offline-to-online）
 - 所有实验跑 5 个随机种子，报告 95% 置信区间
-
----
 
 ## 六、实验结果
 
@@ -329,8 +317,6 @@ SAC Flow-T 和 SAC Flow-G 在 6 个 MuJoCo 任务中的 5 个上达到了**最�
 
 更多采样步数意味着更深的反向传播，对梯度稳定性要求更高。结果表明 Flow-T 和 Flow-G **对步数不敏感**，尤其 Flow-T 在 $K=10$ 时仍保持优异性能。
 
----
-
 ## 七、用类比总结 SAC Flow 的核心原理
 
 想象你在学画画，需要从一团随机笔触（噪声）一步步精炼出一幅好画（动作）。
@@ -342,8 +328,6 @@ SAC Flow-T 和 SAC Flow-G 在 6 个 MuJoCo 任务中的 5 个上达到了**最�
 **SAC Flow-T**（Transformer Decoder）：每步精炼时，画家都重新审视参考照片（状态 $s$，通过 cross-attention），然后基于当前画面做有针对性的调整。Transformer 的 pre-norm 残差结构天然保证了信息传递的稳定性。
 
 **噪声增强 rollout 的意义**：SAC 要求画家报告"画出这幅画的概率有多大"。确定性的 4 步精炼无法计算概率。噪声增强就像让画家每步轻微抖手——抖动使得每步都变成了高斯分布，概率就可以算了，而且最终画面的分布与不抖手时完全一致。
-
----
 
 ## 八、与 RISE 的关系与区别
 
@@ -360,8 +344,6 @@ SAC Flow 和 RISE 都是用 RL 训练机器人策略，但思路截然不同：
 | **应用场景** | 真实机器人 | 仿真连续控制 + 仿真机器人操作 |
 
 两者可以互补：SAC Flow 提供了稳定训练 Flow 策略的 RL 算法，RISE 提供了在想象空间中做 RL 的框架。未来可能的方向是用 SAC Flow 的稳定训练算法在 RISE 的想象空间中训练 Flow 策略。
-
----
 
 ## 九、局限性与未来方向
 

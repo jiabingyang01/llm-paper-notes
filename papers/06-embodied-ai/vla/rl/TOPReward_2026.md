@@ -10,13 +10,9 @@
 >
 > **🔗** [arXiv](https://arxiv.org/abs/2602.19313) | [项目主页](https://topreward.github.io/webpage/)
 
----
-
 ## 一句话总结
 
 提出 TOPReward，不让 VLM 生成数值进度估计，而是直接从 VLM 内部的 token logits 中提取 `True` 令牌的对数概率作为任务完成度信号。在开源 Qwen3-VL-8B 上实现 **0.947 VOC**（ManiRewardBench）和 **0.857 VOC**（OXE），大幅超越 GVL 基线，同时提出包含 130+ 真实任务的 **ManiRewardBench** 基准。
-
----
 
 ## 一、问题与动机
 
@@ -35,8 +31,6 @@ VLA 模型（OpenVLA、π₀ 等）的预训练已取得快速进展，但用 RL
 
 > VLM 不是不懂进度，而是不会"说"进度。如果绕过文本生成，直接读取模型内部的"信念"，开源 VLM 其实具备强大的进度估计能力。
 
----
-
 ## 二、预备知识
 
 ### 2.1 进度估计作为时序价值函数
@@ -52,8 +46,6 @@ GVL 将进度估计框架为视觉问答：把帧打乱后输入 VLM，要求模
 $$\text{VOC} = \text{rank-correlation}\big(\text{argsort}(s_{t_1}, s_{t_2}, \ldots, s_{t_K}),\; (t_1, t_2, \ldots, t_K)\big)$$
 
 即预测值排序与时间顺序的 Spearman 秩相关，范围 $[-1, 1]$，1 表示完美对齐。
-
----
 
 ## 三、核心方法
 
@@ -99,8 +91,6 @@ $$r_t = \sum_i \log p_\theta(\text{inst}_i \mid c(\tau_{1:t}, u, \text{inst}_{<i
 
 但效果不如 `True` token 方案。原因是模型会对视频中出现的实体赋予高概率（如看到苹果就给 "apple" 高概率），无论任务是否完成，从而破坏进度估计。
 
----
-
 ## 四、ManiRewardBench
 
 论文提出 **ManiRewardBench**，一个用于评估机器人操作奖励模型的基准：
@@ -119,8 +109,6 @@ $$r_t = \sum_i \log p_\theta(\text{inst}_i \mid c(\tau_{1:t}, u, \text{inst}_{<i
 - **子任务级时序标注**：每个 episode 标注了子任务的 start/end 时间，支持细粒度进度评估
 - **包含失败轨迹**：23 个任务的 156 条 episode 包含成功和失败两类
 - **任务多样性**：涵盖多步推理、精细操作、柔性物体处理、抽象/符号任务
-
----
 
 ## 五、实验结果
 
@@ -186,8 +174,6 @@ $$\mathcal{L}_{\text{AWR}} = \mathbb{E}_{p(a|o), q(a_t|a)}\left[\Delta_t \cdot \
 
 Chat template 对 logit-based 方法有灾难性影响，这解释了 Gemini API（强制 chat template）上效果不佳的原因。
 
----
-
 ## 六、局限性与未来方向
 
 1. **视觉感知继承自 VLM**：精细空间推理任务（精确对齐、小物体操作）可能获得嘈杂的进度估计。
@@ -196,8 +182,6 @@ Chat template 对 logit-based 方法有灾难性影响，这解释了 Gemini API
 4. **计算成本**：每个前缀需要一次完整的 VLM 前向传播，K=20 的前缀采样意味着 20 次推理。
 5. **仅验证了 behavior cloning 场景**：AWR 实验使用 50 条演示 + TOPReward 加权，但未在在线 RL 闭环中验证。
 6. **ManiRewardBench 访问受限**：为防止数据泄漏，数据集不公开，仅通过受控评估协议访问。
-
----
 
 ## 七、个人思考
 
@@ -227,8 +211,6 @@ Chat template 导致 47% 的性能下降是一个值得警惕的信号。这说�
 ### 7.4 VOC 失败模式的发现很有价值
 
 论文指出 VOC 无法区分"有序但不完整"的轨迹，这对 GVL 等基于排序的方法是根本性的质疑。一条 30% 完成后随机漂移的失败轨迹也能获得高 VOC——这意味着如果只用 VOC 评估，可能会高估奖励模型的实际效用。TOPReward 通过直接测量完成概率绕过了这个问题，同时也为未来的进度估计评估提供了新的 metric 设计思路。
-
----
 
 ## 参考
 

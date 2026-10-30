@@ -2,8 +2,6 @@
 
 具身智能：VLA 模型、世界模型、机器人策略 RL 训练、模仿学习等。
 
----
-
 ## 🤖 VLA（Vision-Language-Action）
 
 ### 基础模型
@@ -136,8 +134,6 @@ VLA 模型推理加速，包括 Token 缓存/剪枝、动态计算、量化等�
 | [World-VLA-Loop](vla/rl/World_VLA_Loop_2026.md) | 闭环联合优化、SANS 近成功数据、Cosmos-Predict 2 + 奖励预测头、迭代 RL | 2026 |
 | [WoVR](vla/rl/WoVR_2026.md) | 幻觉感知世界模型 RL、关键帧初始化 Rollout、策略-模型协同进化（PACE） | 2026 |
 
----
-
 ## 🌍 World Models
 
 纯世界模型 / 模拟器：预测未来状态（$p(o'\mid o,a)$），作数据生成、RL 训练场或策略评估用，本身不联合产出策略。
@@ -148,8 +144,6 @@ VLA 模型推理加速，包括 Token 缓存/剪枝、动态计算、量化等�
 | [DreamDojo](world-models/DreamDojo_2026.md) | 44,711h 人类 Ego 视频预训练、32 维连续潜动作 VAE、相对动作重分块、Self Forcing 蒸馏 10.81 FPS 实时交互、策略评估 $r=0.995$、测试时规划 +17%、ICML 2026 | 2026 |
 | [Kinema4D](world-models/Kinema4D_2026.md) | 4D Pointmap 运动学控制、DiT 联合 RGB+Pointmap 合成、Robo4D-200k、构型无关、零样本真实世界迁移、PSNR 22.50、F-Score 0.4733 | 2026 |
 | [MIND-V](world-models/MINDV_2026.md) | 认知分层 VWM（SRH + BSB + MVG）、CogVideoX-5B 底座、V-JEPA2 物理裁判 PFC 奖励、GRPO 后训练、Staged Visual Future Rollouts、PFC +9.0%、Task Success +76.7% | 2026 |
-
----
 
 ## 🌐 World Action Models
 
@@ -165,8 +159,6 @@ VLA 模型推理加速，包括 Token 缓存/剪枝、动态计算、量化等�
 | [WAM Survey](world-action-models/WAM_Survey_2026.md) | 首篇 World Action Models 系统综述、定义 WAM 与相邻概念划界、Cascaded/Joint 架构分类、四类数据生态、三维评估协议（视觉保真/物理常识/动作可行性）、七大开放挑战 | 2026 |
 | [WorldVLA](world-action-models/WorldVLA_2025.md) | 自回归统一动作+世界模型、Chameleon 骨架、Action Attention Mask 阻断误差累积、VQ-GAN 离散 token、LIBERO 81.8% | 2025 |
 
----
-
 ## 🎓 Imitation Learning
 
 从视频演示学习操作策略，包括无动作标注学习、光流策略、轨迹模仿等。
@@ -174,8 +166,6 @@ VLA 模型推理加速，包括 Token 缓存/剪枝、动态计算、量化等�
 | 论文 | 关键词 | 年份 |
 | --- | --- | --- |
 | [EC-Flow](imitation-learning/EC_Flow_2025.md) | 具身中心光流、目标图像辅助对齐、URDF 运动学动作计算、无动作标注、DiT 扩散、遮挡 +62%、柔性 +45%、非位移 +80% | 2025 |
-
----
 
 ## 🏭 Data Synthesis
 

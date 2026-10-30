@@ -10,13 +10,9 @@
 >
 > [arXiv](https://arxiv.org/abs/2510.00406)
 
----
-
 ## 一句话总结
 
 用数据驱动的视频预测世界模型充当可控模拟器，将 VLA 输出的动作在世界模型中 rollout 得到视觉轨迹，通过与目标参考轨迹对比计算 verified reward（像素级 MAE + 感知级 LPIPS），再用 GRPO 端到端更新 VLA——仅需 400 步微调即超越 150K 步 SFT 基线。
-
----
 
 ## 一、问题与动机
 
@@ -57,8 +53,6 @@
 
 VLA-RFT 的最大特色是在**像素空间**做世界模型预测，配合 verified reward 实现极高的样本效率。WMPO 也在像素空间做 RL，但奖励是学习的二分类成功判别器而非 verified reward。
 
----
-
 ## 二、预备知识
 
 ### 2.1 Flow Matching 动作头
@@ -81,8 +75,6 @@ $$\bar{R}_\text{group} = \frac{1}{N}\sum_{j=1}^{N} R_j, \quad \text{Adv}_n = R_n
 ### 2.3 LPIPS 感知距离
 
 LPIPS（Learned Perceptual Image Patch Similarity）使用预训练深度网络的特征衡量图像间的感知相似度，比像素级 L1/L2 更符合人类对"相似"的判断。$d_\text{LPIPS}$ 越小表示越相似。
-
----
 
 ## 三、核心方法：VLA-RFT
 
@@ -170,8 +162,6 @@ $$\mathcal{L}_\text{GRPO}^\text{VLA}(\theta,\psi) = -\mathbb{E}\Big[\text{clip}(
 
 Type 3 在同一生成空间做对比，消除了世界模型生成质量偏差，效果远优于直接用真实图像对比。
 
----
-
 ## 四、实验设置
 
 ### 4.1 基准与指标
@@ -204,8 +194,6 @@ Type 3 在同一生成空间做对比，消除了世界模型生成质量偏差�
 | Batch size | 16 |
 | Rollout 次数 | 16 |
 | 框架 | VERL（4x A800 GPU） |
-
----
 
 ## 五、实验结果
 
@@ -258,8 +246,6 @@ VLA-RFT 在所有扰动条件下均优于基线，**组合扰动下提升最显�
 
 VLA-RFT 以 400 步达到与 online RL（10K 步）、offline RL（40K 步）相当甚至更优的提升，数据效率优势巨大。
 
----
-
 ## 六、类比总结
 
 把 VLA-RFT 想象成一个"考试模拟器"：
@@ -267,8 +253,6 @@ VLA-RFT 以 400 步达到与 online RL（10K 步）、offline RL（40K 步）相
 - **Stage I**：老师（世界模型）先学会"出题+批改"的能力，学生（VLA）先学会基本功
 - **Stage II**：学生做模拟卷（rollout），老师批改并打分（verified reward），学生根据分数调整答题策略（GRPO），不需要真正参加考试（真实环境交互）
 - **Reward Type 3 的精妙之处**：老师不是拿标准答案直接对比，而是把标准答案也用同样的出题方式重新"翻译"一遍再对比，消除了翻译偏差
-
----
 
 ## 七、局限性
 
@@ -287,8 +271,6 @@ Verified reward 本质上是与专家轨迹的相似度，策略无法发现超�
 ### 7.4 策略架构限制
 
 当前框架针对 flow-matching 策略设计（特别是 SDE-Policy 的 Sigma Net），扩展到自回归离散 token VLA 或 diffusion policy 需要额外适配。
-
----
 
 ## 八、个人思考
 
@@ -311,8 +293,6 @@ Type 3 reward 的核心洞察——在同一生成空间内对比而非跨空间
 ### 8.4 样本效率的上限在哪
 
 400 步就能提升 4.5 个百分点，这暗示 SFT 基线仍有大量"低垂果实"可被 RL 摘取。但随着基线变强，RFT 的边际收益是否会快速递减？论文中 Base (3w) → Base (15w) 的 SFT 阶段增量已经很小，这可能意味着 RFT 的收益空间有限。
-
----
 
 ## 参考
 

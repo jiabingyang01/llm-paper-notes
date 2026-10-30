@@ -12,13 +12,9 @@
 >
 > **分类标签**：`隐式世界模型` `未来潜在对齐` `动作感知嵌入` `Q-former` `人类视频协同训练`
 
----
-
 ## 一句话总结
 
 FLARE 在流匹配 DiT 策略里加入 $M$ 个**可学习未来 token**，把 DiT 中间层对应这些 token 的激活与**未来观测的动作感知潜在嵌入**做余弦对齐（$\lambda=0.2$），从而在不重建未来帧的前提下实现**隐式世界建模**——架构改动极小，RoboCasa 24 任务 70.1%、GR1 24 任务 55.0% 超越 UWM/GR00T N1 等基线，真实 GR1 人形最高 95.1%，并解锁了用**无动作标签的人类第一视角视频**协同训练（仅 1 条机器人轨迹即达 60% 新物体成功率）。
-
----
 
 ## 一、问题与动机
 
@@ -37,8 +33,6 @@ FLARE 在流匹配 DiT 策略里加入 $M$ 个**可学习未来 token**，把 Di
 
 FLARE 据此主张：**绕过对未来帧/latent 的显式重建**，只在一个紧凑的、动作感知的潜在空间里做"未来对齐"即可。它把世界建模退化为一个**表示对齐辅助损失**，与现有 VLA 架构（π₀、GR00T N1）完全兼容，只需新增极少量 token。
 
----
-
 ## 二、预备知识：流匹配策略
 
 FLARE 沿用 π₀ / GR00T N1 的流匹配（flow matching）动作生成框架。记观测 $o_t$（多视角图像 + 语言指令）、本体状态 $q_t$、专家动作块 $A_t=(a_t,\dots,a_{t+H})$，并定义视觉-语言嵌入 $\phi_t = VL(o_t)$。
@@ -56,8 +50,6 @@ $$\mathcal{L}_{fm}(\theta) = \mathbb{E}_\tau\big[\,\|V_\theta(\phi_t, A_t^\tau, 
 $$A_t^{\tau+1/K} = A_t^\tau + \tfrac{1}{K}V_\theta(\phi_t, A_t^\tau, q_t)$$
 
 全程取 $K=4$ 步。骨干 $V_\theta$ 是交替"交叉注意力 + 自注意力"的 Diffusion Transformer（DiT），交叉注意力用于 condition 在 $\phi_t$ 上。
-
----
 
 ## 三、核心方法
 
@@ -119,8 +111,6 @@ $$\theta_{\text{target\_vl}} \leftarrow \rho\,\theta_{\text{target\_vl}} + (1-\r
 > 6. 反传 $\mathcal{L}=\mathcal{L}_{fm}+\lambda\mathcal{L}_{align}$，并以 EMA 更新 target 嵌入。
 
 值得注意的是：$\mathcal{L}_{align}$ **不需要动作标签**——它只依赖"未来观测嵌入"。这正是后文人类视频协同训练能成立的关键。
-
----
 
 ## 四、实验结果
 
@@ -196,8 +186,6 @@ $$\theta_{\text{target\_vl}} \leftarrow \rho\,\theta_{\text{target\_vl}} + (1-\r
 
 > 多任务实验训练配置：32 张 H100、batch 1024、80k 步，其余超参与预训练一致。
 
----
-
 ## 五、局限性与未来方向
 
 论文指出的主要局限：
@@ -206,8 +194,6 @@ $$\theta_{\text{target\_vl}} \leftarrow \rho\,\theta_{\text{target\_vl}} + (1-\r
 2. **仍需少量演示**：泛化到新物体依然依赖少量专家演示，在难以采集数据的场景可能受限。
 3. **受控视频采集**：人类视频是头戴 GoPro 的受控环境数据，扩展到自然场景的大规模 egocentric 数据是重要方向。
 4. **聚焦协同训练而非规划**：FLARE 面向策略与世界模型**协同训练**，而非 DINO-WM 式的零样本规划——把规划作为下游扩展是 future work。
-
----
 
 ## 六、个人思考
 
@@ -236,8 +222,6 @@ $\mathcal{L}_{align}$ 不需要动作标签，这一点让 FLARE 天然吃得下
 ### 6.4 与 GR00T 谱系的关系
 
 FLARE 出自 GR00T N1 同一团队（Linxi Fan、Yuke Zhu 等），并已作为 "FLARE Integration" 落进 **GR00T N1.5**。它本质是给 GR00T N1 的流匹配 DiT 头加一个对齐辅助损失——这解释了为什么实验里 GR00T N1 (Scratch) 是核心 baseline。把它看作 [π₀](../foundation/pi0_2024.md) / GR00T N1 流匹配范式上的一个**即插即用世界建模插件**，比看作独立架构更准确，这也是我把它归入 `reasoning/`（世界模型）而非 `foundation/` 的理由。
-
----
 
 ## 参考
 

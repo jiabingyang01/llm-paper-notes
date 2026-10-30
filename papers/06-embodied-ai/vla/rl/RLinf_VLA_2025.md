@@ -8,13 +8,9 @@
 >
 > 🔗 [arXiv](https://arxiv.org/abs/2510.06710) | [PDF](https://arxiv.org/pdf/2510.06710) | [代码](https://github.com/RLinf/RLinf) | [模型](https://huggingface.co/RLinf)
 
----
-
 ## 一句话总结
 
 RLinf-VLA 提出了一个**统一**且**高效**的 VLA+RL 训练框架：通过三种灵活的 GPU 分配模式（colocated / disaggregated / 新提出的 **hybrid fine-grained pipelining**）解决仿真器-生成-训练的资源竞争问题，统一支持多种 VLA 架构（OpenVLA、OpenVLA-OFT）、多种 RL 算法（PPO、GRPO）和多种仿真器（ManiSkill、LIBERO），单一模型首次在 **130 个 LIBERO 任务上达到 98.11%** 成功率，并总结出一套 VLA+RL 的 best practices。
-
----
 
 ## 一、问题与动机
 
@@ -42,8 +38,6 @@ RLinf-VLA 提出了一个**统一**且**高效**的 VLA+RL 训练框架：通过
 ### 1.3 GPU 资源竞争：VLA+RL 独有的系统挑战
 
 与 LLM 的 RL 后训练不同，VLA+RL 需要与**仿真器**反复交互。仿真器本身也消耗大量 GPU 资源（特别是 GPU 并行仿真器如 ManiSkill），这导致**仿真、推理生成、训练**三者之间存在严重的 GPU 资源竞争——现有框架无法高效处理这一问题。
-
----
 
 ## 二、核心方法
 
@@ -140,8 +134,6 @@ $$\hat{A}^{(i)} = \frac{\mathcal{R}^{(i)} - \text{mean}(\{\mathcal{R}^{(j)}\}_{j
 
 其中 $\mathcal{R}^{(i)}$ 是轨迹 $\tau^{(i)}$ 的总奖励，$G$ 是组大小。同一组内的轨迹必须对应**相同任务和相同初始状态**。
 
----
-
 ## 三、算法设计细节
 
 ### 3.1 Action Chunk 下的优势估计
@@ -187,8 +179,6 @@ $$J^{\text{GRPO}}(\theta) = \mathbb{E}\left[\frac{1}{G}\sum_{i=1}^G \frac{1}{T_i
 #### Success Rate Filter
 
 借鉴 DAPO 的动态采样策略，丢弃组内所有轨迹全部成功或全部失败的组（因为此时组内优势为零，不提供有效梯度信号）。在 OpenVLA + ManiSkill 设置中，这一机制有效防止了训练崩溃。
-
----
 
 ## 四、实验结果
 
@@ -258,8 +248,6 @@ $$J^{\text{GRPO}}(\theta) = \mathbb{E}\left[\frac{1}{G}\sum_{i=1}^G \frac{1}{T_i
 
 SFT 策略倾向于过冲（overshooting），而 RL 策略虽有轻微振荡但能迭代修正末端执行器姿态，展现出更强的零样本泛化能力。
 
----
-
 ## 五、局限性与未来方向
 
 1. **VLA 架构有限**：目前仅支持 OpenVLA 和 OpenVLA-OFT（均 ~7B），未集成 π₀、π₀.₅ 等 Flow Matching VLA（已规划中）
@@ -267,8 +255,6 @@ SFT 策略倾向于过冲（overshooting），而 RL 策略虽有轻微振荡但
 3. **真实世界实验初步**：仅在简单 pick-and-place 上测试了 6 种物体，未涉及长时域或灵巧操作
 4. **仿真到真实迁移**：未使用任何 sim-to-real 技术（domain randomization 等），8/30 的成功率仍有很大提升空间
 5. **仿真器覆盖不足**：未集成 RoboTwin、IsaacLab 等（已在规划中）
-
----
 
 ## 六、个人思考
 
@@ -287,8 +273,6 @@ RLinf-VLA 基于同一团队的 [RLinf](RLinf_2025.md) 通用 RL 训练系统，
 ### 6.4 Best Practices 的实践价值
 
 本文最有价值的贡献之一是系统化的消融实验和 best practices 总结。对于想要在自己的 VLA 上做 RL 微调的研究者，这些指导非常实用：action-level value estimation、partial reset、trajectory length normalization、valid action mask 的选择，比单纯的 SOTA 数字更有工程指导意义。
-
----
 
 ## 参考
 

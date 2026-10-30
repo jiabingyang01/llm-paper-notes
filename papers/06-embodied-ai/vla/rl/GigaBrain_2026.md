@@ -10,13 +10,9 @@
 >
 > 分类标签：`World Model RL` `VLA` `RAMP` `优势条件化` `Wan2.2`
 
----
-
 ## 一句话总结
 
 提出 **RAMP**（Reinforcement leArning via world Model-conditioned Policy），用视频世界模型同时预测未来状态和价值，将其作为策略的条件输入，结合 human-in-the-loop rollout 迭代训练，在 Laundry Folding、Box Packing、Espresso Preparation 等任务上比 RECAP 基线提升约 **30%**，并从理论上证明 RECAP 是 RAMP 的退化特例。
-
----
 
 ## 一、问题与动机
 
@@ -42,8 +38,6 @@ RAMP 的关键创新是引入**世界模型预测的未来状态** $\mathbf{z}$ 
 - 世界模型不仅预测价值（用于计算优势），还预测**未来视觉状态的隐表征**
 - 策略同时以 $(I, \mathbf{z})$ 为条件生成动作——既知道"做得好不好"，又看到"未来会怎样"
 - 这从根本上将策略从"对未来的平均猜测"升级为"针对具体未来的精确规划"
-
----
 
 ## 二、预备知识
 
@@ -71,8 +65,6 @@ $$\mathcal{L}(\theta) = \mathbb{E}_D\left[-\log \pi_\theta(a|\mathbf{o}, l) - \a
 其中 $I = \mathbb{1}(A(\mathbf{o}, l, a) > \epsilon)$ 是二值化优势指标。策略以观测 $\mathbf{o}$、语言指令 $l$ 和优势指标 $I$ 为输入。
 
 RECAP 的问题在于：策略只看到 $I$（1 bit），完全不知道未来状态会是什么样。
-
----
 
 ## 三、核心方法：RAMP
 
@@ -169,8 +161,6 @@ $$I = \mathbb{1}(A(\mathbf{s}_t, a_t) > \epsilon)$$
   - **高效模式**：遮蔽世界模型 token，纯当前观测推理
   - **标准模式**：世界模型生成 $\mathbf{z}$，策略利用未来状态引导长时域规划
 
----
-
 ## 四、实验结果
 
 ### 4.1 GigaBrain-0.5 基础模型性能
@@ -228,8 +218,6 @@ $$I = \mathbb{1}(A(\mathbf{s}_t, a_t) > \epsilon)$$
 
 RAMP 在 Box Packing 和 Espresso Preparation 上比 RECAP 提升约 **30%**，在所有三个任务上接近满分。
 
----
-
 ## 五、局限性与未来方向
 
 ### 5.1 世界模型的计算开销
@@ -248,8 +236,6 @@ RAMP 的 Stage 3 仍需人类干预来收集高质量 rollout 数据。如何进
 
 - 更高效地利用 model rollout 数据，最大化合成轨迹的信息价值
 - 探索更可扩展的自进化范式：自主数据策展、策略精调、世界模型更新的闭环交互
-
----
 
 ## 六、个人思考
 
@@ -293,8 +279,6 @@ WMPO 在**像素空间**做 on-policy GRPO（策略梯度），RAMP 在观测空
 - RAMP 避免了在 flow matching 模型上做策略梯度的不稳定性（WMPO 基于 OpenVLA-OFT 的离散 token，绕过了这个问题，但不适用于 flow policy）
 - RAMP 支持 HILR 闭环持续改进；WMPO 也支持 lifelong learning（policy rollout → WM 微调 → GRPO → 再 rollout 的循环），但强度不同
 - RAMP 直接把未来状态作为条件喂入策略；WMPO 把未来帧仅用于 GRPO 奖励计算
-
----
 
 ## 参考
 
