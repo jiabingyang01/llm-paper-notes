@@ -209,6 +209,7 @@
 
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
+| [EgoWAM](/papers/06-embodied-ai/world-action-models/EgoWAM_2026) | 基于 HPT 主干的受控人机 WAM 协同训练框架（固定策略主干/流匹配动作头/数据配比，推理期剥离世界头保持 30 Hz 零开销），系统对比 Pixel VAE、DINO (RAE) 与相机稳像 3D Motion Flow 三大世界目标；证明像素重建迁移微弱，而满足外观抽象/跨具身一致性/自运动解耦的目标能解锁野外第一视角人类数据（EgoVerse 10:1）：DINO 将 OOD 泛化提升超 4×（折衣 15%→85%），3D Flow 域内提升 20–30 pp（达 90%）且抗动作/头动失配 | World Action Model、人机协同训练、第一视角人类数据、DINO / RAE、3D Motion Flow、训练时表征塑形、CoRL 2026 | 2026.07 |
 | [Fast-WAM](/papers/06-embodied-ai/world-action-models/FastWAM_2026) | 通过受控变体实验拆解 WAM 的两个因素，证明训练时视频协同目标（而非测试时未来想象）是性能主因；提出跳过测试时视频生成、单次前向传播动作预测，190 ms 延迟、RoboTwin 91.8%、LIBERO 97.6%，无具身预训练 | 视频协同训练、MoT 架构、训练-推理解耦、Flow Matching、测试时加速 | 2026.03 |
 | [LDA-1B](/papers/06-embodied-ai/world-action-models/LDA_1B_2026) | 1.6B 机器人基础模型，用统一世界模型（策略+正逆动力学+视觉预测）+ 质量分层数据摄入（无动作视频/低质量轨迹各司其职）+ 结构化 DINO 潜在预测，RoboCasa-GR1 55.4% 超 3B 的 GR00T-N1.6，真机接触/灵巧/长时程较 π₀.₅ +21%/48%/23%，低质量数据反涨 10% | 机器人基础模型、统一世界模型 UWM、通用数据摄入、DINO 潜在、MM-DiT、质量分层监督、RSS 2026 | 2026.02 |
 | [SpatialVAM](/papers/06-embodied-ai/world-action-models/SpatialVAM_2026) | 点云三视图正交投影 RGB + 末端位姿三视图热力图，Wan2.2-5B 视频 DiT 联合预测未来 RGB 视频与热力图视频，热力图反投影得到 3D 轨迹；10 demo 在 Meta-World/RoboCasa/真实 Franka 分别 +22%/10%/16%，单步去噪即 85.7% | 3D Video Action Model、多视图热力图、Wan2.2、LoRA、View-Attention、Meta-World 89.1% | 2026.04 |

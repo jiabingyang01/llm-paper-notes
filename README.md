@@ -281,6 +281,7 @@
 <details open>
 <summary>World Action Models（联合建模未来状态与动作，直接产出策略）</summary>
 
+- [EgoWAM (2026)](papers/06-embodied-ai/world-action-models/EgoWAM_2026.md) — 受控人机 WAM 协同训练框架（HPT 主干 + 可插拔世界头 + 推理期零开销剥离 30 Hz），系统对比 Pixel VAE / DINO (RAE) / 相机稳像 3D Motion Flow，解锁野外第一视角人类数据（EgoVerse 10:1）：DINO 驱动 OOD 泛化最高超 4×（折衣 15%→85%），3D Flow 域内提升 20–30 pp（达 90%）且对未对齐演示免疫，CoRL 2026
 - [Fast-WAM (2026)](papers/06-embodied-ai/world-action-models/FastWAM_2026.md) — 训练时视频协同目标是 WAM 性能主因、测试时未来想象非必要，跳过视频生成 190 ms 推理，RoboTwin 91.8%、LIBERO 97.6%
 - [LDA-1B (2026)](papers/06-embodied-ai/world-action-models/LDA_1B_2026.md) — 1.6B 统一世界模型基础模型（策略+正逆动力学+视觉预测）+ 质量分层数据摄入 + 结构化 DINO 潜在预测，RoboCasa-GR1 55.4% 超 3B GR00T，真机较 π₀.₅ 提升 21%/48%/23%，低质量数据反涨 10%，RSS 2026
 - [SpatialVAM (2026)](papers/06-embodied-ai/world-action-models/SpatialVAM_2026.md) — 点云三视图投影 + 末端热力图视频，Wan2.2-5B 联合预测未来 RGB/热力图，10 demo 在 Meta-World/RoboCasa/真实 Franka 分别 +22%/10%/16%，单步去噪即 85.7%
