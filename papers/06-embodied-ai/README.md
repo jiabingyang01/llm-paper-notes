@@ -153,6 +153,7 @@ VLA 模型推理加速，包括 Token 缓存/剪枝、动态计算、量化等�
 | --- | --- | --- |
 | [EgoWAM](world-action-models/EgoWAM_2026.md) | 受控人机 WAM 协同训练（HPT 主干 + 可插拔世界头 + 30 Hz 纯动作推理）、三大世界表征对比（Pixel VAE / RAE DINO / 相机稳像 3D Flow）、解锁 EgoVerse 10:1 野外人类数据、DINO OOD 泛化超 4×（折衣 85%）、3D Flow 域内 90% 且抗失配、CoRL 2026 | 2026.07 |
 | [Fast-WAM](world-action-models/FastWAM_2026.md) | 视频协同训练 vs. 测试时未来想象受控拆解、MoT 架构（Wan2.2-5B + Action DiT）、训练-推理解耦、190 ms 延迟、RoboTwin 91.8%、LIBERO 97.6% | 2026.03 |
+| [GO-3 / GE-Act 2.0](world-action-models/GO_3_2026.md) | 智元 GO-3 Preview / WRAM 架构、CoAE（$64\times$ 压缩 24 token + 三教师对齐）、SVP 条件 MeanFlow 单步视觉规划、KASO 高噪动作探测 4 选 1、100 项真机零样本 OOD 规模化（$r=0.80$）、RoboTwin 85.0% 三榜第一、Genie Evolver（CEL + Rollback）+ Genie Master（EEP） | 2026.10 |
 | [HumanScale](world-action-models/HumanScale_2026.md) | Wan 2.2 自回归 MoT WAM、100h–5,000h 人机同规模受控对决、5.6× 轨迹密度与 25.6× 交互词汇、OOD 对数线性缩放（$R^2=0.94$，500h 超 20kh LingBot-VA）、AgiBot OOD 90.0% | 2026.06 |
 | [LDA-1B](world-action-models/LDA_1B_2026.md) | 统一世界模型基础模型（策略+正逆动力学+视觉预测）、通用数据摄入（质量分层监督）、结构化 DINO 潜在预测、MM-DiT、EI-30k、RoboCasa-GR1 55.4% 超 3B GR00T、真机 +21%/48%/23%、RSS 2026 | 2026 |
 | [SpatialVAM](world-action-models/SpatialVAM_2026.md) | 3D Video Action Model、多视图正交投影 RGB + 热力图、Wan2.2-5B + View-Attention LoRA、双扩散损失、Meta-World 89.1%、RoboCasa 42%、真实 Franka 57.1%、单步去噪 85.7% | 2026 |

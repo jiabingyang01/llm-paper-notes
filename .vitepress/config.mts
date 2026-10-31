@@ -340,6 +340,7 @@ export default defineConfig({
                   items: [
                     { text: 'EgoWAM (2026)', link: '/papers/06-embodied-ai/world-action-models/EgoWAM_2026' },
                     { text: 'Fast-WAM (2026)', link: '/papers/06-embodied-ai/world-action-models/FastWAM_2026' },
+                    { text: 'GO-3 / GE-Act 2.0 (2026)', link: '/papers/06-embodied-ai/world-action-models/GO_3_2026' },
                     { text: 'HumanScale (2026)', link: '/papers/06-embodied-ai/world-action-models/HumanScale_2026' },
                     { text: 'LDA-1B (2026)', link: '/papers/06-embodied-ai/world-action-models/LDA_1B_2026' },
                     { text: 'SpatialVAM (2026)', link: '/papers/06-embodied-ai/world-action-models/SpatialVAM_2026' },
