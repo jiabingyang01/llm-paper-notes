@@ -102,7 +102,7 @@ export default defineConfig({
             },
             {
               text: '02 Alignment & Safety',
-              collapsed: false,
+              collapsed: true,
               link: '/papers/02-alignment-and-safety/',
               items: [
                 { text: 'R³L (2026)', link: '/papers/02-alignment-and-safety/R3L_2026' },
@@ -197,11 +197,11 @@ export default defineConfig({
               items: [
                 {
                   text: 'VLA',
-                  collapsed: false,
+                  collapsed: true,
                   items: [
                     {
                       text: '基础模型',
-                      collapsed: false,
+                      collapsed: true,
                       items: [
                         { text: 'Being-H0 (2025)', link: '/papers/06-embodied-ai/vla/foundation/Being_H0_2025' },
                         { text: 'Being-H0.5 (2026)', link: '/papers/06-embodied-ai/vla/foundation/Being_H0_5_2026' },
@@ -226,7 +226,7 @@ export default defineConfig({
                     },
                     {
                       text: '感知增强',
-                      collapsed: false,
+                      collapsed: true,
                       items: [
                         { text: '3D-CAVLA (2025)', link: '/papers/06-embodied-ai/vla/perception/3D_CAVLA_2025' },
                         { text: '3D-MIX (2026)', link: '/papers/06-embodied-ai/vla/perception/3D_Mix_2026' },
@@ -242,7 +242,7 @@ export default defineConfig({
                     },
                     {
                       text: '推理与规划',
-                      collapsed: false,
+                      collapsed: true,
                       items: [
                         { text: 'CoWVLA (2026)', link: '/papers/06-embodied-ai/vla/reasoning/CoWVLA_2026' },
                         { text: 'CronusVLA (2026)', link: '/papers/06-embodied-ai/vla/reasoning/CronusVLA_2026' },
@@ -261,7 +261,7 @@ export default defineConfig({
                     },
                     {
                       text: '高效推理',
-                      collapsed: false,
+                      collapsed: true,
                       items: [
                         { text: 'BitVLA (2025)', link: '/papers/06-embodied-ai/vla/efficient/BitVLA_2025' },
                         { text: 'EfficientVLA (2025)', link: '/papers/06-embodied-ai/vla/efficient/EfficientVLA_2025' },
@@ -279,7 +279,7 @@ export default defineConfig({
                     },
                     {
                       text: 'RL 后训练',
-                      collapsed: false,
+                      collapsed: true,
                       items: [
                         { text: 'ARM (2026)', link: '/papers/06-embodied-ai/vla/rl/ARM_2026' },
                         { text: 'ConRFT (2025)', link: '/papers/06-embodied-ai/vla/rl/ConRFT_2025' },
@@ -328,7 +328,7 @@ export default defineConfig({
                 },
                 {
                   text: 'World Models',
-                  collapsed: false,
+                  collapsed: true,
                   items: [
                     { text: 'BridgeV2W (2025)', link: '/papers/06-embodied-ai/world-models/BridgeV2W_2025' },
                     { text: 'DreamDojo (2026)', link: '/papers/06-embodied-ai/world-models/DreamDojo_2026' },
@@ -338,7 +338,7 @@ export default defineConfig({
                 },
                 {
                   text: 'World Action Models',
-                  collapsed: false,
+                  collapsed: true,
                   items: [
                     { text: 'EgoWAM (2026)', link: '/papers/06-embodied-ai/world-action-models/EgoWAM_2026' },
                     { text: 'Fast-WAM (2026)', link: '/papers/06-embodied-ai/world-action-models/FastWAM_2026' },
@@ -352,7 +352,7 @@ export default defineConfig({
                 },
                 {
                   text: 'Imitation Learning',
-                  collapsed: false,
+                  collapsed: true,
                   items: [
                     { text: 'EC-Flow (2025)', link: '/papers/06-embodied-ai/imitation-learning/EC_Flow_2025' },
                     { text: 'EgoMimic (2025)', link: '/papers/06-embodied-ai/imitation-learning/EgoMimic_2025' },
@@ -360,7 +360,7 @@ export default defineConfig({
                 },
                 {
                   text: 'Data Synthesis',
-                  collapsed: false,
+                  collapsed: true,
                   items: [
                     { text: 'Ego2Robot (2026)', link: '/papers/06-embodied-ai/data-synthesis/Ego2Robot_2026' },
                     { text: 'EgoDex (2025)', link: '/papers/06-embodied-ai/data-synthesis/EgoDex_2025' },
@@ -385,7 +385,7 @@ export default defineConfig({
             },
             {
               text: '09 Evaluation',
-              collapsed: false,
+              collapsed: true,
               link: '/papers/09-evaluation-and-benchmarks/',
               items: [
                 { text: 'MME (2024)', link: '/papers/09-evaluation-and-benchmarks/MME_2024' },
@@ -393,7 +393,7 @@ export default defineConfig({
             },
             {
               text: '10 Reinforcement Learning',
-              collapsed: false,
+              collapsed: true,
               link: '/papers/10-reinforcement-learning/',
               items: [
                 { text: 'DiffusionNFT (2025)', link: '/papers/10-reinforcement-learning/DiffusionNFT_2025' },

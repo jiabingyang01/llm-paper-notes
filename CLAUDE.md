@@ -89,7 +89,7 @@ index.md                              # 网站首页
 { text: 'π₀.₆* (2025)', link: '/papers/06-embodied-ai/vla/rl/pi06star_2025' },
 ```
 
-侧边栏结构位于 `themeConfig.sidebar['/papers/']` 中。
+侧边栏结构位于 `themeConfig.sidebar['/papers/']` 中。所有包含具体论文条目的子分类列表一律设置 `collapsed: true`（默认收起），避免侧边栏过长。
 
 #### (B) `papers/index.md` — 论文索引表
 
