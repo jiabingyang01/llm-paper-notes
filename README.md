@@ -76,6 +76,7 @@
 - [LogicCheckGPT (2024)](papers/04-multimodal/vlm/hallucination/LogicCheckGPT_2024.md) — 逻辑闭环探测（对象→属性→对象），黑盒后处理缓解幻觉，POPE 准确率提升超 30%
 - [LPOI (2025)](papers/04-multimodal/vlm/hallucination/LPOI_2025.md) — 首次列表级偏好优化：对象遮蔽渐进插值生成有序图像序列 + Plackett-Luce 排序损失，Object HalBench CHAIR$_S$ 24.3（mDPO 30.7）
 - [LURE (2024)](papers/04-multimodal/vlm/hallucination/LURE_2024.md) — 共现/不确定性/位置三因素统计分析 + GPT-3.5 构造幻觉数据训练修正器，后处理兼容任意 LVLM，CHAIR$_S$ 平均降低 50%+
+- [M3ID (2024)](papers/04-multimodal/vlm/hallucination/M3ID_2024.md) — 视觉条件稀释（消退记忆）逆向互信息解码 + 自生成偏好 DPO 微调（CVPR 2024），LLaVA-13B CHAIRs 降 29%、POPE 升 24%
 - [mDPO (2024)](papers/04-multimodal/vlm/hallucination/mDPO_2024.md) — 发现多模态 DPO 忽略图像条件，图像对比偏好优化 + 锚定奖励正则化缓解幻觉
 - [MemVR (2025)](papers/04-multimodal/vlm/hallucination/MemVR_2025.md) — FFN key-value memory 视觉回溯 + 不确定性动态触发，1.04× 延迟缓解幻觉且提升通用能力
 - [MMHalSnowball (2024)](papers/04-multimodal/vlm/hallucination/MMHalSnowball_2024.md) — 多模态幻觉雪球效应评估框架 + 残差视觉解码自适应缓解多轮对话幻觉累积
@@ -83,6 +84,7 @@
 - [REVERIE (2024)](papers/04-multimodal/vlm/hallucination/REVERIE_2024.md) — 正负 rationale 反思式指令微调，254k 三元组数据集提供细粒度推理监督，POPE +12.7、MME +348
 - [RFI (2026)](papers/04-multimodal/vlm/hallucination/RFI_2026.md) — Rectified Flow 动态预测输入特定干预向量 + SVD 去噪，仅 1.09x 延迟，POPE 平均 F1 +7.59%
 - [SENTINEL (2025)](papers/04-multimodal/vlm/hallucination/SENTINEL_2025.md) — 域内自举 + 句子级 C-DPO 早期干预，幻觉率降低 92% 且通用能力不降反升
+- [SID (2025)](papers/04-multimodal/vlm/hallucination/SID_2025.md) — 早期解码层保留 10% 最低注意力视觉 Token（CT²S）精准诱发关联幻觉并对比消除（ICLR 2025），四大架构 SOTA 且比 VCD 提速 30%
 - [SIMA (2024)](papers/04-multimodal/vlm/hallucination/SIMA_2024.md) — 三视觉指标引导的上下文自评估 + 自生成偏好数据 DPO，无需外部模型，14 基准平均 +7.5%
 - [STIC (2024)](papers/04-multimodal/vlm/hallucination/STIC_2024.md) — 两阶段自训练：good/bad prompt + 图像腐蚀构造偏好数据 DPO + 描述注入式 SFT，仅用无标签图像，7 基准平均 +4.0%
 - [TAF (2026)](papers/04-multimodal/vlm/hallucination/TAF_2026.md) — Token 非对称过滤：隔离 phantom token 的 T2V 干扰 + 强调 anchor token 的视觉证据，training-free 全面 SOTA

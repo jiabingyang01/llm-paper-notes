@@ -24,6 +24,7 @@
 | [LogicCheckGPT](vlm/hallucination/LogicCheckGPT_2024.md) | 逻辑闭环、逻辑一致性、Training-Free、Plug-and-Play | 2024.02 |
 | [LPOI](vlm/hallucination/LPOI_2025.md) | 列表级偏好优化、对象遮蔽、渐进插值、硬负样本、Visual Prompting | 2025.05 |
 | [LURE](vlm/hallucination/LURE_2024.md) | 共现/不确定性/位置统计分析、GPT-3.5 幻觉数据构造、[IDK] 占位修正器、Post-hoc | 2023.10 |
+| [M3ID](vlm/hallucination/M3ID_2024.md) | 视觉条件稀释、消退记忆、逐点互信息、对比解码、自生成 DPO | 2024.03 |
 | [mDPO](vlm/hallucination/mDPO_2024.md) | 条件偏好优化、图像对比偏好、奖励锚定、无条件偏好问题 | 2024.06 |
 | [MemVR](vlm/hallucination/MemVR_2025.md) | FFN Key-Value Memory、视觉回溯、不确定性触发、Training-Free、Plug-and-Play | 2025.05 |
 | [MMHalSnowball](vlm/hallucination/MMHalSnowball_2024.md) | 幻觉雪球效应、残差视觉解码、自适应分布混合、Training-Free | 2024.07 |
@@ -31,6 +32,7 @@
 | [REVERIE](vlm/hallucination/REVERIE_2024.md) | 反思微调、正负 Rationale、细粒度推理监督、REVERIE 数据集 | 2024.07 |
 | [RFI](vlm/hallucination/RFI_2026.md) | Rectified Flow、动态干预向量、输入自适应、SVD 去噪、Plug-and-Play | 2026 |
 | [SENTINEL](vlm/hallucination/SENTINEL_2025.md) | 句子级早期干预、域内偏好学习、C-DPO、交叉验证 | 2025.07 |
+| [SID](vlm/hallucination/SID_2025.md) | 自省式对比解码、CT²S 低注意力 Token 保留、跨模态关联幻觉、Training-Free | 2024.08 |
 | [SIMA](vlm/hallucination/SIMA_2024.md) | 自生成响应、上下文自评估、三视觉指标、DPO、Self-Improvement | 2024.05 |
 | [STIC](vlm/hallucination/STIC_2024.md) | 自训练、图像理解、描述注入微调、正则化 DPO、Self-Training | 2024.05 |
 | [TAF](vlm/hallucination/TAF_2026.md) | Phantom Token 隔离、Anchor Token 强调、非对称注意力过滤、Training-Free | 2026 |
