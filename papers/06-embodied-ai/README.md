@@ -174,6 +174,7 @@ VLA 模型推理加速，包括 Token 缓存/剪枝、动态计算、量化等�
 
 | 论文 | 关键词 | 年份 |
 | --- | --- | --- |
+| [Ego2Robot](data-synthesis/Ego2Robot_2026.md) | 无标定三阶段跨具身数据合成、Hand-to-Gripper 几何重定向、SAM 3 + ProPainter 手臂擦除、15 构型空间基座网格搜索、1,940h→18,561h、RoboTwin 2.0 四维解耦基准 | 2026 |
 | [EgoDex](data-synthesis/EgoDex_2025.md) | Apple Vision Pro 采集 829h / 33.8 万条 / 194 项双手灵巧任务、68 关节毫米级 3D 骨骼真值、48 维轨迹预测与逆动力学基准、ICLR 2026 | 2025 |
 | [EgoVerse](data-synthesis/EgoVerse_2026.md) | 全球多源 1,362h / 240 场景 / 2,087 演示者 3D 手姿 Ego 数据集、跨 4 实验室 2,000+ 次真机评测（夹爪/灵巧手/人形）、OOD 相对提升 50%–100%+、域内人类锚定律、RSS 2026 | 2026 |
 | [MimicDreamer](data-synthesis/MimicDreamer_2025.md) | Human-to-Robot、视频扩散、EgoStabilizer 稳视点、IK 动作对齐（软屏蔽 roll）、H2R Aligner（CogVideoX-5b 换手）、π₀ 后训练、EgoDex、六任务平均 +14.7% SR | 2025 |

@@ -359,6 +359,7 @@ export default defineConfig({
                   text: 'Data Synthesis',
                   collapsed: false,
                   items: [
+                    { text: 'Ego2Robot (2026)', link: '/papers/06-embodied-ai/data-synthesis/Ego2Robot_2026' },
                     { text: 'EgoDex (2025)', link: '/papers/06-embodied-ai/data-synthesis/EgoDex_2025' },
                     { text: 'EgoVerse (2026)', link: '/papers/06-embodied-ai/data-synthesis/EgoVerse_2026' },
                     { text: 'MimicDreamer (2025)', link: '/papers/06-embodied-ai/data-synthesis/MimicDreamer_2025' },

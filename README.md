@@ -311,6 +311,7 @@
 <details open>
 <summary>Data Synthesis（人类演示 / 世界模型 → 机器人可训练数据）</summary>
 
+- [Ego2Robot (2026)](papers/06-embodied-ai/data-synthesis/Ego2Robot_2026.md) — 无标定三阶段跨具身合成管线（Hand-to-Gripper 重定向 + SAM 3/ProPainter 擦除 + 15 种机械臂构型空间基座网格搜索与三级清洗），将 1,940h 人类 Ego 视频扩展为 18,561h 机器人数据，RoboTwin 2.0 四维解耦基准与真机全面提升
 - [EgoDex (2025)](papers/06-embodied-ai/data-synthesis/EgoDex_2025.md) — Apple Vision Pro 采集 829h / 33.8 万条 / 194 项双手灵巧任务，带 68 关节毫米级 3D 骨骼真值，系统评测 14 组大模型策略与数据缩放律，ICLR 2026
 - [EgoVerse (2026)](papers/06-embodied-ai/data-synthesis/EgoVerse_2026.md) — 全球多源 1,362h / 240 场景 / 2,087 演示者带 3D 手姿的人类 Ego 数据集，跨 4 大实验室 2,000+ 次真机评测使 OOD 相对提升 50%–100%+，揭示域内人类锚定律，RSS 2026
 - [MimicDreamer (2025)](papers/06-embodied-ai/data-synthesis/MimicDreamer_2025.md) — 三件套（EgoStabilizer 稳视点 + IK 动作对齐 + H2R Aligner 视频扩散换手）把人类演示转机器人监督，后训练 π₀，六任务平均 +14.7% SR，随人类数据规模单调提升

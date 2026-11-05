@@ -235,6 +235,7 @@
 
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
+| [Ego2Robot](/papers/06-embodied-ai/data-synthesis/Ego2Robot_2026) | 无成对标定三阶段跨具身数据合成管线（Hand-to-Gripper 虚拟指尖重定向与降速对齐 + SAM 3/ProPainter 手臂擦除 + 15 种机械臂构型空间基座网格搜索与深度感知合成 + 三级质量清洗），将 1,940h 人类第一视角视频扩展为 18,561h 合成机器人数据并在 RoboTwin 2.0 四维解耦泛化基准与真机验证 | Human-to-Robot、Hand-to-Gripper 重定向、SAM 3 + ProPainter、15 构型基座网格搜索、四维解耦泛化评测 | 2026.08 |
 | [EgoDex](/papers/06-embodied-ai/data-synthesis/EgoDex_2025) | 基于 Apple Vision Pro 采集 829 小时 / 33.8 万条演示 / 194 项双手灵巧操作任务，提供带置信度的 68 关节（双臂五指 50 关节）毫米级 3D 骨骼追踪真值，并在 48 维双手轨迹预测与视觉目标逆动力学基准上系统评测 14 组大模型策略与数据缩放规律 | 第一视角人类数据集、Apple Vision Pro、3D 手部骨骼追踪、双手五指灵巧操作、ICLR 2026 | 2025.05 |
 | [EgoVerse](/papers/06-embodied-ai/data-synthesis/EgoVerse_2026) | 联合全球多机构构建持续增长的 1,362 小时 / 240 个真实场景 / 2,087 名演示者带 3D 手腕与手指位姿标注的第一视角人类操作数据集，在 4 大实验室（双臂夹爪、五指灵巧手、全身人形）超 2,000 次真机评测中使 OOD 成功率相对提升 50%–100%+，揭示场景多样性主导与域内人类锚定翻倍激活规律 | 全球第一视角人类数据集、跨实验室真机基准、人机协同训练、域内锚定效应、RSS 2026 | 2026.04 |
 | [MimicDreamer](/papers/06-embodied-ai/data-synthesis/MimicDreamer_2025) | 三件套把低成本第一人称人类演示转成机器人可用监督：EgoStabilizer 单应稳视点 + 补洞、IK 动作对齐（只对齐 pitch/yaw 软屏蔽 roll）、H2R Aligner（CogVideoX-5b 多条件视频扩散把人手换机械臂）；仅用合成数据后训练 π₀，六任务平均成功率较纯真机 +14.7%，且随人类数据规模单调提升 | Human-to-Robot、视频扩散、视点稳定、IK 动作对齐、π₀ 后训练、EgoDex | 2025.09 |
