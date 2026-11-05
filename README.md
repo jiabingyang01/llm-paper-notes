@@ -303,6 +303,7 @@
 <summary>Imitation Learning</summary>
 
 - [EC-Flow (2025)](papers/06-embodied-ai/imitation-learning/EC_Flow_2025.md) — 具身中心光流 + 目标图像对齐 + URDF 运动学，5 条无动作标注视频学操作，遮挡 +62%、柔性 +45%、非位移 +80%
+- [EgoMimic (2025)](papers/06-embodied-ai/imitation-learning/EgoMimic_2025.md) — Project Aria 眼镜人机同构传感器 + SLAM 相机系对齐 + 独立高斯归一化 + SAM 2 掩码红线 + 位姿/关节双头共享 ACT，三项真机长程任务较 ACT +34%–228%，零新场景真机数据跨房间泛化，ICRA 2025
 
 </details>
 </blockquote>

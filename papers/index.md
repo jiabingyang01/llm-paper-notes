@@ -228,6 +228,7 @@
 | 论文 | 一句话概括 | 关键词 | 时间 |
 | --- | --- | --- | --- |
 | [EC-Flow](/papers/06-embodied-ai/imitation-learning/EC_Flow_2025) | 将光流预测从物体中心转为具身中心（预测机器人上采样点轨迹），配合目标图像辅助对齐和 URDF 感知运动学动作计算，仅用 5 条无动作标注 RGB 视频学习操作策略，在遮挡（+62%）、柔性物体（+45%）和非位移操作（+80%）场景大幅超越物体中心方法 | 具身中心光流、目标图像对齐、URDF 运动学、无动作标注、DiT 扩散 | 2025.07 |
+| [EgoMimic](/papers/06-embodied-ai/imitation-learning/EgoMimic_2025) | 全栈人机第一视角协同模仿学习框架：75g Project Aria 眼镜（人机同构主视角传感器 + 侧视 SLAM 防丢手）配倒置双臂 ViperX，结合瞬时相机系重投影、独立高斯归一化、SAM 2 掩码+红线叠加与位姿-关节双分支共享 ACT 策略，三项长程真机任务得分较 ACT 提升 34%–228% 并实现零新场景真机数据泛化 | Project Aria 眼镜、人机平权共训、SLAM 相机系对齐、SAM 2 视觉掩码、双分支 ACT、ICRA 2025 | 2024.10 |
 
 ### 🦾 Embodied AI — Data Synthesis
 

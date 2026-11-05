@@ -353,6 +353,7 @@ export default defineConfig({
                   collapsed: false,
                   items: [
                     { text: 'EC-Flow (2025)', link: '/papers/06-embodied-ai/imitation-learning/EC_Flow_2025' },
+                    { text: 'EgoMimic (2025)', link: '/papers/06-embodied-ai/imitation-learning/EgoMimic_2025' },
                   ],
                 },
                 {

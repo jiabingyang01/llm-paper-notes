@@ -167,6 +167,7 @@ VLA 模型推理加速，包括 Token 缓存/剪枝、动态计算、量化等�
 | 论文 | 关键词 | 年份 |
 | --- | --- | --- |
 | [EC-Flow](imitation-learning/EC_Flow_2025.md) | 具身中心光流、目标图像辅助对齐、URDF 运动学动作计算、无动作标注、DiT 扩散、遮挡 +62%、柔性 +45%、非位移 +80% | 2025 |
+| [EgoMimic](imitation-learning/EgoMimic_2025.md) | Project Aria 眼镜人机同构采集、SLAM 瞬时相机系对齐、独立高斯归一化、SAM 2 掩码+红线叠加、位姿-关节双分支共享 ACT、真机得分 +34%–228%、跨场景零真机泛化、ICRA 2025 | 2025 |
 
 ## 🏭 Data Synthesis
 
