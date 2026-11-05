@@ -82,6 +82,7 @@
 - [MMHalSnowball (2024)](papers/04-multimodal/vlm/hallucination/MMHalSnowball_2024.md) — 多模态幻觉雪球效应评估框架 + 残差视觉解码自适应缓解多轮对话幻觉累积
 - [OPERA (2024)](papers/04-multimodal/vlm/hallucination/OPERA_2024.md) — 注意力柱状聚合模式检测 + 过度信任惩罚 + 回溯重分配，无训练 Beam Search 解码缓解幻觉
 - [REVERIE (2024)](papers/04-multimodal/vlm/hallucination/REVERIE_2024.md) — 正负 rationale 反思式指令微调，254k 三元组数据集提供细粒度推理监督，POPE +12.7、MME +348
+- [ReVisiT (2026)](papers/04-multimodal/vlm/hallucination/ReVisiT_2026.md) — 视觉连接器输出 token 经 LM Head 词表投射提取显式视觉语义锚点 + Top-$K$ 概率池最小化 JS 散度动态校准（ACL 2026），单次 LLM 前向传播（1.09× 延迟）在八大 LVLM 上显著压降幻觉
 - [RFI (2026)](papers/04-multimodal/vlm/hallucination/RFI_2026.md) — Rectified Flow 动态预测输入特定干预向量 + SVD 去噪，仅 1.09x 延迟，POPE 平均 F1 +7.59%
 - [SENTINEL (2025)](papers/04-multimodal/vlm/hallucination/SENTINEL_2025.md) — 域内自举 + 句子级 C-DPO 早期干预，幻觉率降低 92% 且通用能力不降反升
 - [SID (2025)](papers/04-multimodal/vlm/hallucination/SID_2025.md) — 早期解码层保留 10% 最低注意力视觉 Token（CT²S）精准诱发关联幻觉并对比消除（ICLR 2025），四大架构 SOTA 且比 VCD 提速 30%
@@ -140,6 +141,7 @@
 <details open>
 <summary>基础模型</summary>
 
+- [ABot-M0 (2026)](papers/06-embodied-ai/vla/foundation/ABot_M0_2026.md) — 600 万条 UniACT 跨构型标准化轨迹 + 一步式 $\boldsymbol{x}_1$ 动作流形学习（AML）+ Qwen3-VL & VGGT 2D/3D 双流感知，LIBERO 98.6%、LIBERO-Plus 80.5%、RoboTwin 2.0 53.4%
 - [Being-H0 (2025)](papers/06-embodied-ai/vla/foundation/Being_H0_2025.md) — 千小时 UniHand 物理指令微调 + 腕指解耦部位级 GRQ-VAE 分词器（1.29 mm 精度）+ 物理空间对齐，多指灵巧手真机 74.3%（超 GR00T N1.5 10.7 pp），ICML 2026
 - [Being-H0.5 (2026)](papers/06-embodied-ai/vla/foundation/Being_H0_5_2026.md) — 3.5 万小时 UniHand-2.0（含 1.6kh 人类操作 + 30 构型）母本体预训练，统一语义槽 + 分层 Mixture-of-Flow + MPG/UAC，单一通用权重跨 5 种真机超 $\pi_{0.5}$，LIBERO 98.9%，CoRL 2026 Oral
 - [ChatVLA (2025)](papers/06-embodied-ai/vla/foundation/ChatVLA_2025.md) — Phased Alignment Training + MoE 双专家，2B 参数统一多模态理解与机器人控制，MMMU 37.4、25 项真实任务超越 OpenVLA
@@ -150,13 +152,18 @@
 - [Emergence-H2R (2025)](papers/06-embodied-ai/vla/foundation/Emergence_H2R_2025.md) — 零显式对齐的 $\pi_{0.5}+\text{ego}$ 共训配方，揭示 H2R 迁移随预训练多样性越过阈值自发涌现（VLM 表征自然收敛），仅人类视频出现的新任务真机得分翻倍（34%→59%），RSS 2026
 - [FAST (2025)](papers/06-embodied-ai/vla/foundation/FAST_2025.md) — DCT + BPE 频域压缩动作 tokenization，解决自回归 VLA 高频任务瓶颈，匹配扩散 π₀ 训练 5× 加速
 - [GR-3 (2025)](papers/06-embodied-ai/vla/foundation/GR3_2025.md) — 4B VLA：VL 协同训练 + VR 人类轨迹 10-shot 适配 + Task Status 指令跟随，全面超越 π₀
+- [GR00T-N1 (2025)](papers/06-embodied-ai/vla/foundation/GR00T_N1_2025.md) — NVIDIA 2.2B 开源人形机器人基座：System 2（Eagle-2 VLM）+ System 1（流匹配 DiT）双系统架构与金字塔数据飞轮（含 LAPA 潜动作），63.9 ms 推理，LIBERO 93.9%
 - [H-RDT (2025)](papers/06-embodied-ai/vla/foundation/H_RDT_2025.md) — 2B 双臂流匹配 DiT 在 EgoDex（829h）48 维人手超集预训练，5 步 ODE 达 30 Hz 迁移 5 种双臂构型，真机较从零训 +40.5%（折毛巾 0%→52%），AAAI 2026
 - [MMaDA-VLA (2026)](papers/06-embodied-ai/vla/foundation/MMaDA_VLA_2026.md) — 原生离散扩散统一多模态 VLA，并行去噪生成目标观测+动作块，LIBERO 98.0%、CALVIN 4.78 全面 SOTA
+- [OpenVLA (2024)](papers/06-embodied-ai/vla/foundation/OpenVLA_2024.md) — 首个开源 7B 通用 VLA（DINOv2+SigLIP 双视觉 + 970k OXE 分位数离散动作预训练），跨 29 项真机任务超 55B RT-2-X 16.5%，支持 LoRA 与 INT4 量化，CoRL 2024
+- [OpenVLA-OFT (2025)](papers/06-embodied-ai/vla/foundation/OpenVLA_OFT_2025.md) — 优化微调配方：双向注意力并行解码 + 连续 L1 回归 + FiLM 语言调制，吞吐量暴涨 26×–43×（109.7 Hz），LIBERO 76.5%→97.1%，RSS 2025
 - [OTTER (2025)](papers/06-embodied-ai/vla/foundation/OTTER_2025.md) — 冻结 CLIP + 文本感知视觉特征提取实现零样本泛化，4 种原语未见任务 77%，Octo/OpenVLA 几乎为 0%
 - [Qwen-RobotManip (2026)](papers/06-embodied-ai/vla/foundation/Qwen_RobotManip_2026.md) — “先对齐后规模化”操作基础模型：80 维统一表征 + 解耦相机系相对位姿（CaPE）+ In-Context 历史适配，配合跨 15 构型 H2R 合成与严苛清洗构建纯开源 38,100 小时语料，六大 OOD 基准大幅超越 $\pi_{0.5}$、夺得 RoboChallenge Table30-v1 通才赛道第一
 - [SpatialVLA (2025)](papers/06-embodied-ai/vla/foundation/SpatialVLA_2025.md) — Ego3D 位置编码 + 自适应高斯动作网格（3 token/step），1.1M 数据预训练 3.5B 零样本超 55B RT-2-X，20 Hz
+- [StarVLA (2026)](papers/06-embodied-ai/vla/foundation/StarVLA_2026.md) — “乐高式”模块化 VLA 开发框架：基于 Qwen3-VL-4B 系统解耦隐式桥接 vs. 显式分词及连续 DiT vs. 离散 FAST，结合 SAM3 开放词汇掩码，LIBERO 96.6%、LIBERO-Plus 74.1%
 - [UniVLA (2025)](papers/06-embodied-ai/vla/foundation/UniVLA_2025.md) — 任务中心潜在动作两阶段解耦 + 跨具身无标注视频预训练，1/20 算力超 OpenVLA，LIBERO 95.2%、真实世界 81.7%
 - [VITRA (2025)](papers/06-embodied-ai/vla/foundation/VITRA_2025.md) — 米制世界系手-机追踪 + 三维腕速原子切分 + 轨迹叠加标注从野外人类视频提炼百万片段 VITRA-1M，配合 FoV 因果扩散 VLA，XHand 真机 OOD 泛化 64.6%（$\pi_0$ 的 4×），ICRA 2026
+- [X-VLA (2025)](papers/06-embodied-ai/vla/foundation/X_VLA_2025.md) — 0.9B 软提示流匹配 Transformer：为异构本体分配专属可学习 Soft Prompts 吸收动力学差异，LIBERO 98.1%、SimplerEnv-WidowX 95.8%，AgiBot World 2025 双赛道冠军，ICLR 2026
 - [π₀ (2024)](papers/06-embodied-ai/vla/foundation/pi0_2024.md) — Flow Matching VLA 基础模型
 - [π₀.₅ (2025)](papers/06-embodied-ai/vla/foundation/pi05_2025.md) — 异构协同训练 + 分层推理
 
@@ -290,9 +297,12 @@
 
 - [EgoWAM (2026)](papers/06-embodied-ai/world-action-models/EgoWAM_2026.md) — 受控人机 WAM 协同训练框架（HPT 主干 + 可插拔世界头 + 推理期零开销剥离 30 Hz），系统对比 Pixel VAE / DINO (RAE) / 相机稳像 3D Motion Flow，解锁野外第一视角人类数据（EgoVerse 10:1）：DINO 驱动 OOD 泛化最高超 4×（折衣 15%→85%），3D Flow 域内提升 20–30 pp（达 90%）且对未对齐演示免疫，CoRL 2026
 - [Fast-WAM (2026)](papers/06-embodied-ai/world-action-models/FastWAM_2026.md) — 训练时视频协同目标是 WAM 性能主因、测试时未来想象非必要，跳过视频生成 190 ms 推理，RoboTwin 91.8%、LIBERO 97.6%
+- [FlowWAM (2026)](papers/06-embodied-ai/world-action-models/FlowWAM_2026.md) — 密集 2D 光流作为无本体共享代理表征的 Wan2.2-5B MoT 世界动作模型，在 830h EgoDex 无机器人标签人类视频预训练，RoboTwin 2.0-Full 均分 71.1%（Clean 89.2% / Rand. 53.0%）
 - [GO-3 / GE-Act 2.0 (2026)](papers/06-embodied-ai/world-action-models/GO_3_2026.md) — 智元 GO-3 Preview 全链路具身基座（WRAM 预训练 + Genie Evolver 后训练 + Genie Master 部署自进化）：CoAE（每帧 24 token 三教师对齐）+ SVP 条件 MeanFlow 单步视觉规划 + KASO 动作空间 4 选 1 联合优化，近 4 万小时异构数据上 100 项真机零样本 OOD 技能呈 1.94 logit/decade 扩展，RoboTwin 85.0% / RoboDojo / RoboColiseum 三榜第一
 - [HumanScale (2026)](papers/06-embodied-ai/world-action-models/HumanScale_2026.md) — Wan 2.2 自回归 MoT WAM 在 100h–5,000h 同规模受控对决人类 Ego 视频 vs. 多构型真机数据，证明人类视频凭 5.6× 密度与 25.6× 词汇覆盖呈对数线性下降（$R^2=0.94$，500h 超 20kh LingBot-VA），AgiBot 真机 OOD 达 90%
 - [LDA-1B (2026)](papers/06-embodied-ai/world-action-models/LDA_1B_2026.md) — 1.6B 统一世界模型基础模型（策略+正逆动力学+视觉预测）+ 质量分层数据摄入 + 结构化 DINO 潜在预测，RoboCasa-GR1 55.4% 超 3B GR00T，真机较 π₀.₅ 提升 21%/48%/23%，低质量数据反涨 10%，RSS 2026
+- [Motus (2025)](papers/06-embodied-ai/world-action-models/Motus_2025.md) — 8B 三专家 MoT（Wan2.2 + Qwen3-VL + Action）+ UniDiffuser 统一五种具身范式 + 光流 DP-GMM 潜动作预训练，RoboTwin 2.0 87.8%（超 $\pi_{0.5}$ 45%），CVPR 2026
+- [OpenWAM (2026)](papers/06-embodied-ai/world-action-models/OpenWAM_2026.md) — 开放模块化世界动作模型预训练（OpenWAM-$\alpha$ 6B），规模化协同训练视频生成与连续动作流匹配，LIBERO 99.3%、RoboCasa 69.7%、RoboTwin 2.0-Full 69.1%
 - [SpatialVAM (2026)](papers/06-embodied-ai/world-action-models/SpatialVAM_2026.md) — 点云三视图投影 + 末端热力图视频，Wan2.2-5B 联合预测未来 RGB/热力图，10 demo 在 Meta-World/RoboCasa/真实 Franka 分别 +22%/10%/16%，单步去噪即 85.7%
 - [WAM Survey (2026)](papers/06-embodied-ai/world-action-models/WAM_Survey_2026.md) — 首篇 World Action Models 系统综述，定义 WAM（联合建模未来状态与动作）并与 VLA/WM/VAM/Video Policy 划界，Cascaded/Joint 架构分类 + 四类数据生态 + 三维评估协议 + 七大开放挑战
 - [WorldVLA (2025)](papers/06-embodied-ai/world-action-models/WorldVLA_2025.md) — 自回归统一 VLA + 世界模型，Action Attention Mask 解决 Chunking 误差累积

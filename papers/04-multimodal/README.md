@@ -30,6 +30,7 @@
 | [MMHalSnowball](vlm/hallucination/MMHalSnowball_2024.md) | 幻觉雪球效应、残差视觉解码、自适应分布混合、Training-Free | 2024.07 |
 | [OPERA](vlm/hallucination/OPERA_2024.md) | 注意力聚合模式、Over-Trust Penalty、Beam Search 回溯、Training-Free | 2024 |
 | [REVERIE](vlm/hallucination/REVERIE_2024.md) | 反思微调、正负 Rationale、细粒度推理监督、REVERIE 数据集 | 2024.07 |
+| [ReVisiT](vlm/hallucination/ReVisiT_2026.md) | 视觉连接器 Token 词表投射、Top-$K$ 最小化 JS 散度、单次前向零重算、Training-Free、ACL 2026 | 2025.06 |
 | [RFI](vlm/hallucination/RFI_2026.md) | Rectified Flow、动态干预向量、输入自适应、SVD 去噪、Plug-and-Play | 2026 |
 | [SENTINEL](vlm/hallucination/SENTINEL_2025.md) | 句子级早期干预、域内偏好学习、C-DPO、交叉验证 | 2025.07 |
 | [SID](vlm/hallucination/SID_2025.md) | 自省式对比解码、CT²S 低注意力 Token 保留、跨模态关联幻觉、Training-Free | 2024.08 |
