@@ -121,11 +121,11 @@ export default defineConfig({
               items: [
                 {
                   text: 'VLM',
-                  collapsed: false,
+                  collapsed: true,
                   items: [
                     {
                       text: '幻觉缓解',
-                      collapsed: false,
+                      collapsed: true,
                       items: [
                         { text: 'ACPO (2026)', link: '/papers/04-multimodal/vlm/hallucination/ACPO_2026' },
                         { text: 'AGLA (2025)', link: '/papers/04-multimodal/vlm/hallucination/AGLA_2025' },
@@ -165,7 +165,7 @@ export default defineConfig({
                     },
                     {
                       text: 'Token 压缩',
-                      collapsed: false,
+                      collapsed: true,
                       items: [
                         { text: 'DART (2025)', link: '/papers/04-multimodal/vlm/efficiency/DART_2025' },
                         { text: 'Elastic Cache (2024)', link: '/papers/04-multimodal/vlm/efficiency/ElasticCache_2024' },
@@ -177,7 +177,7 @@ export default defineConfig({
                 },
                 {
                   text: '视频生成',
-                  collapsed: false,
+                  collapsed: true,
                   items: [
                     { text: 'WorldForge (2025)', link: '/papers/04-multimodal/video-generation/WorldForge_2025' },
                   ],
